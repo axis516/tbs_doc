@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>План-фактный анализ согласования</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>NewWindow</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>EndEdit</ExcludedCommand>
+		<ExcludedCommand>CancelEdit</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+	</CommandSet>
+	<ReportResult>Результат</ReportResult>
+	<DetailsData>ДанныеРасшифровки</DetailsData>
+	<ReportFormType>Main</ReportFormType>
+	<VariantAppearance>ПредставлениеВарианта</VariantAppearance>
+	<AutoShowState>Auto</AutoShowState>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманды" id="33">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКоманднаяПанельЛевая" id="37">
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельЛеваяРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<Button name="Сформировать" id="39">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.StandardCommand.Generate</CommandName>
+							<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="40"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<InputField name="ПредставлениеВарианта" id="30">
+					<DataPath>ПредставлениеВарианта</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<DropListButton>true</DropListButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПредставлениеВариантаКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ПредставлениеВариантаРасширеннаяПодсказка" id="32"/>
+					<Events>
+						<Event name="ChoiceProcessing">ПредставлениеВариантаОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<Button name="ФормаНастройкиОтчета" id="28">
+					<Type>UsualButton</Type>
+					<CommandName>Form.StandardCommand.ReportSettings</CommandName>
+					<ExtendedTooltip name="ФормаНастройкиОтчетаРасширеннаяПодсказка" id="29"/>
+				</Button>
+				<CommandBar name="ГруппаКоманднаяПанельПравая" id="41">
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельПраваяРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<Button name="СформироватьВсеДействия" id="55">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.StandardCommand.Generate</CommandName>
+							<ExtendedTooltip name="СформироватьВсеДействияРасширеннаяПодсказка" id="56"/>
+						</Button>
+						<ButtonGroup name="ГруппаНастройки" id="61">
+							<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<Button name="НастройкиОтчета" id="59">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.ReportSettings</CommandName>
+									<ExtendedTooltip name="НастройкиОтчетаРасширеннаяПодсказка" id="60"/>
+								</Button>
+								<Button name="СохранитьНастройкиОтчета" id="43">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.SaveReportSettings</CommandName>
+									<ExtendedTooltip name="СохранитьНастройкиОтчетаРасширеннаяПодсказка" id="44"/>
+								</Button>
+								<Button name="ЗагрузитьНастройкиОтчета" id="45">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.LoadReportSettings</CommandName>
+									<ExtendedTooltip name="ЗагрузитьНастройкиОтчетаРасширеннаяПодсказка" id="46"/>
+								</Button>
+								<Button name="СтандартныеНастройки" id="47">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.StandardSettings</CommandName>
+									<ExtendedTooltip name="СтандартныеНастройкиРасширеннаяПодсказка" id="48"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<ButtonGroup name="ГруппаВарианты" id="63">
+							<ExtendedTooltip name="ГруппаВариантыРасширеннаяПодсказка" id="64"/>
+							<ChildItems>
+								<Button name="ЗагрузитьВариант" id="57">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.LoadVariant</CommandName>
+									<ExtendedTooltip name="ЗагрузитьВариантРасширеннаяПодсказка" id="58"/>
+								</Button>
+								<Button name="ИзменитьВариант" id="65">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.ChangeVariant</CommandName>
+									<ExtendedTooltip name="ИзменитьВариантРасширеннаяПодсказка" id="66"/>
+								</Button>
+								<Button name="СохранитьВариант" id="67">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>false</OnlyInAllActions>
+									<CommandName>Form.StandardCommand.SaveVariant</CommandName>
+									<ExtendedTooltip name="СохранитьВариантРасширеннаяПодсказка" id="68"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<Button name="Печать" id="49">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.StandardCommand.Print</CommandName>
+							<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="50"/>
+						</Button>
+						<Button name="Сохранить" id="51">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.StandardCommand.Save</CommandName>
+							<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="52"/>
+						</Button>
+						<Button name="Справка" id="53">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="54"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПользовательскиеНастройки" id="26">
+			<Group>Vertical</Group>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскиеНастройкиРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<Table name="КомпоновщикНастроекПользовательскиеНастройки" id="6">
+					<CommandBarLocation>None</CommandBarLocation>
+					<Autofill>true</Autofill>
+					<Header>false</Header>
+					<VerticalStretch>false</VerticalStretch>
+					<DataPath>Отчет.SettingsComposer.UserSettings</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSet>
+						<ExcludedCommand>HierarchicalList</ExcludedCommand>
+						<ExcludedCommand>Tree</ExcludedCommand>
+						<ExcludedCommand>List</ExcludedCommand>
+						<ExcludedCommand>UseFieldAsValue</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ViewMode>QuickAccess</ViewMode>
+					<ContextMenu name="КомпоновщикНастроекПользовательскиеНастройкиКонтекстноеМеню" id="7"/>
+					<AutoCommandBar name="КомпоновщикНастроекПользовательскиеНастройкиКоманднаяПанель" id="8"/>
+					<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="15"/>
+					<SearchStringAddition name="КомпоновщикНастроекПользовательскиеНастройкиСтрокаПоиска" id="16">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекПользовательскиеНастройки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекПользовательскиеНастройкиСтрокаПоискаКонтекстноеМеню" id="17"/>
+						<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиСтрокаПоискаРасширеннаяПодсказка" id="18"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="КомпоновщикНастроекПользовательскиеНастройкиСостояниеПросмотра" id="19">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекПользовательскиеНастройки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекПользовательскиеНастройкиСостояниеПросмотраКонтекстноеМеню" id="20"/>
+						<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиСостояниеПросмотраРасширеннаяПодсказка" id="21"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="КомпоновщикНастроекПользовательскиеНастройкиУправлениеПоиском" id="22">
+						<AdditionSource>
+							<Item>КомпоновщикНастроекПользовательскиеНастройки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="КомпоновщикНастроекПользовательскиеНастройкиУправлениеПоискомКонтекстноеМеню" id="23"/>
+						<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиУправлениеПоискомРасширеннаяПодсказка" id="24"/>
+					</SearchControlAddition>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<SpreadSheetDocumentField name="Результат" id="9">
+			<DataPath>Результат</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<TitleLocation>None</TitleLocation>
+			<Width>100</Width>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="25"/>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.ПланФактныйАнализСогласования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Результат" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеРасшифровки" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьБыстрыеНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать настройки в основном окне</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеВарианта" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

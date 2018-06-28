@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВидДокумента" id="1">
+			<DataPath>Запись.ВидДокумента</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<DropListButton>false</DropListButton>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="ВидДокументаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВидДокументаExtendedTooltip" id="34"/>
+			<Events>
+				<Event name="OnChange">ВидДокументаПриИзменении</Event>
+				<Event name="StartChoice">ВидДокументаНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ШаблонБизнесПроцесса" id="3">
+			<DataPath>Запись.ШаблонБизнесПроцесса</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон процесса</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Left</TitleLocation>
+			<DropListButton>false</DropListButton>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="ШаблонБизнесПроцессаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ШаблонБизнесПроцессаExtendedTooltip" id="35"/>
+			<Events>
+				<Event name="StartChoice">ШаблонБизнесПроцессаНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Условие" id="13">
+			<DataPath>Запись.Условие</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+			<DropListButton>false</DropListButton>
+			<ChoiceButton>true</ChoiceButton>
+			<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+			<OpenButton>false</OpenButton>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="УсловиеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="УсловиеExtendedTooltip" id="36"/>
+		</InputField>
+		<InputField name="Организация" id="5">
+			<DataPath>Запись.Организация</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действует для организации</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Left</TitleLocation>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все организации</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="52"/>
+		</InputField>
+		<CheckBoxField name="ЗапрещеноИзменение" id="11">
+			<DataPath>Запись.ЗапрещеноИзменение</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить изменение процессов, созданных по этому шаблону для этого вида документа</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗапрещеноИзменениеКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ЗапрещеноИзменениеExtendedTooltip" id="37"/>
+		</CheckBoxField>
+		<Pages name="ГруппаНастройкиАвтостарта" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки автостарта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки автостарта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаНастройкиАвтостартаРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<Page name="ГруппаРучнойСтарт" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ручной запуск</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ручной старт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРучнойСтартРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<CheckBoxField name="ПредлагатьЗапускПользователю" id="18">
+							<DataPath>Запись.ИнтерактивныйЗапуск</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предлагать запуск при выполнении действия:</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПредлагатьЗапускПользователюКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ПредлагатьЗапускПользователюExtendedTooltip" id="41"/>
+							<Events>
+								<Event name="OnChange">ПредлагатьЗапускПользователюПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаВидыСобытий" id="66">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа виды событий</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа виды событий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВидыСобытийРасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступ" id="68">
+									<Width>2</Width>
+									<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="70"/>
+								</LabelDecoration>
+								<RadioButtonField name="ВидИнтерактивногоСобытия" id="20">
+									<DataPath>Запись.ВидИнтерактивногоСобытия</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При выполнении действия</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ContextMenu name="ВидИнтерактивногоСобытияКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ВидИнтерактивногоСобытияExtendedTooltip" id="42"/>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаАвтостарт" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автоматический запуск</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа автостарт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TitleDataPath>ГруппаАвтостартЗаголовок</TitleDataPath>
+					<ExtendedTooltip name="ГруппаАвтостартExtendedTooltip" id="38"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНеинтерактивно" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запускать процесс автоматически по событиям</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНеинтерактивноExtendedTooltip" id="43"/>
+							<ChildItems>
+								<Table name="ВидыБизнесСобытий" id="23">
+									<Representation>List</Representation>
+									<TitleLocation>Top</TitleLocation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<HeightInTableRows>4</HeightInTableRows>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ВидыБизнесСобытий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запускать процесс автоматически по событиям</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSet>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВидыБизнесСобытийКонтекстноеМеню" id="24"/>
+									<AutoCommandBar name="ВидыБизнесСобытийКоманднаяПанель" id="25"/>
+									<ExtendedTooltip name="ВидыБизнесСобытийExtendedTooltip" id="44"/>
+									<SearchStringAddition name="ВидыБизнесСобытийСтрокаПоиска" id="53">
+										<AdditionSource>
+											<Item>ВидыБизнесСобытий</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВидыБизнесСобытийСтрокаПоискаКонтекстноеМеню" id="54"/>
+										<ExtendedTooltip name="ВидыБизнесСобытийСтрокаПоискаРасширеннаяПодсказка" id="55"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВидыБизнесСобытийСостояниеПросмотра" id="56">
+										<AdditionSource>
+											<Item>ВидыБизнесСобытий</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВидыБизнесСобытийСостояниеПросмотраКонтекстноеМеню" id="57"/>
+										<ExtendedTooltip name="ВидыБизнесСобытийСостояниеПросмотраРасширеннаяПодсказка" id="58"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВидыБизнесСобытийУправлениеПоиском" id="59">
+										<AdditionSource>
+											<Item>ВидыБизнесСобытий</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВидыБизнесСобытийУправлениеПоискомКонтекстноеМеню" id="60"/>
+										<ExtendedTooltip name="ВидыБизнесСобытийУправлениеПоискомРасширеннаяПодсказка" id="61"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ВидыБизнесСобытийВыбор</Event>
+									</Events>
+									<ChildItems>
+										<CheckBoxField name="ВидыБизнесСобытийПометка" id="30">
+											<DataPath>ВидыБизнесСобытий.Пометка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.CheckAll</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВидыБизнесСобытийПометкаКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ВидыБизнесСобытийПометкаExtendedTooltip" id="45"/>
+											<Events>
+												<Event name="OnChange">ВидыБизнесСобытийПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ВидыБизнесСобытийЗначение" id="26">
+											<DataPath>ВидыБизнесСобытий.Значение</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВидыБизнесСобытийЗначениеКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="ВидыБизнесСобытийЗначениеExtendedTooltip" id="46"/>
+										</InputField>
+										<InputField name="ВидыБизнесСобытийПредставление" id="28">
+											<DataPath>ВидыБизнесСобытий.Представление</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Событие</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>20</Width>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="ВидыБизнесСобытийПредставлениеКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="ВидыБизнесСобытийПредставлениеExtendedTooltip" id="47"/>
+										</InputField>
+										<InputField name="ВидыБизнесСобытийУсловие" id="32">
+											<DataPath>ВидыБизнесСобытий.Условие</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Условие автозапуска</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="ВидыБизнесСобытийУсловиеКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ВидыБизнесСобытийУсловиеExtendedTooltip" id="48"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкаШаблоновБизнесПроцессов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВариантЗаданияОрганизации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант задания организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьУчетПоОрганизациям</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="СписокТипов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список типов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидыБизнесСобытий" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды бизнес-событий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесСобытия</Item>
+			</FunctionalOptions>
+			<Columns>
+				<Column name="Значение" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыБизнесСобытий</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Представление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Условие" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УсловияМаршрутизации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Загружено" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загружено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВсеВидыБизнесСобытий" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все виды бизнес-событий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесСобытия</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ОрганизацияПриОткрытии" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьУчетПоОрганизациям</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВидДокументаПриОткрытии" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыВнутреннихДокументов</v8:Type>
+				<v8:Type>cfg:CatalogRef.ВидыВходящихДокументов</v8:Type>
+				<v8:Type>cfg:CatalogRef.ВидыИсходящихДокументов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ШаблонБизнесПроцессаПриОткрытии" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон бизнес процесса при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныУтверждения</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныОзнакомления</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныСоставныхБизнесПроцессов</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныРассмотрения</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныСогласования</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныПоручения</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныКомплексныхБизнесПроцессов</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныПриглашения</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныИсполнения</v8:Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныРегистрации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстПредупреждения" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст предупреждения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГруппаАвтостартЗаголовок" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа автостарт заголовок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

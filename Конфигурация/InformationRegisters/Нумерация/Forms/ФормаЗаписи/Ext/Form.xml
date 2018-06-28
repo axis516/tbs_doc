@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>50</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Нумератор" id="1">
+			<DataPath>Запись.Нумератор</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НумераторКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НумераторExtendedTooltip" id="17"/>
+			<Events>
+				<Event name="OnChange">НумераторПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Организация" id="5">
+			<DataPath>Запись.Организация</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="18"/>
+		</InputField>
+		<InputField name="Подразделение" id="11">
+			<DataPath>Запись.Подразделение</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="19"/>
+		</InputField>
+		<InputField name="ВидДокумента" id="25">
+			<DataPath>Запись.ВидДокумента</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ВидДокументаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Проект" id="13">
+			<DataPath>Запись.Проект</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПроектExtendedTooltip" id="20"/>
+		</InputField>
+		<InputField name="ВопросДеятельности" id="15">
+			<DataPath>Запись.ВопросДеятельности</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ВопросДеятельностиКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ВопросДеятельностиExtendedTooltip" id="21"/>
+		</InputField>
+		<InputField name="СвязанныйДокумент" id="9">
+			<DataPath>Запись.СвязанныйДокумент</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="СвязанныйДокументКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="СвязанныйДокументExtendedTooltip" id="22"/>
+			<Events>
+				<Event name="OnChange">СвязанныйДокументПриИзменении</Event>
+				<Event name="StartChoice">СвязанныйДокументНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПериодНумерации" id="3">
+			<DataPath>Запись.ПериодНумерации</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальная дата периода нумерации, к которому относится текущий номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПериодНумерацииКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ПериодНумерацииExtendedTooltip" id="23"/>
+		</InputField>
+		<InputField name="ТекущийНомер" id="7">
+			<DataPath>Запись.ТекущийНомер</DataPath>
+			<ContextMenu name="ТекущийНомерКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТекущийНомерExtendedTooltip" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Нумерация</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

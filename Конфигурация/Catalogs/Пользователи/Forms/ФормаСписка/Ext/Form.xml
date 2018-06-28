@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>72</Width>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandSet>
+		<ExcludedCommand>Create</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="160">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="161"/>
+		</UsualGroup>
+		<CommandBar name="КоманднаяПанель" id="158">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="159"/>
+			<ChildItems>
+				<Button name="СоздатьПользователя" id="54">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Item.ПользователиСписок.StandardCommand.Create</CommandName>
+					<ExtendedTooltip name="СоздатьПользователяExtendedTooltip" id="101"/>
+				</Button>
+				<ButtonGroup name="КоманднаяПанельПользователи" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель пользователи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КоманднаяПанельПользователиExtendedTooltip" id="104"/>
+					<ChildItems>
+						<Button name="ФормаВыбрать" id="216">
+							<Type>CommandBarButton</Type>
+							<Visible>false</Visible>
+							<CommandName>0:8e2b82cf-d1ea-46b2-afdf-a8d64e66ea2b</CommandName>
+							<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="217"/>
+						</Button>
+						<Button name="ФормаСкопировать" id="212">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Copy</CommandName>
+							<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="213"/>
+						</Button>
+						<Button name="ФормаИзменить" id="214">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Change</CommandName>
+							<ExtendedTooltip name="ФормаИзменитьРасширеннаяПодсказка" id="215"/>
+						</Button>
+						<Button name="ФормаИзменитьВыделенные" id="196">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+							<ExtendedTooltip name="ФормаИзменитьВыделенныеРасширеннаяПодсказка" id="197"/>
+						</Button>
+						<Button name="ФормаУстановитьПароль" id="198">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.Command.УстановитьПароль</CommandName>
+							<ExtendedTooltip name="ФормаУстановитьПарольРасширеннаяПодсказка" id="199"/>
+						</Button>
+						<Button name="ФормаГруппыИПолномочия" id="231">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.Command.ГруппыИПолномочия</CommandName>
+							<ExtendedTooltip name="ФормаГруппыИПолномочияРасширеннаяПодсказка" id="232"/>
+						</Button>
+						<Popup name="ГруппаОтправить" id="237">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отправить</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>Picture</Representation>
+							<ExtendedTooltip name="ГруппаОтправитьРасширеннаяПодсказка" id="238"/>
+							<ChildItems>
+								<Button name="ОбщаяКомандаСоздатьПисьмоНаОсновании" id="249">
+									<Type>CommandBarButton</Type>
+									<CommandName>CommonCommand.СоздатьПисьмоНаОсновании</CommandName>
+									<DataPath>Items.ПользователиСписок.CurrentData.Ref</DataPath>
+									<ExtendedTooltip name="ОбщаяКомандаСоздатьПисьмоНаОснованииРасширеннаяПодсказка" id="250"/>
+								</Button>
+								<Button name="ПроцессИсполнение" id="241">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПроцессИсполнение</CommandName>
+									<ExtendedTooltip name="ПроцессИсполнениеРасширеннаяПодсказка" id="242"/>
+								</Button>
+								<Button name="ПроцессОзнакомление" id="243">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ПроцессОзнакомление</CommandName>
+									<ExtendedTooltip name="ПроцессОзнакомлениеРасширеннаяПодсказка" id="244"/>
+								</Button>
+								<ButtonGroup name="ГруппаДругойВариант" id="245">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа другой вариант</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа другой вариант</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаДругойВариантРасширеннаяПодсказка" id="246"/>
+									<ChildItems>
+										<Button name="ОбщаяКомандаСоздатьБизнесПроцесс" id="247">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<CommandName>CommonCommand.СоздатьБизнесПроцесс</CommandName>
+											<DataPath>Items.ПользователиСписок.CurrentData.Ref</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Еще варианты...</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОбщаяКомандаСоздатьБизнесПроцессРасширеннаяПодсказка" id="248"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+							</ChildItems>
+						</Popup>
+						<Button name="ФормаПоказыватьНедействительныхПользователей" id="229">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.Command.ПоказыватьНедействительныхПользователей</CommandName>
+							<ExtendedTooltip name="ФормаПоказыватьНедействительныхПользователейРасширеннаяПодсказка" id="230"/>
+						</Button>
+						<ButtonGroup name="ПользователиСтандартныеКоманды" id="210">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователи стандартные команды</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSource>Form</CommandSource>
+							<ExtendedTooltip name="ПользователиСтандартныеКомандыРасширеннаяПодсказка" id="211"/>
+						</ButtonGroup>
+						<Button name="СведенияОПользователях" id="132">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Form.Command.СведенияОПользователях</CommandName>
+							<ExtendedTooltip name="СведенияОПользователяхРасширеннаяПодсказка" id="133"/>
+						</Button>
+						<Button name="ПользователиИБ" id="6">
+							<Type>CommandBarButton</Type>
+							<OnlyInAllActions>false</OnlyInAllActions>
+							<CommandName>Catalog.Пользователи.Command.ПользователиИнформационнойБазы</CommandName>
+							<ExtendedTooltip name="ПользователиИБExtendedTooltip" id="106"/>
+						</Button>
+					</ChildItems>
+				</ButtonGroup>
+				<SearchStringAddition name="ДополнениеСтрокаПоиска" id="218">
+					<AdditionSource>
+						<Item>ПользователиСписок</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строка поиска</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДополнениеСтрокаПоискаКонтекстноеМеню" id="219"/>
+					<ExtendedTooltip name="ДополнениеСтрокаПоискаРасширеннаяПодсказка" id="220"/>
+				</SearchStringAddition>
+				<ButtonGroup name="ГруппаПечать" id="235">
+					<ExtendedTooltip name="ГруппаПечатьРасширеннаяПодсказка" id="236"/>
+				</ButtonGroup>
+				<Button name="ФормаСправка" id="70">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="107"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="ПользователиСписок" id="48">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<Height>16</Height>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>ПользователиСписок</DataPath>
+			<RowPictureDataPath>1/8</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<ContextMenu name="ПользователиСписокКонтекстноеМеню" id="49">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ПользователиСписокКонтекстноеМенюСоздать" id="204">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиСписок.StandardCommand.Create</CommandName>
+						<ExtendedTooltip name="ПользователиСписокКонтекстноеМенюСоздатьРасширеннаяПодсказка" id="205"/>
+					</Button>
+					<Button name="ПользователиСписокКонтекстноеМенюСкопировать" id="206">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиСписок.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="ПользователиСписокКонтекстноеМенюСкопироватьРасширеннаяПодсказка" id="207"/>
+					</Button>
+					<Button name="ПользователиСписокКонтекстноеМенюИзменить" id="208">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПользователиСписок.StandardCommand.Change</CommandName>
+						<ExtendedTooltip name="ПользователиСписокКонтекстноеМенюИзменитьРасширеннаяПодсказка" id="209"/>
+					</Button>
+					<Button name="ПользователиСписокКонтекстноеМенюИзменитьВыделенные" id="194">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИзменитьВыделенные</CommandName>
+						<ExtendedTooltip name="ПользователиСписокКонтекстноеМенюИзменитьВыделенныеРасширеннаяПодсказка" id="195"/>
+					</Button>
+					<Button name="ПользователиСписокКонтекстноеМенюУстановитьПароль" id="200">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьПароль</CommandName>
+						<ExtendedTooltip name="ПользователиСписокКонтекстноеМенюУстановитьПарольРасширеннаяПодсказка" id="201"/>
+					</Button>
+					<Button name="ПользователиСписокКонтекстноеМенюГруппыИПолномочия" id="233">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ГруппыИПолномочия</CommandName>
+						<ExtendedTooltip name="ПользователиСписокКонтекстноеМенюГруппыИПолномочияРасширеннаяПодсказка" id="234"/>
+					</Button>
+					<ButtonGroup name="ПользователиСписокКонтекстноеМенюСтандартныеКоманды" id="202">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пользователи список контекстное меню стандартные команды</v8:content>
+							</v8:item>
+						</Title>
+						<CommandSource>Item.ПользователиСписок</CommandSource>
+						<ExtendedTooltip name="ПользователиСписокКонтекстноеМенюСтандартныеКомандыРасширеннаяПодсказка" id="203"/>
+					</ButtonGroup>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ПользователиСписокКоманднаяПанель" id="50"/>
+			<ExtendedTooltip name="ПользователиСписокExtendedTooltip" id="120"/>
+			<SearchStringAddition name="ПользователиСписокСтрокаПоиска" id="174">
+				<AdditionSource>
+					<Item>ПользователиСписок</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиСписокСтрокаПоискаКонтекстноеМеню" id="175"/>
+				<ExtendedTooltip name="ПользователиСписокСтрокаПоискаРасширеннаяПодсказка" id="176"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПользователиСписокСостояниеПросмотра" id="177">
+				<AdditionSource>
+					<Item>ПользователиСписок</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиСписокСостояниеПросмотраКонтекстноеМеню" id="178"/>
+				<ExtendedTooltip name="ПользователиСписокСостояниеПросмотраРасширеннаяПодсказка" id="179"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПользователиСписокУправлениеПоиском" id="180">
+				<AdditionSource>
+					<Item>ПользователиСписок</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиСписокУправлениеПоискомКонтекстноеМеню" id="181"/>
+				<ExtendedTooltip name="ПользователиСписокУправлениеПоискомРасширеннаяПодсказка" id="182"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="51">
+					<DataPath>ПользователиСписок.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Width>24</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>36</MaxWidth>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="121"/>
+				</LabelField>
+				<ColumnGroup name="ПодразделениеДолжность" id="221">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение, должность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделение и должность</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>36</Width>
+					<Group>InCell</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ПодразделениеДолжностьРасширеннаяПодсказка" id="222"/>
+					<ChildItems>
+						<LabelField name="Подразделение" id="223">
+							<DataPath>ПользователиСписок.Подразделение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ShowInHeader>false</ShowInHeader>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="224"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="225"/>
+						</LabelField>
+						<LabelField name="Должность" id="226">
+							<DataPath>ПользователиСписок.Должность</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ShowInHeader>false</ShowInHeader>
+							<ContextMenu name="ДолжностьКонтекстноеМеню" id="227"/>
+							<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="228"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПользователиСписок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>ПользователиСписок.Недействителен</Field>
+				<Field>ПользователиСписок.ВозможноСменитьПароль</Field>
+				<Field>ПользователиСписок.Ref</Field>
+				<Field>ПользователиСписок.DeletionMark</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Пользователи.Ссылка,
+	Пользователи.Подготовлен,
+	Пользователи.ПометкаУдаления,
+	Пользователи.Недействителен,
+	Пользователи.Наименование,
+	Пользователи.Служебный,
+	Пользователи.Комментарий,
+	ВЫБОР
+		КОГДА Пользователи.Служебный
+			ТОГДА ЛОЖЬ
+		КОГДА Пользователи.Недействителен
+			ТОГДА ЛОЖЬ
+		КОГДА Пользователи.ИдентификаторПользователяИБ = &amp;ИдентификаторТекущегоПользователяИБ
+			ТОГДА ИСТИНА
+		КОГДА &amp;ВозможноСменитьТолькоСвойПароль
+			ТОГДА ЛОЖЬ
+		КОГДА Пользователи.ИдентификаторПользователяИБ = &amp;ПустойУникальныйИдентификатор
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ВозможноСменитьПароль,
+	Пользователи.ИдентификаторПользователяИБ,
+	СведенияОПользователяхДокументооборот.Должность,
+	СведенияОПользователяхДокументооборот.Подразделение,
+	СоставыГруппПользователей.ГруппаПользователей КАК РабочаяГруппа
+ИЗ
+	Справочник.Пользователи КАК Пользователи
+ЛЕВОЕ СОЕДИНЕНИЕ
+	РегистрСведений.СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+ПО
+	Пользователи.Ссылка = СведенияОПользователяхДокументооборот.Пользователь
+{ЛЕВОЕ СОЕДИНЕНИЕ
+	РегистрСведений.СоставыГруппПользователей КАК СоставыГруппПользователей
+ПО
+	СоставыГруппПользователей.Пользователь = Пользователи.Ссылка}</QueryText>
+				<MainTable>Catalog.Пользователи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВыбиратьИерархически" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать пользователей нижестоящих групп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыбиратьИерархически</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПоказыватьНедействительныхПользователей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать недействительных пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьНедействительныхПользователей</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СведенияОПользователях" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о пользователях</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о пользователях</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СведенияОПользователях</Action>
+		</Command>
+		<Command name="ИзменитьВыделенные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить выделенные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьВыделенные</Action>
+		</Command>
+		<Command name="УстановитьПароль" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пароль...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьПароль</Action>
+		</Command>
+		<Command name="ПоказыватьНедействительныхПользователей" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленных и недействительных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать недействительных пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьПоказыватьНедействительныхПользователей</Action>
+		</Command>
+		<Command name="ГруппыИПолномочия" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы и полномочия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочие группы и полномочия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГруппыИПолномочия</Action>
+		</Command>
+		<Command name="ПроцессИсполнение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процесс согласование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроцессИсполнение</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесПроцессыИЗадачи</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПроцессОзнакомление" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ознакомление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процесс согласование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроцессОзнакомление</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесПроцессыИЗадачи</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ДополнительныеСведенияКоманднаяПанель</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

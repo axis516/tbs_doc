@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Height>35</Height>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаТаблицы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРабочиеГруппы" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рабочие группы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рабочие группы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРабочиеГруппыРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппыИКомПанель" id="72">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы и ком панель</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппыИКомПанельРасширеннаяПодсказка" id="73"/>
+							<ChildItems>
+								<LabelDecoration name="ГруппыЗаголовок" id="74">
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рабочие группы: </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГруппыЗаголовокКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ГруппыЗаголовокРасширеннаяПодсказка" id="76"/>
+								</LabelDecoration>
+								<CommandBar name="ГруппыКомПанель" id="70">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы ком панель</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы ком панель</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="ГруппыКомПанельРасширеннаяПодсказка" id="71"/>
+									<ChildItems>
+										<Button name="РабочиеГруппыДобавить" id="21">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Item.РабочиеГруппы.StandardCommand.Add</CommandName>
+											<ExtendedTooltip name="РабочиеГруппыДобавитьРасширеннаяПодсказка" id="22"/>
+										</Button>
+										<Button name="РабочиеГруппыУдалить" id="23">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Item.РабочиеГруппы.StandardCommand.Delete</CommandName>
+											<ExtendedTooltip name="РабочиеГруппыУдалитьРасширеннаяПодсказка" id="24"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="РабочиеГруппы" id="5">
+							<Representation>Tree</Representation>
+							<Header>false</Header>
+							<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+							<HorizontalLines>false</HorizontalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>РабочиеГруппы</DataPath>
+							<RowPictureDataPath>РабочиеГруппы.Картинка</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.СостояниеПользователя04</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рабочие группы</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="РабочиеГруппыКонтекстноеМеню" id="6"/>
+							<AutoCommandBar name="РабочиеГруппыКоманднаяПанель" id="7">
+								<HorizontalAlign>Right</HorizontalAlign>
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РабочиеГруппыРасширеннаяПодсказка" id="8"/>
+							<SearchStringAddition name="РабочиеГруппыСтрокаПоиска" id="9">
+								<AdditionSource>
+									<Item>РабочиеГруппы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РабочиеГруппыСтрокаПоискаКонтекстноеМеню" id="10"/>
+								<ExtendedTooltip name="РабочиеГруппыСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РабочиеГруппыСостояниеПросмотра" id="12">
+								<AdditionSource>
+									<Item>РабочиеГруппы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РабочиеГруппыСостояниеПросмотраКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="РабочиеГруппыСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РабочиеГруппыУправлениеПоиском" id="15">
+								<AdditionSource>
+									<Item>РабочиеГруппы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РабочиеГруппыУправлениеПоискомКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="РабочиеГруппыУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">РабочиеГруппыВыбор</Event>
+								<Event name="BeforeAddRow">РабочиеГруппыПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">РабочиеГруппыПередУдалением</Event>
+								<Event name="ChoiceProcessing">РабочиеГруппыОбработкаВыбора</Event>
+								<Event name="AfterDeleteRow">РабочиеГруппыПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="РабочиеГруппыГруппа" id="65">
+									<DataPath>РабочиеГруппы.Группа</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РабочиеГруппыГруппаКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="РабочиеГруппыГруппаРасширеннаяПодсказка" id="67"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="Отступ" id="25">
+					<Width>2</Width>
+					<ContextMenu name="ОтступКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОтступРасширеннаяПодсказка" id="27"/>
+				</LabelDecoration>
+				<UsualGroup name="ПолномочияИКомПанель" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полномочия и ком панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полномочия и ком панель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПолномочияИКомПанельРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="86">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="87"/>
+							<ChildItems>
+								<LabelDecoration name="ПолномочияЗаголовок" id="81">
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Полномочия:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПолномочияЗаголовокКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ПолномочияЗаголовокРасширеннаяПодсказка" id="83"/>
+								</LabelDecoration>
+								<CommandBar name="Группа2" id="92">
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="93"/>
+									<ChildItems>
+										<Button name="УстановитьВсеПолномочия" id="88">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.УстановитьВсеПолномочия</CommandName>
+											<ExtendedTooltip name="УстановитьВсеПолномочияРасширеннаяПодсказка" id="89"/>
+										</Button>
+										<Button name="СнятьВсеПолномочия" id="90">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.СнятьВсеПолномочия</CommandName>
+											<ExtendedTooltip name="СнятьВсеПолномочияРасширеннаяПодсказка" id="91"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Полномочия" id="30">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Полномочия</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПолномочияКонтекстноеМеню" id="31"/>
+							<AutoCommandBar name="ПолномочияКоманднаяПанель" id="32">
+								<HorizontalAlign>Right</HorizontalAlign>
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПолномочияРасширеннаяПодсказка" id="33"/>
+							<SearchStringAddition name="ПолномочияСтрокаПоиска" id="34">
+								<AdditionSource>
+									<Item>Полномочия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолномочияСтрокаПоискаКонтекстноеМеню" id="35"/>
+								<ExtendedTooltip name="ПолномочияСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПолномочияСостояниеПросмотра" id="37">
+								<AdditionSource>
+									<Item>Полномочия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолномочияСостояниеПросмотраКонтекстноеМеню" id="38"/>
+								<ExtendedTooltip name="ПолномочияСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПолномочияУправлениеПоиском" id="40">
+								<AdditionSource>
+									<Item>Полномочия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолномочияУправлениеПоискомКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="ПолномочияУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ПолномочияВыбор</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ПолномочияГруппаКолонок" id="43">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Полномочия группа колонок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Полномочия группа колонок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ПолномочияГруппаКолонокРасширеннаяПодсказка" id="44"/>
+									<ChildItems>
+										<CheckBoxField name="ПолномочияПометка" id="62">
+											<DataPath>Полномочия.Пометка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<ThreeState>true</ThreeState>
+											<ContextMenu name="ПолномочияПометкаКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ПолномочияПометкаРасширеннаяПодсказка" id="64"/>
+											<Events>
+												<Event name="OnChange">ПолномочияПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ПолномочияСсылка" id="59">
+											<DataPath>Полномочия.Ссылка</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПолномочияСсылкаКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="ПолномочияСсылкаРасширеннаяПодсказка" id="61"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКнопки" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКнопкиСлева" id="77">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки слева</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<ExtendedTooltip name="ГруппаКнопкиСлеваРасширеннаяПодсказка" id="78"/>
+					<ChildItems>
+						<Button name="Готово" id="55">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.СохранитьНастройкиИЗакрыть</CommandName>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Готово</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГотовоРасширеннаяПодсказка" id="56"/>
+						</Button>
+						<Button name="СохранитьНастройки" id="68">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СохранитьНастройки</CommandName>
+							<ExtendedTooltip name="СохранитьНастройкиРасширеннаяПодсказка" id="69"/>
+						</Button>
+						<Button name="Отмена" id="57">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Cancel</CommandName>
+							<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="58"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="ГруппаКнопкиСправа" id="79">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки справа</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаКнопкиСправаРасширеннаяПодсказка" id="80"/>
+					<ChildItems>
+						<Button name="ОтчетПоНастройкамДоступа" id="51">
+							<Type>CommandBarHyperlink</Type>
+							<Representation>PictureAndText</Representation>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.ОтчетПоНастройкамДоступа</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Report</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОтчетПоНастройкамДоступаРасширеннаяПодсказка" id="52"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВсеПолномочияГруппИПользователя" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все полномочия групп и пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Владелец" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РабочиеГруппы</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Полномочия" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полномочия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПрофилиГруппДоступа</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РабочиеГруппы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочие группы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Группа" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РабочиеГруппы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВходитНепосредственно" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входит непосредственно</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Пользователь" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.РабочиеГруппы</v8:Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Полномочия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полномочия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полномочия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПрофилиГруппДоступа</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтчетПоНастройкамДоступа" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все настройки доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по настройкам доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтчетПоНастройкамДоступа</Action>
+		</Command>
+		<Command name="СохранитьНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройки</Action>
+		</Command>
+		<Command name="СохранитьНастройкиИЗакрыть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройкиИЗакрыть</Action>
+		</Command>
+		<Command name="УстановитьВсеПолномочия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все полномочия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все полномочия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьВсеПолномочия</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="СнятьВсеПолномочия" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все полномочия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все полномочия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеПолномочия</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Пользователь">
+			<Type>
+				<v8:Type>cfg:CatalogRef.РабочиеГруппы</v8:Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

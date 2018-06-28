@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗагрузка" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загрузка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загрузка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗагрузкаРасширеннаяПодсказка" id="77"/>
+			<ChildItems>
+				<Button name="ЗагрузитьДанные" id="31">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<SkipOnInput>false</SkipOnInput>
+					<Height>2</Height>
+					<CommandName>Form.Command.ЗагрузитьДанные</CommandName>
+					<ExtendedTooltip name="ЗагрузитьДанныеExtendedTooltip" id="79"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКомментарий" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа комментарий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомментарийExtendedTooltip" id="55"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация3" id="39">
+					<Width>4</Width>
+					<Height>2</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<SkipOnInput>false</SkipOnInput>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="Декорация3ExtendedTooltip" id="56"/>
+				</PictureDecoration>
+				<LabelDecoration name="Декорация4" id="41">
+					<HorizontalStretch>false</HorizontalStretch>
+					<SkipOnInput>false</SkipOnInput>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внимание!
+Перед выполнением загрузки данных остановите сервер 1С:Архива 3.0.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация4КонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="Декорация4ExtendedTooltip" id="57"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ФорматБазыДанных" id="1">
+			<DataPath>ФорматБазыДанных</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант базы данных</v8:content>
+				</v8:item>
+			</Title>
+			<ChoiceButton>false</ChoiceButton>
+			<ClearButton>false</ClearButton>
+			<SpinButton>false</SpinButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Файл main.mdb</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>MS SQL Server</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ChoiceListButton>true</ChoiceListButton>
+			<ContextMenu name="ФорматБазыДанныхКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ФорматБазыДанныхExtendedTooltip" id="58"/>
+			<Events>
+				<Event name="OnChange">ФорматБазыДанныхПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ИмяSQLСервера" id="51">
+			<DataPath>ИмяSQLСервера</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя MS SQL сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИмяSQLСервераКонтекстноеМеню" id="52"/>
+			<ExtendedTooltip name="ИмяSQLСервераExtendedTooltip" id="59"/>
+		</InputField>
+		<InputField name="ИмяБазы" id="53">
+			<DataPath>ИмяБазы</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя базы на MS SQL сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИмяБазыКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="ИмяБазыExtendedTooltip" id="60"/>
+		</InputField>
+		<InputField name="ИмяПользователя" id="27">
+			<DataPath>ИмяПользователяБазыДанных</DataPath>
+			<ContextMenu name="ИмяПользователяКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="ИмяПользователяExtendedTooltip" id="61"/>
+		</InputField>
+		<InputField name="Пароль" id="29">
+			<DataPath>Пароль</DataPath>
+			<ContextMenu name="ПарольКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ПарольExtendedTooltip" id="62"/>
+		</InputField>
+		<InputField name="ПутьКФайлуMDB" id="23">
+			<DataPath>ФайлMDB</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл базы данных</v8:content>
+				</v8:item>
+			</Title>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ПутьКФайлуMDBКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ПутьКФайлуMDBExtendedTooltip" id="63"/>
+			<Events>
+				<Event name="StartChoice">ПутьКФайлуMDBНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="КаталогСервера" id="3">
+			<DataPath>КаталогСервера</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к каталогу DOCBASE</v8:content>
+				</v8:item>
+			</Title>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КаталогСервераКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="КаталогСервераExtendedTooltip" id="64"/>
+			<Events>
+				<Event name="StartChoice">DocbaseНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="Группа2" id="37">
+			<Visible>false</Visible>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="65"/>
+			<ChildItems>
+				<Button name="ЗагрузитьПользователей" id="16">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.ЗагрузитьПользователей</CommandName>
+					<ExtendedTooltip name="ЗагрузитьПользователейExtendedTooltip" id="66"/>
+				</Button>
+				<Button name="ЗагрузитьВходящиеДокументы" id="17">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.ЗагрузитьВходящиеДокументы</CommandName>
+					<ExtendedTooltip name="ЗагрузитьВходящиеДокументыExtendedTooltip" id="67"/>
+				</Button>
+				<Button name="ЗагрузитьИсходящиеДокументы" id="22">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.ЗагрузитьИсходящиеДокументы</CommandName>
+					<ExtendedTooltip name="ЗагрузитьИсходящиеДокументыExtendedTooltip" id="68"/>
+				</Button>
+				<Button name="ЗагрузкаПапок" id="19">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.ЗагрузкаПапок</CommandName>
+					<ExtendedTooltip name="ЗагрузкаПапокExtendedTooltip" id="69"/>
+				</Button>
+				<Button name="ЗагрузкаФайлы" id="20">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.ЗагрузкаФайлы</CommandName>
+					<ExtendedTooltip name="ЗагрузкаФайлыExtendedTooltip" id="70"/>
+				</Button>
+				<Button name="ЗагрузитьПодверсии" id="18">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.ЗагрузитьПодверсии</CommandName>
+					<ExtendedTooltip name="ЗагрузитьПодверсииExtendedTooltip" id="71"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ДляВходящихДокументов" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для входящих документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для входящих документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ДляВходящихДокументовExtendedTooltip" id="73"/>
+			<ChildItems>
+				<InputField name="ГрифВходящих" id="44">
+					<DataPath>ГрифВходящих</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гриф доступа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ГрифВходящихКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ГрифВходящихExtendedTooltip" id="74"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ДляИсходящихДокументов" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для исходящих документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для исходящих документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ДляИсходящихДокументовExtendedTooltip" id="75"/>
+			<ChildItems>
+				<InputField name="ГрифИсходящих" id="49">
+					<DataPath>ГрифИсходящих</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гриф доступа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ГрифИсходящихКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ГрифИсходящихExtendedTooltip" id="76"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузкаДанныхИз1САрхива30</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ФорматБазыДанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат базы данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогСервера" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="АдресСоответсвиеИдентификатораПользователяСсылке" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес соответсвие идентификатора пользователя ссылке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСоответствиеИдентификатораДокументаСcылке" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес соответствие идентификатора документа сcылке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСоответсвиеИдентификатораПапкиСсылке" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес соответсвие идентификатора папки ссылке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСоответствиеИдентификатораВерсииФайлаСcылке" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес соответствие идентификатора версии файла сcылке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлMDB" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл MDB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяПользователяБазыДанных" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя пользователя базы данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Пароль" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСоответствиеИдентификатораФайлаСcылке" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес соответствие идентификатора файла сcылке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГрифВходящих" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гриф входящих</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГрифыДоступа</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьГрифыДоступа</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ГрифИсходящих" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гриф исходящих</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГрифыДоступа</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьГрифыДоступа</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИмяSQLСервера" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя SQLСервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяБазы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя базы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ошибки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьПользователей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПользователей</Action>
+		</Command>
+		<Command name="ЗагрузитьВходящиеДокументы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить входящие документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить входящие документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьВходящиеДокументы</Action>
+		</Command>
+		<Command name="ЗагрузитьИсходящиеДокументы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить исходящие документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить исходящие документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИсходящиеДокументы</Action>
+		</Command>
+		<Command name="ЗагрузитьПодверсии" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить подверсии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить подверсии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПодверсии</Action>
+		</Command>
+		<Command name="ЗагрузкаФайлы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьФайлы</Action>
+		</Command>
+		<Command name="ЗагрузкаПапок" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка папок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка папок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПапки</Action>
+		</Command>
+		<Command name="ЗагрузитьДанные" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьДанные</Action>
+		</Command>
+	</Commands>
+</Form>

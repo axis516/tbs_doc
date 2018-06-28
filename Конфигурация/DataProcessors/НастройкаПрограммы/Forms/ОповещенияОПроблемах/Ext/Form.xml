@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка оповещений о проблемах</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="ОсновнаяКоманднаяПанель" id="830">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ОсновнаяКоманднаяПанельРасширеннаяПодсказка" id="831"/>
+			<ChildItems>
+				<Button name="КомандаЗаписатьИЗакрыть" id="816">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+					<TextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="КомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="817"/>
+				</Button>
+				<Button name="Отмена" id="20">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<TextColor>style:ОтметкаОтрицательногоВыполненияЗадачи</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="712"/>
+				</Button>
+				<Button name="Справка" id="21">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="713"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="СписокОповещенияЗаголовокИКоманды" id="714">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список оповещения заголовок и команды</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокОповещенияЗаголовокИКомандыРасширеннаяПодсказка" id="715"/>
+			<ChildItems>
+				<LabelDecoration name="СписокОповещенияЗаголовок" id="718">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кого оповещать о проблемах в работе программы и мобильных клиентов:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СписокОповещенияЗаголовокКонтекстноеМеню" id="719"/>
+					<ExtendedTooltip name="СписокОповещенияЗаголовокРасширеннаяПодсказка" id="720"/>
+				</LabelDecoration>
+				<CommandBar name="Группа6" id="716">
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="717"/>
+					<ChildItems>
+						<Button name="СписокОповещенияДобавить" id="395">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.СписокОповещения.StandardCommand.Add</CommandName>
+							<ExtendedTooltip name="СписокОповещенияДобавитьExtendedTooltip" id="676"/>
+						</Button>
+						<Button name="СписокОповещенияИзменить" id="396">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.СписокОповещения.StandardCommand.Change</CommandName>
+							<ExtendedTooltip name="СписокОповещенияИзменитьExtendedTooltip" id="677"/>
+						</Button>
+						<Button name="СписокОповещенияУдалить" id="397">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.СписокОповещения.StandardCommand.Delete</CommandName>
+							<ExtendedTooltip name="СписокОповещенияУдалитьExtendedTooltip" id="678"/>
+						</Button>
+						<Button name="СписокОповещенияПодбор" id="398">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.СписокОповещения.StandardCommand.Pickup</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подобрать</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СписокОповещенияПодборExtendedTooltip" id="679"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокОповещения" id="386">
+			<Representation>List</Representation>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>СписокОповещения</DataPath>
+			<RowPictureDataPath>СписокОповещения.Picture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="СписокОповещенияКонтекстноеМеню" id="387">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокОповещенияКонтекстноеМенюДобавить" id="391">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокОповещения.StandardCommand.Add</CommandName>
+						<ExtendedTooltip name="СписокОповещенияКонтекстноеМенюДобавитьExtendedTooltip" id="672"/>
+					</Button>
+					<Button name="СписокОповещенияКонтекстноеМенюИзменить" id="392">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокОповещения.StandardCommand.Change</CommandName>
+						<ExtendedTooltip name="СписокОповещенияКонтекстноеМенюИзменитьExtendedTooltip" id="673"/>
+					</Button>
+					<Button name="СписокОповещенияКонтекстноеМенюУдалить" id="393">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокОповещения.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="СписокОповещенияКонтекстноеМенюУдалитьExtendedTooltip" id="674"/>
+					</Button>
+					<Button name="СписокОповещенияКонтекстноеМенюПодбор" id="394">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокОповещения.StandardCommand.Pickup</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подобрать</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СписокОповещенияКонтекстноеМенюПодборExtendedTooltip" id="675"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокОповещенияКоманднаяПанель" id="388">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокОповещенияExtendedTooltip" id="680"/>
+			<SearchStringAddition name="СписокОповещенияСтрокаПоиска" id="821">
+				<AdditionSource>
+					<Item>СписокОповещения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокОповещенияСтрокаПоискаКонтекстноеМеню" id="822"/>
+				<ExtendedTooltip name="СписокОповещенияСтрокаПоискаРасширеннаяПодсказка" id="823"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокОповещенияСостояниеПросмотра" id="824">
+				<AdditionSource>
+					<Item>СписокОповещения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокОповещенияСостояниеПросмотраКонтекстноеМеню" id="825"/>
+				<ExtendedTooltip name="СписокОповещенияСостояниеПросмотраРасширеннаяПодсказка" id="826"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокОповещенияУправлениеПоиском" id="827">
+				<AdditionSource>
+					<Item>СписокОповещения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокОповещенияУправлениеПоискомКонтекстноеМеню" id="828"/>
+				<ExtendedTooltip name="СписокОповещенияУправлениеПоискомРасширеннаяПодсказка" id="829"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="СписокОповещенияЗначение" id="399">
+					<DataPath>СписокОповещения.Value</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокОповещенияЗначениеКонтекстноеМеню" id="400"/>
+					<ExtendedTooltip name="СписокОповещенияЗначениеExtendedTooltip" id="681"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.ФактическийИсполнительЗадач.Ref</Field>
+				<Field>НаборКонстант.УдалятьНеактивныеВерсии</Field>
+				<Field>НаборКонстант.УдалитьТипХраненияФайлов.Ref</Field>
+				<Field>НаборКонстант.УдалитьТипХраненияФайлов</Field>
+				<Field>НаборКонстант.УдалитьКонтекстКриптографии.Ref</Field>
+				<Field>НаборКонстант.УдалитьКонтекстАвторизации.Ref</Field>
+				<Field>НаборКонстант.ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсий.Ref</Field>
+				<Field>НаборКонстант.СрокХраненияПротоколовВыполненияЗадачПоПочте</Field>
+				<Field>НаборКонстант.СписокЗапрещенныхРасширений</Field>
+				<Field>НаборКонстант.ПутьСохраненияУдаляемыхВерсийWindows</Field>
+				<Field>НаборКонстант.ПутьСохраненияУдаляемыхВерсийLinux</Field>
+				<Field>НаборКонстант.ПроверятьЭлектронныеПодписиНаСервере</Field>
+				<Field>НаборКонстант.ПровайдерSMS.Ref</Field>
+				<Field>НаборКонстант.ПрефиксУзлаРаспределеннойИнформационнойБазы</Field>
+				<Field>НаборКонстант.ПрефиксИБвШтрихкоде</Field>
+				<Field>НаборКонстант.ОсновнойГрафикРаботы</Field>
+				<Field>НаборКонстант.ОсновнаяЕдиницаТрудозатрат.Ref</Field>
+				<Field>НаборКонстант.ОсновнаяЕдиницаДлительности.Ref</Field>
+				<Field>НаборКонстант.ОграничиватьДоступностьПолейПоСостоянию</Field>
+				<Field>НаборКонстант.ОграничиватьДоступНаУровнеЗаписей</Field>
+				<Field>НаборКонстант.МаксимальныйРазмерФайла</Field>
+				<Field>НаборКонстант.МаксимальныйРазмерВложенийВУведомленииНовойЗадачи</Field>
+				<Field>НаборКонстант.КаталогСохраненияКопииПротоколаРаботыПользователейWindows</Field>
+				<Field>НаборКонстант.КаталогСохраненияКопииПротоколаРаботыПользователейLinux</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляWindows</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляLinux</Field>
+				<Field>НаборКонстант.ИспользоватьЭлектронныеПодписи</Field>
+				<Field>НаборКонстант.ИспользоватьУчетДоступаКПерсональнымДанным</Field>
+				<Field>НаборКонстант.ИспользоватьСпискиРассылкиПоКонтрагентам</Field>
+				<Field>НаборКонстант.ИспользоватьСостоянияДокументов</Field>
+				<Field>НаборКонстант.ИспользоватьСинхронизациюДанных</Field>
+				<Field>НаборКонстант.ИспользоватьРаспознавание</Field>
+				<Field>НаборКонстант.ИспользоватьПриглашениеНаМероприятие</Field>
+				<Field>НаборКонстант.ИспользоватьПолнотекстовыйПоиск</Field>
+				<Field>НаборКонстант.ИспользоватьПовторениеБизнесПроцессов</Field>
+				<Field>НаборКонстант.ИспользоватьОтложеннуюОтправкуЭлектронныхДокументов</Field>
+				<Field>НаборКонстант.ИспользоватьОбщиеДополнительныеРеквизитыИСведения</Field>
+				<Field>НаборКонстант.ИспользоватьОбщиеДополнительныеЗначения</Field>
+				<Field>НаборКонстант.ИспользоватьОбменЭД</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеРеквизитыИСведения</Field>
+				<Field>НаборКонстант.ИспользоватьДатуНачалаЗадач</Field>
+				<Field>НаборКонстант.ИспользоватьДатуИВремяВСрокахЗадач</Field>
+				<Field>НаборКонстант.ИспользоватьГруппыПользователей</Field>
+				<Field>НаборКонстант.ИспользоватьГрифыДоступа</Field>
+				<Field>НаборКонстант.ИспользоватьГрафикиРаботы</Field>
+				<Field>НаборКонстант.ИспользоватьВнутреннююМаршрутизацию</Field>
+				<Field>НаборКонстант.ИспользоватьВнешнихПользователей</Field>
+				<Field>НаборКонстант.ИспользоватьВерсионированиеОбъектов</Field>
+				<Field>НаборКонстант.ИспользоватьБизнесСобытия</Field>
+				<Field>НаборКонстант.ИспользоватьБизнесПроцессыИЗадачи</Field>
+				<Field>НаборКонстант.ИзменятьЗаданияЗаднимЧислом</Field>
+				<Field>НаборКонстант.ИзвлекатьТекстыФайловНаСервере</Field>
+				<Field>НаборКонстант.ЗапрещатьЗагрузкуФайловПоРасширению</Field>
+				<Field>НаборКонстант.ЗаголовокСистемы</Field>
+				<Field>НаборКонстант.ДатаОбновленияПовторноИспользуемыхЗначенийМРО</Field>
+				<Field>НаборКонстант.ВидЦитированияПриОтветеВФорматеHTML.Ref</Field>
+				<Field>НаборКонстант.ВариантИспользованияPushУведомлений.Ref</Field>
+				<Field>НаборКонстант.АдресатыПолученияОтчетаПоЖурналуРегистрации</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ЭтоФайловаяБаза" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это файловая база</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическиОчищатьУстаревшиеHTMLПредставленияСодержанияПисем" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически очищать устаревшие HTML представления содержания писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокОповещения" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список оповещения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаписатьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

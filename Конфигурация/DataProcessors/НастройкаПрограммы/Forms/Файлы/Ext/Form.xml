@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка работы с файлами</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="ОсновнаяКоманднаяПанель" id="1">
+			<ExtendedTooltip name="ОсновнаяКоманднаяПанельExtendedTooltip" id="485"/>
+			<ChildItems>
+				<Button name="КомандаЗаписатьИЗакрыть" id="513">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+					<ExtendedTooltip name="КомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="514"/>
+				</Button>
+				<Button name="Отмена" id="20">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="487"/>
+				</Button>
+				<Button name="Справка" id="21">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="488"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаРаботаСФайлами" id="92">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа работа с файлами</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРаботаСФайламиExtendedTooltip" id="435"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРазмер" id="133">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа размер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>DontUse</ThroughAlign>
+					<ExtendedTooltip name="ГруппаРазмерExtendedTooltip" id="436"/>
+					<ChildItems>
+						<InputField name="МаксимальныйРазмерФайла" id="2">
+							<DataPath>МаксимальныйРазмерФайла</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Максимальный размер файла</v8:content>
+								</v8:item>
+							</Title>
+							<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+							<Width>8</Width>
+							<Wrap>false</Wrap>
+							<SpinButton>true</SpinButton>
+							<BorderColor>style:BorderColor</BorderColor>
+							<ContextMenu name="МаксимальныйРазмерФайлаКонтекстноеМеню" id="3"/>
+							<ExtendedTooltip name="МаксимальныйРазмерФайлаExtendedTooltip" id="437"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияМб" id="134">
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>(Мб)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияМбКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="ДекорацияМбExtendedTooltip" id="438"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТипХранения" id="286">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа тип хранения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТипХраненияExtendedTooltip" id="439"/>
+					<ChildItems>
+						<CheckBoxField name="ХранитьФайлыВТомахНаДиске" id="293">
+							<DataPath>НаборКонстант.ХранитьФайлыВТомахНаДиске</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ХранитьФайлыВТомахНаДискеКонтекстноеМеню" id="294"/>
+							<ExtendedTooltip name="ХранитьФайлыВТомахНаДискеExtendedTooltip" id="440"/>
+							<Events>
+								<Event name="OnChange">ХранитьФайлыВТомахНаДискеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<Button name="ОткрытьТомаХраненияФайлов" id="287">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьТомаХраненияФайлов</CommandName>
+							<ExtendedTooltip name="ОткрытьТомаХраненияФайловExtendedTooltip" id="441"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ИзвлекатьТекстыФайловНаСервере" id="6">
+					<DataPath>НаборКонстант.ИзвлекатьТекстыФайловНаСервере</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Извлекать тексты только на сервере</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИзвлекатьТекстыФайловНаСервереКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ИзвлекатьТекстыФайловНаСервереExtendedTooltip" id="442"/>
+				</CheckBoxField>
+				<InputField name="СписокРасширенийФайловOpenDocument" id="295">
+					<DataPath>НаборКонстант.СписокРасширенийФайловOpenDocument</DataPath>
+					<ContextMenu name="СписокРасширенийФайловOpenDocumentКонтекстноеМеню" id="296"/>
+					<ExtendedTooltip name="СписокРасширенийФайловOpenDocumentExtendedTooltip" id="443"/>
+				</InputField>
+				<InputField name="СписокРасширенийТекстовыхФайлов" id="299">
+					<DataPath>НаборКонстант.СписокРасширенийТекстовыхФайлов</DataPath>
+					<ContextMenu name="СписокРасширенийТекстовыхФайловКонтекстноеМеню" id="300"/>
+					<ExtendedTooltip name="СписокРасширенийТекстовыхФайловExtendedTooltip" id="444"/>
+				</InputField>
+				<CheckBoxField name="ИспользоватьАвтозаполнениеФайлов" id="168">
+					<DataPath>НаборКонстант.ИспользоватьАвтозаполнениеФайлов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать автозаполнение шаблонов файлов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьАвтозаполнениеФайловКонтекстноеМеню" id="169"/>
+					<ExtendedTooltip name="ИспользоватьАвтозаполнениеФайловExtendedTooltip" id="445"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВставкаШКвMSWordНаСервере" id="183">
+					<DataPath>НаборКонстант.ИзменениеФайловMSWordТолькоНаСервере</DataPath>
+					<Visible>false</Visible>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВставкаШКвMSWordНаСервереКонтекстноеМеню" id="184"/>
+					<ExtendedTooltip name="ВставкаШКвMSWordНаСервереExtendedTooltip" id="446"/>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаРасширение" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расширение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасширениеExtendedTooltip" id="447"/>
+					<ChildItems>
+						<CheckBoxField name="ЗапретЗагрузкиФайловПоРасширению" id="128">
+							<DataPath>НаборКонстант.ЗапрещатьЗагрузкуФайловПоРасширению</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запретить загрузку файлов с расширением:</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗапретЗагрузкиФайловПоРасширениюКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ЗапретЗагрузкиФайловПоРасширениюExtendedTooltip" id="448"/>
+							<Events>
+								<Event name="OnChange">ЗапретЗагрузкиФайловПоРасширениюПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СписокЗапрещенныхРасширений" id="130">
+							<DataPath>НаборКонстант.СписокЗапрещенныхРасширений</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СписокЗапрещенныхРасширенийКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="СписокЗапрещенныхРасширенийExtendedTooltip" id="449"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="НастройкаАвтоматическойЗагрузкиФайлов" id="212">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.НастройкаАвтоматическойЗагрузкиФайлов</CommandName>
+					<ExtendedTooltip name="НастройкаАвтоматическойЗагрузкиФайловExtendedTooltip" id="450"/>
+				</Button>
+				<UsualGroup name="ГруппаРаспознавание" id="164">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа распознавание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРаспознаваниеExtendedTooltip" id="451"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьРаспознавание" id="143">
+							<DataPath>НаборКонстант.ИспользоватьРаспознавание</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Распознавание изображений с помощью CuneiForm (подробнее см. в справке)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьРаспознаваниеКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="ИспользоватьРаспознаваниеExtendedTooltip" id="452"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьРаспознаваниеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<Button name="НастройкиРаспознавания" id="165">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.НастройкиРаспознавания</CommandName>
+							<ExtendedTooltip name="НастройкиРаспознаванияExtendedTooltip" id="453"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ИспользоватьХранилищеФайлов" id="80">
+					<DataPath>НаборКонстант.ИспользоватьХранилищеФайлов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать папки файлов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьХранилищеФайловКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ИспользоватьХранилищеФайловExtendedTooltip" id="470"/>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаНеактивныеВерсии" id="282">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очистка устаревших версий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очистка устаревших версий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаНеактивныеВерсииExtendedTooltip" id="454"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОчистки" id="304">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа очистки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОчисткиExtendedTooltip" id="455"/>
+							<ChildItems>
+								<CheckBoxField name="УдалятьНеактивныеВерсии" id="267">
+									<DataPath>НаборКонстант.УдалятьНеактивныеВерсии</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автоматически очищать устаревшие версии файлов</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УдалятьНеактивныеВерсииКонтекстноеМеню" id="268"/>
+									<ExtendedTooltip name="УдалятьНеактивныеВерсииExtendedTooltip" id="456"/>
+									<Events>
+										<Event name="OnChange">УдалятьНеактивныеВерсииПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<Button name="ОчиститьСейчас" id="303">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОчиститьСейчас</CommandName>
+									<ExtendedTooltip name="ОчиститьСейчасExtendedTooltip" id="457"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастроекОчистки" id="321">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настроек очистки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастроекОчисткиExtendedTooltip" id="458"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСрокХраненияВерсий" id="279">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа срок хранения версий</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСрокХраненияВерсийExtendedTooltip" id="459"/>
+									<ChildItems>
+										<InputField name="СрокХраненияНеактивныхВерсий" id="269">
+											<DataPath>НаборКонстант.СрокХраненияНеактивныхВерсий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Срок устаревания неактивных версий</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СрокХраненияНеактивныхВерсийКонтекстноеМеню" id="270"/>
+											<ExtendedTooltip name="СрокХраненияНеактивныхВерсийExtendedTooltip" id="460"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияДнейХранения" id="280">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>дней</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияДнейХраненияКонтекстноеМеню" id="281"/>
+											<ExtendedTooltip name="ДекорацияДнейХраненияExtendedTooltip" id="461"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ПутьСохраненияУдаляемыхВерсий" id="271">
+									<DataPath>ПутьСохраненияУдаляемыхВерсий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещать устаревшие версии файлов в каталог (путь в формате UNC, например \\server\path)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ChoiceButton>true</ChoiceButton>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ПутьСохраненияУдаляемыхВерсийКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ПутьСохраненияУдаляемыхВерсийExtendedTooltip" id="463"/>
+									<Events>
+										<Event name="StartChoice">ПутьСохраненияУдаляемыхВерсийНачалоВыбора</Event>
+										<Event name="Clearing">ПутьСохраненияУдаляемыхВерсийОчистка</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ОчищатьДанныеДляПолнотекстовогоПоиска" id="307">
+									<DataPath>НаборКонстант.ОчищатьДанныеДляПолнотекстовогоПоиска</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОчищатьДанныеДляПолнотекстовогоПоискаКонтекстноеМеню" id="308"/>
+									<ExtendedTooltip name="ОчищатьДанныеДляПолнотекстовогоПоискаExtendedTooltip" id="462"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаОповещениеОВыполненииОчистки" id="288">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оповещение о выполнении очистки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оповещение о выполнении очистки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<ExtendedTooltip name="ГруппаОповещениеОВыполненииОчисткиExtendedTooltip" id="464"/>
+									<ChildItems>
+										<InputField name="ОтветственныйЗаУдалениеНеактивныхВерсий" id="273">
+											<DataPath>НаборКонстант.ОтветственныйЗаУдалениеНеактивныхВерсий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кого оповещать</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ОтветственныйЗаУдалениеНеактивныхВерсийКонтекстноеМеню" id="274"/>
+											<ExtendedTooltip name="ОтветственныйЗаУдалениеНеактивныхВерсийExtendedTooltip" id="465"/>
+										</InputField>
+										<InputField name="ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсий" id="275">
+											<DataPath>НаборКонстант.ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Как оповещать</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсийКонтекстноеМеню" id="276"/>
+											<ExtendedTooltip name="ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсийExtendedTooltip" id="466"/>
+											<Events>
+												<Event name="OnChange">ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсийПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПапкаДляХраненияОтчетовОбУдалении" id="277">
+											<DataPath>НаборКонстант.ПапкаДляХраненияОтчетовОбУдалении</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Папка для отчета</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В этой папке будет сохранен отчет о результатах очистки устаревших версий в формате HTML.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ContextMenu name="ПапкаДляХраненияОтчетовОбУдаленииКонтекстноеМеню" id="278"/>
+											<ExtendedTooltip name="ПапкаДляХраненияОтчетовОбУдаленииExtendedTooltip" id="468"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.ФактическийИсполнительЗадач.Ref</Field>
+				<Field>НаборКонстант.УдалитьТипХраненияФайлов.Ref</Field>
+				<Field>НаборКонстант.УдалитьКонтекстКриптографии.Ref</Field>
+				<Field>НаборКонстант.УдалитьКонтекстАвторизации.Ref</Field>
+				<Field>НаборКонстант.ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсий.Ref</Field>
+				<Field>НаборКонстант.ПутьСохраненияУдаляемыхВерсийWindows</Field>
+				<Field>НаборКонстант.ПутьСохраненияУдаляемыхВерсийLinux</Field>
+				<Field>НаборКонстант.ПровайдерSMS.Ref</Field>
+				<Field>НаборКонстант.ОсновнаяЕдиницаТрудозатрат.Ref</Field>
+				<Field>НаборКонстант.ОсновнаяЕдиницаДлительности.Ref</Field>
+				<Field>НаборКонстант.ВидЦитированияПриОтветеВФорматеHTML.Ref</Field>
+				<Field>НаборКонстант.ВариантИспользованияPushУведомлений.Ref</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="МаксимальныйРазмерФайла" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальный размер файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ХранениеВТомахНаДискеВключено" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранение в томах на диске включено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьРаспознаваниеВключено" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать распознавание включено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранитьФайлыВТомахНаДискеНачальноеЗначение" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранить файлы в томах на диске начальное значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьСохраненияУдаляемыхВерсий" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь сохранения удаляемых версий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастройкиРаспознавания" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки распознавания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки распознавания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиРаспознавания</Action>
+		</Command>
+		<Command name="НастройкаАвтоматическойЗагрузкиФайлов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка автоматической загрузки файлов...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкаАвтоматическойЗагрузкиФайлов</Action>
+		</Command>
+		<Command name="ОткрытьТомаХраненияФайлов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тома хранения файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть тома хранения файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьТомаХраненияФайлов</Action>
+		</Command>
+		<Command name="ОчиститьСейчас" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить сейчас...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОчиститьСейчас</Action>
+		</Command>
+		<Command name="КомандаЗаписатьИЗакрыть" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

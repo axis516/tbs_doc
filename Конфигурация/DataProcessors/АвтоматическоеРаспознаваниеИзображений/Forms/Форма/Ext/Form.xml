@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>60</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаУстановкиКомпоненты" id="13">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа установки компоненты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установка компоненты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУстановкиКомпонентыExtendedTooltip" id="34"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИнформация" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа информация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа информация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнформацияExtendedTooltip" id="35"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияКартинка" id="14">
+							<Width>4</Width>
+							<Height>2</Height>
+							<Picture>
+								<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияКартинкаКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ДекорацияКартинкаExtendedTooltip" id="36"/>
+						</PictureDecoration>
+						<LabelDecoration name="ДекорацияТекст" id="17">
+							<Height>2</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для распознавания изображений необходимо установить компоненту загрузки Cunei Form</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияТекстКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ДекорацияТекстExtendedTooltip" id="37"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="УстановитьКомпонентуЗагрузкиКартинок" id="12">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.УстановитьКомпонентуЗагрузкиИзображений</CommandName>
+					<ExtendedTooltip name="УстановитьКомпонентуЗагрузкиКартинокExtendedTooltip" id="38"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИнтервалВремени" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа интервал времени</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал времени</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнтервалВремениExtendedTooltip" id="39"/>
+			<ChildItems>
+				<InputField name="ИнтервалВремениВыполнения" id="1">
+					<DataPath>ИнтервалВремениВыполнения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интервал времени выполнения</v8:content>
+						</v8:item>
+					</Title>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ИнтервалВремениВыполненияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИнтервалВремениВыполненияExtendedTooltip" id="40"/>
+					<Events>
+						<Event name="OnChange">ИнтервалВремениВыполненияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ДекорацияСек" id="9">
+					<SkipOnInput>false</SkipOnInput>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>(сек)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияСекКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДекорацияСекExtendedTooltip" id="41"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КоличествоФайловВПорции" id="25">
+			<DataPath>КоличествоФайловВПорции</DataPath>
+			<ContextMenu name="КоличествоФайловВПорцииКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="КоличествоФайловВПорцииExtendedTooltip" id="42"/>
+			<Events>
+				<Event name="OnChange">КоличествоФайловВПорцииПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="КоличествоФайловСНеизвлеченнымТекстом" id="23">
+			<DataPath>КоличествоНераспознанныхФайлов</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="КоличествоФайловСНеизвлеченнымТекстомКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="КоличествоФайловСНеизвлеченнымТекстомExtendedTooltip" id="43"/>
+		</InputField>
+		<UsualGroup name="ГруппаСтатуса" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа статуса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтатусаExtendedTooltip" id="44"/>
+			<ChildItems>
+				<LabelField name="Статус" id="4">
+					<DataPath>Статус</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Height>1</Height>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СтатусExtendedTooltip" id="45"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастроекImageMagick" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек image magick</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки image magick</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастроекImageMagickExtendedTooltip" id="46"/>
+			<ChildItems>
+				<LabelField name="ИнформационнаяНадпись" id="20">
+					<DataPath>ИнформационнаяНадпись</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<VerticalAlign>Bottom</VerticalAlign>
+					<Height>3</Height>
+					<ContextMenu name="ИнформационнаяНадписьКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ИнформационнаяНадписьExtendedTooltip" id="47"/>
+				</LabelField>
+				<Button name="ОткрытьПерсональныеНастройки" id="22">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьПерсональныеНастройки</CommandName>
+					<ExtendedTooltip name="ОткрытьПерсональныеНастройкиExtendedTooltip" id="48"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКомПанели" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ком панели</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ком панели</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Horizontal</Group>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомПанелиРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<UsualGroup name="КоманднаяПанель" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<Button name="ФормаСтарт" id="27">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Старт</CommandName>
+							<ExtendedTooltip name="ФормаСтартExtendedTooltip" id="30"/>
+						</Button>
+						<Button name="ФормаСтоп" id="28">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Стоп</CommandName>
+							<ExtendedTooltip name="ФормаСтопExtendedTooltip" id="31"/>
+						</Button>
+						<Button name="ФормаИзвлечьВсе" id="29">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.РаспознатьВсе</CommandName>
+							<ExtendedTooltip name="ФормаИзвлечьВсеExtendedTooltip" id="32"/>
+						</Button>
+						<Button name="Закрыть" id="3">
+							<Type>UsualButton</Type>
+							<Representation>Text</Representation>
+							<DefaultButton>true</DefaultButton>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.Close</CommandName>
+							<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="33"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСправка" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСправкаРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<Button name="Справка" id="54">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<Width>3</Width>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="55"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.АвтоматическоеРаспознаваниеИзображений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИнтервалВремениВыполнения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал времени выполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>7</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Статус" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрогнозируемоеВремяНачалаРаспознавания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прогнозируемое время начала распознавания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресПриложенияЗапускаCuneiForm" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес приложения запуска cunei form</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКПрограммеКонвертацииPDF" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к программе конвертации PDF</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформационнаяНадпись" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная надпись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьImageMagickДляРаспознаванияPDF" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать image magick для распознавания PDF</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоФайловВПорции" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество файлов в одной порции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>7</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоНераспознанныхФайлов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество нераспознанных файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>7</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачатоРаспознавание" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начато распознавание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьКомпонентуЗагрузкиИзображений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить компоненту загрузки изображений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить компоненту загрузки изображений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьКомпонентуЗагрузкиИзображений</Action>
+		</Command>
+		<Command name="ОткрытьПерсональныеНастройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть персональные настройки...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть персональные настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПерсональныеНастройки</Action>
+		</Command>
+		<Command name="РаспознатьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распознать все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распознать все нераспознанные файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаспознатьВсе</Action>
+		</Command>
+		<Command name="Старт" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Старт</Action>
+		</Command>
+		<Command name="Стоп" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоп</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоп</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Стоп</Action>
+		</Command>
+	</Commands>
+</Form>

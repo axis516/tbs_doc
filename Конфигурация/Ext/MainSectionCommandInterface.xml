@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<CommandsVisibility>
+		<Command name="Catalog.АдреснаяКнига.Command.АдреснаяКнига">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиМне">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.АдминистраторСистемы">false</xr:Value>
+				<xr:Value name="Role.Администрирование">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиОтдела">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.РаботаСЗадачамиСотрудниковПодразделения">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиПроектов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.МоиДокументы.Command.МоиДокументы">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеВходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.РаботаСВнутреннимиДокументами">true</xr:Value>
+				<xr:Value name="Role.ЧтениеВходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ЧтениеИсходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.РегистрацияИсходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ЕжедневныйОтчет.Command.ОткрытьСвоиОтчеты">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеЕжедневныхОтчетов">true</xr:Value>
+				<xr:Value name="Role.ЧтениеЕжедневныхОтчетов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.КонтрольныеТочки.Command.МоиКонтрольныеТочки">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Мероприятия.Command.МоиМероприятия">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.МоиПроцессы">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ЗаписиРабочегоКалендаря.Command.ОткрытьКалендарь">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПоказателиПроцессов.Command.МониторингПроцессов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Контроль.Command.НаКонтроле">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.НастройкаПрограммы.Command.НастройкаПрограммы">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.АдминистрированиеСистемы.Command.АдминистрированиеСистемы">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ЭлектроннаяПочта">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ЗаметкиДокументооборота.Command.Заметки">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ГруппыДоступа.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.Бронь.Command.Бронирование">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.АдминистраторСистемы">false</xr:Value>
+				<xr:Value name="Role.Администрирование">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВнутренниеДокументы.Command.СписокВнутреннихДокументов">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.РаботаСВнутреннимиДокументами">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВходящиеДокументы.Command.СписокВходящихДокументов">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеВходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ЧтениеВходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ИсходящиеДокументы.Command.СписокИсходящихДокументов">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ЧтениеИсходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ДобавлениеИзменениеИсходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.РегистрацияИсходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ЕжедневныйОтчет.Command.ОткрытьОтчетыПодчиненных">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ЧтениеЕжедневныхОтчетовСотрудниковПодразделения">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.ЖурналПередачиДокументов.Command.ОткрытьФормуСписка">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеВЖурналПередачиДокументов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиОтМеня">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.Администрирование">false</xr:Value>
+				<xr:Value name="Role.АдминистраторСистемы">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.КатегорииДанных.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.АдминистраторСистемы">false</xr:Value>
+				<xr:Value name="Role.Администрирование">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВходящиеДокументы.Command.ОткрытьОбращенияГраждан">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеВходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ЧтениеВходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.Отсутствие.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ПротоколРаботыОбщая">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.СтруктураПредприятия.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="0:192c9bf3-da64-4ca8-a802-26d2d1a53725">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Файлы.Command.ПапкиФайлов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.РаботаСПапкамиФайлов">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ТемыОбсуждений.Command.ОткрытьФормуПросмотраОбсуждений">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВнутренниеДокументы.Command.СоздатьВнутреннийДокумент">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.РаботаСВнутреннимиДокументами">true</xr:Value>
+				<xr:Value name="Role.РегистрацияВнутреннихДокументов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ВходящиеДокументы.Command.СоздатьВходящийДокумент">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеВходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ИсходящиеДокументы.Command.СоздатьИсходящийДокумент">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеИсходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.РегистрацияИсходящихДокументов">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ЗаписиРабочегоКалендаря.Command.СоздатьЗаписьКалендаря">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Мероприятия.Command.СоздатьМероприятие">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.Отсутствие.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.СоздатьПисьмо">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.Администрирование">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.СоздатьБизнесПроцессГлобальная">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.РаботаСЗадачамиИБизнесПроцессами">true</xr:Value>
+				<xr:Value name="Role.БазовыеПраваДокументооборот">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПоискПоРеквизитам.Command.ПоискДокументовИФайлов">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПоискПисемПоРеквизитам.Command.ПоискПисем">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.ПолнотекстовыйПоискВДанных.Command.ПолнотекстовыйПоиск">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.УстановкаТиповойМетодикиДокументооборота.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаВидеоматериалы">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаГруппаFacebook">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаГруппаВКонтакте">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.Обозреватель.Command.НаписатьОтзыв">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаСайт">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаОписаниеИзменений">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Catalog.АдреснаяКнига.Command.АдреснаяКнига">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиМне">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиОтдела">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиПроектов">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="InformationRegister.МоиДокументы.Command.МоиДокументы">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ЕжедневныйОтчет.Command.ОткрытьСвоиОтчеты">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.КонтрольныеТочки.Command.МоиКонтрольныеТочки">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Мероприятия.Command.МоиМероприятия">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.МоиПроцессы">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ЗаписиРабочегоКалендаря.Command.ОткрытьКалендарь">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ПоказателиПроцессов.Command.МониторингПроцессов">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Контроль.Command.НаКонтроле">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.НастройкаПрограммы.Command.НастройкаПрограммы">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.АдминистрированиеСистемы.Command.АдминистрированиеСистемы">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ЭлектроннаяПочта">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ЗаметкиДокументооборота.Command.Заметки">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ГруппыДоступа.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.Бронь.Command.Бронирование">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ВнутренниеДокументы.Command.СписокВнутреннихДокументов">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ВходящиеДокументы.Command.СписокВходящихДокументов">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ИсходящиеДокументы.Command.СписокИсходящихДокументов">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ЕжедневныйОтчет.Command.ОткрытьОтчетыПодчиненных">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="InformationRegister.ЖурналПередачиДокументов.Command.ОткрытьФормуСписка">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиОтМеня">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.КатегорииДанных.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ВходящиеДокументы.Command.ОткрытьОбращенияГраждан">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.Отсутствие.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ПротоколРаботыОбщая">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.СтруктураПредприятия.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="0:192c9bf3-da64-4ca8-a802-26d2d1a53725">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Файлы.Command.ПапкиФайлов">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ТемыОбсуждений.Command.ОткрытьФормуПросмотраОбсуждений">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ВнутренниеДокументы.Command.СоздатьВнутреннийДокумент">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ВходящиеДокументы.Command.СоздатьВходящийДокумент">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ИсходящиеДокументы.Command.СоздатьИсходящийДокумент">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.ЗаписиРабочегоКалендаря.Command.СоздатьЗаписьКалендаря">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Мероприятия.Command.СоздатьМероприятие">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.Отсутствие.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.СоздатьПисьмо">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.СоздатьБизнесПроцессГлобальная">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.ПоискПоРеквизитам.Command.ПоискДокументовИФайлов">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.ПоискПисемПоРеквизитам.Command.ПоискПисем">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.ПолнотекстовыйПоискВДанных.Command.ПолнотекстовыйПоиск">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.УстановкаТиповойМетодикиДокументооборота.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаВидеоматериалы">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаГруппаFacebook">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаГруппаВКонтакте">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.Обозреватель.Command.НаписатьОтзыв">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаСайт">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаОписаниеИзменений">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Catalog.АдреснаяКнига.Command.АдреснаяКнига">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиМне">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиОтдела">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Task.ЗадачаИсполнителя.Command.ЗадачиПроектов">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.МоиДокументы.Command.МоиДокументы">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Document.ЕжедневныйОтчет.Command.ОткрытьСвоиОтчеты">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.КонтрольныеТочки.Command.МоиКонтрольныеТочки">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.Мероприятия.Command.МоиМероприятия">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.МоиПроцессы">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.ЗаписиРабочегоКалендаря.Command.ОткрытьКалендарь">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.ПоказателиПроцессов.Command.МониторингПроцессов">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.Контроль.Command.НаКонтроле">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.НастройкаПрограммы.Command.НастройкаПрограммы">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.АдминистрированиеСистемы.Command.АдминистрированиеСистемы">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.Пользователи.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ЭлектроннаяПочта">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.ЗаметкиДокументооборота.Command.Заметки">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаВидеоматериалы">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаГруппаFacebook">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаГруппаВКонтакте">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.Обозреватель.Command.НаписатьОтзыв">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаСайт">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ИнформационнаяПоддержкаОписаниеИзменений">
+			<CommandGroup>CommandGroup.ИнформационнаяПоддержка</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelSeeAlso</Group>
+		<Group>CommandGroup.ИнформационнаяПоддержка</Group>
+	</GroupsOrder>
+</CommandInterface>

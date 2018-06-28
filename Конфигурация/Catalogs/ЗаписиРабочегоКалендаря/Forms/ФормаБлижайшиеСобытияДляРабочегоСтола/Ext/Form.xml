@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ближайшие события</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПланДня" id="137">
+			<Representation>Tree</Representation>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<Header>false</Header>
+			<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ПланДня</DataPath>
+			<CommandSet>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="ПланДняКонтекстноеМеню" id="138">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ПланДняКонтекстноеМенюСоздатьСобытиеКалендаря" id="162">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПланДня.StandardCommand.Add</CommandName>
+						<ExtendedTooltip name="ПланДняКонтекстноеМенюСоздатьСобытиеКалендаряExtendedTooltip" id="178"/>
+					</Button>
+					<Button name="ПланДняКонтекстноеМенюСкопироватьЗаписьКалендаря" id="163">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПланДня.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="ПланДняКонтекстноеМенюСкопироватьЗаписьКалендаряExtendedTooltip" id="179"/>
+					</Button>
+					<Button name="ПланДняКонтекстноеМенюУстановитьПометкаУдаления" id="164">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ПланДня.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="ПланДняКонтекстноеМенюУстановитьПометкаУдаленияExtendedTooltip" id="180"/>
+					</Button>
+					<Button name="ПланДняКонтекстноеМенюОтработатьПланДня" id="213">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтработатьПланДня</CommandName>
+						<ExtendedTooltip name="ПланДняКонтекстноеМенюОтработатьПланДняРасширеннаяПодсказка" id="214"/>
+					</Button>
+					<Popup name="ПланДняКонтекстноеМенюГруппаУстановитьЦвет" id="165">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Цвет</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Устанавливает цвет события</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ПланДняКонтекстноеМенюГруппаУстановитьЦветExtendedTooltip" id="181"/>
+						<ChildItems>
+							<ButtonGroup name="ПланДняКонтекстноеМенюГруппаЦвет" id="166">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Календарь контекстное меню группа цвет</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Календарь контекстное меню группа цвет</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ПланДняКонтекстноеМенюГруппаЦветExtendedTooltip" id="182"/>
+								<ChildItems>
+									<Button name="ПланДняКонтекстноеМенюУстановитьЦветКрасный" id="167">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветКрасный</CommandName>
+										<ExtendedTooltip name="ПланДняКонтекстноеМенюУстановитьЦветКрасныйExtendedTooltip" id="183"/>
+									</Button>
+									<Button name="ПланДняКонтекстноеМенюУстановитьЦветСиний" id="168">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветСиний</CommandName>
+										<ExtendedTooltip name="ПланДняКонтекстноеМенюУстановитьЦветСинийExtendedTooltip" id="184"/>
+									</Button>
+									<Button name="ПланДняКонтекстноеМенюУстановитьЦветЖелтый" id="169">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветЖелтый</CommandName>
+										<ExtendedTooltip name="ПланДняКонтекстноеМенюУстановитьЦветЖелтыйExtendedTooltip" id="185"/>
+									</Button>
+									<Button name="ПланДняКонтекстноеМенюУстановитьЦветЗеленый" id="170">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветЗеленый</CommandName>
+										<ExtendedTooltip name="ПланДняКонтекстноеМенюУстановитьЦветЗеленыйExtendedTooltip" id="186"/>
+									</Button>
+									<Button name="ПланДняКонтекстноеМенюУстановитьЦветОранжевый" id="171">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветОранжевый</CommandName>
+										<ExtendedTooltip name="ПланДняКонтекстноеМенюУстановитьЦветОранжевыйExtendedTooltip" id="187"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="ПланДняКонтекстноеМенюУстановитьЦветНет" id="172">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьЦветНет</CommandName>
+								<ExtendedTooltip name="ПланДняКонтекстноеМенюУстановитьЦветНетExtendedTooltip" id="188"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="ПланДняКонтекстноеМенюПечать" id="177">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Печать</CommandName>
+						<ExtendedTooltip name="ПланДняКонтекстноеМенюПечатьExtendedTooltip" id="189"/>
+					</Button>
+					<Button name="ФормаОбновить" id="19">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Обновить</CommandName>
+						<ExtendedTooltip name="ФормаОбновитьExtendedTooltip" id="190"/>
+					</Button>
+					<Button name="ПланДняКонтекстноеМенюАвтообновление" id="197">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Автообновление</CommandName>
+						<ExtendedTooltip name="ПланДняКонтекстноеМенюАвтообновлениеРасширеннаяПодсказка" id="198"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ПланДняКоманднаяПанель" id="139">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПланДняExtendedTooltip" id="191"/>
+			<SearchStringAddition name="ПланДняСтрокаПоиска" id="199">
+				<AdditionSource>
+					<Item>ПланДня</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланДняСтрокаПоискаКонтекстноеМеню" id="200"/>
+				<ExtendedTooltip name="ПланДняСтрокаПоискаРасширеннаяПодсказка" id="201"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПланДняСостояниеПросмотра" id="202">
+				<AdditionSource>
+					<Item>ПланДня</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланДняСостояниеПросмотраКонтекстноеМеню" id="203"/>
+				<ExtendedTooltip name="ПланДняСостояниеПросмотраРасширеннаяПодсказка" id="204"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПланДняУправлениеПоиском" id="205">
+				<AdditionSource>
+					<Item>ПланДня</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланДняУправлениеПоискомКонтекстноеМеню" id="206"/>
+				<ExtendedTooltip name="ПланДняУправлениеПоискомРасширеннаяПодсказка" id="207"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="DragCheck">ПланДняПроверкаПеретаскивания</Event>
+				<Event name="Selection">ПланДняВыбор</Event>
+				<Event name="BeforeAddRow">ПланДняПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ПланДняПередУдалением</Event>
+				<Event name="OnActivateRow">ПланДняПриАктивизацииСтроки</Event>
+				<Event name="DragStart">ПланДняНачалоПеретаскивания</Event>
+				<Event name="Drag">ПланДняПеретаскивание</Event>
+				<Event name="BeforeRowChange">ПланДняПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="ПланДняГруппаОписаниеКраткое" id="208">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План дня группа описание краткое</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План дня группа описание краткое</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Height>3</Height>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ПланДняГруппаОписаниеКраткоеРасширеннаяПодсказка" id="209"/>
+					<ChildItems>
+						<PictureField name="ПланДняИндексЦвета" id="210">
+							<DataPath>ПланДня.ИндексЦвета</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КоллекцияЦвет</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ПланДняИндексЦветаКонтекстноеМеню" id="211"/>
+							<ExtendedTooltip name="ПланДняИндексЦветаРасширеннаяПодсказка" id="212"/>
+						</PictureField>
+						<InputField name="ПланДняОписаниеКраткое" id="148">
+							<DataPath>ПланДня.ОписаниеКраткое</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoCellHeight>true</AutoCellHeight>
+							<Height>3</Height>
+							<ContextMenu name="ПланДняОписаниеКраткоеКонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ПланДняОписаниеКраткоеExtendedTooltip" id="196"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СвернутьСобытияВесьДеньВКалендаре" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть события весь день в календаре</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяЗаписьКалендаря" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая запись календаря</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗаписиРабочегоКалендаря</v8:Type>
+				<v8:Type>cfg:DocumentRef.Отсутствие</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяДатаНачала" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПланДня" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План дня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЗаписиРабочегоКалендаря</v8:Type>
+						<v8:Type>cfg:DocumentRef.Отсутствие</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВесьДень" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Весь день</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаНачала" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаОкончания" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата окончания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОписаниеКраткое" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание краткое</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Цвет" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЦветаРабочегоКалендаря</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипЗаписиКалендаря" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип записи календаря</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипЗаписиКалендаря</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаДень" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата день</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИндексЦвета" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс цвета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидЭлемента" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид элемента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ЭлементыРабочегоКалендаря</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаНачалаИсходная" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала (исходная)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="УникальныйИдентификатор" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уникальный идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВесьДень" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Весь день</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаСегодня" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата сегодня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиАвтообновления" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки автообновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПериодОтображения" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПериодОтображенияРабочегоКалендаря</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиОтображения" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить план дня</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+		</Command>
+		<Command name="УстановитьЦветНет" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЦветПоУмолчанию</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьЦветНет</Action>
+		</Command>
+		<Command name="УстановитьЦветКрасный" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Красный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить красный цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЦветКрасный</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьЦветКрасный</Action>
+		</Command>
+		<Command name="УстановитьЦветСиний" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить синий цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЦветСиний</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьЦветСиний</Action>
+		</Command>
+		<Command name="УстановитьЦветЖелтый" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Желтый</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить желтый цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЦветЖелтый</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьЦветЖелтый</Action>
+		</Command>
+		<Command name="УстановитьЦветЗеленый" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зеленый</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить зеленый цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЦветЗеленый</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьЦветЗеленый</Action>
+		</Command>
+		<Command name="УстановитьЦветОранжевый" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оранжевый</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить оранжевый цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЦветОранжевый</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьЦветОранжевый</Action>
+		</Command>
+		<Command name="Печать" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Alt+P</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Печать</Action>
+		</Command>
+		<Command name="Автообновление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автообновление...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Автообновление</Action>
+		</Command>
+		<Command name="ОтработатьПланДня" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отработано</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отработать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗеленаяГалочка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтработатьПланДня</Action>
+		</Command>
+	</Commands>
+</Form>

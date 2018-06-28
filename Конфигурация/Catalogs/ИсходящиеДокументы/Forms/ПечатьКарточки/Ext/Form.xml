@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Печать карточки документа</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройки" id="45">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПрочие" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прочие</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прочие</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПрочиеExtendedTooltip" id="31"/>
+					<ChildItems>
+						<CheckBoxField name="РеквизитыКарточки" id="1">
+							<DataPath>РеквизитыКарточки</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РеквизитыКарточкиКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="РеквизитыКарточкиExtendedTooltip" id="32"/>
+						</CheckBoxField>
+						<CheckBoxField name="ДопРеквизиты" id="27">
+							<DataPath>ДопРеквизиты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Доп. реквизиты</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДопРеквизитыКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ДопРеквизитыExtendedTooltip" id="33"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПриложенныеФайлы" id="3">
+							<DataPath>ПриложенныеФайлы</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПриложенныеФайлыКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ПриложенныеФайлыExtendedTooltip" id="34"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВерсииФайлов" id="6">
+							<DataPath>ВерсииФайлов</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВерсииФайловКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ВерсииФайловExtendedTooltip" id="35"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЭП" id="25">
+							<DataPath>ЭП</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЭПКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ЭПРасширеннаяПодсказка" id="36"/>
+						</CheckBoxField>
+						<CheckBoxField name="СвязанныеДокументы" id="8">
+							<DataPath>СвязанныеДокументы</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СвязанныеДокументыКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="СвязанныеДокументыExtendedTooltip" id="37"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЖурналПередачи" id="10">
+							<DataPath>ЖурналПередачи</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЖурналПередачиКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЖурналПередачиExtendedTooltip" id="38"/>
+						</CheckBoxField>
+						<CheckBoxField name="Этапы" id="59">
+							<DataPath>Этапы</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЭтапыКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ЭтапыРасширеннаяПодсказка" id="61"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаБизнесПроцессы" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа бизнес процессы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа бизнес процессы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаБизнесПроцессыExtendedTooltip" id="39"/>
+					<ChildItems>
+						<CheckBoxField name="Согласование" id="14">
+							<DataPath>Согласование</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СогласованиеКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СогласованиеExtendedTooltip" id="40"/>
+						</CheckBoxField>
+						<CheckBoxField name="Утверждение" id="16">
+							<DataPath>Утверждение</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УтверждениеКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="УтверждениеExtendedTooltip" id="41"/>
+						</CheckBoxField>
+						<CheckBoxField name="Ознакомление" id="18">
+							<DataPath>Ознакомление</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОзнакомлениеКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ОзнакомлениеExtendedTooltip" id="42"/>
+						</CheckBoxField>
+						<CheckBoxField name="Поручения" id="20">
+							<DataPath>Поручения</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПорученияКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ПорученияExtendedTooltip" id="43"/>
+						</CheckBoxField>
+						<CheckBoxField name="Задачи" id="22">
+							<DataPath>Задачи</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗадачиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ЗадачиExtendedTooltip" id="44"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманды" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<CommandBar name="ГруппаФлажки" id="49">
+					<ExtendedTooltip name="ГруппаФлажкиРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<ButtonGroup name="Группа1" id="62">
+							<Representation>Compact</Representation>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="63"/>
+							<ChildItems>
+								<Button name="УстановитьВсе" id="51">
+									<Type>CommandBarButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.УстановитьВсе</CommandName>
+									<TextColor>style:ButtonTextColor</TextColor>
+									<BackColor>style:ButtonBackColor</BackColor>
+									<BorderColor>style:BorderColor</BorderColor>
+									<ExtendedTooltip name="УстановитьВсеExtendedTooltip" id="52"/>
+								</Button>
+								<Button name="СнятьВсе" id="53">
+									<Type>CommandBarButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.СнятьВсе</CommandName>
+									<TextColor>style:ButtonTextColor</TextColor>
+									<BackColor>style:ButtonBackColor</BackColor>
+									<BorderColor>style:BorderColor</BorderColor>
+									<ExtendedTooltip name="СнятьВсеExtendedTooltip" id="54"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="ГруппаПечать" id="55">
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаПечатьРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<Button name="Печать" id="5">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.Печать</CommandName>
+							<ExtendedTooltip name="ПечатьExtendedTooltip" id="29"/>
+						</Button>
+						<Button name="Отмена" id="24">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Cancel</CommandName>
+							<ExtendedTooltip name="ОтменаExtendedTooltip" id="30"/>
+						</Button>
+						<Button name="Справка" id="57">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="58"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="РеквизитыКарточки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты карточки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>РеквизитыКарточки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПриложенныеФайлы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приложенные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПриложенныеФайлы</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВерсииФайлов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версии файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВерсииФайлов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СвязанныеДокументы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>СвязанныеДокументы</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСвязиДокументов</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ЖурналПередачи" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал передачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ЖурналПередачи</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Согласование" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Согласование</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесПроцессыИЗадачи</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Утверждение" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Утверждение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Утверждение</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесПроцессыИЗадачи</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Ознакомление" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ознакомление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Ознакомление</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесПроцессыИЗадачи</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Поручения" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поручения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Поручения</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесПроцессыИЗадачи</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Задачи" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Задачи</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьБизнесПроцессыИЗадачи</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ЭП" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЭП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ЭП</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьЭлектронныеПодписи</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДопРеквизиты" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доп реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ДопРеквизиты</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДополнительныеРеквизитыИСведения</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Этапы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этапы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Этапы</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Печать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Печать</Action>
+		</Command>
+		<Command name="СнятьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсеФлажки</Action>
+		</Command>
+		<Command name="УстановитьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьВсеФлажки</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПараметрКоманды">
+			<Type/>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

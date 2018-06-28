@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Укажите количество потоков для перераспределения приемки почты</v8:content>
+		</v8:item>
+	</Title>
+	<Width>60</Width>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="РекомендуемоеКоличество" id="8">
+			<Height>2</Height>
+			<TextColor>style:ИнформационнаяНадпись</TextColor>
+			<ContextMenu name="РекомендуемоеКоличествоКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="РекомендуемоеКоличествоРасширеннаяПодсказка" id="10"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаЧислоЗаданий" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа число заданий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа число заданий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЧислоЗаданийРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<TrackBarField name="ЧислоЗаданий" id="31">
+					<DataPath>ЧислоЗаданий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Увеличение числа потоков (1-10) ускоряет приемку почты, но также повышает нагрузку на почтовый сервер  и на сервер 1С:Документооборота. Примерное количество потоков можно оценить делением общего числа учетных записей минимум на 50.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Width>60</Width>
+					<Height>1</Height>
+					<MinValue>1</MinValue>
+					<MaxValue>10</MaxValue>
+					<MarkingStep>1</MarkingStep>
+					<ContextMenu name="ЧислоЗаданийКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ЧислоЗаданийРасширеннаяПодсказка" id="33"/>
+				</TrackBarField>
+				<UsualGroup name="ГруппаДекорации" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа декорации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа декорации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДекорацииРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияНачалоОтрезка" id="28">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>1</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНачалоОтрезкаКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДекорацияНачалоОтрезкаРасширеннаяПодсказка" id="30"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияПробел" id="39">
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ДекорацияПробелКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ДекорацияПробелРасширеннаяПодсказка" id="41"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияКонецОтрезка" id="34">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>10</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияКонецОтрезкаКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ДекорацияКонецОтрезкаРасширеннаяПодсказка" id="36"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="ДекорацияПодсказка" id="42">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>#827B5B</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Увеличение числа потоков (1-10) ускоряет приемку почты, но также повышает нагрузку на почтовый сервер  и на сервер 1С:Документооборота. Примерное количество потоков можно оценить делением общего числа учетных записей минимум на 50.</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<ContextMenu name="ДекорацияПодсказкаКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ДекорацияПодсказкаРасширеннаяПодсказка" id="44"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="ЧислоЗаданийНадпись" id="13">
+			<DataPath>ЧислоЗаданий</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрано потоков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>ShowLeft</ToolTipRepresentation>
+			<ContextMenu name="ЧислоЗаданийНадписьКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ЧислоЗаданийНадписьРасширеннаяПодсказка" id="15"/>
+		</LabelField>
+		<UsualGroup name="ГруппаКоманд" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команд</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команд</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>true</VerticalStretch>
+			<VerticalAlign>Bottom</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<CommandBar name="КоманднаяПанель" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<Button name="ФормаОК" id="3">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.ОК</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Готово</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="5"/>
+						</Button>
+						<Button name="ФормаОтмена" id="4">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Cancel</CommandName>
+							<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="6"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЧислоЗаданий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число потоков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+		</Command>
+	</Commands>
+</Form>

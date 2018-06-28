@@ -1,0 +1,1231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Поддержка и обслуживание</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Колонки" id="15">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="КолонкиExtendedTooltip" id="66"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаExtendedTooltip" id="67"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУдаление" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа удаление</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа удаление</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУдалениеExtendedTooltip" id="68"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаУдаление" id="20">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка удаление</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.Корзина</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаУдалениеКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="КартинкаУдалениеExtendedTooltip" id="69"/>
+									<Events>
+										<Event name="Click">КартинкаУдалениеНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаУдаление" id="19">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда удаление</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда удаление</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаУдалениеExtendedTooltip" id="70"/>
+									<ChildItems>
+										<Button name="УдалениеПомеченныхОбъектов" id="3">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>DataProcessor.УдалениеПомеченныхОбъектов.StandardCommand.Open</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Удаление помеченных объектов</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="УдалениеПомеченныхОбъектовExtendedTooltip" id="71"/>
+										</Button>
+										<LabelDecoration name="КомментарийУдаление" id="22">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Автоматическое или ручное удаление данных,
+помеченных на удаление</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийУдалениеКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="КомментарийУдалениеExtendedTooltip" id="72"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеПравами" id="193">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление правами</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа журнал</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеПравамиРасширеннаяПодсказка" id="194"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаУправлениеПравами" id="195">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка управление правами</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.НастройкаПраваДоступа</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаУправлениеПравамиКонтекстноеМеню" id="196"/>
+									<ExtendedTooltip name="КартинкаУправлениеПравамиРасширеннаяПодсказка" id="197"/>
+									<Events>
+										<Event name="Click">КартинкаУправлениеПравамиНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаУправлениеПравами" id="198">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда журнал</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда журнал</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаУправлениеПравамиРасширеннаяПодсказка" id="199"/>
+									<ChildItems>
+										<Button name="УправлениеПравами" id="200">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>DataProcessor.УправлениеРасчетомПрав.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="УправлениеПравамиРасширеннаяПодсказка" id="201"/>
+										</Button>
+										<LabelDecoration name="КомментарийУправлениеПравами" id="202">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновление прав доступа, настройки, отчеты по правам</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийУправлениеПравамиКонтекстноеМеню" id="203"/>
+											<ExtendedTooltip name="КомментарийУправлениеПравамиРасширеннаяПодсказка" id="204"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПечФормыОтчетыОбработки" id="181">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа печ. формы, отчеты и обработки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контроль</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПечФормыОтчетыОбработкиРасширеннаяПодсказка" id="182"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаПечФормыОтчетыОбработки" id="183">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка ПечФормыОтчетыОбработки</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ПечФормыОтчетыИОбработки32</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаПечФормыОтчетыОбработкиКонтекстноеМеню" id="184"/>
+									<ExtendedTooltip name="КартинкаПечФормыОтчетыОбработкиРасширеннаяПодсказка" id="185"/>
+									<Events>
+										<Event name="Click">ПечФормыОтчетыОбработки</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаПечФормыОтчетыОбработки" id="186">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда ПечФормыОтчетыОбработки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда контроль журнала</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаПечФормыОтчетыОбработкиРасширеннаяПодсказка" id="187"/>
+									<ChildItems>
+										<Button name="ПечФормыОтчетыОбработки" id="188">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.ПечФормыОтчетыОбработки</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Печатные формы, отчеты и обработки</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПечФормыОтчетыОбработкиРасширеннаяПодсказка" id="189"/>
+										</Button>
+										<LabelDecoration name="КомментарийПечФормыОтчетыОбработки" id="190">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка печатных форм,
+дополнительных отчетов и обработок</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийПечФормыОтчетыОбработкиКонтекстноеМеню" id="191"/>
+											<ExtendedTooltip name="КомментарийПечФормыОтчетыОбработкиРасширеннаяПодсказка" id="192"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаМетрики" id="169">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа метрики</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контроль</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМетрикиРасширеннаяПодсказка" id="170"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаДинамикаПоказателей" id="171">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка динамика показателей</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.Метрики32</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаДинамикаПоказателейКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="КартинкаДинамикаПоказателейРасширеннаяПодсказка" id="173"/>
+									<Events>
+										<Event name="Click">КартинкаДинамикаПоказателейНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаМетрики" id="174">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда метрики</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда контроль журнала</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаМетрикиРасширеннаяПодсказка" id="175"/>
+									<ChildItems>
+										<Button name="Метрики" id="176">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Report.Метрики.StandardCommand.Open</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Метрики</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="МетрикиРасширеннаяПодсказка" id="177"/>
+										</Button>
+										<LabelDecoration name="КомментарийМетрики" id="178">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Размер очереди, количество активных пользователей
+и другие</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийМетрикиКонтекстноеМеню" id="179"/>
+											<ExtendedTooltip name="КомментарийМетрикиРасширеннаяПодсказка" id="180"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеКлассификаторами" id="157">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление классификаторами</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контроль</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеКлассификаторамиРасширеннаяПодсказка" id="158"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаУправлениеКлассификаторами" id="159">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка управление классификаторами</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.УправлениеКлассификаторами32</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаУправлениеКлассификаторамиКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="КартинкаУправлениеКлассификаторамиРасширеннаяПодсказка" id="161"/>
+									<Events>
+										<Event name="Click">УправлениеКлассификаторами</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаУправлениеКлассификаторами" id="162">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда управление классификаторами</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда контроль журнала</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаУправлениеКлассификаторамиРасширеннаяПодсказка" id="163"/>
+									<ChildItems>
+										<Button name="УправлениеКлассификаторами" id="164">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.УправлениеКлассификаторами</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Управление классификаторами</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="УправлениеКлассификаторамиРасширеннаяПодсказка" id="165"/>
+										</Button>
+										<LabelDecoration name="КомментарийУправлениеКлассификаторами" id="166">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка, обновление классификаторов</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийУправлениеКлассификаторамиКонтекстноеМеню" id="167"/>
+											<ExtendedTooltip name="КомментарийУправлениеКлассификаторамиРасширеннаяПодсказка" id="168"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаППД" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ППД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ППД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаППДExtendedTooltip" id="73"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаППД" id="25">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка ППД</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.УправлениеПолнотекстовымПоиском</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаППДКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="КартинкаППДExtendedTooltip" id="74"/>
+									<Events>
+										<Event name="Click">КартинкаППДНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаППД" id="27">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда ППД</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда ППД</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаППДExtendedTooltip" id="75"/>
+									<ChildItems>
+										<Button name="УправлениеПолнотекстовымПоиском" id="4">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>DataProcessor.УправлениеПолнотекстовымПоиском.Command.УправлениеПолнотекстовымПоиском</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Управление полнотекстовым поиском</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="УправлениеПолнотекстовымПоискомExtendedTooltip" id="76"/>
+										</Button>
+										<LabelDecoration name="КомментарийППД" id="28">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновление полнотекстового индекса, включение
+разрешения использования поиска, очистка индексов</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийППДКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="КомментарийППДExtendedTooltip" id="77"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаExtendedTooltip" id="88"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРеглЗадания" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа регл задания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа регл задания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРеглЗаданияРасширеннаяПодсказка" id="83"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаКонсоль" id="37">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка консоль</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.КонсольЗаданий</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаКонсольКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="КартинкаКонсольExtendedTooltip" id="84"/>
+									<Events>
+										<Event name="Click">КартинкаКонсольНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаКонсоль" id="39">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда консоль</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда консоль</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаКонсольExtendedTooltip" id="85"/>
+									<ChildItems>
+										<Button name="КонсольРегламентныхЗаданий" id="10">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>DataProcessor.РегламентныеИФоновыеЗадания.StandardCommand.Open</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Регламентные и фоновые задания</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КонсольРегламентныхЗаданийExtendedTooltip" id="86"/>
+										</Button>
+										<LabelDecoration name="КомментарийКонсоль" id="40">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Запуск, остановка, настройка расписания регламентных
+и фоновых заданий</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийКонсольКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="КомментарийКонсольExtendedTooltip" id="87"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЖурнал" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа журнал</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа журнал</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЖурналExtendedTooltip" id="99"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаЖурнал" id="55">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка журнал</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ЖурналРегистрации32</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаЖурналКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="КартинкаЖурналExtendedTooltip" id="100"/>
+									<Events>
+										<Event name="Click">КартинкаЖурналНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаЖурнал" id="57">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда журнал</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда журнал</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаЖурналExtendedTooltip" id="101"/>
+									<ChildItems>
+										<Button name="ЖурналРегистрации" id="13">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>DataProcessor.ЖурналРегистрации.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="ЖурналРегистрацииExtendedTooltip" id="102"/>
+										</Button>
+										<LabelDecoration name="КомментарийЖурнал" id="58">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Просмотр событий и действий пользователей, записанных
+в журнал регистрации</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийЖурналКонтекстноеМеню" id="59"/>
+											<ExtendedTooltip name="КомментарийЖурналExtendedTooltip" id="103"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПользователи" id="42">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пользователи</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пользователи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПользователиExtendedTooltip" id="89"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаПользователи" id="43">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка пользователи</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.АктивныеПользователи32</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаПользователиКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="КартинкаПользователиExtendedTooltip" id="90"/>
+									<Events>
+										<Event name="Click">КартинкаПользователиНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаПользователи" id="45">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда пользователи</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда пользователи</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаПользователиExtendedTooltip" id="91"/>
+									<ChildItems>
+										<Button name="АктивныеПользователи" id="11">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>DataProcessor.АктивныеПользователи.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="АктивныеПользователиExtendedTooltip" id="92"/>
+										</Button>
+										<LabelDecoration name="КомментарийАктивныеПользователи" id="46">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Просмотр сведений об активных пользователях и их действиях</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийАктивныеПользователиКонтекстноеМеню" id="47"/>
+											<ExtendedTooltip name="КомментарийАктивныеПользователиРасширеннаяПодсказка" id="93"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаБлокировка" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа блокировка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа блокировка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаБлокировкаExtendedTooltip" id="78"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаБлокировка" id="31">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка блокировка</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.БлокировкаСоединений</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаБлокировкаКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="КартинкаБлокировкаExtendedTooltip" id="79"/>
+									<Events>
+										<Event name="Click">КартинкаБлокировкаНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаБлокировки" id="33">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда блокировки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда блокировки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаБлокировкиExtendedTooltip" id="80"/>
+									<ChildItems>
+										<Button name="БлокировкаСоединенийСИнформационнойБазой" id="12">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>DataProcessor.БлокировкаРаботыПользователей.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="БлокировкаСоединенийСИнформационнойБазойExtendedTooltip" id="81"/>
+										</Button>
+										<LabelDecoration name="КомментарийБлокировка" id="34">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Блокировка соединений с информационной базой
+для выполнения регламентных операций в указанное время</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийБлокировкаКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="КомментарийБлокировкаExtendedTooltip" id="82"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиФорм" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки форм</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки форм</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиФормExtendedTooltip" id="94"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаНастройкиФорм" id="49">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка настройки форм</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.УправлениеНастройкамиФорм</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаНастройкиФормКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="КартинкаНастройкиФормExtendedTooltip" id="95"/>
+									<Events>
+										<Event name="Click">КартинкаНастройкиФормНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаНастройки" id="51">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда настройки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаНастройкиExtendedTooltip" id="96"/>
+									<ChildItems>
+										<Button name="УправлениеНастройкамиФорм" id="6">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>DataProcessor.НастройкиПользователей.StandardCommand.Open</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Управление пользовательскими настройками</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="УправлениеНастройкамиФормExtendedTooltip" id="97"/>
+										</Button>
+										<LabelDecoration name="КомментарийНастройкиФорм" id="52">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Просмотр, копирование и удаление пользовательских настроек</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийНастройкиФормКонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="КомментарийНастройкиФормExtendedTooltip" id="98"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОбновлениеКонфигурации" id="121">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обновление конфигурации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа резервное копирование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбновлениеКонфигурацииРасширеннаяПодсказка" id="122"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаОбновлениеКонфигурации" id="123">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка обновление конфигурации</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ОбновлениеКонфигурации</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаОбновлениеКонфигурацииКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="КартинкаОбновлениеКонфигурацииРасширеннаяПодсказка" id="125"/>
+									<Events>
+										<Event name="Click">ОбновлениеКонфигурацииНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаОбновлениеКонфигурации" id="126">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда обновление конфигурации</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда обновление конфигурации</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаОбновлениеКонфигурацииРасширеннаяПодсказка" id="127"/>
+									<ChildItems>
+										<Button name="ОбновлениеКонфигурации" id="128">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.ОбновлениеКонфигурации</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновление конфигурации</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОбновлениеКонфигурацииРасширеннаяПодсказка" id="129"/>
+										</Button>
+										<LabelDecoration name="КомментарийОбновлениеКонфигурации" id="130">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Запуск, настройка обновления конфигурации,
+просмотр результатов обновления</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийОбновлениеКонфигурацииКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="КомментарийОбновлениеКонфигурацииРасширеннаяПодсказка" id="132"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРезервноеКопирование" id="109">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа резервное копирование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа резервное копирование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРезервноеКопированиеРасширеннаяПодсказка" id="110"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаРезервноеКопирование" id="111">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка резервное копирование</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.РезервноеКопирование</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаРезервноеКопированиеКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="КартинкаРезервноеКопированиеРасширеннаяПодсказка" id="113"/>
+									<Events>
+										<Event name="Click">РезервноеКопированиеНажатие</Event>
+									</Events>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаКомандаРезервноеКопирование" id="114">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда резервное копирование</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команда резервное копирование</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандаРезервноеКопированиеРасширеннаяПодсказка" id="115"/>
+									<ChildItems>
+										<Button name="РезервноеКопирование" id="116">
+											<Type>Hyperlink</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.РезервноеКопирование</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Резервное копирование и восстановление</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="РезервноеКопированиеРасширеннаяПодсказка" id="117"/>
+										</Button>
+										<LabelDecoration name="КомментарийРезервноеКопирование" id="118">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ПоясняющийТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Запуск, настройка резервного копирования
+информационной базы, восстановление из резервной копии</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="КомментарийРезервноеКопированиеКонтекстноеМеню" id="119"/>
+											<ExtendedTooltip name="КомментарийРезервноеКопированиеРасширеннаяПодсказка" id="120"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.АдминистрированиеСистемы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УправлениеКлассификаторами" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление классификаторами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление классификаторами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УправлениеКлассификаторами</Action>
+		</Command>
+		<Command name="РезервноеКопирование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резервное копирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резервное копирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РезервноеКопированиеНажатие</Action>
+		</Command>
+		<Command name="ОбновлениеКонфигурации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновление конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновление конфигурации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновлениеКонфигурацииНажатие</Action>
+		</Command>
+		<Command name="ПечФормыОтчетыОбработки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печ формы отчеты обработки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печ формы отчеты обработки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечФормыОтчетыОбработки</Action>
+		</Command>
+	</Commands>
+</Form>

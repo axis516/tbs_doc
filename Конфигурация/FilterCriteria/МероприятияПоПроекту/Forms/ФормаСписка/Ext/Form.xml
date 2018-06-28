@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мероприятия по проекту</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<Width>80</Width>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.КартинкаСостояниеМероприятия</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.КоллекцияСостоянияМероприятия</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</RowsPicture>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2">
+				<ChildItems>
+					<Button name="СписокКонтекстноеМенюОбновить" id="78">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Refresh</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюОбновитьРасширеннаяПодсказка" id="79"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюВывестиСписок" id="76">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="77"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюОтображатьУдаленные" id="74">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтображатьУдаленные</CommandName>
+						<ExtendedTooltip name="СписокКонтекстноеМенюОтображатьУдаленныеРасширеннаяПодсказка" id="75"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="14"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="15">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="18">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="21">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Наименование" id="8">
+					<DataPath>Список.Наименование</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние мероприятия, наименование и вид мероприятия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>25</Width>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаВремяМесто" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа время место</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа время место</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>7</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаВремяМестоРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<ColumnGroup name="ГруппаПериодСтрокой" id="46">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа время</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период строкой</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>7</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>InCell</Group>
+							<ExtendedTooltip name="ГруппаПериодСтрокойРасширеннаяПодсказка" id="47"/>
+							<ChildItems>
+								<LabelField name="ДатаНачалаСортировка" id="48">
+									<DataPath>Список.ДатаНачала</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировка время</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ДатаНачалаСортировкаКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ДатаНачалаСортировкаРасширеннаяПодсказка" id="50"/>
+								</LabelField>
+								<LabelField name="ПериодСтрокой" id="10">
+									<DataPath>Список.ПериодСтрокой</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время</v8:content>
+										</v8:item>
+									</Title>
+									<Width>7</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ПериодСтрокойРасширеннаяПодсказка" id="26"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="МестоПроведения" id="12">
+							<DataPath>Список.МестоПроведения</DataPath>
+							<Width>7</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="МестоПроведенияКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="МестоПроведенияРасширеннаяПодсказка" id="28"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Участники" id="80">
+					<DataPath>Список.Участники</DataPath>
+					<Width>15</Width>
+					<ContextMenu name="УчастникиКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="УчастникиРасширеннаяПодсказка" id="82"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаЗадачиФайлы" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа задачи файлы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа задачи файлы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗадачиФайлыРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<PictureField name="Файлы" id="59">
+							<DataPath>Список.Файлы</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Файлы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ТолькоСкрепка</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>2</Width>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.ТолькоСкрепка</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ФайлыКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ФайлыРасширеннаяПодсказка" id="61"/>
+						</PictureField>
+						<PictureField name="Задачи" id="62">
+							<DataPath>Список.Задачи</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задачи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВзаимодействиеСотрудников</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>2</Width>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.ВзаимодействиеСотрудников</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ЗадачиКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="64"/>
+						</PictureField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаВажностьКонтроль" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа важность контроль</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа важность контроль</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВажностьКонтрольРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<PictureField name="ВажностьКартинка" id="43">
+							<DataPath>Список.ВажностьКартинка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВосклицательныйЗнакСерый</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>2</Width>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КоллекцияВариантыВажности</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ВажностьКартинкаКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ВажностьКартинкаРасширеннаяПодсказка" id="45"/>
+						</PictureField>
+						<CheckBoxField name="ЕстьКатегорииДанных" id="67">
+							<DataPath>Список.ЕстьКатегорииДанных</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Категории</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.Категории</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЕстьКатегорииДанныхКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ЕстьКатегорииДанныхРасширеннаяПодсказка" id="69"/>
+						</CheckBoxField>
+					</ChildItems>
+				</ColumnGroup>
+				<PictureField name="СостояниеКонтроля" id="54">
+					<DataPath>Список.СостояниеКонтроля</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние контроля</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.КартинкаКонтроль16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>2</Width>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СостоянияКонтроля16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="СостояниеКонтроляКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СостояниеКонтроляРасширеннаяПодсказка" id="56"/>
+				</PictureField>
+				<LabelField name="Ссылка" id="4">
+					<DataPath>Список.Ref</DataPath>
+					<Visible>false</Visible>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ТекущаяДата</Field>
+				<Field>Список.СостояниеМероприятия</Field>
+				<Field>Список.ДатаОкончания</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	КритерийОтбораМероприятияПоПроекту.Ссылка,
+	КритерийОтбораМероприятияПоПроекту.Ссылка.Наименование + " (" + КритерийОтбораМероприятияПоПроекту.Ссылка.ВидМероприятия.Наименование + ")" КАК Наименование,
+	КритерийОтбораМероприятияПоПроекту.Ссылка.ДатаНачала КАК ДатаНачала,
+	КритерийОтбораМероприятияПоПроекту.Ссылка.МестоПроведения КАК МестоПроведения,
+	КритерийОтбораМероприятияПоПроекту.Ссылка.Организатор КАК Организатор,
+	КритерийОтбораМероприятияПоПроекту.Ссылка.ПериодСтрокой КАК ПериодСтрокой,
+	&amp;ТекущаяДата КАК ТекущаяДата,
+	ВЫБОР
+		КОГДА КритерийОтбораМероприятияПоПроекту.Ссылка.Важность = ЗНАЧЕНИЕ(Перечисление.ВариантыВажностиЗадачи.Низкая)
+			ТОГДА 0
+		КОГДА КритерийОтбораМероприятияПоПроекту.Ссылка.Важность = ЗНАЧЕНИЕ(Перечисление.ВариантыВажностиЗадачи.Высокая)
+			ТОГДА 2
+		ИНАЧЕ 1
+	КОНЕЦ КАК ВажностьКартинка,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтроле)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 1
+					ИНАЧЕ 3
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроля)
+			ТОГДА 4
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтролеНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 5
+					КОГДА КешИнформацииОбОбъектах.СрокИсполненияОбщий = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполненияОбщий &gt;= &amp;ТекущаяДата
+						ТОГДА 8
+					ИНАЧЕ 6
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроляНесколько)
+			ТОГДА 7
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СмешанноНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 9
+					ИНАЧЕ 10
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ КАК СостояниеКонтроля,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьФайлы
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Файлы,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьЗадачи ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьЗадачи
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Задачи,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьКатегорииДанных,
+	ВЫБОР
+		КОГДА 1 В
+				(ВЫБРАТЬ
+					1
+				ИЗ
+					РегистрСведений.СостоянияМероприятий КАК СостоянияМероприятий
+				ГДЕ
+					СостоянияМероприятий.Мероприятие = КритерийОтбораМероприятияПоПроекту.Ссылка
+					И СостоянияМероприятий.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеПроведено))
+			ТОГДА 4
+		КОГДА 1 В
+				(ВЫБРАТЬ
+					1
+				ИЗ
+					РегистрСведений.СостоянияМероприятий КАК СостоянияМероприятий
+				ГДЕ
+					СостоянияМероприятий.Мероприятие = КритерийОтбораМероприятияПоПроекту.Ссылка
+					И СостоянияМероприятий.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеОтменено))
+			ТОГДА 5
+		КОГДА КритерийОтбораМероприятияПоПроекту.Ссылка.ДатаНачала = ДАТАВРЕМЯ(1, 1, 1)
+				И 1 В
+					(ВЫБРАТЬ
+						1
+					ИЗ
+						РегистрСведений.СостоянияМероприятий КАК СостоянияМероприятий
+					ГДЕ
+						СостоянияМероприятий.Мероприятие = КритерийОтбораМероприятияПоПроекту.Ссылка
+						И СостоянияМероприятий.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеВСтадииПодготовки))
+			ТОГДА 1
+		КОГДА КритерийОтбораМероприятияПоПроекту.Ссылка.ДатаОкончания &lt; &amp;ТекущаяДата
+				И 1 В
+					(ВЫБРАТЬ
+						1
+					ИЗ
+						РегистрСведений.СостоянияМероприятий КАК СостоянияМероприятий
+					ГДЕ
+						СостоянияМероприятий.Мероприятие = КритерийОтбораМероприятияПоПроекту.Ссылка
+						И СостоянияМероприятий.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеВСтадииПодготовки))
+			ТОГДА 3
+		КОГДА 1 В
+				(ВЫБРАТЬ
+					1
+				ИЗ
+					РегистрСведений.СостоянияМероприятий КАК СостоянияМероприятий
+				ГДЕ
+					СостоянияМероприятий.Мероприятие = КритерийОтбораМероприятияПоПроекту.Ссылка
+					И СостоянияМероприятий.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеВСтадииПодготовки))
+			ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ КАК КартинкаСостояниеМероприятия,
+	ВЫБОР
+		КОГДА 1 В
+				(ВЫБРАТЬ
+					1
+				ИЗ
+					РегистрСведений.СостоянияМероприятий КАК СостоянияМероприятий
+				ГДЕ
+					СостоянияМероприятий.Мероприятие = КритерийОтбораМероприятияПоПроекту.Ссылка
+					И СостоянияМероприятий.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеПроведено))
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеПроведено)
+		КОГДА 1 В
+				(ВЫБРАТЬ
+					1
+				ИЗ
+					РегистрСведений.СостоянияМероприятий КАК СостоянияМероприятий
+				ГДЕ
+					СостоянияМероприятий.Мероприятие = КритерийОтбораМероприятияПоПроекту.Ссылка
+					И СостоянияМероприятий.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеВСтадииПодготовки))
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеВСтадииПодготовки)
+		КОГДА 1 В
+				(ВЫБРАТЬ
+					1
+				ИЗ
+					РегистрСведений.СостоянияМероприятий КАК СостоянияМероприятий
+				ГДЕ
+					СостоянияМероприятий.Мероприятие = КритерийОтбораМероприятияПоПроекту.Ссылка
+					И СостоянияМероприятий.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеОтменено))
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.МероприятиеОтменено)
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.СостоянияМероприятий.ПустаяСсылка)
+	КОНЕЦ КАК СостояниеМероприятия,
+	КритерийОтбораМероприятияПоПроекту.Ссылка.ДатаОкончания КАК ДатаОкончания,
+	КритерийОтбораМероприятияПоПроекту.Ссылка.ПометкаУдаления КАК ПометкаУдаления,
+	ДанныеМероприятий.Участники
+ИЗ
+	КритерийОтбора.МероприятияПоПроекту(&amp;ЗначениеОтбора) КАК КритерийОтбораМероприятияПоПроекту
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КешИнформацииОбОбъектах КАК КешИнформацииОбОбъектах
+		ПО КритерийОтбораМероприятияПоПроекту.Ссылка = КешИнформацииОбОбъектах.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеМероприятий КАК ДанныеМероприятий
+		ПО КритерийОтбораМероприятияПоПроекту.Ссылка.Ссылка = ДанныеМероприятий.Мероприятие
+ГДЕ
+	(&amp;ОтображатьУдаленные
+			ИЛИ НЕ КритерийОтбораМероприятияПоПроекту.Ссылка.ПометкаУдаления)</QueryText>
+				<MainTable>FilterCriterion.МероприятияПоПроекту</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаНачала</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СостояниеМероприятия</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияМероприятий.МероприятиеВСтадииПодготовки</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ОтметкаПоложительногоВыполненияЗадачи</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>Filled</dcsset:comparisonType>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаНачала</dcsset:left>
+									<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">ТекущаяДата</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СостояниеМероприятия</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияМероприятий.МероприятиеВСтадииПодготовки</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Peru</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>Filled</dcsset:comparisonType>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+									<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">ТекущаяДата</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СостояниеМероприятия</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияМероприятий.МероприятиеВСтадииПодготовки</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ОтметкаОтрицательногоВыполненияЗадачи</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СостояниеМероприятия</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияМероприятий.МероприятиеОтменено</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ЗакрытыеНеактуальныеЗаписи</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Наименование</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="true" kind="StyleItem"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтображатьУдаленные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтображатьУдаленные</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтображатьУдаленные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтображатьУдаленные</Action>
+		</Command>
+	</Commands>
+</Form>

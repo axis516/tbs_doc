@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>100</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Территории" id="47">
+			<Representation>Tree</Representation>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<HeightInTableRows>15</HeightInTableRows>
+			<ChoiceMode>true</ChoiceMode>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Территории</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="ТерриторииКонтекстноеМеню" id="48"/>
+			<AutoCommandBar name="ТерриторииКоманднаяПанель" id="49">
+				<ChildItems>
+					<Button name="ТерриторииВыбрать" id="79">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Item.Территории.StandardCommand.Choose</CommandName>
+						<ExtendedTooltip name="ТерриторииВыбратьРасширеннаяПодсказка" id="80"/>
+					</Button>
+					<Button name="ТерриторииДобавить" id="81">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Территории.StandardCommand.Add</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Создать</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТерриторииДобавитьРасширеннаяПодсказка" id="82"/>
+					</Button>
+					<Button name="ТерриторииСкопировать" id="83">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Территории.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="ТерриторииСкопироватьРасширеннаяПодсказка" id="84"/>
+					</Button>
+					<Popup name="ТерриторииГруппаРежимПросмотра" id="87">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Режим просмотра</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Территории группа режим просмотра</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Picture>
+							<xr:Ref>StdPicture.ListViewMode</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ТерриторииГруппаРежимПросмотраРасширеннаяПодсказка" id="88"/>
+						<ChildItems>
+							<Button name="ТерриторииСписок" id="89">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Территории.StandardCommand.List</CommandName>
+								<ExtendedTooltip name="ТерриторииСписокРасширеннаяПодсказка" id="90"/>
+							</Button>
+							<Button name="ТерриторииИерархическийСписок" id="91">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Территории.StandardCommand.HierarchicalList</CommandName>
+								<ExtendedTooltip name="ТерриторииИерархическийСписокРасширеннаяПодсказка" id="92"/>
+							</Button>
+							<Button name="ТерриторииДерево" id="93">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Территории.StandardCommand.Tree</CommandName>
+								<ExtendedTooltip name="ТерриторииДеревоРасширеннаяПодсказка" id="94"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="ТерриторииВывестиСписок" id="85">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Территории.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="ТерриторииВывестиСписокРасширеннаяПодсказка" id="86"/>
+					</Button>
+					<Button name="ТерриторииИзменитьФорму" id="72">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="ТерриторииИзменитьФормуРасширеннаяПодсказка" id="73"/>
+					</Button>
+					<Button name="ТерриторииСправка" id="74">
+						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<ExtendedTooltip name="ТерриторииСправкаРасширеннаяПодсказка" id="75"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТерриторииРасширеннаяПодсказка" id="50"/>
+			<SearchStringAddition name="ТерриторииСтрокаПоиска" id="51">
+				<AdditionSource>
+					<Item>Территории</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТерриторииСтрокаПоискаКонтекстноеМеню" id="52"/>
+				<ExtendedTooltip name="ТерриторииСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТерриторииСостояниеПросмотра" id="54">
+				<AdditionSource>
+					<Item>Территории</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТерриторииСостояниеПросмотраКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="ТерриторииСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТерриторииУправлениеПоиском" id="57">
+				<AdditionSource>
+					<Item>Территории</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТерриторииУправлениеПоискомКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="ТерриторииУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ValueChoice">ТерриторииВыборЗначения</Event>
+				<Event name="Selection">ТерриторииВыбор</Event>
+				<Event name="BeforeAddRow">ТерриторииПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТерриторииПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТерриторииНаименование" id="60">
+					<DataPath>Территории.Наименование</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТерриторииНаименованиеКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ТерриторииНаименованиеРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="ТерриторииВместимость" id="63">
+					<DataPath>Территории.Вместимость</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТерриторииВместимостьКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ТерриторииВместимостьРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="ТерриторииОтветственный" id="66">
+					<DataPath>Территории.Ответственный</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТерриторииОтветственныйКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ТерриторииОтветственныйРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="ТерриторииОписание" id="69">
+					<DataPath>Территории.Описание</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТерриторииОписаниеКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ТерриторииОписаниеРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<PictureField name="ТерриторииДоступнаСхема" id="76">
+					<DataPath>Территории.ДоступнаСхема</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<ShowInHeader>false</ShowInHeader>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.СхемаТерритории</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>2</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СхемаТерритории</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<ContextMenu name="ТерриторииДоступнаСхемаКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ТерриторииДоступнаСхемаРасширеннаяПодсказка" id="78"/>
+				</PictureField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Территории" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Территории</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСхемыПомещений</Item>
+			</FunctionalOptions>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТерриторииИПомещения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДоступноБронирование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступно бронирование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Вместимость" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вместимость</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ответственный" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Описание" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДоступнаСхема" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступна схема</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтображатьУдаленные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтображатьУдаленные</Field>
+			</Save>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТерриторииНаименование</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТерриторииВместимость</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Территории.ДоступноБронирование</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+				<dcsset:presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ВыборПомещенияДляБрони</v8:content>
+					</v8:item>
+				</dcsset:presentation>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Территории</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Территории.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="true" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОтображатьУдаленные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтображатьУдаленные</Action>
+		</Command>
+	</Commands>
+</Form>

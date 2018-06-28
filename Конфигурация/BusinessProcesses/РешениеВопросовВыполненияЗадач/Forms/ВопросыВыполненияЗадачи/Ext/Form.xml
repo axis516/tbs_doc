@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>96</Width>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СписокВопросов" id="30">
+			<Height>15</Height>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>СписокВопросов</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+				<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Choose</ExcludedCommand>
+				<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+				<ExcludedCommand>SetDateInterval</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>CommandBar</SearchStringLocation>
+			<ViewStatusLocation>Top</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокВопросовКонтекстноеМеню" id="31"/>
+			<AutoCommandBar name="СписокВопросовКоманднаяПанель" id="32">
+				<ChildItems>
+					<Button name="СписокВопросовИзменитьФорму" id="103">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="СписокВопросовИзменитьФормуРасширеннаяПодсказка" id="104"/>
+					</Button>
+					<Button name="СписокВопросовСправка" id="101">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<ExtendedTooltip name="СписокВопросовСправкаРасширеннаяПодсказка" id="102"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокВопросовExtendedTooltip" id="63"/>
+			<SearchStringAddition name="СписокВопросовСтрокаПоиска" id="78">
+				<AdditionSource>
+					<Item>СписокВопросов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокВопросовСтрокаПоискаКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="СписокВопросовСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокВопросовСостояниеПросмотра" id="81">
+				<AdditionSource>
+					<Item>СписокВопросов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокВопросовСостояниеПросмотраКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="СписокВопросовСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокВопросовУправлениеПоиском" id="84">
+				<AdditionSource>
+					<Item>СписокВопросов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокВопросовУправлениеПоискомКонтекстноеМеню" id="85"/>
+				<ExtendedTooltip name="СписокВопросовУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СписокВопросовПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="СписокВопросовСостояниеКартинка" id="87">
+					<DataPath>СписокВопросов.СостояниеКартинка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.СостояниеПроцессаЗаголовок</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>2</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СостоянияМоихПроцессов</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="СписокВопросовСостояниеКартинкаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="СписокВопросовСостояниеКартинкаРасширеннаяПодсказка" id="89"/>
+				</PictureField>
+				<ColumnGroup name="СписокВопросовГруппаОписаниеИСроки" id="126">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список вопросов группа описание и сроки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список вопросов группа описание и сроки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СписокВопросовГруппаОписаниеИСрокиРасширеннаяПодсказка" id="127"/>
+					<ChildItems>
+						<ColumnGroup name="СписокВопросовГруппаВидВопросаИОписание" id="131">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список вопросов группа вид вопроса и описание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список вопросов группа вид вопроса и описание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>5</Width>
+							<ExtendedTooltip name="СписокВопросовГруппаВидВопросаИОписаниеРасширеннаяПодсказка" id="132"/>
+							<ChildItems>
+								<LabelField name="СписокВопросовВидВопроса" id="133">
+									<DataPath>СписокВопросов.ВидВопроса</DataPath>
+									<ShowInHeader>false</ShowInHeader>
+									<Width>5</Width>
+									<Height>1</Height>
+									<Font italic="true" kind="AutoFont"/>
+									<ContextMenu name="СписокВопросовВидВопросаКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="СписокВопросовВидВопросаРасширеннаяПодсказка" id="135"/>
+								</LabelField>
+								<LabelField name="СписокВопросовОписание" id="37">
+									<DataPath>СписокВопросов.Описание</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопрос</v8:content>
+										</v8:item>
+									</Title>
+									<AutoCellHeight>true</AutoCellHeight>
+									<Width>5</Width>
+									<VerticalStretch>false</VerticalStretch>
+									<ContextMenu name="СписокВопросовОписаниеКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="СписокВопросовОписаниеРасширеннаяПодсказка" id="64"/>
+								</LabelField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="СписокВопросовГруппаСроки" id="105">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список вопросов группа сроки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список вопросов группа сроки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СписокВопросовГруппаСрокиРасширеннаяПодсказка" id="106"/>
+							<ChildItems>
+								<ColumnGroup name="СписокВопросовГруппаНовыйСрок" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список вопросов группа новый срок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список вопросов группа новый срок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="СписокВопросовГруппаНовыйСрокРасширеннаяПодсказка" id="119"/>
+									<ChildItems>
+										<LabelField name="СписокВопросовЗаголовокНовыйСрок" id="113">
+											<DataPath>СписокВопросов.ЗаголовокНовыйСрок</DataPath>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>11</Width>
+											<Height>1</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Font italic="true" kind="AutoFont"/>
+											<ContextMenu name="СписокВопросовЗаголовокНовыйСрокКонтекстноеМеню" id="114"/>
+											<ExtendedTooltip name="СписокВопросовЗаголовокНовыйСрокРасширеннаяПодсказка" id="115"/>
+										</LabelField>
+										<LabelField name="СписокВопросовНовыйСрок" id="107">
+											<DataPath>СписокВопросов.НовыйСрок</DataPath>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>11</Width>
+											<Height>1</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Font italic="true" kind="AutoFont"/>
+											<ContextMenu name="СписокВопросовНовыйСрокКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="СписокВопросовНовыйСрокРасширеннаяПодсказка" id="109"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="СписокВопросовГруппаСтарыйСрок" id="116">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список вопросов группа старый срок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список вопросов группа старый срок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="СписокВопросовГруппаСтарыйСрокРасширеннаяПодсказка" id="117"/>
+									<ChildItems>
+										<LabelField name="СписокВопросовЗаголовокСтарыйСрок" id="123">
+											<DataPath>СписокВопросов.ЗаголовокСтарыйСрок</DataPath>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>11</Width>
+											<Height>1</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Font italic="true" kind="AutoFont"/>
+											<ContextMenu name="СписокВопросовЗаголовокСтарыйСрокКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="СписокВопросовЗаголовокСтарыйСрокРасширеннаяПодсказка" id="125"/>
+										</LabelField>
+										<LabelField name="СписокВопросовСтарыйСрок" id="120">
+											<DataPath>СписокВопросов.СтарыйСрок</DataPath>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>11</Width>
+											<Height>1</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Font italic="true" kind="AutoFont"/>
+											<ContextMenu name="СписокВопросовСтарыйСрокКонтекстноеМеню" id="121"/>
+											<ExtendedTooltip name="СписокВопросовСтарыйСрокРасширеннаяПодсказка" id="122"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СписокВопросовГруппаИнициаторПроцесса" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список вопросов группа инициатор процесса</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список вопросов группа инициатор процесса</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="СписокВопросовГруппаИнициаторПроцессаРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<LabelField name="СписокВопросовИнициаторПроцесса" id="68">
+							<DataPath>СписокВопросов.ИнициаторПроцесса</DataPath>
+							<Width>16</Width>
+							<ContextMenu name="СписокВопросовИнициаторПроцессаКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="СписокВопросовИнициаторПроцессаРасширеннаяПодсказка" id="70"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="СписокВопросовАвтор" id="128">
+					<DataPath>СписокВопросов.Автор</DataPath>
+					<Width>12</Width>
+					<ContextMenu name="СписокВопросовАвторКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="СписокВопросовАвторРасширеннаяПодсказка" id="130"/>
+				</LabelField>
+				<LabelField name="СписокВопросовДата" id="53">
+					<DataPath>СписокВопросов.Date</DataPath>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Width>11</Width>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ='dd.MM.yyyy ЧЧ:мм'</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="СписокВопросовДатаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="СписокВопросовДатаРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<InputField name="СписокВопросовПринятоеРешение" id="98">
+			<DataPath>Items.СписокВопросов.CurrentData.ПринятоеРешение</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>2</Height>
+			<VerticalStretch>false</VerticalStretch>
+			<MultiLine>true</MultiLine>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принятое решение</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="СписокВопросовПринятоеРешениеКонтекстноеМеню" id="99"/>
+			<ExtendedTooltip name="СписокВопросовПринятоеРешениеРасширеннаяПодсказка" id="100"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокВопросов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список вопросов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РешениеВопросовВыполненияЗадач.Ссылка,
+	РешениеВопросовВыполненияЗадач.Дата,
+	РешениеВопросовВыполненияЗадач.Автор,
+	РешениеВопросовВыполненияЗадач.ВидВопроса,
+	ВЫРАЗИТЬ(РешениеВопросовВыполненияЗадач.Описание КАК СТРОКА(300)) КАК Описание,
+	ВЫРАЗИТЬ(РешениеВопросовВыполненияЗадач.ПринятоеРешение КАК СТРОКА(300)) КАК ПринятоеРешение,
+	РешениеВопросовВыполненияЗадач.ИнициаторПроцесса,
+	ВЫБОР
+		КОГДА РешениеВопросовВыполненияЗадач.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияБизнесПроцессов.Остановлен)
+			ТОГДА 0
+		КОГДА РешениеВопросовВыполненияЗадач.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияБизнесПроцессов.Прерван)
+			ТОГДА 1
+		КОГДА РешениеВопросовВыполненияЗадач.Завершен = ИСТИНА
+			ТОГДА 4
+		ИНАЧЕ -1
+	КОНЕЦ КАК СостояниеКартинка,
+	РешениеВопросовВыполненияЗадач.НовыйСрок,
+	ВЫБОР
+		КОГДА РешениеВопросовВыполненияЗадач.ВидВопроса = ЗНАЧЕНИЕ(Перечисление.ВидыВопросовВыполненияЗадач.ПереносСрока)
+			ТОГДА ЕСТЬNULL(ПереносыСроковВыполненияПроцессовИЗадач.СтарыйСрок, РешениеВопросовВыполненияЗадач.СрокИсполнения)
+		ИНАЧЕ ДАТАВРЕМЯ(1, 1, 1)
+	КОНЕЦ КАК СтарыйСрок,
+	ВЫРАЗИТЬ("" КАК СТРОКА(10)) КАК ЗаголовокСтарыйСрок,
+	ВЫРАЗИТЬ("" КАК СТРОКА(10)) КАК ЗаголовокНовыйСрок
+ИЗ
+	БизнесПроцесс.РешениеВопросовВыполненияЗадач КАК РешениеВопросовВыполненияЗадач
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПереносыСроковВыполненияПроцессовИЗадач КАК ПереносыСроковВыполненияПроцессовИЗадач
+		ПО РешениеВопросовВыполненияЗадач.Ссылка = ПереносыСроковВыполненияПроцессовИЗадач.БизнесПроцессПереноса
+			И (ПереносыСроковВыполненияПроцессовИЗадач.БизнесПроцессПереноса ССЫЛКА БизнесПроцесс.РешениеВопросовВыполненияЗадач)
+			И РешениеВопросовВыполненияЗадач.ПредметРассмотрения = ПереносыСроковВыполненияПроцессовИЗадач.Предмет
+ГДЕ
+	РешениеВопросовВыполненияЗадач.ПредметРассмотрения = &amp;ПредметРассмотрения</QueryText>
+				<MainTable>BusinessProcess.РешениеВопросовВыполненияЗадач</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Ссылка.Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ВидВопроса</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ЗаголовокСтарыйСрок</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СтарыйСрок</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>ЗаголовокНовыйСрок</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>НовыйСрок</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВидВопроса</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыВопросовВыполненияЗадач.Иное</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Видимость</dcscor:parameter>
+									<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+								</dcscor:item>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:use>false</dcscor:use>
+									<dcscor:parameter>Отображать</dcscor:parameter>
+									<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ЗаголовокСтарыйСрок</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВидВопроса</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыВопросовВыполненияЗадач.ПереносСрока</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Старый срок:</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ЗаголовокНовыйСрок</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ВидВопроса</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыВопросовВыполненияЗадач.ПереносСрока</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Текст</dcscor:parameter>
+									<dcscor:value xsi:type="xs:string">Новый срок:</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗадачаПараметр" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача параметр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:TaskRef.ЗадачаИсполнителя</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Задача">
+			<Type>
+				<v8:Type>cfg:TaskRef.ЗадачаИсполнителя</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

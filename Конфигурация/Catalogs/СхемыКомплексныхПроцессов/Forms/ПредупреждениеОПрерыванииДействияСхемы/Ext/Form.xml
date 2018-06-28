@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Прерывание действий</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаИнфо" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инфо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инфо</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнфоРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаПредупреждение" id="3">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка предупреждение</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="КартинкаПредупреждениеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="КартинкаПредупреждениеРасширеннаяПодсказка" id="5"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаОписаниеИДействия" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа описание и действия</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа описание и действия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<VerticalSpacing>OneAndHalf</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОписаниеИДействияРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияИнфо" id="6">
+							<Width>35</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>4</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Из процесса удалены стартованные действия.
+
+Для отмены закройте карточку процесса без сохранения. 
+Иначе при следующей записи действия будут прерваны. </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияИнфоКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ДекорацияИнфоРасширеннаяПодсказка" id="8"/>
+						</LabelDecoration>
+						<Table name="ИсключенныеДействия" id="13">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<Width>1</Width>
+							<HeightInTableRows>3</HeightInTableRows>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>ИсключенныеДействия</DataPath>
+							<RowPictureDataPath>ИсключенныеДействия.Picture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CheckAll</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>UncheckAll</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>Pickup</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+							</CommandSet>
+							<ContextMenu name="ИсключенныеДействияКонтекстноеМеню" id="14"/>
+							<AutoCommandBar name="ИсключенныеДействияКоманднаяПанель" id="15"/>
+							<ExtendedTooltip name="ИсключенныеДействияРасширеннаяПодсказка" id="16"/>
+							<SearchStringAddition name="ИсключенныеДействияСтрокаПоиска" id="17">
+								<AdditionSource>
+									<Item>ИсключенныеДействия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсключенныеДействияСтрокаПоискаКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ИсключенныеДействияСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсключенныеДействияСостояниеПросмотра" id="20">
+								<AdditionSource>
+									<Item>ИсключенныеДействия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсключенныеДействияСостояниеПросмотраКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ИсключенныеДействияСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсключенныеДействияУправлениеПоиском" id="23">
+								<AdditionSource>
+									<Item>ИсключенныеДействия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсключенныеДействияУправлениеПоискомКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ИсключенныеДействияУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ИсключенныеДействияВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ИсключенныеДействияЗначение" id="26">
+									<DataPath>ИсключенныеДействия.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсключенныеДействияЗначениеКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ИсключенныеДействияЗначениеРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКнопки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиExtendedTooltip" id="10"/>
+			<ChildItems>
+				<Button name="ОК" id="11">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<Width>10</Width>
+					<CommandName>Form.StandardCommand.OK</CommandName>
+					<Font ref="style:ШрифтВажныхКнопок" kind="StyleItem"/>
+					<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="12"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИсключенныеДействия" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключенные действия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:TypeSet>cfg:DefinedType.ДействиеКомплексногоПроцесса</v8:TypeSet>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="ИсключенныеДействия">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

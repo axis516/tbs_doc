@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКомандыВнизу" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды внизу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды внизу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыВнизуExtendedTooltip" id="156"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКомандыЗапускаПроцессов" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новое поручение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды запуска процессов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомандыЗапускаПроцессовExtendedTooltip" id="157"/>
+					<ChildItems>
+						<Button name="СоздатьНовоеПоручение" id="109">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СоздатьНовоеПоручение</CommandName>
+							<ExtendedTooltip name="СоздатьНовоеПоручениеExtendedTooltip" id="158"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКомандыОбновить" id="104">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды обновить</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды обновить</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомандыОбновитьExtendedTooltip" id="160"/>
+					<ChildItems>
+						<Button name="ФормаОбновить" id="73">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.Обновить</CommandName>
+							<ExtendedTooltip name="ФормаОбновитьExtendedTooltip" id="161"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКолонки" id="21">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаКолонкиExtendedTooltip" id="123"/>
+			<ChildItems>
+				<UsualGroup name="КолонкаЗадачиМне" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи мне</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка задачи мне</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КолонкаЗадачиМнеExtendedTooltip" id="124"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВсеЗадачи" id="17">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа все задачи</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа все задачи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВсеЗадачиExtendedTooltip" id="125"/>
+							<ChildItems>
+								<Button name="КомандаВсеЗадачи" id="20">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<DefaultItem>true</DefaultItem>
+									<Width>8</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.КомандаВсеЗадачи</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.ВсеЗадачиМногоЗадач</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаВсеЗадачиExtendedTooltip" id="126"/>
+								</Button>
+								<UsualGroup name="ГруппаВсеЗадачиИнформация" id="52">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа все задачи информация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа все задачи информация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВсеЗадачиИнформацияExtendedTooltip" id="127"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияВсеЗадачи" id="55">
+											<Height>2</Height>
+											<TextColor>style:ButtonTextColor</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Всего задач мне (10)</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="ДекорацияВсеЗадачиКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="ДекорацияВсеЗадачиExtendedTooltip" id="128"/>
+											<Events>
+												<Event name="Click">ДекорацияВсеЗадачиНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРассмотреть" id="2">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа рассмотреть</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа рассмотреть</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРассмотретьExtendedTooltip" id="129"/>
+							<ChildItems>
+								<Button name="КомандаРассмотрение" id="8">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.КомандаРассмотрение</CommandName>
+									<Font bold="true" kind="AutoFont"/>
+									<Picture>
+										<xr:Ref>CommonPicture.РассмотрениеМногоЗадач</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаРассмотрениеExtendedTooltip" id="130"/>
+								</Button>
+								<UsualGroup name="ГруппаРассмотрение" id="31">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа рассмотрение</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа рассмотрение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРассмотрениеExtendedTooltip" id="131"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияНаРассмотрение" id="32">
+											<Height>2</Height>
+											<TextColor>style:ButtonTextColor</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>На рассмотрение (10)</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="ДекорацияНаРассмотрениеКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ДекорацияНаРассмотрениеExtendedTooltip" id="132"/>
+											<Events>
+												<Event name="Click">ДекорацияНаРассмотрениеНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСогласовать" id="9">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа согласовать</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа согласовать</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСогласоватьExtendedTooltip" id="133"/>
+							<ChildItems>
+								<Button name="КомандаСогласование" id="12">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.КомандаСогласование</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.СогласованиеМногоЗадач</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаСогласованиеExtendedTooltip" id="134"/>
+								</Button>
+								<UsualGroup name="ГруппаСогласование" id="38">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа согласование</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа согласование</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСогласованиеExtendedTooltip" id="135"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияСогласование" id="41">
+											<Height>2</Height>
+											<TextColor>style:ButtonTextColor</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>На согласование (10)</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="ДекорацияСогласованиеКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="ДекорацияСогласованиеExtendedTooltip" id="136"/>
+											<Events>
+												<Event name="Click">ДекорацияСогласованиеНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУтвердить" id="13">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа утвердить</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа утвердить</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУтвердитьExtendedTooltip" id="137"/>
+							<ChildItems>
+								<Button name="КомандаУтверждение" id="16">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.КомандаУтверждение</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.УтверждениеМногоЗадач</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаУтверждениеExtendedTooltip" id="138"/>
+								</Button>
+								<UsualGroup name="ГруппаУтверждение" id="45">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа утверждение</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа утверждение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУтверждениеExtendedTooltip" id="139"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияУтверждение" id="48">
+											<Width>21</Width>
+											<Height>2</Height>
+											<TextColor>style:ButtonTextColor</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>На утверждение (10)</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="ДекорацияУтверждениеКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ДекорацияУтверждениеExtendedTooltip" id="140"/>
+											<Events>
+												<Event name="Click">ДекорацияУтверждениеНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="КолонкаМежду" id="77">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка между</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка между</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КолонкаМеждуExtendedTooltip" id="141"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияМеждуКолонками" id="78">
+							<Width>6</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>   </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияМеждуКолонкамиКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="ДекорацияМеждуКолонкамиExtendedTooltip" id="142"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="КолонкаЗадачиОтМеня" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи от меня</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка задачи от меня</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КолонкаЗадачиОтМеняExtendedTooltip" id="143"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗадачиОтМеня" id="23">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа все задачи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗадачиОтМеняExtendedTooltip" id="144"/>
+							<ChildItems>
+								<Button name="КомандаЗадачиОтМеня" id="26">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.КомандаЗадачиОтМеня</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.ВсеЗадачиОтМеняМного</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаЗадачиОтМеняExtendedTooltip" id="145"/>
+								</Button>
+								<UsualGroup name="ГруппаЗадачиОтМеняИнформация" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа задачи от меня информация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа задачи от меня информация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗадачиОтМеняИнформацияExtendedTooltip" id="146"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияЗадачиОтМеня" id="62">
+											<Height>2</Height>
+											<TextColor>style:ButtonTextColor</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Мои процессы (10)</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="ДекорацияЗадачиОтМеняКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ДекорацияЗадачиОтМеняExtendedTooltip" id="147"/>
+											<Events>
+												<Event name="Click">ДекорацияЗадачиОтМеняНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗадачиОтМеняПросроченные" id="27">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа все задачи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗадачиОтМеняПросроченныеExtendedTooltip" id="148"/>
+							<ChildItems>
+								<Button name="КомандаЗадачиОтМеняПросроченные" id="30">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<Width>8</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.КомандаЗадачиОтМеняПросроченные</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.ВсеЗадачиПросроченныеМногоЗадач</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаЗадачиОтМеняПросроченныеExtendedTooltip" id="149"/>
+								</Button>
+								<UsualGroup name="ГруппаЗадачиОтМеняПросроченныеИнформация" id="66">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа задачи от меня просроченные информация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа задачи от меня просроченные информация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗадачиОтМеняПросроченныеИнформацияExtendedTooltip" id="150"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаЗадачиОтМеняПросроченныеГоризонтально" id="122">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа задачи от меня просроченные горизонтально</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа задачи от меня просроченные горизонтально</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗадачиОтМеняПросроченныеГоризонтальноExtendedTooltip" id="151"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияЗадачиОтМеняПросроченные" id="69">
+													<Width>20</Width>
+													<Height>2</Height>
+													<HorizontalStretch>true</HorizontalStretch>
+													<TextColor>style:ButtonTextColor</TextColor>
+													<Font ref="sys:DefaultGUIFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Просроченные (10)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ДекорацияЗадачиОтМеняПросроченныеКонтекстноеМеню" id="70"/>
+													<ExtendedTooltip name="ДекорацияЗадачиОтМеняПросроченныеExtendedTooltip" id="152"/>
+													<Events>
+														<Event name="Click">ДекорацияЗадачиОтМеняПросроченныеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<PictureDecoration name="ДекорацияПослеЗадачМне" id="107">
+			<Height>1</Height>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорация после задач мне</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПослеЗадачМнеКонтекстноеМеню" id="108"/>
+			<ExtendedTooltip name="ДекорацияПослеЗадачМнеExtendedTooltip" id="155"/>
+		</PictureDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЧислоЗадачРассмотрение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число задач рассмотрение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧислоЗадачСогласование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число задач согласование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧислоЗадачУтверждение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число задач утверждение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧислоЗадачВсего" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число задач всего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧислоЗадачОтМеня" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число задач от меня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧислоЗадачОтМеняПросроченные" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число задач от меня просроченные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаРассмотрение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда рассмотрение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи на рассмотрение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаРассмотрение</Action>
+		</Command>
+		<Command name="КомандаСогласование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда согласование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи на согласование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСогласование</Action>
+		</Command>
+		<Command name="КомандаУтверждение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда утверждение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи на утверждение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаУтверждение</Action>
+		</Command>
+		<Command name="КомандаВсеЗадачи" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все задачи мне</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВсеЗадачи</Action>
+		</Command>
+		<Command name="Обновить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаЗадачиОтМеня" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда задачи от меня</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи от меня</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗадачиОтМеня</Action>
+		</Command>
+		<Command name="КомандаЗадачиОтМеняПросроченные" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда задачи от меня просроченные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи от меня (просроченные)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗадачиОтМеняПросроченные</Action>
+		</Command>
+		<Command name="СоздатьНовоеПоручение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставить задачу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставить задачу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНовоеПоручение</Action>
+		</Command>
+	</Commands>
+</Form>

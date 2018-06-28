@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="107">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="108"/>
+			<ChildItems>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заголовок</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСодержаниеТемы" id="92">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа содержание темы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftWide</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСодержаниеТемыРасширеннаяПодсказка" id="93"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСодержание" id="109">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСодержаниеРасширеннаяПодсказка" id="110"/>
+					<ChildItems>
+						<CommandBar name="КоманднаяПанельСодержания" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель содержания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель содержания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="КоманднаяПанельСодержанияРасширеннаяПодсказка" id="41"/>
+							<ChildItems>
+								<Button name="Жирный" id="42">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.СодержаниеФорматированное.StandardCommand.Bold</CommandName>
+									<ExtendedTooltip name="ЖирныйРасширеннаяПодсказка" id="43"/>
+								</Button>
+								<Button name="Наклонный" id="44">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.СодержаниеФорматированное.StandardCommand.Italic</CommandName>
+									<ExtendedTooltip name="НаклонныйРасширеннаяПодсказка" id="45"/>
+								</Button>
+								<Button name="МаркированныйСписок" id="46">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.СодержаниеФорматированное.StandardCommand.BulletedList</CommandName>
+									<ExtendedTooltip name="МаркированныйСписокРасширеннаяПодсказка" id="47"/>
+								</Button>
+								<Button name="НумерованныйСписок" id="48">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.СодержаниеФорматированное.StandardCommand.NumberedList</CommandName>
+									<ExtendedTooltip name="НумерованныйСписокРасширеннаяПодсказка" id="49"/>
+								</Button>
+								<Button name="УвеличитьОтступ" id="50">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.СодержаниеФорматированное.StandardCommand.IncreaseIndent</CommandName>
+									<ExtendedTooltip name="УвеличитьОтступРасширеннаяПодсказка" id="51"/>
+								</Button>
+								<Button name="УменьшитьОтступ" id="52">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.СодержаниеФорматированное.StandardCommand.DecreaseIndent</CommandName>
+									<ExtendedTooltip name="УменьшитьОтступРасширеннаяПодсказка" id="53"/>
+								</Button>
+								<Button name="ЦветФона" id="54">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.СодержаниеФорматированное.StandardCommand.BackColor</CommandName>
+									<ExtendedTooltip name="ЦветФонаРасширеннаяПодсказка" id="55"/>
+								</Button>
+								<Button name="ЦветТекста" id="56">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.СодержаниеФорматированное.StandardCommand.TextColor</CommandName>
+									<ExtendedTooltip name="ЦветТекстаРасширеннаяПодсказка" id="57"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<FormattedDocumentField name="СодержаниеФорматированное" id="7">
+							<DataPath>СодержаниеФорматированное</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+							<ContextMenu name="СодержаниеФорматированноеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="СодержаниеФорматированноеРасширеннаяПодсказка" id="9"/>
+						</FormattedDocumentField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТемы" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа темы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа темы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТемыРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗаголовокТем" id="129">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа заголовок тем</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа заголовок тем</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗаголовокТемРасширеннаяПодсказка" id="130"/>
+							<ChildItems>
+								<LabelDecoration name="ЗаголовокТем" id="131">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Темы:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаголовокТемКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ЗаголовокТемРасширеннаяПодсказка" id="133"/>
+								</LabelDecoration>
+								<Button name="СоздатьНовуюТему" id="134">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СоздатьНовуюТему</CommandName>
+									<ExtendedTooltip name="СоздатьНовуюТемуРасширеннаяПодсказка" id="135"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ДеревоТем" id="94">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоТем</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Темы</v8:content>
+								</v8:item>
+							</Title>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ДеревоТемКонтекстноеМеню" id="95">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ДеревоТемКонтекстноеМенюСоздатьНовуюТему" id="125">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоздатьНовуюТему</CommandName>
+										<ExtendedTooltip name="ДеревоТемКонтекстноеМенюСоздатьНовуюТемуРасширеннаяПодсказка" id="126"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ДеревоТемКоманднаяПанель" id="96"/>
+							<ExtendedTooltip name="ДеревоТемРасширеннаяПодсказка" id="97"/>
+							<SearchStringAddition name="ДеревоТемСтрокаПоиска" id="116">
+								<AdditionSource>
+									<Item>ДеревоТем</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТемСтрокаПоискаКонтекстноеМеню" id="117"/>
+								<ExtendedTooltip name="ДеревоТемСтрокаПоискаРасширеннаяПодсказка" id="118"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоТемСостояниеПросмотра" id="119">
+								<AdditionSource>
+									<Item>ДеревоТем</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТемСостояниеПросмотраКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="ДеревоТемСостояниеПросмотраРасширеннаяПодсказка" id="121"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоТемУправлениеПоиском" id="122">
+								<AdditionSource>
+									<Item>ДеревоТем</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоТемУправлениеПоискомКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="ДеревоТемУправлениеПоискомРасширеннаяПодсказка" id="124"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ДеревоТемПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ДеревоТемПередУдалением</Event>
+								<Event name="DragStart">ДеревоТемНачалоПеретаскивания</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ДеревоТемВыбрана" id="104">
+									<DataPath>ДеревоТем.Выбрана</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоТемВыбранаКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="ДеревоТемВыбранаРасширеннаяПодсказка" id="106"/>
+									<Events>
+										<Event name="OnChange">ДеревоТемВыбранаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ДеревоТемНаименование" id="98">
+									<DataPath>ДеревоТем.Наименование</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоТемНаименованиеКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ДеревоТемНаименованиеРасширеннаяПодсказка" id="100"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияСписокТем" id="84">
+			<Visible>false</Visible>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Укажите темы</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<ContextMenu name="ДекорацияСписокТемКонтекстноеМеню" id="85"/>
+			<ExtendedTooltip name="ДекорацияСписокТемРасширеннаяПодсказка" id="86"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаПодШапка" id="111">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодШапкаРасширеннаяПодсказка" id="112"/>
+			<ChildItems>
+				<InputField name="Приоритет" id="87">
+					<DataPath>Объект.Приоритет</DataPath>
+					<Width>4</Width>
+					<SpinButton>false</SpinButton>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>-3 Низкий</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">-3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:decimal">-2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:decimal">-1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>0 Обычный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>3 Высокий</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ChoiceListButton>true</ChoiceListButton>
+					<ContextMenu name="ПриоритетКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<LabelDecoration name="ДекорацияПустота" id="113">
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="ДекорацияПустотаКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="ДекорацияПустотаРасширеннаяПодсказка" id="115"/>
+				</LabelDecoration>
+				<LabelField name="Изменена" id="63">
+					<DataPath>Объект.Изменена</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<ContextMenu name="ИзмененаКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ИзмененаРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЗаметкиДокументооборота</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СодержаниеФорматированное" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержание форматированное</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныеТемы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные темы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоТем" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево тем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТемыЗаметок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Выбрана" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрана</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВсеТемыНаименование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВсеТемы.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="false" strikeout="true" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьНовуюТему" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новую тему</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новую тему</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьНовуюТему</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

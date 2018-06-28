@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>90</Width>
+	<AutoTitle>false</AutoTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверитьПравила" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьПравило</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьПравилаExtendedTooltip" id="50"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ЛеваяГруппа" id="43">
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Левая группа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Левая группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЛеваяГруппаExtendedTooltip" id="52"/>
+			<ChildItems>
+				<UsualGroup name="НаименованиеКод" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование код</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование код</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="НаименованиеКодExtendedTooltip" id="53"/>
+					<ChildItems>
+						<LabelDecoration name="НаименованиеЗаголовок" id="93">
+							<Width>11</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НаименованиеЗаголовокКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="НаименованиеЗаголовокРасширеннаяПодсказка" id="95"/>
+						</LabelDecoration>
+						<InputField name="Наименование" id="3">
+							<DataPath>Объект.Description</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="54"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаблонФайла" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаблон файла</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаблон файла</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаблонФайлаExtendedTooltip" id="55"/>
+					<ChildItems>
+						<LabelDecoration name="ШаблонФайлаЗаголовок" id="90">
+							<Width>11</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Шаблон файла:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ШаблонФайлаЗаголовокКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ШаблонФайлаЗаголовокРасширеннаяПодсказка" id="92"/>
+						</LabelDecoration>
+						<InputField name="ШаблонФайла" id="7">
+							<DataPath>Объект.ШаблонФайла</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>46</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ШаблонФайлаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ШаблонФайлаExtendedTooltip" id="56"/>
+							<Events>
+								<Event name="AutoComplete">ШаблонФайлаАвтоПодбор</Event>
+								<Event name="StartChoice">ШаблонФайлаНачалоВыбора</Event>
+								<Event name="TextEditEnd">ШаблонФайлаОкончаниеВводаТекста</Event>
+								<Event name="ChoiceProcessing">ШаблонФайлаОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТипШаблона" id="26">
+							<DataPath>Объект.ШаблонФайла.ТекущаяВерсияРасширение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип файла</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТипШаблонаКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ТипШаблонаExtendedTooltip" id="57"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВладелецФайла" id="20">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа владелец файла</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВладелецФайлаExtendedTooltip" id="58"/>
+					<ChildItems>
+						<LabelDecoration name="ВладелецФайлаЗаголовок" id="87">
+							<Width>11</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Владелец файла:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВладелецФайлаЗаголовокКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ВладелецФайлаЗаголовокРасширеннаяПодсказка" id="89"/>
+						</LabelDecoration>
+						<InputField name="ТипВладельцаФайла" id="18">
+							<DataPath>ТипВладельцаФайла</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Владелец файла</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип документа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>17</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ListChoiceMode>true</ListChoiceMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ТипВладельцаФайлаКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ТипВладельцаФайлаExtendedTooltip" id="59"/>
+							<Events>
+								<Event name="OnChange">ТипВладельцаФайлаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВладелецФайла" id="5">
+							<DataPath>Объект.ВладелецФайла</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид документа</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ВладелецФайлаКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ВладелецФайлаExtendedTooltip" id="60"/>
+							<Events>
+								<Event name="OnChange">ВладелецФайлаПриИзменении</Event>
+								<Event name="StartChoice">ВладелецФайлаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШапка" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="51"/>
+			<ChildItems>
+				<UsualGroup name="ПраваяГруппа" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая группа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая группа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяГруппаExtendedTooltip" id="61"/>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ДанныеДляАвтозаполнения" id="9">
+			<Representation>List</Representation>
+			<HeightInTableRows>10</HeightInTableRows>
+			<AutoAddIncomplete>false</AutoAddIncomplete>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДанныеДляАвтозаполнения</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеДляАвтозаполненияКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="ДанныеДляАвтозаполненияКоманднаяПанель" id="11">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДанныеДляАвтозаполненияДобавить" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДанныеДляАвтозаполнения.StandardCommand.Add</CommandName>
+						<ExtendedTooltip name="ДанныеДляАвтозаполненияДобавитьExtendedTooltip" id="63"/>
+					</Button>
+					<Button name="ДанныеДляАвтозаполненияИзменить" id="29">
+						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.ДанныеДляАвтозаполнения.StandardCommand.Change</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Change</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДанныеДляАвтозаполненияИзменитьExtendedTooltip" id="64"/>
+					</Button>
+					<Button name="ДанныеДляАвтозаполненияСкопировать" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДанныеДляАвтозаполнения.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="ДанныеДляАвтозаполненияСкопироватьExtendedTooltip" id="65"/>
+					</Button>
+					<Button name="ДанныеДляАвтозаполненияУдалить" id="47">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ДанныеДляАвтозаполнения.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="ДанныеДляАвтозаполненияУдалитьExtendedTooltip" id="66"/>
+					</Button>
+					<ButtonGroup name="ДанныеДляАвтозаполненияГруппа2" id="96">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ДанныеДляАвтозаполненияГруппа2РасширеннаяПодсказка" id="97"/>
+						<ChildItems>
+							<Button name="ДанныеДляАвтозаполненияПереместитьВверх" id="48">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДанныеДляАвтозаполнения.StandardCommand.MoveUp</CommandName>
+								<ExtendedTooltip name="ДанныеДляАвтозаполненияПереместитьВверхExtendedTooltip" id="67"/>
+							</Button>
+							<Button name="ДанныеДляАвтозаполненияПереместитьВниз" id="49">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДанныеДляАвтозаполнения.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="ДанныеДляАвтозаполненияПереместитьВнизExtendedTooltip" id="68"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДанныеДляАвтозаполненияExtendedTooltip" id="69"/>
+			<SearchStringAddition name="ДанныеДляАвтозаполненияСтрокаПоиска" id="78">
+				<AdditionSource>
+					<Item>ДанныеДляАвтозаполнения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДляАвтозаполненияСтрокаПоискаКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="ДанныеДляАвтозаполненияСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеДляАвтозаполненияСостояниеПросмотра" id="81">
+				<AdditionSource>
+					<Item>ДанныеДляАвтозаполнения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДляАвтозаполненияСостояниеПросмотраКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="ДанныеДляАвтозаполненияСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеДляАвтозаполненияУправлениеПоиском" id="84">
+				<AdditionSource>
+					<Item>ДанныеДляАвтозаполнения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеДляАвтозаполненияУправлениеПоискомКонтекстноеМеню" id="85"/>
+				<ExtendedTooltip name="ДанныеДляАвтозаполненияУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДанныеДляАвтозаполненияВыбор</Event>
+				<Event name="BeforeAddRow">ДанныеДляАвтозаполненияПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ДанныеДляАвтозаполненияПередУдалением</Event>
+				<Event name="BeforeRowChange">ДанныеДляАвтозаполненияПередНачаломИзменения</Event>
+				<Event name="NewWriteProcessing">ДанныеДляАвтозаполненияОбработкаЗаписиНового</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ДанныеДляАвтозаполненияТермДляЗамены" id="14">
+					<DataPath>Объект.ДанныеДляАвтозаполнения.ТермДляЗамены</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Какое поле заменить</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>20</Width>
+					<ContextMenu name="ДанныеДляАвтозаполненияТермДляЗаменыКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДанныеДляАвтозаполненияТермДляЗаменыExtendedTooltip" id="70"/>
+				</LabelField>
+				<LabelField name="ДанныеДляАвтозаполненияЗаменяемаяСтрока" id="24">
+					<DataPath>Объект.ДанныеДляАвтозаполнения.ЗаменяемаяСтрока</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Какую строку заменить</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>20</Width>
+					<ContextMenu name="ДанныеДляАвтозаполненияЗаменяемаяСтрокаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДанныеДляАвтозаполненияЗаменяемаяСтрокаExtendedTooltip" id="71"/>
+				</LabelField>
+				<ColumnGroup name="ДанныеДляАвтозаполненияГруппа1" id="41">
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ДанныеДляАвтозаполненияГруппа1ExtendedTooltip" id="72"/>
+					<ChildItems>
+						<LabelField name="ДанныеДляАвтозаполненияСтрокаЗамены" id="16">
+							<DataPath>Объект.ДанныеДляАвтозаполнения.ЗначениеЗамены</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>На что заменить</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>1</Width>
+							<ContextMenu name="ДанныеДляАвтозаполненияСтрокаЗаменыКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ДанныеДляАвтозаполненияСтрокаЗаменыExtendedTooltip" id="73"/>
+						</LabelField>
+						<InputField name="ДанныеДляАвтозаполненияФорматЗначенияЗамены" id="36">
+							<DataPath>Объект.ДанныеДляАвтозаполнения.ФорматЗначенияЗамены</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Формат</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ДанныеДляАвтозаполненияФорматЗначенияЗаменыКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ДанныеДляАвтозаполненияФорматЗначенияЗаменыExtendedTooltip" id="74"/>
+						</InputField>
+						<InputField name="ДанныеДляАвтозаполненияВыражениеОбработкиРезультатаЗамены" id="34">
+							<DataPath>Объект.ДанныеДляАвтозаполнения.ВыражениеОбработкиРезультатаЗамены</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выражение</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<ContextMenu name="ДанныеДляАвтозаполненияВыражениеОбработкиРезультатаЗаменыКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ДанныеДляАвтозаполненияВыражениеОбработкиРезультатаЗаменыExtendedTooltip" id="75"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="30">
+			<DataPath>Объект.Ответственный</DataPath>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="76"/>
+		</InputField>
+		<InputField name="Комментарий" id="32">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="77"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПравилаАвтозаполненияФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПолноеИмяФайлаДляПроверки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полное имя файла для проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыполнятьЗаполнениеФайловНаСервере" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять заполнение файлов на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокПолейШаблона" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список полей шаблона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТипВладельцаФайла" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип владельца файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяТипаВнутренниеДокументы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя типа внутренние документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяТипаИсходящиеДокументы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя типа исходящие документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РасширениеФайла" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширение файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДанныеДляАвтозаполненияСтрокаЗамены</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДанныеДляАвтозаполненияФорматЗначенияЗамены</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДанныеДляАвтозаполненияВыражениеОбработкиРезультатаЗамены</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ДанныеДляАвтозаполнения.ЗначениеЗамены</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ДанныеДляАвтозаполнения.ЗначениеЗамены</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">{</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветРеквизитаВСпискеЗаменФайла</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьПравило" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить настройку заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить правило</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПравило</Action>
+		</Command>
+	</Commands>
+</Form>

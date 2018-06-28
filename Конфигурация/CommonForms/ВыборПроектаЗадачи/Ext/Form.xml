@@ -1,0 +1,1123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор проекта (проектной задачи)</v8:content>
+		</v8:item>
+	</Title>
+	<Width>100</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаВыбрать" id="126">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Выбрать</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="127"/>
+			</Button>
+			<Popup name="ФормаГруппаРежимПросмотра" id="128">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Режим просмотра</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаГруппаРежимПросмотраРасширеннаяПодсказка" id="129"/>
+				<ChildItems>
+					<Button name="РежимПросмотраСписком" id="130">
+						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>false</OnlyInAllActions>
+						<CommandName>Form.Command.РежимПросмотраСписком</CommandName>
+						<ExtendedTooltip name="РежимПросмотраСпискомРасширеннаяПодсказка" id="131"/>
+					</Button>
+					<Button name="РежимПросмотраПоПапкам" id="132">
+						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>false</OnlyInAllActions>
+						<CommandName>Form.Command.РежимПросмотраПоПапкам</CommandName>
+						<ExtendedTooltip name="РежимПросмотраПоПапкамРасширеннаяПодсказка" id="133"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ПоказыватьУдаленные" id="137">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+				<ExtendedTooltip name="ПоказыватьУдаленныеРасширеннаяПодсказка" id="138"/>
+			</Button>
+			<Button name="ФормаИзменитьФорму" id="139">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="140"/>
+			</Button>
+			<Button name="ФормаСправка" id="141">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="142"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПоиска" id="143">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поиска</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поиска</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоискаExtendedTooltip" id="144"/>
+			<ChildItems>
+				<InputField name="СтрокаПоиска" id="145">
+					<DataPath>СтрокаПоиска</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Введите часть наименования проекта или проектной задачи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<Width>45</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="146">
+						<ChildItems>
+							<Button name="СтрокаПоискаКонтекстноеМенюОчиститьИсторию" id="148">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОчиститьИсторию</CommandName>
+								<ExtendedTooltip name="СтрокаПоискаКонтекстноеМенюОчиститьИсториюExtendedTooltip" id="149"/>
+							</Button>
+						</ChildItems>
+					</ContextMenu>
+					<ExtendedTooltip name="СтрокаПоискаExtendedTooltip" id="147"/>
+					<Events>
+						<Event name="OnChange">СтрокаПоискаПриИзменении</Event>
+						<Event name="Clearing">СтрокаПоискаОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="150">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="151"/>
+			<ChildItems>
+				<Page name="СтраницаСписки" id="152">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница списки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница списки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаСпискиРасширеннаяПодсказка" id="153"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСписки" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа списки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа списки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСпискиExtendedTooltip" id="52"/>
+							<ChildItems>
+								<Table name="Папки" id="77">
+									<Representation>Tree</Representation>
+									<TitleLocation>Top</TitleLocation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<Width>30</Width>
+									<Height>15</Height>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Папки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Папки</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSet>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>LevelUp</ExcludedCommand>
+										<ExcludedCommand>MoveItem</ExcludedCommand>
+										<ExcludedCommand>LevelDown</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>false</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="ПапкиКонтекстноеМеню" id="78"/>
+									<AutoCommandBar name="ПапкиКоманднаяПанель" id="79"/>
+									<ExtendedTooltip name="ПапкиРасширеннаяПодсказка" id="80"/>
+									<SearchStringAddition name="ПапкиСтрокаПоиска" id="81">
+										<AdditionSource>
+											<Item>Папки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПапкиСтрокаПоискаКонтекстноеМеню" id="84"/>
+										<ExtendedTooltip name="ПапкиСтрокаПоискаРасширеннаяПодсказка" id="85"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПапкиСостояниеПросмотра" id="86">
+										<AdditionSource>
+											<Item>Папки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПапкиСостояниеПросмотраКонтекстноеМеню" id="89"/>
+										<ExtendedTooltip name="ПапкиСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПапкиУправлениеПоиском" id="91">
+										<AdditionSource>
+											<Item>Папки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПапкиУправлениеПоискомКонтекстноеМеню" id="94"/>
+										<ExtendedTooltip name="ПапкиУправлениеПоискомРасширеннаяПодсказка" id="95"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ПапкиПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ПапкиГруппа" id="96">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Папки группа</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Папки группа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ПапкиГруппаExtendedTooltip" id="97"/>
+											<ChildItems>
+												<PictureField name="КартинкаГруппы" id="98">
+													<DataPath>Папки.ИндексКартинки</DataPath>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.Папки</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</ValuesPicture>
+													<ContextMenu name="КартинкаГруппыКонтекстноеМеню" id="99"/>
+													<ExtendedTooltip name="КартинкаГруппыExtendedTooltip" id="100"/>
+												</PictureField>
+												<InputField name="НаименованиеГруппы" id="101">
+													<DataPath>Папки.Description</DataPath>
+													<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+													<Wrap>false</Wrap>
+													<BorderColor>style:BorderColor</BorderColor>
+													<ContextMenu name="НаименованиеГруппыКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="НаименованиеГруппыExtendedTooltip" id="103"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+								<Table name="Проекты" id="2">
+									<Representation>List</Representation>
+									<TitleLocation>Top</TitleLocation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Width>30</Width>
+									<Height>15</Height>
+									<ChoiceMode>true</ChoiceMode>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Проекты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проекты</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSet>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>LevelUp</ExcludedCommand>
+										<ExcludedCommand>MoveItem</ExcludedCommand>
+										<ExcludedCommand>LevelDown</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>FoldersAndItems</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>false</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="ПроектыКонтекстноеМеню" id="3"/>
+									<AutoCommandBar name="ПроектыКоманднаяПанель" id="4"/>
+									<ExtendedTooltip name="ПроектыРасширеннаяПодсказка" id="53"/>
+									<SearchStringAddition name="ПроектыСтрокаПоиска" id="59">
+										<AdditionSource>
+											<Item>Проекты</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроектыСтрокаПоискаКонтекстноеМеню" id="60"/>
+										<ExtendedTooltip name="ПроектыСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПроектыСостояниеПросмотра" id="62">
+										<AdditionSource>
+											<Item>Проекты</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроектыСостояниеПросмотраКонтекстноеМеню" id="63"/>
+										<ExtendedTooltip name="ПроектыСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПроектыУправлениеПоиском" id="65">
+										<AdditionSource>
+											<Item>Проекты</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроектыУправлениеПоискомКонтекстноеМеню" id="66"/>
+										<ExtendedTooltip name="ПроектыУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="ValueChoice">ПроектыВыборЗначения</Event>
+										<Event name="OnActivateRow">ПроектыПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокПроектыНаименование" id="42">
+											<DataPath>Проекты.Description</DataPath>
+											<Width>20</Width>
+											<ContextMenu name="СписокПроектыНаименованиеКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="СписокПроектыНаименованиеExtendedTooltip" id="54"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+								<Table name="ПроектныеЗадачи" id="104">
+									<Representation>Tree</Representation>
+									<TitleLocation>Top</TitleLocation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Width>30</Width>
+									<Height>15</Height>
+									<ChoiceMode>true</ChoiceMode>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ПроектныеЗадачи</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проектные задачи</v8:content>
+										</v8:item>
+									</Title>
+									<CommandSet>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>LevelUp</ExcludedCommand>
+										<ExcludedCommand>MoveItem</ExcludedCommand>
+										<ExcludedCommand>LevelDown</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>false</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="ПроектныеЗадачиКонтекстноеМеню" id="105"/>
+									<AutoCommandBar name="ПроектныеЗадачиКоманднаяПанель" id="106"/>
+									<ExtendedTooltip name="ПроектныеЗадачиРасширеннаяПодсказка" id="107"/>
+									<SearchStringAddition name="ПроектныеЗадачиСтрокаПоиска" id="108">
+										<AdditionSource>
+											<Item>ПроектныеЗадачи</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроектныеЗадачиСтрокаПоискаКонтекстноеМеню" id="111"/>
+										<ExtendedTooltip name="ПроектныеЗадачиСтрокаПоискаРасширеннаяПодсказка" id="112"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПроектныеЗадачиСостояниеПросмотра" id="113">
+										<AdditionSource>
+											<Item>ПроектныеЗадачи</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроектныеЗадачиСостояниеПросмотраКонтекстноеМеню" id="116"/>
+										<ExtendedTooltip name="ПроектныеЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="117"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПроектныеЗадачиУправлениеПоиском" id="118">
+										<AdditionSource>
+											<Item>ПроектныеЗадачи</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроектныеЗадачиУправлениеПоискомКонтекстноеМеню" id="121"/>
+										<ExtendedTooltip name="ПроектныеЗадачиУправлениеПоискомРасширеннаяПодсказка" id="122"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="ValueChoice">ПроектныеЗадачиВыборЗначения</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="КодИНаименование" id="123">
+											<DataPath>ПроектныеЗадачи.КодИНаименование</DataPath>
+											<ContextMenu name="КодИНаименованиеКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="КодИНаименованиеРасширеннаяПодсказка" id="125"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="ТолькоМоиПроекты" id="134">
+							<DataPath>ТолькоМоиПроекты</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТолькоМоиПроектыКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="ТолькоМоиПроектыExtendedTooltip" id="136"/>
+							<Events>
+								<Event name="OnChange">ТолькоМоиПроектыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДерево" id="154">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дерево</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаДеревоРасширеннаяПодсказка" id="155"/>
+					<ChildItems>
+						<Table name="ДеревоПроектов" id="156">
+							<Representation>Tree</Representation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоПроектов</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ДеревоПроектовКонтекстноеМеню" id="157">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ДеревоПроектовКонтекстноеМенюКнопкаВыбрать" id="177">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Выбрать</CommandName>
+										<ExtendedTooltip name="ДеревоПроектовКонтекстноеМенюКнопкаВыбратьРасширеннаяПодсказка" id="178"/>
+									</Button>
+									<Button name="ДеревоПроектовКонтекстноеМенюКнопкаИзменить" id="179">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ДеревоПроектов.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="ДеревоПроектовКонтекстноеМенюКнопкаИзменитьРасширеннаяПодсказка" id="180"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ДеревоПроектовКоманднаяПанель" id="158">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоПроектовРасширеннаяПодсказка" id="159"/>
+							<SearchStringAddition name="ДеревоПроектовСтрокаПоиска" id="160">
+								<AdditionSource>
+									<Item>ДеревоПроектов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоПроектовСтрокаПоискаКонтекстноеМеню" id="161"/>
+								<ExtendedTooltip name="ДеревоПроектовСтрокаПоискаРасширеннаяПодсказка" id="162"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоПроектовСостояниеПросмотра" id="163">
+								<AdditionSource>
+									<Item>ДеревоПроектов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоПроектовСостояниеПросмотраКонтекстноеМеню" id="164"/>
+								<ExtendedTooltip name="ДеревоПроектовСостояниеПросмотраРасширеннаяПодсказка" id="165"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоПроектовУправлениеПоиском" id="166">
+								<AdditionSource>
+									<Item>ДеревоПроектов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоПроектовУправлениеПоискомКонтекстноеМеню" id="167"/>
+								<ExtendedTooltip name="ДеревоПроектовУправлениеПоискомРасширеннаяПодсказка" id="168"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДеревоПроектовВыбор</Event>
+								<Event name="BeforeAddRow">ДеревоПроектовПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ДеревоПроектовПередУдалением</Event>
+								<Event name="BeforeRowChange">ДеревоПроектовПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ДеревоПроектовСтрока" id="169">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево проектов строка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево проектов строка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ДеревоПроектовСтрокаРасширеннаяПодсказка" id="170"/>
+									<ChildItems>
+										<PictureField name="ДеревоПроектовНомерКартинки" id="187">
+											<DataPath>ДеревоПроектов.НомерКартинки</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КоллекцияПроект16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ДеревоПроектовНомерКартинкиКонтекстноеМеню" id="188"/>
+											<ExtendedTooltip name="ДеревоПроектовНомерКартинкиРасширеннаяПодсказка" id="189"/>
+										</PictureField>
+										<InputField name="ДеревоПроектовНаименование" id="181">
+											<DataPath>ДеревоПроектов.Наименование</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоПроектовНаименованиеКонтекстноеМеню" id="182"/>
+											<ExtendedTooltip name="ДеревоПроектовНаименованиеРасширеннаяПодсказка" id="183"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Проекты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Проекты.Папка</Field>
+				<Field>Проекты.ЕстьПроектныеЗадачи</Field>
+				<Field>Проекты.Ref</Field>
+				<Field>Проекты.IsFolder</Field>
+				<Field>Проекты.DeletionMark</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникПроекты.Ссылка,
+	СправочникПроекты.ВерсияДанных,
+	СправочникПроекты.ПометкаУдаления,
+	СправочникПроекты.Предопределенный,
+	СправочникПроекты.Родитель,
+	СправочникПроекты.ЭтоГруппа,
+	СправочникПроекты.Код,
+	СправочникПроекты.Наименование,
+	СправочникПроекты.ГрафикРаботы,
+	СправочникПроекты.ГрифДоступа,
+	СправочникПроекты.ДатаПоследнейЗагрузкиИзВнешнегоФайла,
+	СправочникПроекты.ЕдиницаДлительностиЗадач,
+	СправочникПроекты.ЕдиницаТрудозатратЗадач,
+	СправочникПроекты.ЗагруженИзMSProject,
+	СправочникПроекты.Заказчик,
+	СправочникПроекты.Комментарий,
+	СправочникПроекты.Описание,
+	СправочникПроекты.Организация,
+	СправочникПроекты.Папка,
+	СправочникПроекты.РедактируетсяВСтороннейСистеме,
+	СправочникПроекты.Руководитель,
+	СправочникПроекты.Состояние,
+	СправочникПроекты.СписыватьЗатратыНаПроект,
+	СправочникПроекты.СсылкаНаВнешнийФайл,
+	СправочникПроекты.ТекущийПланНачало,
+	СправочникПроекты.ТекущийПланОкончание,
+	СправочникПроекты.ТекущийПланТрудозатраты,
+	ЕСТЬNULL(ПроектныеЗадачи.ЕстьПроектныеЗадачи, ЛОЖЬ) КАК ЕстьПроектныеЗадачи
+ИЗ
+	Справочник.Проекты КАК СправочникПроекты
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ИСТИНА КАК ЕстьПроектныеЗадачи,
+			ПроектныеЗадачи.Владелец КАК Владелец
+		ИЗ
+			Справочник.ПроектныеЗадачи КАК ПроектныеЗадачи
+		
+		СГРУППИРОВАТЬ ПО
+			ПроектныеЗадачи.Владелец) КАК ПроектныеЗадачи
+		ПО СправочникПроекты.Ссылка = ПроектныеЗадачи.Владелец
+ГДЕ
+	НЕ СправочникПроекты.ПометкаУдаления
+{ГДЕ
+	(СправочникПроекты.Папка = &amp;Группа),
+	(НЕ &amp;ТолькоМоиПроекты
+			ИЛИ (&amp;ТекущийПользователь В
+					(ВЫБРАТЬ
+						ПроектыПроектнаяКоманда.Исполнитель
+					ИЗ
+						Справочник.Проекты.ПроектнаяКоманда КАК ПроектыПроектнаяКоманда
+					ГДЕ
+						ПроектыПроектнаяКоманда.Ссылка = СправочникПроекты.Ссылка)
+				ИЛИ &amp;ТекущийПользователь = СправочникПроекты.Руководитель))}</QueryText>
+				<MainTable>Catalog.Проекты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПерваяАктивизация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первая активизация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбиратьТолькоПроектнуюЗадачу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбирать только проектную задачу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийПроект" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий проект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяПапка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая папка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПапкиПроектов</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТекущаяПапка</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Папки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникПапкиПроектов.Ссылка,
+	СправочникПапкиПроектов.ВерсияДанных,
+	СправочникПапкиПроектов.ПометкаУдаления,
+	СправочникПапкиПроектов.Предопределенный,
+	СправочникПапкиПроектов.Родитель,
+	СправочникПапкиПроектов.Код,
+	СправочникПапкиПроектов.Наименование,
+	ВЫБОР
+		КОГДА СправочникПапкиПроектов.ПометкаУдаления
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИндексКартинки
+ИЗ
+	Справочник.ПапкиПроектов КАК СправочникПапкиПроектов</QueryText>
+				<MainTable>Catalog.ПапкиПроектов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПроектныеЗадачи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проектные задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ПроектныеЗадачи.СуммарнаяЗадача</Field>
+				<Field>ПроектныеЗадачи.Ref</Field>
+				<Field>ПроектныеЗадачи.Owner</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникПроектныеЗадачи.Ссылка,
+	СправочникПроектныеЗадачи.ВерсияДанных,
+	СправочникПроектныеЗадачи.ПометкаУдаления,
+	СправочникПроектныеЗадачи.Предопределенный,
+	СправочникПроектныеЗадачи.Владелец,
+	СправочникПроектныеЗадачи.Родитель,
+	СправочникПроектныеЗадачи.Код,
+	СправочникПроектныеЗадачи.Наименование,
+	СправочникПроектныеЗадачи.Важность,
+	СправочникПроектныеЗадачи.Веха,
+	СправочникПроектныеЗадачи.ГрафикРаботы,
+	СправочникПроектныеЗадачи.ИдентификаторЗадачи,
+	СправочникПроектныеЗадачи.КодСДР,
+	СправочникПроектныеЗадачи.НомерЗадачиВУровне,
+	СправочникПроектныеЗадачи.Описание,
+	СправочникПроектныеЗадачи.Предмет,
+	СправочникПроектныеЗадачи.СуммарнаяЗадача,
+	СправочникПроектныеЗадачи.ТипОграничения,
+	СправочникПроектныеЗадачи.ДатаОграничения,
+	СправочникПроектныеЗадачи.КодСДР + " " + СправочникПроектныеЗадачи.Наименование КАК КодИНаименование
+ИЗ
+	Справочник.ПроектныеЗадачи КАК СправочникПроектныеЗадачи</QueryText>
+				<MainTable>Catalog.ПроектныеЗадачи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>НомерЗадачиВУровне</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВидПросмотра" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид просмотра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПросмотраСпискаОбъектов</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидПросмотра</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПоказыватьУдаленные" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоМоиПроекты" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только мои проекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТолькоМоиПроекты</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВестиУчетПоПроектам</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПустойПроект" id="12">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрокаПоиска" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоискВключен" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск включен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоПроектов" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево проектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПроектныеЗадачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерКартинки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоЗадача" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Владелец" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекущийПользователь" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПроектныеЗадачи</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПроектныеЗадачи.СуммарнаяЗадача</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Выбрать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="РежимПросмотраСписком" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списком</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим просмотра списком</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РежимПросмотраСписком</Action>
+		</Command>
+		<Command name="РежимПросмотраПоПапкам" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По папкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим просмотра списком</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РежимПросмотраПоПапкам</Action>
+		</Command>
+		<Command name="ПоказыватьУдаленные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьУдаленные</Action>
+		</Command>
+		<Command name="ОчиститьИсторию" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить историю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить историю</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьИсторию</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Проект">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ПроектнаяЗадача">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПроектныеЗадачи</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ВыбиратьТолькоПроектнуюЗадачу">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

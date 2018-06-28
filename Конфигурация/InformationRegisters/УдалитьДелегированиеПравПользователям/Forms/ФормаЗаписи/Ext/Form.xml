@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Делегирование прав</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ОтКого" id="1">
+			<DataPath>Запись.ОтКого</DataPath>
+			<ContextMenu name="ОтКогоКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОтКогоExtendedTooltip" id="13"/>
+			<Events>
+				<Event name="StartChoice">ОтКогоНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Кому" id="3">
+			<DataPath>Запись.Кому</DataPath>
+			<ContextMenu name="КомуКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="КомуExtendedTooltip" id="14"/>
+			<Events>
+				<Event name="StartChoice">КомуНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Комментарий" id="9">
+			<DataPath>Запись.Комментарий</DataPath>
+			<Height>3</Height>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="15"/>
+		</InputField>
+		<InputField name="ДатаПередачи" id="7">
+			<DataPath>Запись.ДатаПередачи</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</Title>
+			<Width>15</Width>
+			<ContextMenu name="ДатаПередачиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДатаПередачиExtendedTooltip" id="16"/>
+		</InputField>
+		<InputField name="Ответственный" id="11">
+			<DataPath>Запись.Ответственный</DataPath>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="17"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УдалитьДелегированиеПравПользователям</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

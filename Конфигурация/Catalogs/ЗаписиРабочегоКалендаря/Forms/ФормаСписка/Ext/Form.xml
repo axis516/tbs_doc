@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Записи рабочего календаря</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтображатьУдаленные" id="88">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ОтображатьУдаленные</CommandName>
+				<ExtendedTooltip name="ФормаОтображатьУдаленныеРасширеннаяПодсказка" id="89"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="9">
+			<Width>70</Width>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="10">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокСобытийКонтекстноеМенюСоздатьЗаписьКалендаряВесьДень" id="20">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СоздатьЗаписьКалендаря</CommandName>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюСоздатьЗаписьКалендаряВесьДеньExtendedTooltip" id="56"/>
+					</Button>
+					<Button name="СписокСобытийКонтекстноеМенюСкопировать" id="21">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюСкопироватьExtendedTooltip" id="57"/>
+					</Button>
+					<Button name="СписокСобытийКонтекстноеМенюИзменить" id="22">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Change</CommandName>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюИзменитьExtendedTooltip" id="58"/>
+					</Button>
+					<Button name="СписокСобытийКонтекстноеМенюУстановитьПометкуУдаления" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.SetDeletionMark</CommandName>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюУстановитьПометкуУдаленияExtendedTooltip" id="59"/>
+					</Button>
+					<Popup name="СписокСобытийКонтекстноеМенюГруппаУстановитьЦвет" id="24">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Цвет</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Установить цвет записи</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюГруппаУстановитьЦветExtendedTooltip" id="60"/>
+						<ChildItems>
+							<ButtonGroup name="СписокСобытийКонтекстноеМенюГруппаЦвет" id="25">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список событий контекстное меню группа цвет</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список событий контекстное меню группа цвет</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="СписокСобытийКонтекстноеМенюГруппаЦветExtendedTooltip" id="61"/>
+								<ChildItems>
+									<Button name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаКрасный" id="26">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветСпискаКрасный</CommandName>
+										<ExtendedTooltip name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаКрасныйExtendedTooltip" id="62"/>
+									</Button>
+									<Button name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаСиний" id="27">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветСпискаСиний</CommandName>
+										<ExtendedTooltip name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаСинийExtendedTooltip" id="63"/>
+									</Button>
+									<Button name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаЖелтый" id="28">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветСпискаЖелтый</CommandName>
+										<ExtendedTooltip name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаЖелтыйExtendedTooltip" id="64"/>
+									</Button>
+									<Button name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаЗеленый" id="29">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветСпискаЗеленый</CommandName>
+										<ExtendedTooltip name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаЗеленыйExtendedTooltip" id="65"/>
+									</Button>
+									<Button name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаОранжевый" id="30">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЦветСпискаОранжевый</CommandName>
+										<ExtendedTooltip name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаОранжевыйExtendedTooltip" id="66"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаНет" id="31">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьЦветСпискаНет</CommandName>
+								<ExtendedTooltip name="СписокСобытийКонтекстноеМенюУстановитьЦветСпискаНетExtendedTooltip" id="67"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="СписокСобытийКонтекстноеМенюНайти" id="32">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюНайтиExtendedTooltip" id="68"/>
+					</Button>
+					<Button name="СписокСобытийКонтекстноеМенюОтменитьПоиск" id="33">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюОтменитьПоискExtendedTooltip" id="69"/>
+					</Button>
+					<Button name="СписокСобытийКонтекстноеМенюКопироватьВБуферОбмена" id="34">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.CopyToClipboard</CommandName>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюКопироватьВБуферОбменаExtendedTooltip" id="70"/>
+					</Button>
+					<Button name="СписокСобытийКонтекстноеМенюНастройкаСписка" id="35">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Список.StandardCommand.ListSettings</CommandName>
+						<ExtendedTooltip name="СписокСобытийКонтекстноеМенюНастройкаСпискаExtendedTooltip" id="71"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="11">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="72"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="79">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="80"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="81"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="82">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="83"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="85">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="86"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="87"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокНаименование" id="48">
+					<DataPath>Список.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Событие</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СписокНаименованиеКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="СписокНаименованиеРасширеннаяПодсказка" id="73"/>
+				</LabelField>
+				<LabelField name="СписокДатаНачала" id="42">
+					<DataPath>Список.ДатаНачала</DataPath>
+					<ContextMenu name="СписокДатаНачалаКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="СписокДатаНачалаExtendedTooltip" id="74"/>
+				</LabelField>
+				<LabelField name="СписокДатаОкончания" id="44">
+					<DataPath>Список.ДатаОкончания</DataPath>
+					<ContextMenu name="СписокДатаОкончанияКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СписокДатаОкончанияExtendedTooltip" id="75"/>
+				</LabelField>
+				<CheckBoxField name="ВесьДень" id="54">
+					<DataPath>Список.ВесьДень</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВесьДеньКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ВесьДеньExtendedTooltip" id="76"/>
+				</CheckBoxField>
+				<LabelField name="ТипЗаписиКалендаря" id="52">
+					<DataPath>Список.ТипЗаписиКалендаря</DataPath>
+					<ContextMenu name="ТипЗаписиКалендаряКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ТипЗаписиКалендаряExtendedTooltip" id="77"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="50">
+					<DataPath>Список.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="СсылкаExtendedTooltip" id="78"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="2">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникЗаписиРабочегоКалендаря.Ссылка,
+	СправочникЗаписиРабочегоКалендаря.ВерсияДанных,
+	СправочникЗаписиРабочегоКалендаря.ПометкаУдаления,
+	СправочникЗаписиРабочегоКалендаря.Предопределенный,
+	СправочникЗаписиРабочегоКалендаря.Код,
+	СправочникЗаписиРабочегоКалендаря.Наименование,
+	СправочникЗаписиРабочегоКалендаря.ВесьДень,
+	СправочникЗаписиРабочегоКалендаря.ДатаНачала,
+	СправочникЗаписиРабочегоКалендаря.ДатаОкончания,
+	СправочникЗаписиРабочегоКалендаря.Пользователь,
+	СправочникЗаписиРабочегоКалендаря.Предмет,
+	ЕСТЬNULL(НастройкиОтображенияЗаписейРабочегоКалендаря.ЗначениеНастройки, ЗНАЧЕНИЕ(Перечисление.ЦветаРабочегоКалендаря.Нет)) КАК ЗначениеНастройки,
+	СправочникЗаписиРабочегоКалендаря.ТипЗаписиКалендаря
+ИЗ
+	Справочник.ЗаписиРабочегоКалендаря КАК СправочникЗаписиРабочегоКалендаря
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НастройкиОтображенияЗаписейРабочегоКалендаря КАК НастройкиОтображенияЗаписейРабочегоКалендаря
+		ПО СправочникЗаписиРабочегоКалендаря.Ссылка = НастройкиОтображенияЗаписейРабочегоКалендаря.Событие
+			И (НастройкиОтображенияЗаписейРабочегоКалендаря.Пользователь = &amp;Пользователь)
+			И (НастройкиОтображенияЗаписейРабочегоКалендаря.Настройка = ЗНАЧЕНИЕ(Перечисление.НастройкиЗаписейРабочегоКалендаря.Цвет))
+ГДЕ
+	(&amp;ОтображатьУдаленные
+			ИЛИ НЕ СправочникЗаписиРабочегоКалендаря.ПометкаУдаления)
+{ГДЕ
+	(СправочникЗаписиРабочегоКалендаря.ДатаОкончания &gt;= &amp;ДатаНачала),
+	(СправочникЗаписиРабочегоКалендаря.ДатаНачала &lt;= &amp;ДатаОкончания),
+	(СправочникЗаписиРабочегоКалендаря.ВесьДень = &amp;ВесьДень),
+	(СправочникЗаписиРабочегоКалендаря.Ссылка В (&amp;МассивСсылок))}</QueryText>
+				<MainTable>Catalog.ЗаписиРабочегоКалендаря</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Ссылка.ДатаНачала</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ОписаниеКраткое</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="true" kind="StyleItem"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеНастройки</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЦветаРабочегоКалендаря.Красный</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#F08080</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Красный цвет события</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеНастройки</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЦветаРабочегоКалендаря.Синий</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#A6CAF0</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Синий цвет события</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеНастройки</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЦветаРабочегоКалендаря.Желтый</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#FAD25A</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Желтый цвет события</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеНастройки</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЦветаРабочегоКалендаря.Зеленый</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#9ACD32</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Зеленый цвет события</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеНастройки</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЦветаРабочегоКалендаря.Оранжевый</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#FFB478</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Оранжевый цвет события</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗначениеНастройки</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ЦветаРабочегоКалендаря.Нет</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#F8F2D8</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+							<dcsset:presentation xsi:type="xs:string">Нет цвета события</dcsset:presentation>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВесьДень" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Весь день</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтображатьУдаленные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтображатьУдаленные</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьЗаписьКалендаря" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать запись календаря</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьЗаписьКалендаря</Action>
+		</Command>
+		<Command name="УстановитьЦветСпискаЖелтый" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Желтый</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить желтый цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЦветСпискаЖелтый</Action>
+		</Command>
+		<Command name="УстановитьЦветСпискаЗеленый" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зеленый</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить зеленый цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЦветСпискаЗеленый</Action>
+		</Command>
+		<Command name="УстановитьЦветСпискаКрасный" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Красный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить красный цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЦветСпискаКрасный</Action>
+		</Command>
+		<Command name="УстановитьЦветСпискаНет" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЦветСпискаНет</Action>
+		</Command>
+		<Command name="УстановитьЦветСпискаОранжевый" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оранжевый</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить оранжевый цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЦветСпискаОранжевый</Action>
+		</Command>
+		<Command name="УстановитьЦветСпискаСиний" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить синий цвет записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЦветСпискаСиний</Action>
+		</Command>
+		<Command name="ОтображатьУдаленные" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтображатьУдаленные</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.УстановитьНапоминаниеПоПредмету</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

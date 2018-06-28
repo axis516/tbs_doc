@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<CommandSet>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаЗаписатьИЗакрыть" id="21">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="22"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="27">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="28"/>
+			</Button>
+			<Button name="ФормаПолитикиДоступа" id="52">
+				<Type>CommandBarButton</Type>
+				<CommandName>InformationRegister.РазрешенияДоступаОбщие.Command.ПолитикиДоступа</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ExtendedTooltip name="ФормаПолитикиДоступаРасширеннаяПодсказка" id="53"/>
+			</Button>
+			<Button name="ФормаПолномочияИРазрешения" id="50">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПолномочияИРазрешения</CommandName>
+				<ExtendedTooltip name="ФормаПолномочияИРазрешенияРасширеннаяПодсказка" id="51"/>
+			</Button>
+			<Popup name="ПодменюПолучить" id="40">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Получить</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>StdPicture.Report</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ПодменюПолучитьРасширеннаяПодсказка" id="41"/>
+				<ChildItems>
+					<Button name="ФормаОтчетОтчетПоЗадачамПолучитьСписокИстекающихЗадачПодразделения1" id="48">
+						<Type>CommandBarButton</Type>
+						<CommandName>Report.ОтчетПоЗадачам.Command.ПолучитьСписокИстекающихЗадачПодразделения</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаОтчетОтчетПоЗадачамПолучитьСписокИстекающихЗадачПодразделения1РасширеннаяПодсказка" id="49"/>
+					</Button>
+					<Button name="ФормаОтчетОтчетПоЗадачамПолучитьСписокНеПринятыхЗадачПодразделения" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Report.ОтчетПоЗадачам.Command.ПолучитьСписокНеПринятыхЗадачПодразделения</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаОтчетОтчетПоЗадачамПолучитьСписокНеПринятыхЗадачПодразделенияРасширеннаяПодсказка" id="43"/>
+					</Button>
+					<Button name="ФормаОтчетОтчетПоЗадачамПолучитьСписокТекущихЗадачПодразделения" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Report.ОтчетПоЗадачам.Command.ПолучитьСписокТекущихЗадачПодразделения</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаОтчетОтчетПоЗадачамПолучитьСписокТекущихЗадачПодразделенияРасширеннаяПодсказка" id="45"/>
+					</Button>
+					<Button name="ФормаОбщаяКомандаОтчетыОбъекта" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ОтчетыОбъекта</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Еще отчеты...</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаОбщаяКомандаОтчетыОбъектаРасширеннаяПодсказка" id="47"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ФормаРегистрСведенийИндексыНумерацииИндексНумерации" id="29">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>0:e5d31d93-6cf9-4c25-9c03-555bb967fda5</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ExtendedTooltip name="ФормаРегистрСведенийИндексыНумерацииИндексНумерацииРасширеннаяПодсказка" id="30"/>
+			</Button>
+			<ButtonGroup name="ФормаСтандартныеКоманды" id="23">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма стандартные команды</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма стандартные команды</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ФормаСтандартныеКомандыРасширеннаяПодсказка" id="24"/>
+			</ButtonGroup>
+			<Button name="ФормаОбщаяКомандаДополнительныеСведенияКоманднаяПанель" id="36">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>CommonCommand.ДополнительныеСведенияКоманднаяПанель</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ExtendedTooltip name="ФормаОбщаяКомандаДополнительныеСведенияКоманднаяПанельРасширеннаяПодсказка" id="37"/>
+			</Button>
+			<Popup name="ПодменюЗаполнить" id="38">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подменю заполнить</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюЗаполнитьРасширеннаяПодсказка" id="39"/>
+			</Popup>
+			<Button name="ФормаСправка" id="25">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНаименованиеКод" id="9">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеКодExtendedTooltip" id="14"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>50</Width>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="15"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<TitleLocation>Top</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="16"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ИндексНумерации" id="31">
+			<DataPath>ИндексНумерации</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строковый индекс подразделения может использоваться при формировании регистрационного номера 
+входящего, исходящего или внутреннего документа в качестве префикса или суффикса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<ContextMenu name="ИндексНумерацииКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ИндексНумерацииРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="Руководитель" id="7">
+			<DataPath>Объект.Руководитель</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>50</Width>
+			<Wrap>false</Wrap>
+			<ContextMenu name="РуководительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РуководительExtendedTooltip" id="17"/>
+			<Events>
+				<Event name="Creating">РуководительСоздание</Event>
+			</Events>
+		</InputField>
+		<InputField name="ГрафикРаботы" id="10">
+			<DataPath>Объект.ГрафикРаботы</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<Width>50</Width>
+			<ContextMenu name="ГрафикРаботыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ГрафикРаботыExtendedTooltip" id="18"/>
+		</InputField>
+		<InputField name="ТБС_Дивизион" id="54">
+			<DataPath>Объект.ТБС_Дивизион</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<Width>50</Width>
+			<ContextMenu name="ТБС_ДивизионКонтекстноеМеню" id="55"/>
+			<ExtendedTooltip name="ТБС_ДивизионРасширеннаяПодсказка" id="56"/>
+		</InputField>
+		<InputField name="Родитель" id="5">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вышестоящее подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Top</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>50</Width>
+			<Wrap>false</Wrap>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="19"/>
+		</InputField>
+		<InputField name="Комментарий" id="12">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<Width>50</Width>
+			<VerticalStretch>false</VerticalStretch>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="20"/>
+		</InputField>
+		<UsualGroup name="ГруппаСвойства" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойства</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаСвойстваExtendedTooltip" id="35"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СтруктураПредприятия</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СтарыйРуководитель" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старый руководитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НетНастройкиНумерации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет настройки нумерации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИндексНумерации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индекс нумерации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИндексНумерацииПриОткрытии" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индекс нумерации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать объект и закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПолномочияИРазрешения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полномочия и разрешения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полномочия и разрешения подразделения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолномочияИРазрешения</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>6:440d115d-a769-427e-891a-88d65fba2057</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>5:440d115d-a769-427e-891a-88d65fba2057</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Report.ОтчетПоЗадачам.Command.ПолучитьСписокИстекающихЗадачПодразделения</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Report.ОтчетПоЗадачам.Command.ПолучитьСписокНеПринятыхЗадачПодразделения</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Report.ОтчетПоЗадачам.Command.ПолучитьСписокТекущихЗадачПодразделения</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ДополнительныеПечатныеФормыОбъекта</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

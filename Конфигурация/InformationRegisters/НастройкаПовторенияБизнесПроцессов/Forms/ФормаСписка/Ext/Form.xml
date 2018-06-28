@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка повторения процессов</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Прекратить" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Прекратить</CommandName>
+				<ExtendedTooltip name="ПрекратитьExtendedTooltip" id="27"/>
+			</Button>
+			<Button name="Расписание" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Расписание</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расписание повторения...</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="РасписаниеExtendedTooltip" id="28"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСписки" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСпискиExtendedTooltip" id="29"/>
+			<ChildItems>
+				<Table name="ТипыБизнесПроцессов" id="17">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>15</Width>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>ТипыБизнесПроцессов</DataPath>
+					<RowPictureDataPath>ТипыБизнесПроцессов.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CheckAll</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>UncheckAll</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="ТипыБизнесПроцессовКонтекстноеМеню" id="18"/>
+					<AutoCommandBar name="ТипыБизнесПроцессовКоманднаяПанель" id="19"/>
+					<ExtendedTooltip name="ТипыБизнесПроцессовExtendedTooltip" id="30"/>
+					<SearchStringAddition name="ТипыБизнесПроцессовСтрокаПоиска" id="41">
+						<AdditionSource>
+							<Item>ТипыБизнесПроцессов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыБизнесПроцессовСтрокаПоискаКонтекстноеМеню" id="42"/>
+						<ExtendedTooltip name="ТипыБизнесПроцессовСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТипыБизнесПроцессовСостояниеПросмотра" id="44">
+						<AdditionSource>
+							<Item>ТипыБизнесПроцессов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыБизнесПроцессовСостояниеПросмотраКонтекстноеМеню" id="45"/>
+						<ExtendedTooltip name="ТипыБизнесПроцессовСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТипыБизнесПроцессовУправлениеПоиском" id="47">
+						<AdditionSource>
+							<Item>ТипыБизнесПроцессов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыБизнесПроцессовУправлениеПоискомКонтекстноеМеню" id="48"/>
+						<ExtendedTooltip name="ТипыБизнесПроцессовУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">ТипыБизнесПроцессовПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="Представление" id="20">
+							<DataPath>ТипыБизнесПроцессов.Presentation</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПредставлениеКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ПредставлениеExtendedTooltip" id="31"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаСписок" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСписокExtendedTooltip" id="32"/>
+					<ChildItems>
+						<Table name="Список" id="1">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<DefaultItem>true</DefaultItem>
+							<Width>70</Width>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Список</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокExtendedTooltip" id="33"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="50">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="52"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="53">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="54"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="55"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="56">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="57"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="58"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<PictureField name="ПовторениеПрекращено" id="6">
+									<DataPath>Список.ПовторениеЗавершено</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторение прекращено</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.Stop</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>2</Width>
+									<ValuesPicture>
+										<xr:Ref>StdPicture.Stop</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="ПовторениеПрекращеноКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ПовторениеПрекращеноExtendedTooltip" id="34"/>
+								</PictureField>
+								<LabelField name="БизнесПроцесс" id="4">
+									<DataPath>Список.НаименованиеБизнесПроцесса</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторять процесс</v8:content>
+										</v8:item>
+									</Title>
+									<Width>30</Width>
+									<ContextMenu name="БизнесПроцессКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="БизнесПроцессExtendedTooltip" id="35"/>
+								</LabelField>
+								<LabelField name="ДатаПоследнегоПовторения" id="8">
+									<DataPath>Список.ДатаПоследнегоПовторения</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<DefaultItem>true</DefaultItem>
+									<Width>10</Width>
+									<ContextMenu name="ДатаПоследнегоПовторенияКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="ДатаПоследнегоПовторенияExtendedTooltip" id="36"/>
+								</LabelField>
+								<LabelField name="Автор" id="10">
+									<DataPath>Список.Автор</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автор настройки</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="АвторКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="АвторExtendedTooltip" id="37"/>
+								</LabelField>
+								<LabelField name="Комментарий" id="25">
+									<DataPath>Список.Комментарий</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="КомментарийExtendedTooltip" id="38"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<InputField name="ПредставлениеРасписания" id="23">
+							<DataPath>Items.Список.CurrentData.ПредставлениеРасписания</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расписание повторения</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Height>2</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<ContextMenu name="ПредставлениеРасписанияКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ПредставлениеРасписанияExtendedTooltip" id="39"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПоказатьПрекращенные" id="14">
+			<DataPath>ПоказатьПрекращенные</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоказатьПрекращенныеКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ПоказатьПрекращенныеExtendedTooltip" id="40"/>
+			<Events>
+				<Event name="OnChange">ПоказатьЗавершенныеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.БизнесПроцесс</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РегистрСведенийНастройкаПовторенияБизнесПроцессов.БизнесПроцесс,
+	РегистрСведенийНастройкаПовторенияБизнесПроцессов.БизнесПроцесс.Наименование КАК НаименованиеБизнесПроцесса,
+	РегистрСведенийНастройкаПовторенияБизнесПроцессов.Расписание,
+	РегистрСведенийНастройкаПовторенияБизнесПроцессов.ПовторениеЗавершено,
+	РегистрСведенийНастройкаПовторенияБизнесПроцессов.ДатаПоследнегоПовторения,
+	РегистрСведенийНастройкаПовторенияБизнесПроцессов.Автор,
+	РегистрСведенийНастройкаПовторенияБизнесПроцессов.ПредставлениеРасписания,
+	РегистрСведенийНастройкаПовторенияБизнесПроцессов.Комментарий,
+	ТИПЗНАЧЕНИЯ(РегистрСведенийНастройкаПовторенияБизнесПроцессов.БизнесПроцесс) КАК ТипБизнесПроцесса
+ИЗ
+	РегистрСведений.НастройкаПовторенияБизнесПроцессов КАК РегистрСведенийНастройкаПовторенияБизнесПроцессов
+ГДЕ
+	(ТИПЗНАЧЕНИЯ(РегистрСведенийНастройкаПовторенияБизнесПроцессов.БизнесПроцесс) = ТИПЗНАЧЕНИЯ(&amp;ТипБизнесПроцесса)
+			ИЛИ &amp;ТипБизнесПроцесса = НЕОПРЕДЕЛЕНО)</QueryText>
+				<MainTable>InformationRegister.НастройкаПовторенияБизнесПроцессов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>БизнесПроцесс.ДатаНачала</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПовторениеЗавершено</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ЗакрытыеНеактуальныеЗаписи</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПоказатьПрекращенные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать прекращенные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказатьПрекращенные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТипыБизнесПроцессов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы бизнес процессов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ПредставлениеРасписания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление расписания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Расписание" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Расписание</Action>
+		</Command>
+		<Command name="Прекратить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прекратить повторение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прекратить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Прекратить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

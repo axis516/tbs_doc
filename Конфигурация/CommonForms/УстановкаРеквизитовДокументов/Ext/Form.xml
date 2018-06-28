@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>45</Width>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСохранитьИЗакрыть" id="5">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьИЗакрыть</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Установить реквизиты</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаСохранитьИЗакрытьExtendedTooltip" id="80"/>
+			</Button>
+			<Button name="ФормаОтмена" id="6">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="81"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтступ" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отступ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отступ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтступExtendedTooltip" id="83"/>
+			<ChildItems>
+				<Pages name="СтраницыВидДокумента" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы вид документа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы вид документа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыВидДокументаExtendedTooltip" id="84"/>
+					<ChildItems>
+						<Page name="СтраницаВходящиеДокументы" id="2">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница входящие документы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Входящие документы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаВходящиеДокументыExtendedTooltip" id="85"/>
+							<ChildItems>
+								<InputField name="ВходящиеДокументыВидДокумента" id="3">
+									<DataPath>ВходящиеДокументыВидДокумента</DataPath>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="ВходящиеДокументыВидДокументаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ВходящиеДокументыВидДокументаExtendedTooltip" id="86"/>
+									<Events>
+										<Event name="OnChange">ВидДокументаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВходящиеДокументыГрифДоступа" id="8">
+									<DataPath>ВходящиеДокументыГрифДоступа</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гриф</v8:content>
+										</v8:item>
+									</Title>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="ВходящиеДокументыГрифДоступаКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="ВходящиеДокументыГрифДоступаExtendedTooltip" id="87"/>
+								</InputField>
+								<InputField name="ВходящиеДокументыСпособПолучения" id="12">
+									<DataPath>ВходящиеДокументыСпособПолучения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Получен</v8:content>
+										</v8:item>
+									</Title>
+									<Wrap>false</Wrap>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="ВходящиеДокументыСпособПолученияКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ВходящиеДокументыСпособПолученияExtendedTooltip" id="88"/>
+								</InputField>
+								<InputField name="ВходящиеДокументыНоменклатураДел" id="16">
+									<DataPath>ВходящиеДокументыНоменклатураДел</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номенкл. дел</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВходящиеДокументыНоменклатураДелКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ВходящиеДокументыНоменклатураДелExtendedTooltip" id="89"/>
+								</InputField>
+								<InputField name="ВходящиеДокументыОрганизация" id="24">
+									<DataPath>ВходящиеДокументыОрганизация</DataPath>
+									<ContextMenu name="ВходящиеДокументыОрганизацияКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ВходящиеДокументыОрганизацияExtendedTooltip" id="90"/>
+								</InputField>
+								<InputField name="ВходящиеДокументыПодразделение" id="35">
+									<DataPath>ВходящиеДокументыПодразделение</DataPath>
+									<ContextMenu name="ВходящиеДокументыПодразделениеКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ВходящиеДокументыПодразделениеExtendedTooltip" id="91"/>
+								</InputField>
+								<InputField name="ВходящиеДокументыВопросДеятельности" id="26">
+									<DataPath>ВходящиеДокументыВопросДеятельности</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопрос</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопрос деятельности</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ВходящиеДокументыВопросДеятельностиКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ВходящиеДокументыВопросДеятельностиExtendedTooltip" id="92"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаВнутренниеДокументы" id="37">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внутренние документы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внутренние документы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаВнутренниеДокументыExtendedTooltip" id="93"/>
+							<ChildItems>
+								<InputField name="ВнутренниеДокументыВидДокумента" id="41">
+									<DataPath>ВнутренниеДокументыВидДокумента</DataPath>
+									<ContextMenu name="ВнутренниеДокументыВидДокументаКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ВнутренниеДокументыВидДокументаExtendedTooltip" id="94"/>
+									<Events>
+										<Event name="OnChange">ВидДокументаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВнутренниеДокументыГрифДоступа" id="43">
+									<DataPath>ВнутренниеДокументыГрифДоступа</DataPath>
+									<ContextMenu name="ВнутренниеДокументыГрифДоступаКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ВнутренниеДокументыГрифДоступаExtendedTooltip" id="95"/>
+								</InputField>
+								<InputField name="ВнутренниеДокументыПапка" id="45">
+									<DataPath>ВнутренниеДокументыПапка</DataPath>
+									<ContextMenu name="ВнутренниеДокументыПапкаКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ВнутренниеДокументыПапкаExtendedTooltip" id="96"/>
+								</InputField>
+								<InputField name="ВнутренниеДокументыНоменклатураДел" id="47">
+									<DataPath>ВнутренниеДокументыНоменклатураДел</DataPath>
+									<ContextMenu name="ВнутренниеДокументыНоменклатураДелКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ВнутренниеДокументыНоменклатураДелExtendedTooltip" id="97"/>
+								</InputField>
+								<InputField name="ВнутренниеДокументыОрганизация" id="49">
+									<DataPath>ВнутренниеДокументыОрганизация</DataPath>
+									<ContextMenu name="ВнутренниеДокументыОрганизацияКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ВнутренниеДокументыОрганизацияExtendedTooltip" id="98"/>
+								</InputField>
+								<InputField name="ВнутренниеДокументыПодразделение" id="51">
+									<DataPath>ВнутренниеДокументыПодразделение</DataPath>
+									<ContextMenu name="ВнутренниеДокументыПодразделениеКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ВнутренниеДокументыПодразделениеExtendedTooltip" id="99"/>
+								</InputField>
+								<InputField name="ВнутренниеДокументыВопросДеятельности" id="53">
+									<DataPath>ВнутренниеДокументыВопросДеятельности</DataPath>
+									<ContextMenu name="ВнутренниеДокументыВопросДеятельностиКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ВнутренниеДокументыВопросДеятельностиExtendedTooltip" id="100"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаИсходящиеДокументы" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исходящие документы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исходящие документы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаИсходящиеДокументыExtendedTooltip" id="101"/>
+							<ChildItems>
+								<InputField name="ИсходящиеДокументыВидДокумента" id="63">
+									<DataPath>ИсходящиеДокументыВидДокумента</DataPath>
+									<ContextMenu name="ИсходящиеДокументыВидДокументаКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ИсходящиеДокументыВидДокументаExtendedTooltip" id="102"/>
+									<Events>
+										<Event name="OnChange">ВидДокументаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИсходящиеДокументыГрифДоступа" id="65">
+									<DataPath>ИсходящиеДокументыГрифДоступа</DataPath>
+									<ContextMenu name="ИсходящиеДокументыГрифДоступаКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ИсходящиеДокументыГрифДоступаExtendedTooltip" id="103"/>
+								</InputField>
+								<InputField name="ИсходящиеДокументыНоменклатураДел" id="67">
+									<DataPath>ИсходящиеДокументыНоменклатураДел</DataPath>
+									<ContextMenu name="ИсходящиеДокументыНоменклатураДелКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ИсходящиеДокументыНоменклатураДелExtendedTooltip" id="104"/>
+								</InputField>
+								<InputField name="ИсходящиеДокументыОрганизация" id="69">
+									<DataPath>ИсходящиеДокументыОрганизация</DataPath>
+									<ContextMenu name="ИсходящиеДокументыОрганизацияКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ИсходящиеДокументыОрганизацияExtendedTooltip" id="105"/>
+								</InputField>
+								<InputField name="ИсходящиеДокументыПодразделение" id="71">
+									<DataPath>ИсходящиеДокументыПодразделение</DataPath>
+									<ContextMenu name="ИсходящиеДокументыПодразделениеКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ИсходящиеДокументыПодразделениеExtendedTooltip" id="106"/>
+								</InputField>
+								<InputField name="ИсходящиеДокументыВопросДеятельности" id="73">
+									<DataPath>ИсходящиеДокументыВопросДеятельности</DataPath>
+									<ContextMenu name="ИсходящиеДокументыВопросДеятельностиКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ИсходящиеДокументыВопросДеятельностиExtendedTooltip" id="107"/>
+								</InputField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="УстановитьПризнакПроверки" id="77">
+			<DataPath>УстановитьПризнакПроверки</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить признак проверки документов после установки</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="УстановитьПризнакПроверкиКонтекстноеМеню" id="78"/>
+			<ExtendedTooltip name="УстановитьПризнакПроверкиExtendedTooltip" id="108"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВходящиеДокументыВидДокумента" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыВходящихДокументов</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьВидыВходящихДокументов</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВходящиеДокументыГрифДоступа" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гриф</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГрифыДоступа</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьГрифыДоступа</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВходящиеДокументыСпособПолучения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ получения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СпособыДоставки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВходящиеДокументыНоменклатураДел" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенкл. дел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НоменклатураДел</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНоменклатуруДелВоВходящих</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВходящиеДокументыОрганизация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьУчетПоОрганизациям</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВходящиеДокументыПодразделение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВходящиеДокументыВопросДеятельности" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВопросыДеятельности</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьВопросыДеятельности</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="СписокДокументов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидСправочникаДокументов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид справочника документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВнутренниеДокументыВидДокумента" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыВнутреннихДокументов</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьВидыВнутреннихДокументов</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВнутренниеДокументыГрифДоступа" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гриф доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГрифыДоступа</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьГрифыДоступа</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВнутренниеДокументыПапка" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПапкиВнутреннихДокументов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВнутренниеДокументыНоменклатураДел" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенкл. дел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НоменклатураДел</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНоменклатуруДелВоВнутренних</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВнутренниеДокументыОрганизация" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьУчетПоОрганизациям</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ВнутренниеДокументыПодразделение" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВнутренниеДокументыВопросДеятельности" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВопросыДеятельности</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьВопросыДеятельности</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИсходящиеДокументыВидДокумента" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыИсходящихДокументов</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьВидыИсходящихДокументов</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИсходящиеДокументыГрифДоступа" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гриф доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ГрифыДоступа</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьГрифыДоступа</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИсходящиеДокументыНоменклатураДел" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенкл. дел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НоменклатураДел</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНоменклатуруДелВИсходящих</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИсходящиеДокументыОрганизация" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьУчетПоОрганизациям</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ИсходящиеДокументыПодразделение" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсходящиеДокументыВопросДеятельности" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВопросыДеятельности</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьВопросыДеятельности</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="УстановитьПризнакПроверки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить признак проверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрыть</Action>
+		</Command>
+	</Commands>
+</Form>

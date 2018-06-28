@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка прав доступа</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="ОсновнаяКоманднаяПанель" id="1">
+			<ExtendedTooltip name="ОсновнаяКоманднаяПанельExtendedTooltip" id="485"/>
+			<ChildItems>
+				<Button name="КомандаЗаписатьИЗакрыть" id="513">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+					<ExtendedTooltip name="КомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="514"/>
+				</Button>
+				<Button name="Отмена" id="20">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="487"/>
+				</Button>
+				<Button name="Справка" id="21">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="488"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="ГруппаПраваДоступа" id="311">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Double</VerticalSpacing>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПраваДоступаРасширеннаяПодсказка" id="364"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОсновныеНастройкиПравДоступа" id="326">
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсновныеНастройкиПравДоступаРасширеннаяПодсказка" id="365"/>
+					<ChildItems>
+						<CheckBoxField name="ДокументооборотИспользоватьОграничениеПравДоступа" id="322">
+							<DataPath>НаборКонстант.ДокументооборотИспользоватьОграничениеПравДоступа</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДокументооборотИспользоватьОграничениеПравДоступаКонтекстноеМеню" id="323"/>
+							<ExtendedTooltip name="ДокументооборотИспользоватьОграничениеПравДоступаExtendedTooltip" id="366"/>
+							<Events>
+								<Event name="OnChange">ДокументооборотИспользоватьОграничениеПравДоступаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаОтложенноеОбновление" id="537">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отложенное обновление</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отложенное обновление</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтложенноеОбновлениеРасширеннаяПодсказка" id="538"/>
+							<ChildItems>
+								<CheckBoxField name="ДокументооборотИспользоватьОтложенноеОбновлениеПравДоступа" id="324">
+									<DataPath>НаборКонстант.ДокументооборотИспользоватьОтложенноеОбновлениеПравДоступа</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДокументооборотИспользоватьОтложенноеОбновлениеПравДоступаКонтекстноеМеню" id="325"/>
+									<ExtendedTooltip name="ДокументооборотИспользоватьОтложенноеОбновлениеПравДоступаExtendedTooltip" id="367"/>
+									<Events>
+										<Event name="OnChange">ДокументооборотИспользоватьОтложенноеОбновлениеПравДоступаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПредупреждениеОбОтложенномОбновлении" id="542">
+									<Visible>false</Visible>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;colorstyle -16&gt;не рекомендуется для файлового варианта&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Из-за особенностей реализации регламентных заданий в файловых базах
+права при отложенном обновлении будут рассчитываться с «опозданием» в несколько минут.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="ПредупреждениеОбОтложенномОбновленииКонтекстноеМеню" id="543"/>
+									<ExtendedTooltip name="ПредупреждениеОбОтложенномОбновленииРасширеннаяПодсказка" id="544"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаГрупповойРасчетПрав" id="327">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа групповой расчет прав</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа групповой расчет прав</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГрупповойРасчетПравРасширеннаяПодсказка" id="368"/>
+							<ChildItems>
+								<LabelDecoration name="Отступ1" id="555">
+									<Width>2</Width>
+									<ContextMenu name="Отступ1КонтекстноеМеню" id="556"/>
+									<ExtendedTooltip name="Отступ1РасширеннаяПодсказка" id="557"/>
+								</LabelDecoration>
+								<InputField name="ГрупповойРасчетПравДоступаРазмерПорции" id="534">
+									<DataPath>НаборКонстант.ГрупповойРасчетПравДоступаРазмерПорции</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Размер порции при обработке очереди</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГрупповойРасчетПравДоступаРазмерПорцииКонтекстноеМеню" id="535"/>
+									<ExtendedTooltip name="ГрупповойРасчетПравДоступаРазмерПорцииРасширеннаяПодсказка" id="536"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="ДобавлятьРуководителямДоступПодчиненных" id="217">
+							<DataPath>НаборКонстант.ДобавлятьРуководителямДоступПодчиненных</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДобавлятьРуководителямДоступПодчиненныхКонтекстноеМеню" id="218"/>
+							<ExtendedTooltip name="ДобавлятьРуководителямДоступПодчиненныхРасширеннаяПодсказка" id="369"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПроверятьСоответствиеРабочихГруппОбщимНастройкам" id="558">
+							<DataPath>НаборКонстант.ПроверятьСоответствиеРабочихГруппОбщимНастройкам</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроверятьСоответствиеРабочихГруппОбщимНастройкамКонтекстноеМеню" id="559"/>
+							<ExtendedTooltip name="ПроверятьСоответствиеРабочихГруппОбщимНастройкамРасширеннаяПодсказка" id="560"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаНастройкиПолитикДоступа" id="571">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Политики доступа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ываыв</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаНастройкиПолитикДоступаРасширеннаяПодсказка" id="572"/>
+							<ChildItems>
+								<UsualGroup name="НастройкиПолитикДоступаСодержимое" id="576">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки политик доступа содержимое</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки политик доступа содержимое</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="НастройкиПолитикДоступаСодержимоеРасширеннаяПодсказка" id="577"/>
+									<ChildItems>
+										<UsualGroup name="Группа2" id="581">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="582"/>
+											<ChildItems>
+												<Button name="ИспользованиеРазрезовДоступа" id="566">
+													<Type>Hyperlink</Type>
+													<CommandName>Form.Command.ИспользованиеРазрезовДоступа</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Используемые разрезы доступа</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<ExtendedTooltip name="ИспользованиеРазрезовДоступаРасширеннаяПодсказка" id="567">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>&lt;color #000000&gt;Настройка позволяет исключить реквизиты объектов из списка правообразующих.&lt;/&gt;
+&lt;color #000000&gt;По таким реквизитам нельзя будет настроить ограничения доступа,&lt;/&gt;
+&lt;color #000000&gt;это позволит уменьшить количество служебных объектов механизма прав и ускорить пересчеты прав.&lt;/&gt;
+
+&lt;color #000000&gt;При изменении настройки программа обработает все объекты, которые используют измененные разрезы доступа.&lt;/&gt;
+&lt;color #000000&gt;Это может занять существенное время.&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</Button>
+												<CheckBoxField name="ИсключенияВПолитикахДоступа" id="561">
+													<DataPath>НаборКонстант.СпецРазрешенияВПолитикахДоступа</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Специальные разрешения</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИсключенияВПолитикахДоступаКонтекстноеМеню" id="562"/>
+													<ExtendedTooltip name="ИсключенияВПолитикахДоступаРасширеннаяПодсказка" id="563"/>
+													<Events>
+														<Event name="OnChange">ИсключенияВПолитикахДоступаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<LabelDecoration name="ПояснениеСпециальныеРазрешения" id="586">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>style:ПоясняющийТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Разрешения по сочетаниям комбинаций разрезов доступа</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Top</VerticalAlign>
+													<ContextMenu name="ПояснениеСпециальныеРазрешенияКонтекстноеМеню" id="587"/>
+													<ExtendedTooltip name="ПояснениеСпециальныеРазрешенияРасширеннаяПодсказка" id="588"/>
+												</LabelDecoration>
+												<CheckBoxField name="ИспользоватьЛокальныхАдминистраторов" id="583">
+													<DataPath>НаборКонстант.ИспользоватьЛокальныхАдминистраторов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Локальные администраторы</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьЛокальныхАдминистраторовКонтекстноеМеню" id="584"/>
+													<ExtendedTooltip name="ИспользоватьЛокальныхАдминистраторовРасширеннаяПодсказка" id="585"/>
+													<Events>
+														<Event name="OnChange">ИспользоватьЛокальныхАдминистраторовПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<LabelDecoration name="ПояснениеЛокальныеАдминистраторы" id="589">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>style:ПоясняющийТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Разрешения, которые не ограничиваются рабочими группами и настройками папок</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Top</VerticalAlign>
+													<ContextMenu name="ПояснениеЛокальныеАдминистраторыКонтекстноеМеню" id="590"/>
+													<ExtendedTooltip name="ПояснениеЛокальныеАдминистраторыРасширеннаяПодсказка" id="591"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ОграничиватьДоступЧерезВебСерверы" id="329">
+					<DataPath>НаборКонстант.ОграничиватьДоступЧерезВебСерверы</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОграничиватьДоступЧерезВебСерверыКонтекстноеМеню" id="330"/>
+					<ExtendedTooltip name="ОграничиватьДоступЧерезВебСерверыExtendedTooltip" id="373"/>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаПротоколирование" id="515">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа протоколирование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Протоколирование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПротоколированиеExtendedTooltip" id="516"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьПротоколированиеРаботыПользователей" id="517">
+							<DataPath>НаборКонстант.ИспользоватьПротоколированиеРаботыПользователей</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Протоколировать работу пользователей</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПротоколированиеРаботыПользователейКонтекстноеМеню" id="518"/>
+							<ExtendedTooltip name="ИспользоватьПротоколированиеРаботыПользователейExtendedTooltip" id="519"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьПротоколированиеРаботыПользователейПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаСрокХранения" id="520">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа срок хранения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Срок хранения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСрокХраненияExtendedTooltip" id="521"/>
+							<ChildItems>
+								<InputField name="СрокХраненияПротоколаРаботыПользователей" id="522">
+									<DataPath>НаборКонстант.СрокХраненияПротоколаРаботыПользователей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Срок хранения протоколов</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СрокХраненияПротоколаРаботыПользователейКонтекстноеМеню" id="523"/>
+									<ExtendedTooltip name="СрокХраненияПротоколаРаботыПользователейExtendedTooltip" id="524"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияМесяцев" id="525">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>месяцев</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияМесяцевКонтекстноеМеню" id="526"/>
+									<ExtendedTooltip name="ДекорацияМесяцевExtendedTooltip" id="527"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="КаталогСохраненияКопииПротоколаРаботыПользователей" id="528">
+							<DataPath>КаталогСохраненияКопииПротоколаРаботыПользователей</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каталог хранения протоколов</v8:content>
+								</v8:item>
+							</Title>
+							<Width>31</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="КаталогСохраненияКопииПротоколаРаботыПользователейКонтекстноеМеню" id="529"/>
+							<ExtendedTooltip name="КаталогСохраненияКопииПротоколаРаботыПользователейExtendedTooltip" id="530"/>
+							<Events>
+								<Event name="StartChoice">КаталогСохраненияКопииПротоколаРаботыПользователейНачалоВыбора</Event>
+								<Event name="Clearing">КаталогСохраненияКопииПротоколаРаботыПользователейОчистка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкиВхода" id="545">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки входа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки входа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиВходаРасширеннаяПодсказка" id="546"/>
+					<ChildItems>
+						<Button name="НастройкиВходаПользователей" id="547">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.НастройкиВходаПользователей</CommandName>
+							<ExtendedTooltip name="НастройкиВходаПользователейРасширеннаяПодсказка" id="548"/>
+						</Button>
+						<LabelDecoration name="ПояснениеНастройкиВхода" id="549">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сложность и смена паролей, ограничение работы неактивных пользователей</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ПояснениеНастройкиВходаКонтекстноеМеню" id="550"/>
+							<ExtendedTooltip name="ПояснениеНастройкиВходаРасширеннаяПодсказка" id="551"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.ФактическийИсполнительЗадач.Ref</Field>
+				<Field>НаборКонстант.УдалитьТипХраненияФайлов.Ref</Field>
+				<Field>НаборКонстант.УдалитьКонтекстКриптографии.Ref</Field>
+				<Field>НаборКонстант.УдалитьКонтекстАвторизации.Ref</Field>
+				<Field>НаборКонстант.ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсий.Ref</Field>
+				<Field>НаборКонстант.ПровайдерSMS.Ref</Field>
+				<Field>НаборКонстант.ОсновнаяЕдиницаТрудозатрат.Ref</Field>
+				<Field>НаборКонстант.ОсновнаяЕдиницаДлительности.Ref</Field>
+				<Field>НаборКонстант.ОграничиватьДоступНаУровнеЗаписей</Field>
+				<Field>НаборКонстант.КаталогСохраненияКопииПротоколаРаботыПользователейWindows</Field>
+				<Field>НаборКонстант.КаталогСохраненияКопииПротоколаРаботыПользователейLinux</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляWindows</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляLinux</Field>
+				<Field>НаборКонстант.ВидЦитированияПриОтветеВФорматеHTML.Ref</Field>
+				<Field>НаборКонстант.ВариантИспользованияPushУведомлений.Ref</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ИдентификаторРегламентногоЗадания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор регламентного задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказатьВопросПриИзмененииОграниченияДоступаНаУровнеЗаписей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать вопрос при изменении ограничения доступа на уровне записей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоФайловаяБаза" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это файловая база</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогВременныхФайлов" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог временных файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогСохраненияКопииПротоколаРаботыПользователей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог сохранения копии протокола работы пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаписатьИЗакрыть" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="НастройкиВходаПользователей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки входа пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки входа пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиВходаПользователей</Action>
+		</Command>
+		<Command name="ИспользованиеРазрезовДоступа" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрезы доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование разрезов доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИспользованиеРазрезовДоступа</Action>
+		</Command>
+		<Command name="ОткрытьПолитикиДоступа" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть политики доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть политики доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПолитикиДоступа</Action>
+		</Command>
+	</Commands>
+</Form>

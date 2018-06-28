@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>90</Width>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Списки" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СпискиExtendedTooltip" id="87"/>
+			<ChildItems>
+				<Page name="СписокШаблоныВнутреннихДокументов" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблоны внутренних документов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблоны внутренних документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СписокШаблоныВнутреннихДокументовExtendedTooltip" id="88"/>
+					<ChildItems>
+						<UsualGroup name="ПанельШаблоныВнутреннихДокументов" id="26">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель шаблоны внутренних документов</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПанельШаблоныВнутреннихДокументовExtendedTooltip" id="75"/>
+							<ChildItems>
+								<CommandBar name="Панель1" id="27">
+									<CommandSource>Item.СписокВнутренниеДокументы</CommandSource>
+									<ExtendedTooltip name="Панель1ExtendedTooltip" id="76"/>
+									<ChildItems>
+										<Button name="Список1ПоказыватьУдаленные" id="136">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+											<ExtendedTooltip name="Список1ПоказыватьУдаленныеРасширеннаяПодсказка" id="137"/>
+										</Button>
+										<Button name="Справка1" id="29">
+											<Type>CommandBarButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="Справка1ExtendedTooltip" id="77"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СписокВнутренниеДокументы" id="9">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокШаблоныВнутреннихДокументов</DataPath>
+							<CommandSet>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>LevelUp</ExcludedCommand>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+								<ExcludedCommand>CreateFolder</ExcludedCommand>
+								<ExcludedCommand>LevelDown</ExcludedCommand>
+							</CommandSet>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокВнутренниеДокументыКонтекстноеМеню" id="10"/>
+							<AutoCommandBar name="СписокВнутренниеДокументыКоманднаяПанель" id="11">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокВнутренниеДокументыExtendedTooltip" id="89"/>
+							<SearchStringAddition name="СписокВнутренниеДокументыСтрокаПоиска" id="109">
+								<AdditionSource>
+									<Item>СписокВнутренниеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВнутренниеДокументыСтрокаПоискаКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="СписокВнутренниеДокументыСтрокаПоискаРасширеннаяПодсказка" id="111"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокВнутренниеДокументыСостояниеПросмотра" id="112">
+								<AdditionSource>
+									<Item>СписокВнутренниеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВнутренниеДокументыСостояниеПросмотраКонтекстноеМеню" id="113"/>
+								<ExtendedTooltip name="СписокВнутренниеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="114"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокВнутренниеДокументыУправлениеПоиском" id="115">
+								<AdditionSource>
+									<Item>СписокВнутренниеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВнутренниеДокументыУправлениеПоискомКонтекстноеМеню" id="116"/>
+								<ExtendedTooltip name="СписокВнутренниеДокументыУправлениеПоискомРасширеннаяПодсказка" id="117"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Наименование1" id="30">
+									<DataPath>СписокШаблоныВнутреннихДокументов.Description</DataPath>
+									<ContextMenu name="Наименование1КонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="Наименование1ExtendedTooltip" id="90"/>
+								</LabelField>
+								<LabelField name="Список1КомментарийКШаблону" id="68">
+									<DataPath>СписокШаблоныВнутреннихДокументов.КомментарийКШаблону</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Комментарий</v8:content>
+										</v8:item>
+									</Title>
+									<Height>1</Height>
+									<ContextMenu name="Список1КомментарийКШаблонуКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="Список1КомментарийКШаблонуExtendedTooltip" id="91"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СписокШаблоныВходящихДокументов" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблоны входящих документов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблоны входящих документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СписокШаблоныВходящихДокументовExtendedTooltip" id="92"/>
+					<ChildItems>
+						<UsualGroup name="ПанельШаблоныВходящихДокументов" id="44">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель шаблоны входящих документов</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПанельШаблоныВходящихДокументовExtendedTooltip" id="78"/>
+							<ChildItems>
+								<CommandBar name="Панель2" id="45">
+									<CommandSource>Item.СписокВходящиеДокументы</CommandSource>
+									<ExtendedTooltip name="Панель2ExtendedTooltip" id="79"/>
+									<ChildItems>
+										<Button name="Список2ПоказыватьУдаленные" id="138">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+											<ExtendedTooltip name="Список2ПоказыватьУдаленныеРасширеннаяПодсказка" id="139"/>
+										</Button>
+										<Button name="Справка2" id="47">
+											<Type>CommandBarButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="Справка2ExtendedTooltip" id="80"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СписокВходящиеДокументы" id="37">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокШаблоныВходящихДокументов</DataPath>
+							<CommandSet>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>LevelUp</ExcludedCommand>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+								<ExcludedCommand>CreateFolder</ExcludedCommand>
+								<ExcludedCommand>LevelDown</ExcludedCommand>
+							</CommandSet>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокВходящиеДокументыКонтекстноеМеню" id="38"/>
+							<AutoCommandBar name="СписокВходящиеДокументыКоманднаяПанель" id="39">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокВходящиеДокументыExtendedTooltip" id="93"/>
+							<SearchStringAddition name="СписокВходящиеДокументыСтрокаПоиска" id="118">
+								<AdditionSource>
+									<Item>СписокВходящиеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВходящиеДокументыСтрокаПоискаКонтекстноеМеню" id="119"/>
+								<ExtendedTooltip name="СписокВходящиеДокументыСтрокаПоискаРасширеннаяПодсказка" id="120"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокВходящиеДокументыСостояниеПросмотра" id="121">
+								<AdditionSource>
+									<Item>СписокВходящиеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВходящиеДокументыСостояниеПросмотраКонтекстноеМеню" id="122"/>
+								<ExtendedTooltip name="СписокВходящиеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="123"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокВходящиеДокументыУправлениеПоиском" id="124">
+								<AdditionSource>
+									<Item>СписокВходящиеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВходящиеДокументыУправлениеПоискомКонтекстноеМеню" id="125"/>
+								<ExtendedTooltip name="СписокВходящиеДокументыУправлениеПоискомРасширеннаяПодсказка" id="126"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Наименование2" id="40">
+									<DataPath>СписокШаблоныВходящихДокументов.Description</DataPath>
+									<ContextMenu name="Наименование2КонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="Наименование2ExtendedTooltip" id="94"/>
+								</LabelField>
+								<LabelField name="Список2КомментарийКШаблону" id="70">
+									<DataPath>СписокШаблоныВходящихДокументов.КомментарийКШаблону</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Комментарий</v8:content>
+										</v8:item>
+									</Title>
+									<Height>1</Height>
+									<ContextMenu name="Список2КомментарийКШаблонуКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="Список2КомментарийКШаблонуExtendedTooltip" id="95"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СписокШаблоныИсходящихДокументов" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблоны исходящих документов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблоны исходящих документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СписокШаблоныИсходящихДокументовExtendedTooltip" id="96"/>
+					<ChildItems>
+						<UsualGroup name="ПанельШаблоныИсходящихДокументов" id="56">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель шаблоны исходящих документов</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПанельШаблоныИсходящихДокументовExtendedTooltip" id="81"/>
+							<ChildItems>
+								<CommandBar name="Панель3" id="57">
+									<CommandSource>Item.СписокИсходящиеДокументы</CommandSource>
+									<ExtendedTooltip name="Панель3ExtendedTooltip" id="82"/>
+									<ChildItems>
+										<Button name="Список3ПоказыватьУдаленные" id="140">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.ПоказыватьУдаленные</CommandName>
+											<ExtendedTooltip name="Список3ПоказыватьУдаленныеРасширеннаяПодсказка" id="141"/>
+										</Button>
+										<Button name="Справка3" id="59">
+											<Type>CommandBarButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="Справка3ExtendedTooltip" id="83"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СписокИсходящиеДокументы" id="61">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<SkipOnInput>false</SkipOnInput>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокШаблоныИсходящихДокументов</DataPath>
+							<CommandSet>
+								<ExcludedCommand>HierarchicalList</ExcludedCommand>
+								<ExcludedCommand>Tree</ExcludedCommand>
+								<ExcludedCommand>List</ExcludedCommand>
+								<ExcludedCommand>LevelUp</ExcludedCommand>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+								<ExcludedCommand>CreateFolder</ExcludedCommand>
+								<ExcludedCommand>LevelDown</ExcludedCommand>
+							</CommandSet>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокИсходящиеДокументыКонтекстноеМеню" id="62"/>
+							<AutoCommandBar name="СписокИсходящиеДокументыКоманднаяПанель" id="63">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокИсходящиеДокументыExtendedTooltip" id="97"/>
+							<SearchStringAddition name="СписокИсходящиеДокументыСтрокаПоиска" id="127">
+								<AdditionSource>
+									<Item>СписокИсходящиеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокИсходящиеДокументыСтрокаПоискаКонтекстноеМеню" id="128"/>
+								<ExtendedTooltip name="СписокИсходящиеДокументыСтрокаПоискаРасширеннаяПодсказка" id="129"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокИсходящиеДокументыСостояниеПросмотра" id="130">
+								<AdditionSource>
+									<Item>СписокИсходящиеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокИсходящиеДокументыСостояниеПросмотраКонтекстноеМеню" id="131"/>
+								<ExtendedTooltip name="СписокИсходящиеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="132"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокИсходящиеДокументыУправлениеПоиском" id="133">
+								<AdditionSource>
+									<Item>СписокИсходящиеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокИсходящиеДокументыУправлениеПоискомКонтекстноеМеню" id="134"/>
+								<ExtendedTooltip name="СписокИсходящиеДокументыУправлениеПоискомРасширеннаяПодсказка" id="135"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="Наименование3" id="64">
+									<DataPath>СписокШаблоныИсходящихДокументов.Description</DataPath>
+									<ContextMenu name="Наименование3КонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="Наименование3ExtendedTooltip" id="98"/>
+								</LabelField>
+								<LabelField name="Список3КомментарийКШаблону" id="72">
+									<DataPath>СписокШаблоныИсходящихДокументов.КомментарийКШаблону</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Комментарий</v8:content>
+										</v8:item>
+									</Title>
+									<Height>1</Height>
+									<ContextMenu name="Список3КомментарийКШаблонуКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="Список3КомментарийКШаблонуExtendedTooltip" id="99"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокШаблоныВнутреннихДокументов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список шаблонов внутренних документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокШаблоныВнутреннихДокументов.КомментарийКШаблону</Field>
+				<Field>СписокШаблоныВнутреннихДокументов.Ref</Field>
+				<Field>СписокШаблоныВнутреннихДокументов.Description</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникШаблоныВнутреннихДокументов.Ссылка,
+	СправочникШаблоныВнутреннихДокументов.ПометкаУдаления,
+	СправочникШаблоныВнутреннихДокументов.Предопределенный,
+	СправочникШаблоныВнутреннихДокументов.Код,
+	СправочникШаблоныВнутреннихДокументов.Наименование,
+	СправочникШаблоныВнутреннихДокументов.КомментарийКШаблону
+ИЗ
+	Справочник.ШаблоныВнутреннихДокументов КАК СправочникШаблоныВнутреннихДокументов
+{ГДЕ
+	(СправочникШаблоныВнутреннихДокументов.ЭтоГруппа = &amp;ЭтоГруппа)}</QueryText>
+				<MainTable>Catalog.ШаблоныВнутреннихДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокШаблоныВходящихДокументов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список шаблоны входящих документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокШаблоныВходящихДокументов.КомментарийКШаблону</Field>
+				<Field>СписокШаблоныВходящихДокументов.Ref</Field>
+				<Field>СписокШаблоныВходящихДокументов.Description</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникШаблоныВходящихДокументов.Ссылка,
+	СправочникШаблоныВходящихДокументов.ПометкаУдаления,
+	СправочникШаблоныВходящихДокументов.Предопределенный,
+	СправочникШаблоныВходящихДокументов.Код,
+	СправочникШаблоныВходящихДокументов.Наименование,
+	СправочникШаблоныВходящихДокументов.КомментарийКШаблону
+ИЗ
+	Справочник.ШаблоныВходящихДокументов КАК СправочникШаблоныВходящихДокументов
+{ГДЕ
+	(СправочникШаблоныВходящихДокументов.ЭтоГруппа = &amp;ЭтоГруппа)}</QueryText>
+				<MainTable>Catalog.ШаблоныВходящихДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокШаблоныИсходящихДокументов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список шаблоны исходящих документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокШаблоныИсходящихДокументов.КомментарийКШаблону</Field>
+				<Field>СписокШаблоныИсходящихДокументов.Ref</Field>
+				<Field>СписокШаблоныИсходящихДокументов.Description</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникШаблоныИсходящихДокументов.Ссылка,
+	СправочникШаблоныИсходящихДокументов.ПометкаУдаления,
+	СправочникШаблоныИсходящихДокументов.Предопределенный,
+	СправочникШаблоныИсходящихДокументов.Код,
+	СправочникШаблоныИсходящихДокументов.Наименование,
+	СправочникШаблоныИсходящихДокументов.КомментарийКШаблону
+ИЗ
+	Справочник.ШаблоныИсходящихДокументов КАК СправочникШаблоныИсходящихДокументов
+{ГДЕ
+	(СправочникШаблоныИсходящихДокументов.ЭтоГруппа = &amp;ЭтоГруппа)}</QueryText>
+				<MainTable>Catalog.ШаблоныИсходящихДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПоказыватьУдаленные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьУдаленные</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказыватьУдаленные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьУдаленные</Action>
+		</Command>
+	</Commands>
+</Form>

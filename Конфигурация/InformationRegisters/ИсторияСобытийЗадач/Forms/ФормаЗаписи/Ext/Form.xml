@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСправка" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="17"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="11">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="16"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Задача" id="1">
+			<DataPath>Запись.Задача</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<OpenButton>false</OpenButton>
+			<ContextMenu name="ЗадачаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ЗадачаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Пользователь" id="7">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<UsualGroup name="ГруппаДатаВремя" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата время</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата время</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаВремяРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="ДатаСобытияДата" id="9">
+					<DataPath>Запись.ДатаСобытия</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Width>8</Width>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДатаСобытияДатаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДатаСобытияДатаРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="ДатаСобытияВремя" id="13">
+					<DataPath>Запись.ДатаСобытия</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=T</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДатаСобытияВремяКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ДатаСобытияВремяРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Событие" id="5">
+			<DataPath>Запись.Событие</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="СобытиеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="СобытиеРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="Комментарий" id="3">
+			<DataPath>Запись.Комментарий</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>Left</TitleLocation>
+			<Width>40</Width>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ИсторияСобытийЗадач</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

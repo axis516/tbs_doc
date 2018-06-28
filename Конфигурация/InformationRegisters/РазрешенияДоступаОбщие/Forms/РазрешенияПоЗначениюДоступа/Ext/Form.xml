@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Политики доступа</v8:content>
+		</v8:item>
+	</Title>
+	<Width>80</Width>
+	<Height>30</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="КомПанели" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ком панели</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ком панели</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КомПанелиРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<CommandBar name="КомПанельНабора" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ком панель набора</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ком панель набора</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CommandSource>Item.ТаблицаРазрешений</CommandSource>
+					<ExtendedTooltip name="КомПанельНабораРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<Button name="НаборЗаписейДобавить" id="38">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>Form.Item.ТаблицаРазрешений.StandardCommand.Add</CommandName>
+							<ExtendedTooltip name="НаборЗаписейДобавитьРасширеннаяПодсказка" id="39"/>
+						</Button>
+						<Button name="НаборЗаписейУдалить" id="40">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<OnlyInAllActions>true</OnlyInAllActions>
+							<CommandName>Form.Item.ТаблицаРазрешений.StandardCommand.Delete</CommandName>
+							<ExtendedTooltip name="НаборЗаписейУдалитьРасширеннаяПодсказка" id="41"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаРазрешений" id="44">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаРазрешений</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаРазрешенийКонтекстноеМеню" id="45"/>
+			<AutoCommandBar name="ТаблицаРазрешенийКоманднаяПанель" id="46">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаРазрешенийРасширеннаяПодсказка" id="47"/>
+			<SearchStringAddition name="ТаблицаРазрешенийСтрокаПоиска" id="48">
+				<AdditionSource>
+					<Item>ТаблицаРазрешений</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРазрешенийСтрокаПоискаКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="ТаблицаРазрешенийСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаРазрешенийСостояниеПросмотра" id="51">
+				<AdditionSource>
+					<Item>ТаблицаРазрешений</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРазрешенийСостояниеПросмотраКонтекстноеМеню" id="52"/>
+				<ExtendedTooltip name="ТаблицаРазрешенийСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаРазрешенийУправлениеПоиском" id="54">
+				<AdditionSource>
+					<Item>ТаблицаРазрешений</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРазрешенийУправлениеПоискомКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="ТаблицаРазрешенийУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ТаблицаРазрешенийПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТаблицаРазрешенийПередУдалением</Event>
+				<Event name="OnActivateRow">ТаблицаРазрешенийПриАктивизацииСтроки</Event>
+				<Event name="ChoiceProcessing">ТаблицаРазрешенийОбработкаВыбора</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаРазрешенийПользователь" id="57">
+					<DataPath>ТаблицаРазрешений.Пользователь</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кому</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРазрешенийПользовательКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ТаблицаРазрешенийПользовательРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="ТаблицаРазрешенийУровеньДоступа" id="60">
+					<DataPath>ТаблицаРазрешений.УровеньДоступа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<OpenButton>false</OpenButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ТаблицаРазрешенийУровеньДоступаКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ТаблицаРазрешенийУровеньДоступаРасширеннаяПодсказка" id="62"/>
+					<Events>
+						<Event name="Opening">ТаблицаРазрешенийУровеньДоступаОткрытие</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="КомПанельФормы" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ком панель формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ком панель формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КомПанельФормыРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<Button name="ФормаЗаписатьИЗакрыть" id="29">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Готово</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="ФормаОтмена" id="42">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="43"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИдНовойСтроки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид новой строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаРазрешений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица разрешений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Пользователь" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.КонтейнерПользователей</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="УровеньДоступа" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УровниДоступа</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Унаследован" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Унаследован</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаРазрешений</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаРазрешений.Унаследован</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ИнформационнаяНадпись</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЗначениеДоступа">
+			<Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

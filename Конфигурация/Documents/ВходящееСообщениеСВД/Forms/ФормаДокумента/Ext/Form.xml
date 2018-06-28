@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>90</Width>
+	<Height>30</Height>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="36">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="43"/>
+			</Button>
+			<Button name="ФормаПросмотретьСообщение" id="35">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПросмотретьСообщение</CommandName>
+				<ExtendedTooltip name="ФормаПросмотретьСообщениеРасширеннаяПодсказка" id="44"/>
+			</Button>
+			<Button name="ФормаПраваДоступа" id="56">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ПраваДоступа</CommandName>
+				<ExtendedTooltip name="ФормаПраваДоступаРасширеннаяПодсказка" id="57"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Дата" id="3">
+			<DataPath>Объект.Date</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="ВидСообщения" id="7">
+			<DataPath>Объект.ВидСообщения</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидСообщенияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидСообщенияРасширеннаяПодсказка" id="46"/>
+		</InputField>
+		<InputField name="ВидТранспорта" id="9">
+			<DataPath>Объект.ФорматСообщения</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидТранспортаКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ВидТранспортаРасширеннаяПодсказка" id="47"/>
+		</InputField>
+		<InputField name="ДатаФормирования" id="11">
+			<DataPath>Объект.ДатаФормирования</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаФормированияКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ДатаФормированияРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="Документ" id="41">
+			<DataPath>Объект.Документ</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ChoiceButton>false</ChoiceButton>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<InputField name="ИдентификаторСообщения" id="13">
+			<DataPath>Объект.ИдентификаторСообщения</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИдентификаторСообщенияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИдентификаторСообщенияРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<InputField name="КонтрагентОтправитель" id="15">
+			<DataPath>Объект.КонтрагентОтправитель</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент-отправитель</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КонтрагентОтправительКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="КонтрагентОтправительРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<InputField name="ОрганизацияПолучатель" id="19">
+			<DataPath>Объект.ОрганизацияПолучатель</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОрганизацияПолучательКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОрганизацияПолучательРасширеннаяПодсказка" id="52"/>
+		</InputField>
+		<InputField name="ТранспортПолучения" id="33">
+			<DataPath>Объект.ТранспортПолучения</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТранспортПолученияКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ТранспортПолученияРасширеннаяПодсказка" id="53"/>
+		</InputField>
+		<InputField name="ПервоеСообщениеВСессии" id="37">
+			<DataPath>ПервоеСообщениеВСессии</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ChoiceButton>false</ChoiceButton>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="ПервоеСообщениеВСессииКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ПервоеСообщениеВСессииРасширеннаяПодсказка" id="54"/>
+		</InputField>
+		<HTMLDocumentField name="ТекстHTML" id="39">
+			<DataPath>ТекстHTML</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полный текст сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ТекстHTMLКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="ТекстHTMLРасширеннаяПодсказка" id="55"/>
+		</HTMLDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ВходящееСообщениеСВД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ПервоеСообщениеВСессии" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первое сообщение в сессии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ВходящееСообщениеСВД</v8:Type>
+				<v8:Type>cfg:DocumentRef.ИсходящееСообщениеСВД</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстHTML" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПросмотретьСообщение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотреть сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотреть сообщение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОткрытьВыбранныйФайл</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПросмотретьСообщение</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПраваДоступа" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПраваДоступа</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ДокументооборотИспользоватьОграничениеПравДоступа</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

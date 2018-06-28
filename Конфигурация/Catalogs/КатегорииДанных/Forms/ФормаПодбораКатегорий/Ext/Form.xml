@@ -1,0 +1,802 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Height>30</Height>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСправка" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="70"/>
+			</Button>
+			<Button name="ФормаУстановитьСЗаменой" id="38">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.УстановитьСЗаменой</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьСЗаменойExtendedTooltip" id="71"/>
+			</Button>
+			<Button name="ФормаУстановитьДобавлением" id="68">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УстановитьДобавлением</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьДобавлениемExtendedTooltip" id="72"/>
+			</Button>
+			<Button name="ФормаКомандаГотово" id="69">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаГотово</CommandName>
+				<ExtendedTooltip name="ФормаКомандаГотовоExtendedTooltip" id="73"/>
+			</Button>
+			<Button name="ФормаОтмена" id="39">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="74"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ИнформацияОбОбъектеПодбора" id="41">
+			<DataPath>ИнформацияОбОбъектеПодбора</DataPath>
+			<Visible>false</Visible>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="ИнформацияОбОбъектеПодбораКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ИнформацияОбОбъектеПодбораExtendedTooltip" id="75"/>
+		</LabelField>
+		<UsualGroup name="ЭлементыФормы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЭлементыФормыExtendedTooltip" id="76"/>
+			<ChildItems>
+				<Pages name="ГруппаКатегорииДляВыбора" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа категории для выбора</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа категории для выбора</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКатегорииДляВыбораExtendedTooltip" id="77"/>
+					<ChildItems>
+						<Page name="ГруппаВсеКатегории" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все категории</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа все категории</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаВсеКатегорииExtendedTooltip" id="78"/>
+							<ChildItems>
+								<Table name="ДеревоКатегорий" id="45">
+									<Representation>Tree</Representation>
+									<CommandBarLocation>Top</CommandBarLocation>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<RowSelectionMode>Row</RowSelectionMode>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ДеревоКатегорий</DataPath>
+									<CommandSet>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>OutputList</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<ContextMenu name="ДеревоКатегорийКонтекстноеМеню" id="46"/>
+									<AutoCommandBar name="ДеревоКатегорийКоманднаяПанель" id="47">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДеревоКатегорийExtendedTooltip" id="79"/>
+									<SearchStringAddition name="ДеревоКатегорийСтрокаПоиска" id="90">
+										<AdditionSource>
+											<Item>ДеревоКатегорий</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоКатегорийСтрокаПоискаКонтекстноеМеню" id="91"/>
+										<ExtendedTooltip name="ДеревоКатегорийСтрокаПоискаРасширеннаяПодсказка" id="92"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоКатегорийСостояниеПросмотра" id="93">
+										<AdditionSource>
+											<Item>ДеревоКатегорий</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоКатегорийСостояниеПросмотраКонтекстноеМеню" id="94"/>
+										<ExtendedTooltip name="ДеревоКатегорийСостояниеПросмотраРасширеннаяПодсказка" id="95"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоКатегорийУправлениеПоиском" id="96">
+										<AdditionSource>
+											<Item>ДеревоКатегорий</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоКатегорийУправлениеПоискомКонтекстноеМеню" id="97"/>
+										<ExtendedTooltip name="ДеревоКатегорийУправлениеПоискомРасширеннаяПодсказка" id="98"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ДеревоКатегорийВыбор</Event>
+										<Event name="BeforeAddRow">ДеревоКатегорийПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ДеревоКатегорийПередУдалением</Event>
+										<Event name="BeforeRowChange">ДеревоКатегорийПередНачаломИзменения</Event>
+										<Event name="NewWriteProcessing">ДеревоКатегорийОбработкаЗаписиНового</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ДеревоКатегорийНаименование" id="48">
+											<DataPath>ДеревоКатегорий.Наименование</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Категория</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДеревоКатегорийНаименованиеКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ДеревоКатегорийНаименованиеExtendedTooltip" id="80"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаПоследниеВыбранные" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Недавно выбранные</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа последние выбранные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаПоследниеВыбранныеExtendedTooltip" id="81"/>
+							<ChildItems>
+								<Table name="ПоследниеВыбранныеКатегории" id="55">
+									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<MultipleChoice>true</MultipleChoice>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>ПоследниеВыбранныеКатегории</DataPath>
+									<RowPictureDataPath>ПоследниеВыбранныеКатегории.Picture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<ContextMenu name="ПоследниеВыбранныеКатегорииКонтекстноеМеню" id="56">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<AutoCommandBar name="ПоследниеВыбранныеКатегорииКоманднаяПанель" id="57">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ПоследниеВыбранныеКатегорииExtendedTooltip" id="82"/>
+									<SearchStringAddition name="ПоследниеВыбранныеКатегорииСтрокаПоиска" id="99">
+										<AdditionSource>
+											<Item>ПоследниеВыбранныеКатегории</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПоследниеВыбранныеКатегорииСтрокаПоискаКонтекстноеМеню" id="100"/>
+										<ExtendedTooltip name="ПоследниеВыбранныеКатегорииСтрокаПоискаРасширеннаяПодсказка" id="101"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПоследниеВыбранныеКатегорииСостояниеПросмотра" id="102">
+										<AdditionSource>
+											<Item>ПоследниеВыбранныеКатегории</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПоследниеВыбранныеКатегорииСостояниеПросмотраКонтекстноеМеню" id="103"/>
+										<ExtendedTooltip name="ПоследниеВыбранныеКатегорииСостояниеПросмотраРасширеннаяПодсказка" id="104"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПоследниеВыбранныеКатегорииУправлениеПоиском" id="105">
+										<AdditionSource>
+											<Item>ПоследниеВыбранныеКатегории</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПоследниеВыбранныеКатегорииУправлениеПоискомКонтекстноеМеню" id="106"/>
+										<ExtendedTooltip name="ПоследниеВыбранныеКатегорииУправлениеПоискомРасширеннаяПодсказка" id="107"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ПоследниеВыбранныеКатегорииВыбор</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ПоследниеВыбранныеКатегорииПредставление" id="58">
+											<DataPath>ПоследниеВыбранныеКатегории.Presentation</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Категория</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПоследниеВыбранныеКатегорииПредставлениеКонтекстноеМеню" id="59"/>
+											<ExtendedTooltip name="ПоследниеВыбранныеКатегорииПредставлениеExtendedTooltip" id="83"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<UsualGroup name="ГруппаКнопка" id="27">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкаExtendedTooltip" id="84"/>
+					<ChildItems>
+						<Button name="ДобавитьКСпискуВыбранных" id="26">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ДобавитьКСпискуВыбранных</CommandName>
+							<ExtendedTooltip name="ДобавитьКСпискуВыбранныхExtendedTooltip" id="85"/>
+						</Button>
+						<Button name="УдалитьКатегорииИзСпискаВыбранных" id="43">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.УдалитьКатегорииИзСпискаВыбранных</CommandName>
+							<ExtendedTooltip name="УдалитьКатегорииИзСпискаВыбранныхExtendedTooltip" id="86"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВыбранные" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбранные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбранные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыбранныеExtendedTooltip" id="87"/>
+					<ChildItems>
+						<Table name="ВыбранныеКатегории" id="31">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ВыбранныеКатегории</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбранные категории</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВыбранныеКатегорииКонтекстноеМеню" id="32"/>
+							<AutoCommandBar name="ВыбранныеКатегорииКоманднаяПанель" id="33">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВыбранныеКатегорииExtendedTooltip" id="88"/>
+							<SearchStringAddition name="ВыбранныеКатегорииСтрокаПоиска" id="108">
+								<AdditionSource>
+									<Item>ВыбранныеКатегории</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеКатегорииСтрокаПоискаКонтекстноеМеню" id="109"/>
+								<ExtendedTooltip name="ВыбранныеКатегорииСтрокаПоискаРасширеннаяПодсказка" id="110"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВыбранныеКатегорииСостояниеПросмотра" id="111">
+								<AdditionSource>
+									<Item>ВыбранныеКатегории</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеКатегорииСостояниеПросмотраКонтекстноеМеню" id="112"/>
+								<ExtendedTooltip name="ВыбранныеКатегорииСостояниеПросмотраРасширеннаяПодсказка" id="113"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВыбранныеКатегорииУправлениеПоиском" id="114">
+								<AdditionSource>
+									<Item>ВыбранныеКатегории</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеКатегорииУправлениеПоискомКонтекстноеМеню" id="115"/>
+								<ExtendedTooltip name="ВыбранныеКатегорииУправлениеПоискомРасширеннаяПодсказка" id="116"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ВыбранныеКатегорииВыбор</Event>
+								<Event name="Drag">ВыбранныеКатегорииПеретаскивание</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ВыбранныеКатегорииПолноеНаименование" id="34">
+									<DataPath>ВыбранныеКатегории.ПолноеНаименование</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выбранные категории</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВыбранныеКатегорииПолноеНаименованиеКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ВыбранныеКатегорииПолноеНаименованиеExtendedTooltip" id="89"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВыбранныеКатегории" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные категории</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПолноеНаименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КатегорииДанных</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗаписатьКатегорииПриОК" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать категории при ОК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектыДляКатегоризации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты для категоризации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокРаскрытыхКатегорий" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список раскрытых категорий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяКатегория" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая категория</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КатегорииДанных</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформацияОбОбъектеПодбора" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация об объекте подбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипОбъектаВладельцаСпискаКатегорий" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип объекта владельца списка категорий</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДеревоКатегорий" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево общих категорий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КатегорииДанных</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Персональная" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Персональная</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Выбрана" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрана</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПолноеНаименование" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПоследниеВыбранныеКатегории" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последние выбранные категории</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокНедавнихКатегорийМенялся" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список недавних категорий менялся</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоКатегорийНаименование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоКатегорий.Персональная</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветПерсональнойКатегории</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоКатегорийНаименование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоКатегорий.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:УдаленныйОбъектШрифт" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоКатегорийНаименование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоКатегорий.Персональная</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьКСпискуВыбранных" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить к списку выбранных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьКСпискуВыбранных</Action>
+		</Command>
+		<Command name="УстановитьСЗаменой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить с заменой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все имеющиеся категории будут заменены на выбранные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="Отмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="УдалитьКатегорииИзСпискаВыбранных" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить отмеченные категории из списка выбранных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьКатегорииИзСпискаВыбранных</Action>
+		</Command>
+		<Command name="УстановитьДобавлением" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить с добавлением</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные категории будут добавлены к существующим</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="КомандаГотово" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выбранные категории</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ОбъектыДляКатегорий">
+			<Type/>
+		</Parameter>
+		<Parameter name="ЗаписатьКатегорииПриОК">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка встроенной почты</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalSpacing>Double</VerticalSpacing>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="ОсновнаяКоманднаяПанель" id="830">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ОсновнаяКоманднаяПанельРасширеннаяПодсказка" id="831"/>
+			<ChildItems>
+				<Button name="КомандаЗаписатьИЗакрыть" id="816">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+					<TextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="КомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="817"/>
+				</Button>
+				<Button name="Отмена" id="20">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<TextColor>style:ОтметкаОтрицательногоВыполненияЗадачи</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="712"/>
+				</Button>
+				<Button name="Справка" id="21">
+					<Type>CommandBarButton</Type>
+					<Representation>Picture</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="713"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<CheckBoxField name="ИспользоватьВстроеннуюПочту" id="319">
+			<DataPath>НаборКонстант.ИспользоватьВстроеннуюПочту</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьВстроеннуюПочтуКонтекстноеМеню" id="320"/>
+			<ExtendedTooltip name="ИспользоватьВстроеннуюПочтуExtendedTooltip" id="656"/>
+			<Events>
+				<Event name="OnChange">ИспользоватьВстроеннуюПочтуПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаВстроеннаяПочта" id="372">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа встроенная почта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Встроенная почта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Single</VerticalSpacing>
+			<Representation>NormalSeparation</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВстроеннаяПочтаExtendedTooltip" id="657"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВстроеннаяПочтаТело1" id="838">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа встроенная почта тело1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа встроенная почта тело1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВстроеннаяПочтаТело1РасширеннаяПодсказка" id="839"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВстроеннаяПочтаТело" id="436">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа встроенная почта тело</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВстроеннаяПочтаТелоExtendedTooltip" id="658"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВстроеннаяПочтаЛево" id="408">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВстроеннаяПочтаЛевоExtendedTooltip" id="659"/>
+									<ChildItems>
+										<InputField name="ПользовательРегламентногоЗаданияПолучениеИОтправкаПисем" id="366">
+											<DataPath>ПользовательРегламентногоЗаданияПолучениеИОтправкаПисем</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ПользовательРегламентногоЗаданияПолучениеИОтправкаПисемКонтекстноеМеню" id="367"/>
+											<ExtendedTooltip name="ПользовательРегламентногоЗаданияПолучениеИОтправкаПисемExtendedTooltip" id="660"/>
+											<Events>
+												<Event name="OnChange">ПользовательРегламентногоЗаданияПолучениеИОтправкаПисемПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаПрефиксыПисем" id="429">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Префиксы писем</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Префиксы писем</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Collapsible</Behavior>
+											<ControlRepresentation>Picture</ControlRepresentation>
+											<ExtendedTooltip name="ГруппаПрефиксыПисемExtendedTooltip" id="661"/>
+											<ChildItems>
+												<InputField name="ПрефиксДляОтветныхПисем" id="430">
+													<DataPath>ПрефиксДляОтветныхПисем</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>При ответе</v8:content>
+														</v8:item>
+													</Title>
+													<Width>12</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<DropListButton>true</DropListButton>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Re:</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Re:</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Ответ на:</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Ответ на:</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ChoiceListButton>true</ChoiceListButton>
+													<ContextMenu name="ПрефиксДляОтветныхПисемКонтекстноеМеню" id="431"/>
+													<ExtendedTooltip name="ПрефиксДляОтветныхПисемExtendedTooltip" id="662"/>
+												</InputField>
+												<InputField name="ПрефиксДляПересылаемыхПисем" id="432">
+													<DataPath>ПрефиксДляПересылаемыхПисем</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>При пересылке</v8:content>
+														</v8:item>
+													</Title>
+													<Width>12</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<DropListButton>true</DropListButton>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Fw:</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Fw:</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Пересылка:</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Пересылка:</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ChoiceListButton>true</ChoiceListButton>
+													<ContextMenu name="ПрефиксДляПересылаемыхПисемКонтекстноеМеню" id="433"/>
+													<ExtendedTooltip name="ПрефиксДляПересылаемыхПисемExtendedTooltip" id="663"/>
+												</InputField>
+												<CheckBoxField name="СворачиватьПрефиксОтветаИПересылкиВТемеПисьма" id="434">
+													<DataPath>НаборКонстант.СворачиватьПрефиксОтветаИПересылкиВТемеПисьма</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сворачивать множественные префиксы</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СворачиватьПрефиксОтветаИПересылкиВТемеПисьмаКонтекстноеМеню" id="435"/>
+													<ExtendedTooltip name="СворачиватьПрефиксОтветаИПересылкиВТемеПисьмаExtendedTooltip" id="664"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<CheckBoxField name="ВестиПротоколДоставкиПочты" id="359">
+											<DataPath>НаборКонстант.ВестиПротоколДоставкиПочты</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВестиПротоколДоставкиПочтыКонтекстноеМеню" id="360"/>
+											<ExtendedTooltip name="ВестиПротоколДоставкиПочтыExtendedTooltip" id="665"/>
+										</CheckBoxField>
+										<UsualGroup name="ГруппаСрокХраненияПротоколаДоставкиПочты" id="363">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа срок хранения протокола доставки почты</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСрокХраненияПротоколаДоставкиПочтыExtendedTooltip" id="666"/>
+											<ChildItems>
+												<InputField name="СрокХраненияПротоколаДоставкиПочты" id="361">
+													<DataPath>НаборКонстант.СрокХраненияПротоколаДоставкиПочты</DataPath>
+													<ContextMenu name="СрокХраненияПротоколаДоставкиПочтыКонтекстноеМеню" id="362"/>
+													<ExtendedTooltip name="СрокХраненияПротоколаДоставкиПочтыExtendedTooltip" id="667"/>
+												</InputField>
+												<LabelDecoration name="ДекорацияСрокХраненияПротоколовПочтыДней" id="364">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>дней</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияСрокХраненияПротоколовПочтыДнейКонтекстноеМеню" id="365"/>
+													<ExtendedTooltip name="ДекорацияСрокХраненияПротоколовПочтыДнейExtendedTooltip" id="668"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<CheckBoxField name="ИспользоватьВнутреннююМаршрутизацию" id="368">
+											<DataPath>НаборКонстант.ИспользоватьВнутреннююМаршрутизацию</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьВнутреннююМаршрутизациюКонтекстноеМеню" id="369"/>
+											<ExtendedTooltip name="ИспользоватьВнутреннююМаршрутизациюExtendedTooltip" id="669"/>
+										</CheckBoxField>
+										<CheckBoxField name="ВыполнятьОтправкуВОтдельномРегламентномЗадании" id="370">
+											<DataPath>НаборКонстант.ВыполнятьОтправкуВОтдельномРегламентномЗадании</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВыполнятьОтправкуВОтдельномРегламентномЗаданииКонтекстноеМеню" id="371"/>
+											<ExtendedTooltip name="ВыполнятьОтправкуВОтдельномРегламентномЗаданииExtendedTooltip" id="670"/>
+										</CheckBoxField>
+										<CheckBoxField name="ИспользоватьInternetExplorerДляПолученияТекстаИзHTML" id="832">
+											<DataPath>НаборКонстант.ИспользоватьInternetExplorerДляПолученияТекстаИзHTML</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получать текст из HTML-писем точно</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьInternetExplorerДляПолученияТекстаИзHTMLКонтекстноеМеню" id="833"/>
+											<ExtendedTooltip name="ИспользоватьInternetExplorerДляПолученияТекстаИзHTMLРасширеннаяПодсказка" id="834"/>
+										</CheckBoxField>
+										<CheckBoxField name="РазрешитьПеренаправлениеПисем" id="835">
+											<DataPath>НаборКонстант.РазрешитьПеренаправлениеПисем</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="РазрешитьПеренаправлениеПисемКонтекстноеМеню" id="836"/>
+											<ExtendedTooltip name="РазрешитьПеренаправлениеПисемРасширеннаяПодсказка" id="837"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаВстроеннаяПочтаПраво" id="410">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВстроеннаяПочтаПравоExtendedTooltip" id="682"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаСлужебнаяИнформацияПриОтветеИПересылке" id="411">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Формирование текста письма при ответе и пересылке</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Служебная информация при ответе и пересылке</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Collapsible</Behavior>
+											<ControlRepresentation>Picture</ControlRepresentation>
+											<ExtendedTooltip name="ГруппаСлужебнаяИнформацияПриОтветеИПересылкеExtendedTooltip" id="683"/>
+											<ChildItems>
+												<InputField name="СокращатьИнформациюОПисьмеПриОтвете" id="412">
+													<DataPath>НаборКонстант.СокращатьИнформациюОПисьмеПриОтвете</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вариант шапки письма при ответе</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Полный</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:boolean">false</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Сокращенный</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:boolean">true</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="СокращатьИнформациюОПисьмеПриОтветеКонтекстноеМеню" id="413"/>
+													<ExtendedTooltip name="СокращатьИнформациюОПисьмеПриОтветеExtendedTooltip" id="684"/>
+													<Events>
+														<Event name="OnChange">СокращатьИнформациюОПисьмеПриОтветеПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="СокращатьИнформациюОПисьмеПриПересылке" id="414">
+													<DataPath>НаборКонстант.СокращатьИнформациюОПисьмеПриПересылке</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вариант шапки письма при пересылке</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Полный</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:boolean">false</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Сокращенный</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:boolean">true</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="СокращатьИнформациюОПисьмеПриПересылкеКонтекстноеМеню" id="415"/>
+													<ExtendedTooltip name="СокращатьИнформациюОПисьмеПриПересылкеExtendedTooltip" id="685"/>
+													<Events>
+														<Event name="OnChange">СокращатьИнформациюОПисьмеПриПересылкеПриИзменении</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="СокращатьПредставлениеАдресатов" id="416">
+													<DataPath>НаборКонстант.СокращатьПредставлениеАдресатов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сокращать список адресатов при большом числе адресатов</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СокращатьПредставлениеАдресатовКонтекстноеМеню" id="417"/>
+													<ExtendedTooltip name="СокращатьПредставлениеАдресатовExtendedTooltip" id="686"/>
+													<Events>
+														<Event name="OnChange">СокращатьПредставлениеАдресатовПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ЧислоАдресатовДляКраткогоПредставления" id="418">
+													<DataPath>НаборКонстант.ЧислоАдресатовДляКраткогоПредставления</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Число адресатов для сокращения списка</v8:content>
+														</v8:item>
+													</Title>
+													<Width>4</Width>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="ЧислоАдресатовДляКраткогоПредставленияКонтекстноеМеню" id="419"/>
+													<ExtendedTooltip name="ЧислоАдресатовДляКраткогоПредставленияExtendedTooltip" id="687"/>
+												</InputField>
+												<CheckBoxField name="ПомечатьКаждуюСтрокуИсходногоПисьмаПриОтвете" id="420">
+													<DataPath>НаборКонстант.ПомечатьКаждуюСтрокуИсходногоПисьмаПриОтвете</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Помечать строки исходного письма при ответе</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПомечатьКаждуюСтрокуИсходногоПисьмаПриОтветеКонтекстноеМеню" id="421"/>
+													<ExtendedTooltip name="ПомечатьКаждуюСтрокуИсходногоПисьмаПриОтветеExtendedTooltip" id="688"/>
+													<Events>
+														<Event name="OnChange">ПомечатьКаждуюСтрокуИсходногоПисьмаПриОтветеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ПомечатьКаждуюСтрокуИсходногоПисьмаПриПересылке" id="422">
+													<DataPath>НаборКонстант.ПомечатьКаждуюСтрокуИсходногоПисьмаПриПересылке</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Помечать строки исходного письма при пересылке</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПомечатьКаждуюСтрокуИсходногоПисьмаПриПересылкеКонтекстноеМеню" id="423"/>
+													<ExtendedTooltip name="ПомечатьКаждуюСтрокуИсходногоПисьмаПриПересылкеExtendedTooltip" id="689"/>
+													<Events>
+														<Event name="OnChange">ПомечатьКаждуюСтрокуИсходногоПисьмаПриПересылкеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаЦитирования" id="424">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цитирование в переписке</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цитирование</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Collapsible</Behavior>
+											<ControlRepresentation>Picture</ControlRepresentation>
+											<ExtendedTooltip name="ГруппаЦитированияExtendedTooltip" id="690"/>
+											<ChildItems>
+												<InputField name="СимволЦитированияВПереписке" id="425">
+													<DataPath>НаборКонстант.СимволЦитированияВПереписке</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текстовый формат</v8:content>
+														</v8:item>
+													</Title>
+													<Width>3</Width>
+													<ContextMenu name="СимволЦитированияВПерепискеКонтекстноеМеню" id="426"/>
+													<ExtendedTooltip name="СимволЦитированияВПерепискеExtendedTooltip" id="691"/>
+												</InputField>
+												<InputField name="ВидЦитированияПриОтветеВФорматеHTML" id="427">
+													<DataPath>НаборКонстант.ВидЦитированияПриОтветеВФорматеHTML</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Формат HTML</v8:content>
+														</v8:item>
+													</Title>
+													<Width>20</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ВидЦитированияПриОтветеВФорматеHTMLКонтекстноеМеню" id="428"/>
+													<ExtendedTooltip name="ВидЦитированияПриОтветеВФорматеHTMLExtendedTooltip" id="692"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаМаксимальныйРазмерВнешнегоПисьма" id="453">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа максимальный размер внешнего письма</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаМаксимальныйРазмерВнешнегоПисьмаExtendedTooltip" id="693"/>
+											<ChildItems>
+												<InputField name="МаксимальныйРазмерВнешнегоИсходящегоПисьма" id="454">
+													<DataPath>НаборКонстант.МаксимальныйРазмерВнешнегоИсходящегоПисьма</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Максимальный размер внешнего письма</v8:content>
+														</v8:item>
+													</Title>
+													<Width>4</Width>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="МаксимальныйРазмерВнешнегоИсходящегоПисьмаКонтекстноеМеню" id="455"/>
+													<ExtendedTooltip name="МаксимальныйРазмерВнешнегоИсходящегоПисьмаExtendedTooltip" id="694"/>
+												</InputField>
+												<LabelDecoration name="ДекорацияМаксимальныйРазмерВнешнегоПисьма" id="456">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>(Мб)</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияМаксимальныйРазмерВнешнегоПисьмаКонтекстноеМеню" id="457"/>
+													<ExtendedTooltip name="ДекорацияМаксимальныйРазмерВнешнегоПисьмаExtendedTooltip" id="695"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВстроеннаяПочтаПодвал" id="409">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа встроенная почта подвал</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВстроеннаяПочтаПодвалExtendedTooltip" id="696"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОчисткаУстаревшихHTMLПредставленийСодержанияПисем" id="373">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очистка устаревших HTML представлений содержания писем</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаОчисткаУстаревшихHTMLПредставленийСодержанияПисемExtendedTooltip" id="697"/>
+							<ChildItems>
+								<CheckBoxField name="АвтоматическиОчищатьУстаревшиеHTMLПредставленияСодержанияПисем" id="374">
+									<DataPath>АвтоматическиОчищатьУстаревшиеHTMLПредставленияСодержанияПисем</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвтоматическиОчищатьУстаревшиеHTMLПредставленияСодержанияПисемКонтекстноеМеню" id="375"/>
+									<ExtendedTooltip name="АвтоматическиОчищатьУстаревшиеHTMLПредставленияСодержанияПисемExtendedTooltip" id="698"/>
+									<Events>
+										<Event name="OnChange">АвтоматическиОчищатьУстаревшиеHTMLПредставленияСодержанияПисемПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаСрокУстареванияHTMLПредставленияСодержанияПисем" id="376">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСрокУстареванияHTMLПредставленияСодержанияПисемExtendedTooltip" id="699"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияНадписьСрокУстаревания" id="377">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Срок устаревания</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияНадписьСрокУстареванияКонтекстноеМеню" id="378"/>
+											<ExtendedTooltip name="ДекорацияНадписьСрокУстареванияExtendedTooltip" id="700"/>
+										</LabelDecoration>
+										<InputField name="ПериодХраненияHTMLПредставленияСодержанияПисем" id="379">
+											<DataPath>ПериодХраненияHTMLПредставленияСодержанияПисем</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ПериодХраненияHTMLПредставленияСодержанияПисемКонтекстноеМеню" id="380"/>
+											<ExtendedTooltip name="ПериодХраненияHTMLПредставленияСодержанияПисемExtendedTooltip" id="701"/>
+											<Events>
+												<Event name="OnChange">ПериодХраненияHTMLПредставленияСодержанияПисемПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияНадписьСрокУстареванияДней" id="381">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>дней</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияНадписьСрокУстареванияДнейКонтекстноеМеню" id="382"/>
+											<ExtendedTooltip name="ДекорацияНадписьСрокУстареванияДнейExtendedTooltip" id="702"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.ФактическийИсполнительЗадач.Ref</Field>
+				<Field>НаборКонстант.УдалятьНеактивныеВерсии</Field>
+				<Field>НаборКонстант.УдалитьТипХраненияФайлов.Ref</Field>
+				<Field>НаборКонстант.УдалитьТипХраненияФайлов</Field>
+				<Field>НаборКонстант.УдалитьКонтекстКриптографии.Ref</Field>
+				<Field>НаборКонстант.УдалитьКонтекстАвторизации.Ref</Field>
+				<Field>НаборКонстант.ТипОповещенияОтветственногоЗаУдалениеНеактивныхВерсий.Ref</Field>
+				<Field>НаборКонстант.СрокХраненияПротоколовВыполненияЗадачПоПочте</Field>
+				<Field>НаборКонстант.СписокЗапрещенныхРасширений</Field>
+				<Field>НаборКонстант.ПутьСохраненияУдаляемыхВерсийWindows</Field>
+				<Field>НаборКонстант.ПутьСохраненияУдаляемыхВерсийLinux</Field>
+				<Field>НаборКонстант.ПроверятьЭлектронныеПодписиНаСервере</Field>
+				<Field>НаборКонстант.ПровайдерSMS.Ref</Field>
+				<Field>НаборКонстант.ПрефиксУзлаРаспределеннойИнформационнойБазы</Field>
+				<Field>НаборКонстант.ПрефиксИБвШтрихкоде</Field>
+				<Field>НаборКонстант.ОсновнойГрафикРаботы</Field>
+				<Field>НаборКонстант.ОсновнаяЕдиницаТрудозатрат.Ref</Field>
+				<Field>НаборКонстант.ОсновнаяЕдиницаДлительности.Ref</Field>
+				<Field>НаборКонстант.ОграничиватьДоступностьПолейПоСостоянию</Field>
+				<Field>НаборКонстант.ОграничиватьДоступНаУровнеЗаписей</Field>
+				<Field>НаборКонстант.МаксимальныйРазмерФайла</Field>
+				<Field>НаборКонстант.МаксимальныйРазмерВложенийВУведомленииНовойЗадачи</Field>
+				<Field>НаборКонстант.КаталогСохраненияКопииПротоколаРаботыПользователейWindows</Field>
+				<Field>НаборКонстант.КаталогСохраненияКопииПротоколаРаботыПользователейLinux</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляWindows</Field>
+				<Field>НаборКонстант.КаталогСообщенийОбменаДаннымиДляLinux</Field>
+				<Field>НаборКонстант.ИспользоватьЭлектронныеПодписи</Field>
+				<Field>НаборКонстант.ИспользоватьУчетДоступаКПерсональнымДанным</Field>
+				<Field>НаборКонстант.ИспользоватьСпискиРассылкиПоКонтрагентам</Field>
+				<Field>НаборКонстант.ИспользоватьСостоянияДокументов</Field>
+				<Field>НаборКонстант.ИспользоватьСинхронизациюДанных</Field>
+				<Field>НаборКонстант.ИспользоватьРаспознавание</Field>
+				<Field>НаборКонстант.ИспользоватьПриглашениеНаМероприятие</Field>
+				<Field>НаборКонстант.ИспользоватьПолнотекстовыйПоиск</Field>
+				<Field>НаборКонстант.ИспользоватьПовторениеБизнесПроцессов</Field>
+				<Field>НаборКонстант.ИспользоватьОтложеннуюОтправкуЭлектронныхДокументов</Field>
+				<Field>НаборКонстант.ИспользоватьОбщиеДополнительныеРеквизитыИСведения</Field>
+				<Field>НаборКонстант.ИспользоватьОбщиеДополнительныеЗначения</Field>
+				<Field>НаборКонстант.ИспользоватьОбменЭД</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеРеквизитыИСведения</Field>
+				<Field>НаборКонстант.ИспользоватьДатуНачалаЗадач</Field>
+				<Field>НаборКонстант.ИспользоватьДатуИВремяВСрокахЗадач</Field>
+				<Field>НаборКонстант.ИспользоватьГруппыПользователей</Field>
+				<Field>НаборКонстант.ИспользоватьГрифыДоступа</Field>
+				<Field>НаборКонстант.ИспользоватьГрафикиРаботы</Field>
+				<Field>НаборКонстант.ИспользоватьВнутреннююМаршрутизацию</Field>
+				<Field>НаборКонстант.ИспользоватьВнешнихПользователей</Field>
+				<Field>НаборКонстант.ИспользоватьВерсионированиеОбъектов</Field>
+				<Field>НаборКонстант.ИспользоватьБизнесСобытия</Field>
+				<Field>НаборКонстант.ИспользоватьБизнесПроцессыИЗадачи</Field>
+				<Field>НаборКонстант.ИзменятьЗаданияЗаднимЧислом</Field>
+				<Field>НаборКонстант.ИзвлекатьТекстыФайловНаСервере</Field>
+				<Field>НаборКонстант.ЗапрещатьЗагрузкуФайловПоРасширению</Field>
+				<Field>НаборКонстант.ЗаголовокСистемы</Field>
+				<Field>НаборКонстант.ДатаОбновленияПовторноИспользуемыхЗначенийМРО</Field>
+				<Field>НаборКонстант.ВидЦитированияПриОтветеВФорматеHTML.Ref</Field>
+				<Field>НаборКонстант.ВариантИспользованияPushУведомлений.Ref</Field>
+				<Field>НаборКонстант.АдресатыПолученияОтчетаПоЖурналуРегистрации</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ПрефиксДляОтветныхПисем" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс для ответных писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПрефиксДляПересылаемыхПисем" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс для пересылаемых писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПользовательРегламентногоЗаданияПолучениеИОтправкаПисем" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь регламентного задания "Получение и отправка писем"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоФайловаяБаза" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это файловая база</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическиОчищатьУстаревшиеHTMLПредставленияСодержанияПисем" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически очищать устаревшие HTML-представления содержания писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПериодХраненияHTMLПредставленияСодержанияПисем" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период хранения HTMLПредставления содержания писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокОповещения" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список оповещения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаписатьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

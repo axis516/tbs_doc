@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРазрешитьОтправлятьДанные" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка автоматической отправки сведений об использовании программы</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа разрешить отправлять данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРазрешитьОтправлятьДанныеРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПояснение" id="19">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчеты об использовании программы помогают нам определить, над чем следует поработать в первую очередь.
+Собранные сведения являются обезличенными и содержат только статистические показатели. Подготовка
+и отправка отчетов не замедлит работу программы.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПояснениеКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДекорацияПояснениеРасширеннаяПодсказка" id="21"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаПереключатель" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа переключатель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа переключатель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПереключательРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПереключатель" id="24">
+							<ContextMenu name="ДекорацияПереключательКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ДекорацияПереключательРасширеннаяПодсказка" id="26"/>
+						</LabelDecoration>
+						<RadioButtonField name="ЦентрМониторингаРазрешитьОтправлятьДанные" id="27">
+							<DataPath>ЦентрМониторингаРазрешитьОтправлятьДанные</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<RadioButtonType>RadioButtons</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Разрешить автоматическую отправку сведений об использовании программы в фирму "1С"</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Разрешить отправку сведений стороннему разработчику</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ЦентрМониторингаРазрешитьОтправлятьДанныеКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ЦентрМониторингаРазрешитьОтправлятьДанныеРасширеннаяПодсказка" id="29"/>
+							<Events>
+								<Event name="OnChange">РазрешитьОтправлятьДанныеПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтправкиДанныхНастройкаРесурсаОбщая" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отправки данных настройка ресурса общая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отправки данных настройка ресурса общая</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтправкиДанныхНастройкаРесурсаОбщаяРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияАдресСервиса" id="11">
+					<Width>4</Width>
+					<ContextMenu name="ДекорацияАдресСервисаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДекорацияАдресСервисаРасширеннаяПодсказка" id="13"/>
+				</LabelDecoration>
+				<InputField name="ЦентрМониторингаАдресСервиса" id="14">
+					<DataPath>ЦентрМониторингаАдресСервиса</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес сервиса</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ЦентрМониторингаАдресСервисаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ЦентрМониторингаАдресСервисаРасширеннаяПодсказка" id="16"/>
+					<Events>
+						<Event name="OnChange">ЦентрМониторингаАдресСервисаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗапретитьОтправлятьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа запретить отправлять данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа запретить отправлять данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗапретитьОтправлятьДанныеРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗапретитьОтправлятьДанные" id="3">
+					<ContextMenu name="ДекорацияЗапретитьОтправлятьДанныеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДекорацияЗапретитьОтправлятьДанныеРасширеннаяПодсказка" id="5"/>
+				</LabelDecoration>
+				<RadioButtonField name="ЦентрМониторингаЗапретитьОтправлятьДанные" id="6">
+					<DataPath>ЦентрМониторингаРазрешитьОтправлятьДанные</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>RadioButtons</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Запретить отправку сведений</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ЦентрМониторингаЗапретитьОтправлятьДанныеКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ЦентрМониторингаЗапретитьОтправлятьДанныеРасширеннаяПодсказка" id="8"/>
+					<Events>
+						<Event name="OnChange">РазрешитьОтправлятьДанныеПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПараметрыЦентраМониторинга" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры центра мониторинга</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЦентрМониторингаАдресСервиса" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Центр мониторинга адрес сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦентрМониторингаРазрешитьОтправлятьДанные" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Центр мониторинга разрешить отправлять данные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы (фиксированная структура)</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+			<Edit>
+				<xr:Common>false</xr:Common>
+			</Edit>
+		</Attribute>
+	</Attributes>
+</Form>

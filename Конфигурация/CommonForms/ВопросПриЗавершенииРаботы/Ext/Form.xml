@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Завершение работы</v8:content>
+		</v8:item>
+	</Title>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ОсновнаяГруппа" id="85">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>true</VerticalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ОсновнаяГруппаРасширеннаяПодсказка" id="86"/>
+			<ChildItems>
+				<Page name="ВопросБезУведомлений" id="17">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВопросБезУведомленийРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<UsualGroup name="ВопросБезУведомленийГоризонтальнаяГруппа" id="112">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ВопросБезУведомленийГоризонтальнаяГруппаРасширеннаяПодсказка" id="113"/>
+							<ChildItems>
+								<PictureDecoration name="ВопросБезУведомленийКартинкаПредупреждения" id="18">
+									<Width>5</Width>
+									<Height>2</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<Picture>
+										<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ВопросБезУведомленийКартинкаПредупрежденияКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ВопросБезУведомленийКартинкаПредупрежденияРасширеннаяПодсказка" id="39"/>
+								</PictureDecoration>
+								<UsualGroup name="ВопросБезУведомленийГруппаЭлементов" id="110">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопрос без уведомлений группа элементов</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопрос без уведомлений группа элементов</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ВопросБезУведомленийГруппаЭлементовРасширеннаяПодсказка" id="111"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияВопрос" id="29">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Завершить работу с программой?</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияВопросКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="ДекорацияВопросExtendedTooltip" id="41"/>
+										</LabelDecoration>
+										<CheckBoxField name="БольшеНеЗадаватьЭтотВопрос" id="31">
+											<DataPath>БольшеНеЗадаватьЭтотВопрос</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="БольшеНеЗадаватьЭтотВопросКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="БольшеНеЗадаватьЭтотВопросExtendedTooltip" id="42"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ПустаяДекорация1" id="117">
+							<Height>1</Height>
+							<ContextMenu name="ПустаяДекорация1КонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="ПустаяДекорация1РасширеннаяПодсказка" id="119"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ВопросСУведомлениями" id="87">
+					<ExtendedTooltip name="ВопросСУведомлениямиРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<UsualGroup name="ВопросСУведомлениямиГруппаЭлементов" id="92">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ВопросСУведомлениямиГруппаЭлементовРасширеннаяПодсказка" id="93"/>
+							<ChildItems>
+								<PictureDecoration name="ВопросСУведомлениямиКартинкаПредупреждения" id="99">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопрос с уведомлениями картинка предупреждения</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ВопросСУведомлениямиКартинкаПредупрежденияКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ВопросСУведомлениямиКартинкаПредупрежденияРасширеннаяПодсказка" id="101"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаВнимание" id="97">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВниманиеРасширеннаяПодсказка" id="98"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияВнимание" id="94">
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Внимание!</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияВниманиеКонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="ДекорацияВниманиеРасширеннаяПодсказка" id="96"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаУведомленияПрограммы" id="45">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа уведомления программы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаУведомленияПрограммыРасширеннаяПодсказка" id="46"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияЗанятыеФайлы" id="47">
+													<Height>1</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Есть занятые файлы</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<VerticalAlign>Top</VerticalAlign>
+													<ContextMenu name="ДекорацияЗанятыеФайлыКонтекстноеМеню" id="48"/>
+													<ExtendedTooltip name="ДекорацияЗанятыеФайлыРасширеннаяПодсказка" id="49"/>
+													<Events>
+														<Event name="Click">ДекорацияЗанятыеФайлыНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ПустаяДекорация" id="114">
+							<Visible>false</Visible>
+							<Height>1</Height>
+							<ContextMenu name="ПустаяДекорацияКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="ПустаяДекорацияРасширеннаяПодсказка" id="116"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаКоманды" id="79">
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыExtendedTooltip" id="80"/>
+			<ChildItems>
+				<Button name="Завершить" id="81">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<Width>12</Width>
+					<CommandName>Form.Command.Завершить</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="ЗавершитьРасширеннаяПодсказка" id="82"/>
+				</Button>
+				<Button name="НеЗавершать" id="83">
+					<Type>UsualButton</Type>
+					<Width>24</Width>
+					<CommandName>Form.Command.ВернутьсяВПрограмму</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="НеЗавершатьExtendedTooltip" id="84"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="БольшеНеЗадаватьЭтотВопрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше не задавать этот вопрос</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Завершить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Завершить</Action>
+		</Command>
+		<Command name="ВернутьсяВПрограмму" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуться в программу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуться в программу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеЗавершать</Action>
+		</Command>
+	</Commands>
+</Form>

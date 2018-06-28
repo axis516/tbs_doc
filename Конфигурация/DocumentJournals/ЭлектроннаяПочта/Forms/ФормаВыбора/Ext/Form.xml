@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выберите письмо</v8:content>
+		</v8:item>
+	</Title>
+	<Width>120</Width>
+	<Height>20</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="КоманднаяПанельПеренос" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель перенос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель перенос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КоманднаяПанельПереносExtendedTooltip" id="76"/>
+			<ChildItems>
+				<Button name="Перенести" id="64">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<Height>1</Height>
+					<CommandName>Form.Command.Выбрать</CommandName>
+					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="ПеренестиExtendedTooltip" id="77"/>
+				</Button>
+				<Button name="Отмена" id="30">
+					<Type>UsualButton</Type>
+					<Height>1</Height>
+					<CommandName>Form.Command.Отмена</CommandName>
+					<Font ref="sys:DefaultGUIFont" height="10" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="78"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПапкиИСписок" id="88">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа папки и список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа папки и список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПапкиИСписокРасширеннаяПодсказка" id="89"/>
+			<ChildItems>
+				<Table name="Папки" id="299">
+					<Representation>Tree</Representation>
+					<Width>27</Width>
+					<Height>1</Height>
+					<HeightInTableRows>1</HeightInTableRows>
+					<SelectionMode>SingleRow</SelectionMode>
+					<RowSelectionMode>Row</RowSelectionMode>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Папки</DataPath>
+					<CommandSet>
+						<ExcludedCommand>HierarchicalList</ExcludedCommand>
+						<ExcludedCommand>Tree</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>List</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="ПапкиКонтекстноеМеню" id="300">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<AutoCommandBar name="ПапкиКоманднаяПанель" id="301">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПапкиРасширеннаяПодсказка" id="302"/>
+					<SearchStringAddition name="ПапкиСтрокаПоиска" id="303">
+						<AdditionSource>
+							<Item>Папки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПапкиСтрокаПоискаКонтекстноеМеню" id="304"/>
+						<ExtendedTooltip name="ПапкиСтрокаПоискаРасширеннаяПодсказка" id="305"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПапкиСостояниеПросмотра" id="306">
+						<AdditionSource>
+							<Item>Папки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПапкиСостояниеПросмотраКонтекстноеМеню" id="307"/>
+						<ExtendedTooltip name="ПапкиСостояниеПросмотраРасширеннаяПодсказка" id="308"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПапкиУправлениеПоиском" id="309">
+						<AdditionSource>
+							<Item>Папки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПапкиУправлениеПоискомКонтекстноеМеню" id="310"/>
+						<ExtendedTooltip name="ПапкиУправлениеПоискомРасширеннаяПодсказка" id="311"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">ПапкиПередНачаломДобавления</Event>
+						<Event name="BeforeDeleteRow">ПапкиПередУдалением</Event>
+						<Event name="OnActivateRow">ПапкиПриАктивизацииСтроки</Event>
+						<Event name="BeforeRowChange">ПапкиПередНачаломИзменения</Event>
+					</Events>
+					<ChildItems>
+						<ColumnGroup name="ПапкиГруппаКолонок" id="312">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все папки</v8:content>
+								</v8:item>
+							</Title>
+							<Width>1</Width>
+							<Group>InCell</Group>
+							<ShowInHeader>true</ShowInHeader>
+							<ExtendedTooltip name="ПапкиГруппаКолонокExtendedTooltip" id="313"/>
+							<ChildItems>
+								<PictureField name="ПапкиНомерКартинки" id="347">
+									<DataPath>Папки.НомерКартинки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.КоллекцияПапкиПисем</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="ПапкиНомерКартинкиКонтекстноеМеню" id="348"/>
+									<ExtendedTooltip name="ПапкиНомерКартинкиРасширеннаяПодсказка" id="349"/>
+								</PictureField>
+								<InputField name="ПапкиПредставление" id="350">
+									<DataPath>Папки.Представление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПапкиПредставлениеКонтекстноеМеню" id="351"/>
+									<ExtendedTooltip name="ПапкиПредставлениеРасширеннаяПодсказка" id="352"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+				<Table name="Список" id="90">
+					<CommandBarLocation>None</CommandBarLocation>
+					<DefaultItem>true</DefaultItem>
+					<Width>80</Width>
+					<HeightInTableRows>1</HeightInTableRows>
+					<RowInputMode>AfterCurrentRow</RowInputMode>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<SearchOnInput>DontUse</SearchOnInput>
+					<InitialListView>Beginning</InitialListView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>Список</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Create</ExcludedCommand>
+						<ExcludedCommand>ListSettings</ExcludedCommand>
+						<ExcludedCommand>Refresh</ExcludedCommand>
+						<ExcludedCommand>Choose</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>Top</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>65</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>true</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="СписокКонтекстноеМеню" id="91">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="СписокКонтекстноеМенюНайти" id="365">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюНайтиРасширеннаяПодсказка" id="366"/>
+							</Button>
+							<Button name="СписокКонтекстноеМенюОтменитьПоиск" id="367">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Список.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="СписокКонтекстноеМенюОтменитьПоискРасширеннаяПодсказка" id="368"/>
+							</Button>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="92">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="93"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="94">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="95"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="96"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="97">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="98"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="99"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="100">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="101"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="102"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">СписокВыбор</Event>
+					</Events>
+					<ChildItems>
+						<PictureField name="Важность" id="353">
+							<DataPath>Список.ВажностьНомерКартинки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВосклицательныйЗнакСерый</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>2</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КоллекцияВариантыВажности</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ВажностьКонтекстноеМеню" id="354"/>
+							<ExtendedTooltip name="ВажностьРасширеннаяПодсказка" id="355"/>
+						</PictureField>
+						<LabelField name="Адресаты" id="218">
+							<DataPath>Список.Адресаты</DataPath>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="АдресатыКонтекстноеМеню" id="219"/>
+							<ExtendedTooltip name="АдресатыРасширеннаяПодсказка" id="220"/>
+						</LabelField>
+						<LabelField name="Тема" id="296">
+							<DataPath>Список.Тема</DataPath>
+							<Width>18</Width>
+							<ContextMenu name="ТемаКонтекстноеМеню" id="297"/>
+							<ExtendedTooltip name="ТемаРасширеннаяПодсказка" id="298"/>
+						</LabelField>
+						<LabelField name="Дата" id="227">
+							<DataPath>Список.Date</DataPath>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="228"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="229"/>
+						</LabelField>
+						<PictureField name="ЕстьВложения" id="356">
+							<DataPath>Список.ЕстьВложения</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>2</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ЕстьВложенияКонтекстноеМеню" id="357"/>
+							<ExtendedTooltip name="ЕстьВложенияРасширеннаяПодсказка" id="358"/>
+						</PictureField>
+						<PictureField name="Состояние" id="359">
+							<DataPath>Список.НомерСостояния</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ЗаголовокСостоянияПисем</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>2</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КоллекцияСостоянийПисем</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="СостояниеКонтекстноеМеню" id="360"/>
+							<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="361"/>
+						</PictureField>
+						<PictureField name="Флаг" id="362">
+							<DataPath>Список.НомерФлага</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ПустойФлаг</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>2</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КоллекцияФлаговПисем</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<ContextMenu name="ФлагКонтекстноеМеню" id="363"/>
+							<ExtendedTooltip name="ФлагРасширеннаяПодсказка" id="364"/>
+						</PictureField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СостояниеДереваПапок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние дерева папок</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОтображатьУдаленные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать удаленные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимМоиПапки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим мои папки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбраннаяПапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранная папка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПапкиПисем</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзмененоСостояниеДерева" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменено состояние дерева</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧислоПапок" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число папок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Список" id="9">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.УчетнаяЗапись</Field>
+				<Field>Список.Тема</Field>
+				<Field>Список.Ссылка</Field>
+				<Field>Список.РазмерКб</Field>
+				<Field>Список.Прочтено</Field>
+				<Field>Список.Предмет</Field>
+				<Field>Список.ПометкаУдаления</Field>
+				<Field>Список.Папка</Field>
+				<Field>Список.ОтправкаОтменена</Field>
+				<Field>Список.Отправитель</Field>
+				<Field>Список.НомерФлага</Field>
+				<Field>Список.НомерСостояния</Field>
+				<Field>Список.НомерКартинки</Field>
+				<Field>Список.НайденВКонтактах</Field>
+				<Field>Список.Комментарий</Field>
+				<Field>Список.ЕстьВложения</Field>
+				<Field>Список.ДатаОтправкиПолучения</Field>
+				<Field>Список.Адресаты</Field>
+				<Field>Список.Date</Field>
+				<Field>9/97</Field>
+				<Field>9/95</Field>
+				<Field>9/83</Field>
+				<Field>9/75</Field>
+				<Field>9/64</Field>
+				<Field>9/6</Field>
+				<Field>9/56</Field>
+				<Field>9/26</Field>
+				<Field>9/17</Field>
+				<Field>9/11</Field>
+				<Field>9/109</Field>
+				<Field>9/102</Field>
+				<Field>9/10</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ЕСТЬNULL(СведенияОПрочтении.Прочтен, ЛОЖЬ) = ЛОЖЬ
+				И НЕ ЭлектроннаяПочта.ПометкаУдаления
+			ТОГДА 0
+		КОГДА ЕСТЬNULL(СведенияОПрочтении.Прочтен, ЛОЖЬ) = ИСТИНА
+				И НЕ ЭлектроннаяПочта.ПометкаУдаления
+			ТОГДА 1
+		КОГДА ЕСТЬNULL(СведенияОПрочтении.Прочтен, ЛОЖЬ) = ИСТИНА
+				И ЭлектроннаяПочта.ПометкаУдаления
+			ТОГДА 2
+		КОГДА ЕСТЬNULL(СведенияОПрочтении.Прочтен, ЛОЖЬ) = ЛОЖЬ
+				И ЭлектроннаяПочта.ПометкаУдаления
+			ТОГДА 3
+	КОНЕЦ КАК НомерКартинки,
+	ЭлектроннаяПочта.Ссылка КАК Ссылка,
+	ЭлектроннаяПочта.ПометкаУдаления КАК ПометкаУдаления,
+	ЭлектроннаяПочта.Тема КАК Тема,
+	ЭлектроннаяПочта.Получатели КАК Получатели,
+	ЭлектроннаяПочта.Тип КАК Тип,
+	ЭлектроннаяПочта.ЕстьВложения КАК ЕстьВложения,
+	ЭлектроннаяПочта.УчетнаяЗапись КАК УчетнаяЗапись,
+	ЭлектроннаяПочта.Получено КАК Получено,
+	ЭлектроннаяПочта.Отправлено КАК Отправлено,
+	ЭлектроннаяПочта.Дата,
+	ЭлектроннаяПочта.ДатаОтправкиПолучения КАК ДатаОтправкиПолучения,
+	ЭлектроннаяПочта.Предмет КАК Предмет,
+	ЭлектроннаяПочта.Папка КАК Папка,
+	ЭлектроннаяПочта.Отправитель,
+	ЭлектроннаяПочта.Отправитель.Наименование КАК От_кого,
+	ВЫРАЗИТЬ(ЭлектроннаяПочта.Размер / 1024 КАК ЧИСЛО(10, 1)) КАК РазмерКб,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ЭлектроннаяПочта.Ссылка) = ТИП(Документ.ВходящееПисьмо)
+			ТОГДА ЕСТЬNULL(СведенияОбАдресатах.Представление, ЭлектроннаяПочта.Отправитель.Наименование)
+		ИНАЧЕ ЭлектроннаяПочта.Адресаты
+	КОНЕЦ КАК Адресаты,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ЭлектроннаяПочта.Ссылка) = ТИП(Документ.ВходящееПисьмо)
+			ТОГДА ВЫБОР
+					КОГДА СведенияОбАдресатах.Контакт ЕСТЬ NULL 
+						ТОГДА ЛОЖЬ
+					ИНАЧЕ ИСТИНА
+				КОНЕЦ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК НайденВКонтактах,
+	ЕСТЬNULL(СведенияОПрочтении.Прочтен, ЛОЖЬ) КАК Прочтено,
+	ВЫБОР
+		КОГДА ЭлектроннаяПочта.Важность = ЗНАЧЕНИЕ(Перечисление.ВажностьПисем.Высокая)
+			ТОГДА 2
+		КОГДА ЭлектроннаяПочта.Важность = ЗНАЧЕНИЕ(Перечисление.ВажностьПисем.Низкая)
+			ТОГДА 0
+		ИНАЧЕ 1
+	КОНЕЦ КАК ВажностьНомерКартинки,
+	ВЫБОР
+		КОГДА ФлагиПисем.Флаг = ЗНАЧЕНИЕ(Перечисление.ФлагиОбъектов.Красный)
+			ТОГДА 1
+		КОГДА ФлагиПисем.Флаг = ЗНАЧЕНИЕ(Перечисление.ФлагиОбъектов.Синий)
+			ТОГДА 2
+		КОГДА ФлагиПисем.Флаг = ЗНАЧЕНИЕ(Перечисление.ФлагиОбъектов.Желтый)
+			ТОГДА 3
+		КОГДА ФлагиПисем.Флаг = ЗНАЧЕНИЕ(Перечисление.ФлагиОбъектов.Зеленый)
+			ТОГДА 4
+		КОГДА ФлагиПисем.Флаг = ЗНАЧЕНИЕ(Перечисление.ФлагиОбъектов.Оранжевый)
+			ТОГДА 5
+		КОГДА ФлагиПисем.Флаг = ЗНАЧЕНИЕ(Перечисление.ФлагиОбъектов.Лиловый)
+			ТОГДА 6
+		ИНАЧЕ 0
+	КОНЕЦ КАК НомерФлага,
+	КешИнформацииОбОбъектах.ПолученОтвет,
+	КешИнформацииОбОбъектах.ОтправленОтвет,
+	КешИнформацииОбОбъектах.Переслан,
+	СведенияОПрочтении.Прочтен,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.Объект ЕСТЬ NULL 
+			ТОГДА 0
+		КОГДА КешИнформацииОбОбъектах.ЕстьОшибкиПриемкиОтправкиПочты
+				И ЭлектроннаяПочта.Отправлено = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА 6
+		КОГДА КешИнформацииОбОбъектах.ЕстьОшибкиПриемкиОтправкиПочты
+				И ТИПЗНАЧЕНИЯ(ЭлектроннаяПочта.Ссылка) = ТИП(Документ.ВходящееПисьмо)
+			ТОГДА 6
+		КОГДА КешИнформацииОбОбъектах.Отозван
+			ТОГДА 9
+		КОГДА ЭлектроннаяПочта.ОтправкаОтменена
+			ТОГДА 5
+		КОГДА КешИнформацииОбОбъектах.ПолученОтвет
+			ТОГДА 4
+		КОГДА КешИнформацииОбОбъектах.ОтправленОтвет
+				И КешИнформацииОбОбъектах.Переслан
+			ТОГДА 3
+		КОГДА КешИнформацииОбОбъектах.ОтправленОтвет
+				И НЕ КешИнформацииОбОбъектах.Переслан
+			ТОГДА 1
+		КОГДА НЕ КешИнформацииОбОбъектах.ОтправленОтвет
+				И КешИнформацииОбОбъектах.Переслан
+			ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ КАК НомерСостояния,
+	ЕСТЬNULL(ФлагиПисем.Флаг, ЛОЖЬ) КАК Флаг,
+	ФлагиПисем.Флаг КАК ФлагПоиск,
+	ВЫБОР
+		КОГДА ЭлектроннаяПочта.Тип = ТИП(Документ.ВходящееПисьмо)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.ТипыПисем.Входящие)
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.ТипыПисем.Исходящие)
+	КОНЕЦ КАК ТипПисьма,
+	ЭлектроннаяПочта.Важность,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьОшибкиПриемкиОтправкиПочты
+				И (ЭлектроннаяПочта.Отправлено = ДАТАВРЕМЯ(1, 1, 1)
+					ИЛИ ТИПЗНАЧЕНИЯ(ЭлектроннаяПочта.Ссылка) = ТИП(Документ.ВходящееПисьмо))
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьОшибкиПриемкиОтправкиПочты,
+	ЭлектроннаяПочта.ОтправкаОтменена,
+	ЭлектроннаяПочта.ВидМаршрутизации,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтроле)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 1
+					ИНАЧЕ 3
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроля)
+			ТОГДА 4
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтролеНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 5
+					КОГДА КешИнформацииОбОбъектах.СрокИсполненияОбщий = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполненияОбщий &gt;= &amp;ТекущаяДата
+						ТОГДА 8
+					ИНАЧЕ 6
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроляНесколько)
+			ТОГДА 7
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СмешанноНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 9
+					ИНАЧЕ 10
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ КАК СостояниеКонтроля,
+	ЭлектроннаяПочта.Комментарий КАК Комментарий
+ИЗ
+	ЖурналДокументов.ЭлектроннаяПочта КАК ЭлектроннаяПочта
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФлагиОбъектов КАК ФлагиПисем
+		ПО (ФлагиПисем.Объект = ЭлектроннаяПочта.Ссылка)
+			И (ФлагиПисем.Пользователь = &amp;Пользователь)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СведенияОПрочтении КАК СведенияОПрочтении
+		ПО ЭлектроннаяПочта.Ссылка = СведенияОПрочтении.Объект
+			И (СведенияОПрочтении.Пользователь = &amp;Пользователь)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КешИнформацииОбОбъектах КАК КешИнформацииОбОбъектах
+		ПО ЭлектроннаяПочта.Ссылка = КешИнформацииОбОбъектах.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СведенияОбАдресатах КАК СведенияОбАдресатах
+		ПО ЭлектроннаяПочта.Отправитель = СведенияОбАдресатах.АдресатСообщения
+			И (СведенияОбАдресатах.Активна)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СведенияОбАдресатах КАК СведенияОбАдресатах1
+		ПО ЭлектроннаяПочта.Отправитель = СведенияОбАдресатах1.АдресатСообщения
+			И (СведенияОбАдресатах1.Активна)
+			И (СведенияОбАдресатах1.Контакт &lt; СведенияОбАдресатах.Контакт)
+ГДЕ
+	СведенияОбАдресатах1.Контакт ЕСТЬ NULL 
+	И ЭлектроннаяПочта.Папка = &amp;Папка
+	И ЭлектроннаяПочта.ПометкаУдаления = ЛОЖЬ</QueryText>
+				<MainTable>DocumentJournal.ЭлектроннаяПочта</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТекущаяПапка" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая папка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПапкиПоиска</v8:Type>
+				<v8:Type>cfg:CatalogRef.ПапкиПисем</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Папки" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПапкиПоиска</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПапкиПисем</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерКартинки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидПапки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид папки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыПапокПисем</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Порядок" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПапкаБыстрогоДоступа" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Папка быстрого доступа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЭтоПапкаПоиска" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это папка поиска</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Выделена" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выделена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтображатьУдаленныеПисьмаИПапки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать удаленные письма и папки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтображатьЧислоПисем" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать число писем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Папки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Папки.Выделена</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Папки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Папки.Выделена</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать письмо</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+		</Command>
+		<Command name="Отмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ОтКого" id="5">
+			<DataPath>Объект.ОтКого</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтКогоКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОтКогоExtendedTooltip" id="42"/>
+		</InputField>
+		<InputField name="Кому" id="7">
+			<DataPath>Объект.Кому</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CreateButton>false</CreateButton>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="КомуКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КомуExtendedTooltip" id="43"/>
+		</InputField>
+		<UsualGroup name="ГруппаВариантДелегирования" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вариант делегирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вариант делегирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВариантДелегированияExtendedTooltip" id="78"/>
+			<ChildItems>
+				<RadioButtonField name="ВариантДелегирования" id="79">
+					<DataPath>Объект.ВариантДелегирования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Что делегировать</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ColumnsCount>1</ColumnsCount>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Все права</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыДелегированияПрав.EnumValue.ВсеПрава</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выборочно (по областям):</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыДелегированияПрав.EnumValue.Выборочно</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВариантДелегированияКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ВариантДелегированияExtendedTooltip" id="81"/>
+					<Events>
+						<Event name="OnChange">ВариантДелегированияПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<UsualGroup name="ГруппаОтступКоманднойПанели" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ командной панели</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отступ командной панели</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтступКоманднойПанелиExtendedTooltip" id="83"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОтступ1" id="84">
+							<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ДекорацияОтступ1ExtendedTooltip" id="86"/>
+						</LabelDecoration>
+						<CommandBar name="ГруппаКоманднаяПанель" id="87">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="88"/>
+							<ChildItems>
+								<Button name="УстановитьФлажки" id="89">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.УстановитьФлажки</CommandName>
+									<ExtendedTooltip name="УстановитьФлажкиExtendedTooltip" id="90"/>
+								</Button>
+								<Button name="СнятьФлажки" id="91">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.СнятьФлажки</CommandName>
+									<ExtendedTooltip name="СнятьФлажкиExtendedTooltip" id="92"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбластиДелегирования" id="93">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа области делегирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа области делегирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбластиДелегированияExtendedTooltip" id="94"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияОтступ2" id="95">
+					<Width>13</Width>
+					<ContextMenu name="ДекорацияОтступ2КонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ДекорацияОтступ2ExtendedTooltip" id="97"/>
+				</LabelDecoration>
+				<Table name="ОбластиДелегирования" id="98">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ОбластиДелегирования</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ОбластиДелегированияКонтекстноеМеню" id="99">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<AutoCommandBar name="ОбластиДелегированияКоманднаяПанель" id="100"/>
+					<ExtendedTooltip name="ОбластиДелегированияРасширеннаяПодсказка" id="101"/>
+					<SearchStringAddition name="ОбластиДелегированияСтрокаПоиска" id="102">
+						<AdditionSource>
+							<Item>ОбластиДелегирования</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбластиДелегированияСтрокаПоискаКонтекстноеМеню" id="103"/>
+						<ExtendedTooltip name="ОбластиДелегированияСтрокаПоискаРасширеннаяПодсказка" id="104"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ОбластиДелегированияСостояниеПросмотра" id="105">
+						<AdditionSource>
+							<Item>ОбластиДелегирования</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбластиДелегированияСостояниеПросмотраКонтекстноеМеню" id="106"/>
+						<ExtendedTooltip name="ОбластиДелегированияСостояниеПросмотраРасширеннаяПодсказка" id="107"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ОбластиДелегированияУправлениеПоиском" id="108">
+						<AdditionSource>
+							<Item>ОбластиДелегирования</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбластиДелегированияУправлениеПоискомКонтекстноеМеню" id="109"/>
+						<ExtendedTooltip name="ОбластиДелегированияУправлениеПоискомРасширеннаяПодсказка" id="110"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeRowChange">ОбластиДелегированияПередНачаломИзменения</Event>
+					</Events>
+					<ChildItems>
+						<ColumnGroup name="ОбластиДелегированияГруппа" id="111">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Области делегирования группа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Области делегирования группа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ОбластиДелегированияГруппаExtendedTooltip" id="112"/>
+							<ChildItems>
+								<CheckBoxField name="ОбластиДелегированияПометка" id="113">
+									<DataPath>ОбластиДелегирования.Пометка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбластиДелегированияПометкаКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ОбластиДелегированияПометкаExtendedTooltip" id="115"/>
+								</CheckBoxField>
+								<InputField name="ОбластиДелегированияОбластьДелегирования" id="116">
+									<DataPath>ОбластиДелегирования.ОбластьДелегирования</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Области делегирования</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбластиДелегированияОбластьДелегированияКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ОбластиДелегированияОбластьДелегированияExtendedTooltip" id="118"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="СрокДействия" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок действия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<InputField name="ДатаНачалаДействия" id="65">
+					<DataPath>Объект.ДатаНачалаДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует с</v8:content>
+						</v8:item>
+					</Title>
+					<Width>9</Width>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДатаНачалаДействияКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ДатаНачалаДействияРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="ВремяНачалаДействия" id="71">
+					<DataPath>Объект.ДатаНачалаДействия</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>4</Width>
+					<ChoiceButton>false</ChoiceButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=HH:mm</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ВремяНачалаДействияКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ВремяНачалаДействияРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<InputField name="ДатаОкончанияДействия" id="68">
+					<DataPath>Объект.ДатаОкончанияДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<Width>9</Width>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДатаОкончанияДействияКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ДатаОкончанияДействияРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="ВремяОкончанияДействия" id="74">
+					<DataPath>Объект.ДатаОкончанияДействия</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>4</Width>
+					<ChoiceButton>false</ChoiceButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=HH:mm</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ВремяОкончанияДействияКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ВремяОкончанияДействияРасширеннаяПодсказка" id="76"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="11">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="61"/>
+		</InputField>
+		<InputField name="Ответственный" id="13">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="62"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ДелегированиеПрав</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОбластиДелегирования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Области делегирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ОбластьДелегирования" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Область делегирования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ОбластиДелегированияПрав</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВариантДелегированияПравВыборочно" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант делегирования прав выборочно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыДелегированияПрав</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантДелегированияПравВсеПрава" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Делегирование прав выборочно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыДелегированияПрав</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВосстанавливатьПометкиРолей" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстанавливать пометки ролей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоВыбранныхОбластей" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество выбранных областей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоВыбранныхРолей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество выбранных ролей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СнятьФлажки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="УстановитьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

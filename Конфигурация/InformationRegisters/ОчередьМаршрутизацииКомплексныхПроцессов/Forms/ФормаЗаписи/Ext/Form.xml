@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>50</Width>
+	<Height>12</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаПродолжитьВыполнениеПроцессов" id="46">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПродолжитьВыполнениеПроцессов</CommandName>
+				<ExtendedTooltip name="ФормаПродолжитьВыполнениеПроцессовРасширеннаяПодсказка" id="47"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="13">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<DefaultButton>true</DefaultButton>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="ФормаСправка" id="48">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="49"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="36">
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<Page name="ГруппаБезОшибок" id="38">
+					<ExtendedTooltip name="ГруппаБезОшибокРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<LabelField name="КомплексныйПроцесс" id="40">
+							<DataPath>Запись.КомплексныйПроцесс</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="КомплексныйПроцессКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="КомплексныйПроцессРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+						<LabelField name="ЗавершившеесяДействие" id="43">
+							<DataPath>Запись.ЗавершившеесяДействие</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ЗавершившеесяДействиеКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ЗавершившеесяДействиеРасширеннаяПодсказка" id="45"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОшибка" id="20">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаОшибкаРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияОшибка" id="22">
+							<Picture>
+								<xr:Ref>StdPicture.Stop</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияОшибкаКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ДекорацияОшибкаРасширеннаяПодсказка" id="24"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаОписаниеОшибки" id="31">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОписаниеОшибкиРасширеннаяПодсказка" id="32"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияКомментарий" id="28">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ДекорацияКомментарийКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ДекорацияКомментарийРасширеннаяПодсказка" id="30"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ОчередьМаршрутизацииКомплексныхПроцессов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПродолжитьВыполнениеПроцессов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить выполнение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить выполнение процессов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПродолжитьВыполнениеПроцессов</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

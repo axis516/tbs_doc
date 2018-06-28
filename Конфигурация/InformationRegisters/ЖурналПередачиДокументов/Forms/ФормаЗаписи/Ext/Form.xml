@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<Group>Horizontal</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКомандаЗаписатьИЗакрыть" id="62">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="63"/>
+			</Button>
+			<ButtonGroup name="ФормаСтандартныеКоманды" id="64">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма стандартные команды</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма стандартные команды</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ФормаСтандартныеКомандыРасширеннаяПодсказка" id="65"/>
+			</ButtonGroup>
+			<Button name="ПоказыватьИнструкции" id="33">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ПоказыватьИнструкции</CommandName>
+				<ExtendedTooltip name="ПоказыватьИнструкцииРасширеннаяПодсказка" id="34"/>
+			</Button>
+			<Button name="ФормаСправка" id="66">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="67"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаОсновная" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Page name="ГруппаЭлемента" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа элемента</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа элемента</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЭлементаРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<InputField name="ДокументТекст" id="56">
+							<DataPath>ДокументТекст</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Укажите документ</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ДокументТекстКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ДокументТекстРасширеннаяПодсказка" id="58"/>
+							<Events>
+								<Event name="OnChange">ДокументТекстПриИзменении</Event>
+								<Event name="AutoComplete">ДокументТекстАвтоПодбор</Event>
+								<Event name="StartChoice">ДокументТекстНачалоВыбора</Event>
+								<Event name="Opening">ДокументТекстОткрытие</Event>
+								<Event name="Clearing">ДокументТекстОчистка</Event>
+								<Event name="TextEditEnd">ДокументТекстОкончаниеВводаТекста</Event>
+								<Event name="ChoiceProcessing">ДокументТекстОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаТипЭкземпляра" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа тип экземпляра</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТипЭкземпляраРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<InputField name="ТипЭкземпляра" id="5">
+									<DataPath>Запись.ТипЭкземпляра</DataPath>
+									<Width>16</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ТипЭкземпляраКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="ТипЭкземпляраРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="НомерЭкземпляра" id="7">
+									<DataPath>Запись.НомерЭкземпляра</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>№ экземпляра</v8:content>
+										</v8:item>
+									</Title>
+									<Wrap>false</Wrap>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="НомерЭкземпляраКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="НомерЭкземпляраРасширеннаяПодсказка" id="41"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКому" id="13">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаКомуРасширеннаяПодсказка" id="42"/>
+							<ChildItems>
+								<InputField name="Пользователь" id="9">
+									<DataPath>Запись.Пользователь</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кому передан</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Wrap>false</Wrap>
+									<DropListButton>false</DropListButton>
+									<CreateButton>false</CreateButton>
+									<ContextMenu name="ПользовательКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="43"/>
+									<Events>
+										<Event name="AutoComplete">ПользовательАвтоПодбор</Event>
+										<Event name="StartChoice">ПользовательНачалоВыбора</Event>
+										<Event name="TextEditEnd">ПользовательОкончаниеВводаТекста</Event>
+										<Event name="ChoiceProcessing">ПользовательОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="Период" id="1">
+									<DataPath>Запись.Period</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата передачи</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<Wrap>false</Wrap>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="45"/>
+								</InputField>
+								<UsualGroup name="ГруппаСрокВозврата" id="25">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа срок возврата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа срок возврата</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСрокВозвратаРасширеннаяПодсказка" id="46"/>
+									<ChildItems>
+										<InputField name="СрокВозврата" id="19">
+											<DataPath>Запись.СрокВозврата</DataPath>
+											<Width>12</Width>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="СрокВозвратаКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="СрокВозвратаРасширеннаяПодсказка" id="47"/>
+											<Events>
+												<Event name="OnChange">СрокВозвратаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияПросрочка" id="26">
+											<TextColor>style:ПросроченныеДанныеЦвет</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>(просрочено 10 дней)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПросрочкаКонтекстноеМеню" id="27"/>
+											<ExtendedTooltip name="ДекорацияПросрочкаРасширеннаяПодсказка" id="48"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВозврат" id="14">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа возврат</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВозвратРасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<CheckBoxField name="Возвращен" id="15">
+									<DataPath>Запись.Возвращен</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Возвращен:</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВозвращенКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ВозвращенРасширеннаяПодсказка" id="50"/>
+									<Events>
+										<Event name="OnChange">ВозвращенПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ДатаВозврата" id="17">
+									<DataPath>Запись.ДатаВозврата</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>12</Width>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ДатаВозвратаКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ДатаВозвратаРасширеннаяПодсказка" id="51"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация1" id="59">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="61"/>
+						</LabelDecoration>
+						<InputField name="Комментарий" id="11">
+							<DataPath>Запись.Комментарий</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="44"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаИнструкции" id="30">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инструкции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа инструкции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнструкцииРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<HTMLDocumentField name="Инструкция" id="31">
+					<DataPath>Инструкция</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>15</Width>
+					<ContextMenu name="ИнструкцияКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ИнструкцияРасширеннаяПодсказка" id="53"/>
+					<Events>
+						<Event name="OnClick">ИнструкцияПриНажатии</Event>
+					</Events>
+				</HTMLDocumentField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ЖурналПередачиДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Инструкция" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьИнструкции</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ПоказыватьИнструкции" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать инструкции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьИнструкции</Field>
+			</Save>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьИнструкции</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДокументТекст" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоНоваяЗапись" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это новая запись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СрокВозврата</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Запись.Возвращен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Запись.СрокВозврата</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Запись.СрокВозврата</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="v8:StandardBeginningDate">
+							<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+						</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ПросроченныеДанныеЦвет</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказыватьИнструкции" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать инструкции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать инструкции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Информация</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказыватьИнструкции</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьИнструкции</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="КомандаЗаписатьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать объект и закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

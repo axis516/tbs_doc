@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>80</Width>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandSet>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>ListSettings</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Change</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>OutputList</ExcludedCommand>
+		<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+		<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+		<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+		<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="РолиИИсполнители" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роли и исполнители</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роли и исполнители</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="РолиИИсполнителиРасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРоли" id="1">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРолиРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКомПанельРоли" id="99">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомПанельРолиРасширеннаяПодсказка" id="100"/>
+							<ChildItems>
+								<Button name="СоздатьРоль" id="76">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Item.Роли.StandardCommand.Create</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.РольИсполнителей</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+									<ExtendedTooltip name="СоздатьРольРасширеннаяПодсказка" id="77">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать роль</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Роли" id="3">
+							<CommandBarLocation>Top</CommandBarLocation>
+							<Height>10</Height>
+							<HorizontalLines>false</HorizontalLines>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Роли</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="РолиКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="РолиКоманднаяПанель" id="5">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РолиРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="РолиСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиСтрокаПоискаКонтекстноеМеню" id="10"/>
+								<ExtendedTooltip name="РолиСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РолиСостояниеПросмотра" id="12">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиСостояниеПросмотраКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="РолиСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РолиУправлениеПоиском" id="17">
+								<AdditionSource>
+									<Item>Роли</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РолиУправлениеПоискомКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="РолиУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">РолиПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="РолиНаименование" id="22">
+									<DataPath>Роли.Description</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Роль</v8:content>
+										</v8:item>
+									</Title>
+									<Width>20</Width>
+									<ContextMenu name="РолиНаименованиеКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="РолиНаименованиеРасширеннаяПодсказка" id="24"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИсполнители" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа исполнители</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа исполнители</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИсполнителиРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКомПанелей" id="91">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ком панелей</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ком панелей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомПанелейРасширеннаяПодсказка" id="92"/>
+							<ChildItems>
+								<CommandBar name="КомПанельИсполнители" id="86">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ком панель исполнители</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ком панель исполнители</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="КомПанельИсполнителиРасширеннаяПодсказка" id="87"/>
+									<ChildItems>
+										<Button name="СоздатьИсполнителя" id="78">
+											<Type>CommandBarButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Item.Исполнители.StandardCommand.Create</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.СостояниеПользователя02</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+											<ExtendedTooltip name="СоздатьИсполнителяРасширеннаяПодсказка" id="79">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Добавить исполнителей</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<LabelDecoration name="Отступ" id="88">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ОтступКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ОтступРасширеннаяПодсказка" id="90"/>
+								</LabelDecoration>
+								<CommandBar name="КомПанельОбщая" id="84">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ком панель общая</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ком панель общая</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CommandSource>Form</CommandSource>
+									<ExtendedTooltip name="КомПанельОбщаяРасширеннаяПодсказка" id="85"/>
+									<ChildItems>
+										<Button name="ПоказыватьРолиПомеченныеНаУдаление" id="80">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.ПоказыватьРолиПомеченныеНаУдаление</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Показывать роли, помеченные на удаление</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПоказыватьРолиПомеченныеНаУдалениеРасширеннаяПодсказка" id="81"/>
+										</Button>
+										<Button name="ПоказыватьНедействительныхИсполнителей" id="72">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.ПоказыватьНедействительныхИсполнителей</CommandName>
+											<ExtendedTooltip name="ПоказыватьНедействительныхИсполнителейРасширеннаяПодсказка" id="73"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Исполнители" id="30">
+							<CommandBarLocation>Top</CommandBarLocation>
+							<Height>5</Height>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Исполнители</DataPath>
+							<SearchStringLocation>CommandBar</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ИсполнителиКонтекстноеМеню" id="31"/>
+							<AutoCommandBar name="ИсполнителиКоманднаяПанель" id="32">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИсполнителиРасширеннаяПодсказка" id="33"/>
+							<SearchStringAddition name="ИсполнителиСтрокаПоиска" id="34">
+								<AdditionSource>
+									<Item>Исполнители</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиСтрокаПоискаКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ИсполнителиСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсполнителиСостояниеПросмотра" id="39">
+								<AdditionSource>
+									<Item>Исполнители</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиСостояниеПросмотраКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="ИсполнителиСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсполнителиУправлениеПоиском" id="44">
+								<AdditionSource>
+									<Item>Исполнители</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсполнителиУправлениеПоискомКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="ИсполнителиУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ИсполнителиПередНачаломДобавления</Event>
+								<Event name="AfterDeleteRow">ИсполнителиПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ГруппаКолонок" id="68">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исполнитель</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа колонок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>InCell</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="ГруппаКолонокРасширеннаяПодсказка" id="69"/>
+									<ChildItems>
+										<LabelField name="ИсполнителиИсполнитель" id="49">
+											<DataPath>Исполнители.Исполнитель</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ShowInHeader>false</ShowInHeader>
+											<Width>20</Width>
+											<ContextMenu name="ИсполнителиИсполнительКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ИсполнителиИсполнительРасширеннаяПодсказка" id="51"/>
+										</LabelField>
+										<LabelField name="ИсполнителиОсновнойОбъектАдресации" id="93">
+											<DataPath>Исполнители.ОсновнойОбъектАдресации</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ShowInHeader>false</ShowInHeader>
+											<ContextMenu name="ИсполнителиОсновнойОбъектАдресацииКонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="ИсполнителиОсновнойОбъектАдресацииРасширеннаяПодсказка" id="95"/>
+										</LabelField>
+										<LabelField name="ИсполнителиДополнительныйОбъектАдресации" id="96">
+											<DataPath>Исполнители.ДополнительныйОбъектАдресации</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ShowInHeader>false</ShowInHeader>
+											<ContextMenu name="ИсполнителиДополнительныйОбъектАдресацииКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="ИсполнителиДополнительныйОбъектАдресацииРасширеннаяПодсказка" id="98"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Роли" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роли</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Роли.ТипыОсновногоОбъектаАдресации</Field>
+				<Field>Роли.ТипыДополнительногоОбъектаАдресации</Field>
+				<Field>Роли.ИспользуетсяСОбъектамиАдресации</Field>
+				<Field>Роли.ИспользуетсяБезОбъектовАдресации</Field>
+				<Field>Роли.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникРолиИсполнителей.Ссылка,
+	СправочникРолиИсполнителей.Наименование,
+	СправочникРолиИсполнителей.Комментарий,
+	СправочникРолиИсполнителей.ПометкаУдаления,
+	СправочникРолиИсполнителей.ИспользуетсяСОбъектамиАдресации,
+	СправочникРолиИсполнителей.ИспользуетсяБезОбъектовАдресации,
+	СправочникРолиИсполнителей.ТипыОсновногоОбъектаАдресации.ТипЗначения КАК ТипыОсновногоОбъектаАдресации,
+	СправочникРолиИсполнителей.ТипыДополнительногоОбъектаАдресации.ТипЗначения КАК ТипыДополнительногоОбъектаАдресации,
+	ВЫБОР
+		КОГДА СправочникРолиИсполнителей.Ссылка В
+				(ВЫБРАТЬ ПЕРВЫЕ 1
+					РегистрСведений.ИсполнителиЗадач.РольИсполнителя.Владелец
+				ИЗ
+					РегистрСведений.ИсполнителиЗадач
+				ГДЕ
+					РегистрСведений.ИсполнителиЗадач.РольИсполнителя.Владелец = СправочникРолиИсполнителей.Ссылка)
+			ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьИсполнители
+ИЗ
+	Справочник.РолиИсполнителей КАК СправочникРолиИсполнителей
+{ГДЕ
+	(СправочникРолиИсполнителей.ПометкаУдаления = &amp;ПоказыватьПомеченныеРоли)}</QueryText>
+				<MainTable>Catalog.РолиИсполнителей</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Исполнители" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнители</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийИсполнителиЗадач.РольИсполнителя.Владелец КАК РольВладелец,
+	РегистрСведенийИсполнителиЗадач.РольИсполнителя КАК РольИсполнителя,
+	РегистрСведенийИсполнителиЗадач.РольИсполнителя.ОсновнойОбъектАдресации КАК ОсновнойОбъектАдресации,
+	РегистрСведенийИсполнителиЗадач.РольИсполнителя.ДополнительныйОбъектАдресации КАК ДополнительныйОбъектАдресации,
+	РегистрСведенийИсполнителиЗадач.Исполнитель,
+	РегистрСведенийИсполнителиЗадач.Исполнитель.ПометкаУдаления КАК ПометкаУдаления,
+	РегистрСведенийИсполнителиЗадач.Исполнитель.Недействителен КАК Недействителен,
+	ВЫБОР
+		КОГДА &amp;ОбъектыАдресацииОбязательны
+			И РегистрСведенийИсполнителиЗадач.РольИсполнителя.ОсновнойОбъектАдресации = Неопределено
+			И РегистрСведенийИсполнителиЗадач.РольИсполнителя.ДополнительныйОбъектАдресации = Неопределено
+			ТОГДА ИСТИНА
+		КОГДА НЕ ТИПЗНАЧЕНИЯ(РегистрСведенийИсполнителиЗадач.РольИсполнителя.ОсновнойОбъектАдресации) В (&amp;ТипыОсновногоОбъектаАдресации)
+			ТОГДА ИСТИНА
+		КОГДА НЕ ТИПЗНАЧЕНИЯ(РегистрСведенийИсполнителиЗадач.РольИсполнителя.ДополнительныйОбъектАдресации) В (&amp;ТипыДополнительногоОбъектаАдресации)
+			ТОГДА ИСТИНА
+		ИНАЧЕ
+			ЛОЖЬ
+	КОНЕЦ КАК Недопустим
+ИЗ
+	РегистрСведений.ИсполнителиЗадач КАК РегистрСведенийИсполнителиЗадач
+{ГДЕ
+	Исполнитель.Недействителен = &amp;Недействителен
+	И Исполнитель.ПометкаУдаления = &amp;Недействителен}</QueryText>
+				<MainTable>InformationRegister.ИсполнителиЗадач</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Исполнитель</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТекущаяРоль" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая роль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.РолиИсполнителей</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьНедействительныхИсполнителей" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать недействительных исполнителей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьНедействительныхИсполнителей</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПоказыватьРолиПомеченныеНаУдаление" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать роли, помеченные на удаление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьРолиПомеченныеНаУдаление</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказыватьНедействительныхИсполнителей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать недействительных исполнителей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать недействительных исполнителей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьНедействительныхИсполнителей</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПоказыватьРолиПомеченныеНаУдаление" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать роли помеченные на удаление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать роли помеченные на удаление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказыватьРолиПомеченныеНаУдаление</Action>
+		</Command>
+	</Commands>
+</Form>

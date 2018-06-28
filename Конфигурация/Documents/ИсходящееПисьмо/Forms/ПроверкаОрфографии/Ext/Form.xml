@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Проверка орфографии</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ИсходнаяСтрока" id="1">
+			<DataPath>ИсходнаяСтрока</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>Top</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ИсходнаяСтрокаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИсходнаяСтрокаExtendedTooltip" id="31"/>
+		</InputField>
+		<InputField name="СловоЗамены" id="3">
+			<DataPath>СловоЗамены</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нет в словаре</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Top</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ОшибочныеДанные</TextColor>
+			<ContextMenu name="СловоЗаменыКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="СловоЗаменыExtendedTooltip" id="32"/>
+		</InputField>
+		<UsualGroup name="ГруппаСписокИКнопки" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список вариантов</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:ButtonTextColor</TitleTextColor>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список и кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаСписокИКнопкиExtendedTooltip" id="33"/>
+			<ChildItems>
+				<Table name="СписокВариантов" id="5">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<SkipOnInput>false</SkipOnInput>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>СписокВариантов</DataPath>
+					<RowPictureDataPath>СписокВариантов.Picture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список вариантов</v8:content>
+						</v8:item>
+					</Title>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="СписокВариантовКонтекстноеМеню" id="6"/>
+					<AutoCommandBar name="СписокВариантовКоманднаяПанель" id="7"/>
+					<ExtendedTooltip name="СписокВариантовExtendedTooltip" id="34"/>
+					<SearchStringAddition name="СписокВариантовСтрокаПоиска" id="48">
+						<AdditionSource>
+							<Item>СписокВариантов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокВариантовСтрокаПоискаКонтекстноеМеню" id="49"/>
+						<ExtendedTooltip name="СписокВариантовСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокВариантовСостояниеПросмотра" id="51">
+						<AdditionSource>
+							<Item>СписокВариантов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокВариантовСостояниеПросмотраКонтекстноеМеню" id="52"/>
+						<ExtendedTooltip name="СписокВариантовСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокВариантовУправлениеПоиском" id="54">
+						<AdditionSource>
+							<Item>СписокВариантов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокВариантовУправлениеПоискомКонтекстноеМеню" id="55"/>
+						<ExtendedTooltip name="СписокВариантовУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">СписокВариантовВыбор</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СписокВариантовЗначение" id="8">
+							<DataPath>СписокВариантов.Value</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список вариантов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="СписокВариантовЗначениеКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="СписокВариантовЗначениеExtendedTooltip" id="35"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаКнопки" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиExtendedTooltip" id="36"/>
+					<ChildItems>
+						<Button name="Пропустить" id="10">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.Пропустить</CommandName>
+							<ExtendedTooltip name="ПропуститьExtendedTooltip" id="37"/>
+						</Button>
+						<Button name="ПропуститьВсе" id="18">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПропуститьВсе</CommandName>
+							<ExtendedTooltip name="ПропуститьВсеExtendedTooltip" id="38"/>
+						</Button>
+						<Button name="ДобавитьИсключение" id="20">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ДобавитьИсключение</CommandName>
+							<ExtendedTooltip name="ДобавитьИсключениеExtendedTooltip" id="39"/>
+						</Button>
+						<LabelDecoration name="ДекорацияПустаяПередЗаменить" id="24">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПустаяПередЗаменитьКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ДекорацияПустаяПередЗаменитьExtendedTooltip" id="40"/>
+						</LabelDecoration>
+						<Button name="ЗаменитьСлово" id="15">
+							<Type>UsualButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.ЗаменитьСлово</CommandName>
+							<ExtendedTooltip name="ЗаменитьСловоExtendedTooltip" id="41"/>
+						</Button>
+						<Button name="ЗаменитьВсе" id="19">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаменитьВсе</CommandName>
+							<ExtendedTooltip name="ЗаменитьВсеExtendedTooltip" id="42"/>
+						</Button>
+						<LabelDecoration name="ДекорацияПустая" id="21">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПустаяКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ДекорацияПустаяExtendedTooltip" id="43"/>
+						</LabelDecoration>
+						<Button name="Закрыть" id="11">
+							<Type>UsualButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.StandardCommand.Close</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Закрыть</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="44"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИнформация" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа информация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнформацияExtendedTooltip" id="45"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаПредупреждения" id="29">
+					<Width>5</Width>
+					<Height>2</Height>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка предупреждения</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="КартинкаПредупрежденияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КартинкаПредупрежденияExtendedTooltip" id="46"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияСловоНеМожемПоправить" id="26">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
+					<TextColor>style:ИнформационнаяНадпись</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Слово содержит ошибку, но программа не может ее исправить. 
+Исправьте слово вручную, если нужно.
+</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияСловоНеМожемПоправитьКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДекорацияСловоНеМожемПоправитьExtendedTooltip" id="47"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИсходнаяСтрока" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходная строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СловоЗамены" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Слово замены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокВариантов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список вариантов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Завершить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СловоИзменено" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Слово изменено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НеСовпадаетЧислоВхожденийВТекстеИHtml" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не совпадает число вхождений в тексте и html</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Пропустить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Пропустить</Action>
+		</Command>
+		<Command name="ЗаменитьСлово" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить слово</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+R</Shortcut>
+			<Action>ЗаменитьСлово</Action>
+		</Command>
+		<Command name="ЗаменитьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить слово</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаменитьВсе</Action>
+		</Command>
+		<Command name="ПропуститьВсе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПропуститьВсе</Action>
+		</Command>
+		<Command name="ДобавитьИсключение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить исключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить исключение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьИсключение</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ИсходнаяСтрока">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="СловоЗамены">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="СписокВариантов">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

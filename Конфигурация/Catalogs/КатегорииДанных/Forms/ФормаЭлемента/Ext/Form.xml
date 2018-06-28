@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>66</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПодписаться" id="60">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.Подписаться</CommandName>
+				<ExtendedTooltip name="ФормаПодписатьсяExtendedTooltip" id="61"/>
+			</Button>
+			<Button name="ФормаПраваДоступа" id="101">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ПраваДоступа</CommandName>
+				<ExtendedTooltip name="ФормаПраваДоступаРасширеннаяПодсказка" id="102"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="62"/>
+		</InputField>
+		<InputField name="Описание" id="3">
+			<DataPath>Объект.Описание</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробное описание</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>None</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание категории</v8:content>
+				</v8:item>
+			</ToolTip>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MaxHeight>4</MaxHeight>
+			<MultiLine>true</MultiLine>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробное описание</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ОписаниеExtendedTooltip" id="63"/>
+		</InputField>
+		<InputField name="Родитель" id="21">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входит в категорию</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="РодительКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="РодительExtendedTooltip" id="65"/>
+			<Events>
+				<Event name="OnChange">РодительПриИзменении</Event>
+				<Event name="Clearing">РодительОчистка</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаАвтор" id="87">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа автор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа автор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАвторРасширеннаяПодсказка" id="88"/>
+			<ChildItems>
+				<InputField name="Автор" id="5">
+					<DataPath>Объект.Автор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="АвторКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="АвторExtendedTooltip" id="69"/>
+					<Events>
+						<Event name="OnChange">АвторПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="Персональная" id="9">
+					<DataPath>Объект.Персональная</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это личная категория</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПерсональнаяКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ПерсональнаяExtendedTooltip" id="67"/>
+					<Events>
+						<Event name="OnChange">ПерсональнаяПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаблицаДоступа" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблица доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Width>46</Width>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицаДоступаExtendedTooltip" id="74"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="85">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<LabelDecoration name="ЗаголовокТаблицыДоступа" id="98">
+							<Width>10</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кому доступна:</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователи, которым доступны просмотр и операции с категорией.
+Если категория личная, то она видима только ее автору.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="ЗаголовокТаблицыДоступаКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ЗаголовокТаблицыДоступаРасширеннаяПодсказка" id="100"/>
+						</LabelDecoration>
+						<CommandBar name="ГруппаКнопкиТаблицыДоступа" id="49">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки таблицы доступа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки таблицы доступа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="ГруппаКнопкиТаблицыДоступаExtendedTooltip" id="75"/>
+							<ChildItems>
+								<Button name="ДоступПодобратьПользователейЛичныйДоступ" id="23">
+									<Type>CommandBarButton</Type>
+									<Representation>Text</Representation>
+									<CommandName>Form.Command.ПодобратьПользователейЛичныйДоступ</CommandName>
+									<ExtendedTooltip name="ДоступПодобратьПользователейЛичныйДоступExtendedTooltip" id="76"/>
+								</Button>
+								<Button name="ДоступДобавить" id="50">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Item.Доступ.StandardCommand.Add</CommandName>
+									<ExtendedTooltip name="ДоступДобавитьExtendedTooltip" id="77"/>
+								</Button>
+								<Button name="ДоступУдалить" id="52">
+									<Type>CommandBarButton</Type>
+									<OnlyInAllActions>true</OnlyInAllActions>
+									<CommandName>Form.Item.Доступ.StandardCommand.Delete</CommandName>
+									<ExtendedTooltip name="ДоступУдалитьExtendedTooltip" id="79"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="Доступ" id="11">
+					<Representation>List</Representation>
+					<HeightInTableRows>3</HeightInTableRows>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.Доступ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кому доступна</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДоступКонтекстноеМеню" id="12"/>
+					<AutoCommandBar name="ДоступКоманднаяПанель" id="13">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДоступExtendedTooltip" id="82"/>
+					<SearchStringAddition name="ДоступСтрокаПоиска" id="89">
+						<AdditionSource>
+							<Item>Доступ</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступСтрокаПоискаКонтекстноеМеню" id="90"/>
+						<ExtendedTooltip name="ДоступСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДоступСостояниеПросмотра" id="92">
+						<AdditionSource>
+							<Item>Доступ</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступСостояниеПросмотраКонтекстноеМеню" id="93"/>
+						<ExtendedTooltip name="ДоступСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДоступУправлениеПоиском" id="95">
+						<AdditionSource>
+							<Item>Доступ</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДоступУправлениеПоискомКонтекстноеМеню" id="96"/>
+						<ExtendedTooltip name="ДоступУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="ChoiceProcessing">ДоступОбработкаВыбора</Event>
+						<Event name="OnStartEdit">ДоступПриНачалеРедактирования</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ДоступПользователь" id="16">
+							<DataPath>Объект.Доступ.Пользователь</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователи, которым разрешено видеть и использовать эту категорию</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДоступПользовательКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ДоступПользовательExtendedTooltip" id="83"/>
+							<Events>
+								<Event name="AutoComplete">ДоступПользовательАвтоПодбор</Event>
+								<Event name="StartChoice">ДоступПользовательНачалоВыбора</Event>
+								<Event name="TextEditEnd">ДоступПользовательОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КатегорииДанных</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПояснениеКТаблицеДоступа" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пояснение к таблице доступа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользователиПустаяСсылка" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи пустая ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НеобходимоОповеститьОбИзменении" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Необходимо оповестить об изменении</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодобратьПользователейЛичныйДоступ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F8</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодобратьРаботы</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПодобратьПользователейЛичныйДоступ</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="Подписаться" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписаться...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписаться</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подписаться</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьУведомленияПользователя</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПраваДоступа" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПраваДоступа</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ДокументооборотИспользоватьОграничениеПравДоступа</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Catalog.КатегорииДанных.Command.ОткрытьСписокПравил</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

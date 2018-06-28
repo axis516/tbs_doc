@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Запись о трудозатратах</v8:content>
+		</v8:item>
+	</Title>
+	<Width>50</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Источник" id="1">
+			<DataPath>Запись.Источник</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ИсточникКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИсточникExtendedTooltip" id="31"/>
+		</InputField>
+		<InputField name="Пользователь" id="25">
+			<DataPath>Запись.Пользователь</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ПользовательExtendedTooltip" id="32"/>
+		</InputField>
+		<InputField name="ДатаДобавления" id="9">
+			<DataPath>Запись.ДатаДобавления</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата работы</v8:content>
+				</v8:item>
+			</Title>
+			<Width>10</Width>
+			<EditFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДЛФ=D</v8:content>
+				</v8:item>
+			</EditFormat>
+			<ContextMenu name="ДатаДобавленияКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ДатаДобавленияExtendedTooltip" id="33"/>
+		</InputField>
+		<InputField name="ОписаниеРаботы" id="19">
+			<DataPath>Запись.ОписаниеРаботы</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание работы</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Left</TitleLocation>
+			<Width>10</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ОписаниеРаботыКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОписаниеРаботыExtendedTooltip" id="34"/>
+		</InputField>
+		<InputField name="Начало" id="11">
+			<DataPath>Запись.Начало</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало работы</v8:content>
+				</v8:item>
+			</Title>
+			<Width>6</Width>
+			<EditFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=ЧЧ:мм</v8:content>
+				</v8:item>
+			</EditFormat>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="НачалоКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="НачалоExtendedTooltip" id="35"/>
+		</InputField>
+		<InputField name="Окончание" id="13">
+			<DataPath>Запись.Окончание</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окончание работы</v8:content>
+				</v8:item>
+			</Title>
+			<Width>6</Width>
+			<EditFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=ЧЧ:мм</v8:content>
+				</v8:item>
+			</EditFormat>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="ОкончаниеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОкончаниеExtendedTooltip" id="36"/>
+		</InputField>
+		<InputField name="ДлительностьРаботы" id="21">
+			<DataPath>ДлительностьРаботы</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затраты времени</v8:content>
+				</v8:item>
+			</Title>
+			<Width>6</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<DropListButton>true</DropListButton>
+			<Mask>99:99</Mask>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ChoiceListButton>true</ChoiceListButton>
+			<ContextMenu name="ДлительностьРаботыКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ДлительностьРаботыExtendedTooltip" id="37"/>
+		</InputField>
+		<InputField name="ДлительностьСверхурочно" id="27">
+			<DataPath>Запись.ДлительностьСверхурочно</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Width>6</Width>
+			<ContextMenu name="ДлительностьСверхурочноКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="ДлительностьСверхурочноExtendedTooltip" id="38"/>
+		</InputField>
+		<InputField name="ДлительностьВВыходные" id="29">
+			<DataPath>Запись.ДлительностьВВыходные</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<Width>6</Width>
+			<ContextMenu name="ДлительностьВВыходныеКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ДлительностьВВыходныеExtendedTooltip" id="39"/>
+		</InputField>
+		<InputField name="ВидРабот" id="7">
+			<DataPath>Запись.ВидРабот</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="ВидРаботКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидРаботExtendedTooltip" id="40"/>
+		</InputField>
+		<InputField name="ПроектЗадача" id="23">
+			<DataPath>ПроектЗадача</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ChoiceButton>true</ChoiceButton>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="ПроектЗадачаКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ПроектЗадачаExtendedTooltip" id="41"/>
+			<Events>
+				<Event name="OnChange">ПроектЗадачаПриИзменении</Event>
+				<Event name="AutoComplete">ПроектЗадачаАвтоПодбор</Event>
+				<Event name="StartChoice">ПроектЗадачаНачалоВыбора</Event>
+				<Event name="Opening">ПроектЗадачаОткрытие</Event>
+				<Event name="Clearing">ПроектЗадачаОчистка</Event>
+				<Event name="TextEditEnd">ПроектЗадачаОкончаниеВводаТекста</Event>
+				<Event name="ChoiceProcessing">ПроектЗадачаОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ФактическиеТрудозатраты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДлительностьРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затраты времени</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПроектЗадача" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект, задача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВестиУчетПоПроектам</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="СпособУказанияВремени" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ указания времени</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СпособыУказанияВремени</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоНовый" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это новый</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НачальнаяДатаДобавления" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальная дата добавления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

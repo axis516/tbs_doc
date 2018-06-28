@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыНастроек" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки загрузки и выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыНастроекРасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаВыгрузкаДанных" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузка данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница выгрузка данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницаВыгрузкаДанныхРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКомандыДекорацияОрганизации" id="111">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыДекорацияОрганизацииРасширеннаяПодсказка" id="112"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОрганизации" id="113">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ограничивать выгрузку организациями:</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>купкупц</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияОрганизацииКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ДекорацияОрганизацииРасширеннаяПодсказка" id="115"/>
+								</LabelDecoration>
+								<CommandBar name="ГруппаКомандыОрганизации" id="116">
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="ГруппаКомандыОрганизацииРасширеннаяПодсказка" id="117"/>
+									<ChildItems>
+										<Button name="ОрганизацииДобавить" id="80">
+											<Type>CommandBarButton</Type>
+											<Representation>Text</Representation>
+											<CommandName>Form.Item.Организации.StandardCommand.Add</CommandName>
+											<ExtendedTooltip name="ОрганизацииДобавитьРасширеннаяПодсказка" id="81"/>
+										</Button>
+										<Button name="ОрганизацииУдалить" id="82">
+											<Type>CommandBarButton</Type>
+											<Representation>Text</Representation>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<CommandName>Form.Item.Организации.StandardCommand.Delete</CommandName>
+											<ExtendedTooltip name="ОрганизацииУдалитьРасширеннаяПодсказка" id="83"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Организации" id="73">
+							<HeightInTableRows>4</HeightInTableRows>
+							<Header>false</Header>
+							<AutoAddIncomplete>false</AutoAddIncomplete>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Организации</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОрганизацииКонтекстноеМеню" id="74"/>
+							<AutoCommandBar name="ОрганизацииКоманднаяПанель" id="75">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОрганизацииРасширеннаяПодсказка" id="76"/>
+							<SearchStringAddition name="ОрганизацииСтрокаПоиска" id="84">
+								<AdditionSource>
+									<Item>Организации</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОрганизацииСтрокаПоискаКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="ОрганизацииСтрокаПоискаРасширеннаяПодсказка" id="86"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОрганизацииСостояниеПросмотра" id="87">
+								<AdditionSource>
+									<Item>Организации</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОрганизацииСостояниеПросмотраКонтекстноеМеню" id="88"/>
+								<ExtendedTooltip name="ОрганизацииСостояниеПросмотраРасширеннаяПодсказка" id="89"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОрганизацииУправлениеПоиском" id="90">
+								<AdditionSource>
+									<Item>Организации</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОрганизацииУправлениеПоискомКонтекстноеМеню" id="91"/>
+								<ExtendedTooltip name="ОрганизацииУправлениеПоискомРасширеннаяПодсказка" id="92"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ОрганизацииОрганизация" id="77">
+									<DataPath>Объект.Организации.Организация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+									<ContextMenu name="ОрганизацииОрганизацияКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ОрганизацииОрганизацияРасширеннаяПодсказка" id="79"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаКомандыДекорацияДоговоры" id="122">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыДекорацияДоговорыРасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияДоговоры" id="124">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружать согласованные договоры видов:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияДоговорыКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="ДекорацияДоговорыРасширеннаяПодсказка" id="126"/>
+								</LabelDecoration>
+								<CommandBar name="КомандыДоговоры" id="127">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Команды договоры</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="КомандыДоговорыРасширеннаяПодсказка" id="128"/>
+									<ChildItems>
+										<Button name="ДоговорыДобавить" id="53">
+											<Type>CommandBarButton</Type>
+											<Representation>Text</Representation>
+											<CommandName>Form.Item.Договоры.StandardCommand.Add</CommandName>
+											<ExtendedTooltip name="ДоговорыДобавитьРасширеннаяПодсказка" id="54"/>
+										</Button>
+										<Button name="ДоговорыУдалить" id="55">
+											<Type>CommandBarButton</Type>
+											<Representation>Text</Representation>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<CommandName>Form.Item.Договоры.StandardCommand.Delete</CommandName>
+											<ExtendedTooltip name="ДоговорыУдалитьРасширеннаяПодсказка" id="56"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Договоры" id="46">
+							<HeightInTableRows>4</HeightInTableRows>
+							<Header>false</Header>
+							<AutoAddIncomplete>false</AutoAddIncomplete>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Договоры</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДоговорыКонтекстноеМеню" id="47"/>
+							<AutoCommandBar name="ДоговорыКоманднаяПанель" id="48">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДоговорыРасширеннаяПодсказка" id="49"/>
+							<SearchStringAddition name="ДоговорыСтрокаПоиска" id="93">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="ДоговорыСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоговорыСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыСостояниеПросмотраКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="ДоговорыСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоговорыУправлениеПоиском" id="99">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыУправлениеПоискомКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="ДоговорыУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ДоговорыВидДокумента" id="50">
+									<DataPath>Объект.Договоры.ВидДокумента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоговорыВидДокументаКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ДоговорыВидДокументаРасширеннаяПодсказка" id="52"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаКомандыДекорацияЗаявки" id="133">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыДекорацияЗаявкиРасширеннаяПодсказка" id="134"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияЗаявки" id="135">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружать в платежные поручения согласованные заявки на оплату:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияЗаявкиКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="ДекорацияЗаявкиРасширеннаяПодсказка" id="137"/>
+								</LabelDecoration>
+								<CommandBar name="КомандыЗаявки" id="138">
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="КомандыЗаявкиРасширеннаяПодсказка" id="139"/>
+									<ChildItems>
+										<Button name="ЗаявкиНаОплатуДобавить" id="64">
+											<Type>CommandBarButton</Type>
+											<Representation>Text</Representation>
+											<CommandName>Form.Item.ЗаявкиНаОплату.StandardCommand.Add</CommandName>
+											<ExtendedTooltip name="ЗаявкиНаОплатуДобавитьРасширеннаяПодсказка" id="65"/>
+										</Button>
+										<Button name="ЗаявкиНаОплатуУдалить" id="66">
+											<Type>CommandBarButton</Type>
+											<Representation>Text</Representation>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<CommandName>Form.Item.ЗаявкиНаОплату.StandardCommand.Delete</CommandName>
+											<ExtendedTooltip name="ЗаявкиНаОплатуУдалитьРасширеннаяПодсказка" id="67"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ЗаявкиНаОплату" id="57">
+							<HeightInTableRows>4</HeightInTableRows>
+							<Header>false</Header>
+							<AutoAddIncomplete>false</AutoAddIncomplete>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЗаявкиНаОплату</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗаявкиНаОплатуКонтекстноеМеню" id="58"/>
+							<AutoCommandBar name="ЗаявкиНаОплатуКоманднаяПанель" id="59">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗаявкиНаОплатуРасширеннаяПодсказка" id="60"/>
+							<SearchStringAddition name="ЗаявкиНаОплатуСтрокаПоиска" id="102">
+								<AdditionSource>
+									<Item>ЗаявкиНаОплату</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаявкиНаОплатуСтрокаПоискаКонтекстноеМеню" id="103"/>
+								<ExtendedTooltip name="ЗаявкиНаОплатуСтрокаПоискаРасширеннаяПодсказка" id="104"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗаявкиНаОплатуСостояниеПросмотра" id="105">
+								<AdditionSource>
+									<Item>ЗаявкиНаОплату</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаявкиНаОплатуСостояниеПросмотраКонтекстноеМеню" id="106"/>
+								<ExtendedTooltip name="ЗаявкиНаОплатуСостояниеПросмотраРасширеннаяПодсказка" id="107"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗаявкиНаОплатуУправлениеПоиском" id="108">
+								<AdditionSource>
+									<Item>ЗаявкиНаОплату</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаявкиНаОплатуУправлениеПоискомКонтекстноеМеню" id="109"/>
+								<ExtendedTooltip name="ЗаявкиНаОплатуУправлениеПоискомРасширеннаяПодсказка" id="110"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ЗаявкиНаОплатуВидДокумента" id="61">
+									<DataPath>Объект.ЗаявкиНаОплату.ВидДокумента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗаявкиНаОплатуВидДокументаКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ЗаявкиНаОплатуВидДокументаРасширеннаяПодсказка" id="63"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаЗагрузкаДанных" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница выгружаемые данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницаЗагрузкаДанныхРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<InputField name="ГруппаДоступаКонтрагентов" id="30">
+							<DataPath>Объект.ГруппаДоступаКонтрагентов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Назначать контрагентам группу доступа</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ГруппаДоступаКонтрагентовКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ГруппаДоступаКонтрагентовРасширеннаяПодсказка" id="32"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExchangePlanObject.ОбменБухгалтерияПредприятияДокументооборот20</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Приоритет" id="7">
+			<DataPath>Объект.Приоритет</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПриоритетКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаПрава" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа права</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа права</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПраваРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПраваЛево" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа права лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа права лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваЛевоРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<CheckBoxField name="Чтение" id="10">
+							<DataPath>Объект.Чтение</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЧтениеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЧтениеРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<CheckBoxField name="Изменение" id="13">
+							<DataPath>Объект.Изменение</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИзменениеКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ИзменениеРасширеннаяПодсказка" id="15"/>
+						</CheckBoxField>
+						<CheckBoxField name="Добавление" id="16">
+							<DataPath>Объект.Добавление</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДобавлениеКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ДобавлениеРасширеннаяПодсказка" id="18"/>
+						</CheckBoxField>
+						<CheckBoxField name="Удаление" id="19">
+							<DataPath>Объект.Удаление</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УдалениеКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="УдалениеРасширеннаяПодсказка" id="21"/>
+						</CheckBoxField>
+						<CheckBoxField name="Регистрация" id="22">
+							<DataPath>Объект.Регистрация</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РегистрацияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="РегистрацияРасширеннаяПодсказка" id="24"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраваПраво" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа права право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа права право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваПравоРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<CheckBoxField name="ЧтениеБезОграничения" id="25">
+							<DataPath>Объект.ЧтениеБезОграничения</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЧтениеБезОграниченияКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ЧтениеБезОграниченияРасширеннаяПодсказка" id="27"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИзменениеБезОграничения" id="28">
+							<DataPath>Объект.ИзменениеБезОграничения</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИзменениеБезОграниченияКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ИзменениеБезОграниченияРасширеннаяПодсказка" id="30"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.УровниДоступа</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

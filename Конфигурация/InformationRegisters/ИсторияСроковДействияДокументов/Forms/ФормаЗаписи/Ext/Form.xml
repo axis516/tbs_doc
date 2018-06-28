@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>50</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Документ" id="30">
+			<DataPath>Запись.Документ</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<UsualGroup name="ГруппаСрокДействия" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок действия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСрокДействияРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<InputField name="ДатаНачалаДействия" id="5">
+					<DataPath>Запись.ДатаНачалаДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует с</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ДатаНачалаДействияКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ДатаНачалаДействияРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="ДатаОкончанияДействия" id="7">
+					<DataPath>Запись.ДатаОкончанияДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<Width>10</Width>
+					<ContextMenu name="ДатаОкончанияДействияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаОкончанияДействияРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<CheckBoxField name="Бессрочный" id="9">
+					<DataPath>Запись.Бессрочный</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="БессрочныйКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="БессрочныйРасширеннаяПодсказка" id="43"/>
+					<Events>
+						<Event name="OnChange">БессрочныйПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПорядокПродления" id="11">
+			<DataPath>Запись.ПорядокПродления</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПорядокПродленияКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ПорядокПродленияРасширеннаяПодсказка" id="44"/>
+		</InputField>
+		<LabelDecoration name="ДекорацияОтступ" id="36">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="45"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаОснование" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОснованиеРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИзменил" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изменил</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изменил</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИзменилРасширеннаяПодсказка" id="47"/>
+				</UsualGroup>
+				<InputField name="Изменил" id="28">
+					<DataPath>Запись.Изменил</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="ИзменилКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ИзменилРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="ДатаИзменения" id="32">
+					<DataPath>Запись.ДатаИзменения</DataPath>
+					<Width>12</Width>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ДатаИзмененияКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДатаИзмененияРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="Комментарий" id="17">
+					<DataPath>Запись.Комментарий</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="ДокументИсточникИзменения" id="15">
+					<DataPath>Запись.ДокументИсточникИзменения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок действия изменен документом</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Top</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="ДокументИсточникИзмененияКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ДокументИсточникИзмененияРасширеннаяПодсказка" id="51"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ИсторияСроковДействияДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

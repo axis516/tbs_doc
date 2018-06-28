@@ -1,0 +1,1919 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Документы</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="СтраницаВнутренниеДокументы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внутренние</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внутренние документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВнутренниеДокументыРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<CommandBar name="КоманднаяПанельВнутренние" id="280">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель внутренние</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель внутренние</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="КоманднаяПанельВнутренниеРасширеннаяПодсказка" id="281"/>
+							<ChildItems>
+								<Popup name="РежимПросмотра" id="282">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Режим просмотра</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Режим просмотра</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="РежимПросмотраРасширеннаяПодсказка" id="283"/>
+									<ChildItems>
+										<Button name="ВключитьПросмотрПапкамиВнутренние" id="284">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.ВключитьПросмотрПапками</CommandName>
+											<ExtendedTooltip name="ВключитьПросмотрПапкамиВнутренниеРасширеннаяПодсказка" id="285"/>
+										</Button>
+										<Button name="ВключитьПросмотрСпискомВнутренние" id="286">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.ВключитьПросмотрСписком</CommandName>
+											<ExtendedTooltip name="ВключитьПросмотрСпискомВнутренниеРасширеннаяПодсказка" id="287"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<ButtonGroup name="СписокВнутренниеГруппа4" id="288">
+									<CommandSource>Item.СписокВнутренние</CommandSource>
+									<ExtendedTooltip name="СписокВнутренниеГруппа4РасширеннаяПодсказка" id="289"/>
+									<ChildItems>
+										<SearchStringAddition name="Дополнение1" id="296">
+											<AdditionSource>
+												<Item>СписокВнутренние</Item>
+												<Type>SearchStringRepresentation</Type>
+											</AdditionSource>
+											<ContextMenu name="Дополнение1КонтекстноеМеню" id="297"/>
+											<ExtendedTooltip name="Дополнение1РасширеннаяПодсказка" id="298"/>
+										</SearchStringAddition>
+										<SearchControlAddition name="Дополнение2" id="299">
+											<AdditionSource>
+												<Item>СписокВнутренние</Item>
+												<Type>SearchControl</Type>
+											</AdditionSource>
+											<ContextMenu name="Дополнение2КонтекстноеМеню" id="300"/>
+											<ExtendedTooltip name="Дополнение2РасширеннаяПодсказка" id="301"/>
+										</SearchControlAddition>
+									</ChildItems>
+								</ButtonGroup>
+							</ChildItems>
+						</CommandBar>
+						<UsualGroup name="Группа6" id="275">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="276"/>
+							<ChildItems>
+								<Table name="Папки" id="248">
+									<Representation>Tree</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<SkipOnInput>false</SkipOnInput>
+									<Width>30</Width>
+									<Height>10</Height>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Папки</DataPath>
+									<BorderColor>style:BorderColor</BorderColor>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="ПапкиКонтекстноеМеню" id="249"/>
+									<AutoCommandBar name="ПапкиКоманднаяПанель" id="250"/>
+									<ExtendedTooltip name="ПапкиРасширеннаяПодсказка" id="251"/>
+									<SearchStringAddition name="ПапкиСтрокаПоиска" id="252">
+										<AdditionSource>
+											<Item>Папки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПапкиСтрокаПоискаКонтекстноеМеню" id="255"/>
+										<ExtendedTooltip name="ПапкиСтрокаПоискаРасширеннаяПодсказка" id="256"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПапкиСостояниеПросмотра" id="257">
+										<AdditionSource>
+											<Item>Папки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПапкиСостояниеПросмотраКонтекстноеМеню" id="260"/>
+										<ExtendedTooltip name="ПапкиСостояниеПросмотраРасширеннаяПодсказка" id="261"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПапкиУправлениеПоиском" id="262">
+										<AdditionSource>
+											<Item>Папки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПапкиУправлениеПоискомКонтекстноеМеню" id="265"/>
+										<ExtendedTooltip name="ПапкиУправлениеПоискомРасширеннаяПодсказка" id="266"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="DragCheck">ПапкиПроверкаПеретаскивания</Event>
+										<Event name="OnActivateRow">ПапкиПриАктивизацииСтроки</Event>
+										<Event name="Drag">ПапкиПеретаскивание</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="Группа" id="267">
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ГруппаExtendedTooltip" id="268"/>
+											<ChildItems>
+												<PictureField name="КартинкаГруппы" id="293">
+													<DataPath>Папки.ИндексКартинки</DataPath>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.Папки</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<ContextMenu name="КартинкаГруппыКонтекстноеМеню" id="294"/>
+													<ExtendedTooltip name="КартинкаГруппыРасширеннаяПодсказка" id="295"/>
+												</PictureField>
+												<LabelField name="НаименованиеГруппы" id="272">
+													<DataPath>Папки.Description</DataPath>
+													<ContextMenu name="НаименованиеГруппыКонтекстноеМеню" id="273"/>
+													<ExtendedTooltip name="НаименованиеГруппыРасширеннаяПодсказка" id="274"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+								<Table name="СписокВнутренние" id="193">
+									<CommandBarLocation>None</CommandBarLocation>
+									<Height>10</Height>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокВнутренние</DataPath>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокВнутренниеКонтекстноеМеню" id="194"/>
+									<AutoCommandBar name="СписокВнутренниеКоманднаяПанель" id="195"/>
+									<ExtendedTooltip name="СписокВнутренниеРасширеннаяПодсказка" id="196"/>
+									<SearchStringAddition name="СписокВнутренниеСтрокаПоиска" id="197">
+										<AdditionSource>
+											<Item>СписокВнутренние</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокВнутренниеСтрокаПоискаКонтекстноеМеню" id="200"/>
+										<ExtendedTooltip name="СписокВнутренниеСтрокаПоискаРасширеннаяПодсказка" id="201"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокВнутренниеСостояниеПросмотра" id="202">
+										<AdditionSource>
+											<Item>СписокВнутренние</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокВнутренниеСостояниеПросмотраКонтекстноеМеню" id="205"/>
+										<ExtendedTooltip name="СписокВнутренниеСостояниеПросмотраРасширеннаяПодсказка" id="206"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокВнутренниеУправлениеПоиском" id="207">
+										<AdditionSource>
+											<Item>СписокВнутренние</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокВнутренниеУправлениеПоискомКонтекстноеМеню" id="210"/>
+										<ExtendedTooltip name="СписокВнутренниеУправлениеПоискомРасширеннаяПодсказка" id="211"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">СписокВнутренниеПередНачаломДобавления</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="СписокВнутренниеГруппа1" id="218">
+											<ExtendedTooltip name="СписокВнутренниеГруппа1РасширеннаяПодсказка" id="219"/>
+											<ChildItems>
+												<PictureField name="ФайлыВнутренние" id="212">
+													<DataPath>СписокВнутренние.ИндексКартинкиФайлы</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.ТолькоСкрепка</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<Width>2</Width>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.КоллекцияСкрепка</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<ContextMenu name="ФайлыВнутренниеКонтекстноеМеню" id="213"/>
+													<ExtendedTooltip name="ФайлыВнутренниеРасширеннаяПодсказка" id="214"/>
+												</PictureField>
+												<PictureField name="ЗадачиВнутренние" id="215">
+													<DataPath>СписокВнутренние.Задачи</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.ВзаимодействиеСотрудников</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<Width>2</Width>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.ВзаимодействиеСотрудников</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<ContextMenu name="ЗадачиВнутренниеКонтекстноеМеню" id="216"/>
+													<ExtendedTooltip name="ЗадачиВнутренниеРасширеннаяПодсказка" id="217"/>
+												</PictureField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="СписокВнутренниеГруппа2" id="226">
+											<ExtendedTooltip name="СписокВнутренниеГруппа2РасширеннаяПодсказка" id="227"/>
+											<ChildItems>
+												<PictureField name="ПодписанЭПВнутренние" id="220">
+													<DataPath>СписокВнутренние.СтатусПроверкиЭП</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<Width>2</Width>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.СтатусПроверкиЭП</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<ContextMenu name="ПодписанЭПВнутренниеКонтекстноеМеню" id="221"/>
+													<ExtendedTooltip name="ПодписанЭПВнутренниеРасширеннаяПодсказка" id="222"/>
+												</PictureField>
+												<PictureField name="ЕстьКатегорииВнутренние" id="223">
+													<DataPath>СписокВнутренние.ЕстьКатегорииДанных</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<TitleLocation>None</TitleLocation>
+													<HeaderPicture>
+														<xr:Ref>CommonPicture.Категории</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</HeaderPicture>
+													<Width>2</Width>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.Категории</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<ContextMenu name="ЕстьКатегорииВнутренниеКонтекстноеМеню" id="224"/>
+													<ExtendedTooltip name="ЕстьКатегорииВнутренниеРасширеннаяПодсказка" id="225"/>
+												</PictureField>
+											</ChildItems>
+										</ColumnGroup>
+										<PictureField name="СостояниеКонтроляВнутренние" id="228">
+											<DataPath>СписокВнутренние.СостояниеКонтроля</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.КартинкаКонтроль16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СостоянияКонтроля16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="СостояниеКонтроляВнутренниеКонтекстноеМеню" id="229"/>
+											<ExtendedTooltip name="СостояниеКонтроляВнутренниеРасширеннаяПодсказка" id="230"/>
+										</PictureField>
+										<LabelField name="НаименованиеВнутренние" id="231">
+											<DataPath>СписокВнутренние.Заголовок</DataPath>
+											<AutoCellHeight>true</AutoCellHeight>
+											<Width>23</Width>
+											<ContextMenu name="НаименованиеВнутренниеКонтекстноеМеню" id="232"/>
+											<ExtendedTooltip name="НаименованиеВнутренниеРасширеннаяПодсказка" id="233"/>
+										</LabelField>
+										<LabelField name="РегистрационныйНомерИДатаВнутренние" id="234">
+											<DataPath>СписокВнутренние.РегистрационныйНомерИДата</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Рег. № и дата</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Регистрационный номер и дата регистрации документа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<AutoCellHeight>true</AutoCellHeight>
+											<Width>15</Width>
+											<ContextMenu name="РегистрационныйНомерИДатаВнутренниеКонтекстноеМеню" id="235"/>
+											<ExtendedTooltip name="РегистрационныйНомерИДатаВнутренниеРасширеннаяПодсказка" id="236"/>
+										</LabelField>
+										<ColumnGroup name="СписокВнутренниеГруппа3" id="243">
+											<ExtendedTooltip name="СписокВнутренниеГруппа3РасширеннаяПодсказка" id="244"/>
+											<ChildItems>
+												<LabelField name="УтвердилВнутренние" id="237">
+													<DataPath>СписокВнутренние.Утвердил</DataPath>
+													<Width>25</Width>
+													<ContextMenu name="УтвердилВнутренниеКонтекстноеМеню" id="238"/>
+													<ExtendedTooltip name="УтвердилВнутренниеРасширеннаяПодсказка" id="239"/>
+												</LabelField>
+												<LabelField name="ПодготовилВнутренние" id="240">
+													<DataPath>СписокВнутренние.Подготовил</DataPath>
+													<Width>25</Width>
+													<ContextMenu name="ПодготовилВнутренниеКонтекстноеМеню" id="241"/>
+													<ExtendedTooltip name="ПодготовилВнутренниеРасширеннаяПодсказка" id="242"/>
+												</LabelField>
+											</ChildItems>
+										</ColumnGroup>
+										<LabelField name="ПапкаВнутренние" id="290">
+											<DataPath>СписокВнутренние.Папка</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<ContextMenu name="ПапкаВнутренниеКонтекстноеМеню" id="291"/>
+											<ExtendedTooltip name="ПапкаВнутренниеРасширеннаяПодсказка" id="292"/>
+										</LabelField>
+										<LabelField name="ДатаСортировкиВнутренние" id="245">
+											<DataPath>СписокВнутренние.ДатаСортировки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата</v8:content>
+												</v8:item>
+											</Title>
+											<Width>9</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ='dd.MM.yyyy ЧЧ:мм'</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ДатаСортировкиВнутренниеКонтекстноеМеню" id="246"/>
+											<ExtendedTooltip name="ДатаСортировкиВнутренниеРасширеннаяПодсказка" id="247"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВходящиеДокументы" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВходящиеДокументыРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="СписокВходящие" id="9">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<DefaultItem>true</DefaultItem>
+							<Height>10</Height>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>End</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокВходяшие</DataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокВходящиеКонтекстноеМеню" id="10">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокКонтекстноеМенюСоздать" id="118">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>1:0f8d6d98-2f8b-405a-b8b3-0538e9d95da5</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюСоздатьExtendedTooltip" id="119"/>
+									</Button>
+									<ButtonGroup name="ГруппаСтандартныхКоманд" id="120">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа стандартных команд</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа стандартных команд</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Item.СписокВходящие</CommandSource>
+										<ExtendedTooltip name="ГруппаСтандартныхКомандExtendedTooltip" id="121"/>
+									</ButtonGroup>
+									<Button name="ФормаВыбратьКатегорииКонтекст" id="122">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>false</OnlyInAllActions>
+										<CommandName>9:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+										<ExtendedTooltip name="ФормаВыбратьКатегорииКонтекстExtendedTooltip" id="123"/>
+									</Button>
+									<Button name="СписокКонтекстноеМенюПодписать" id="124">
+										<Type>CommandBarButton</Type>
+										<CommandName>7:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюПодписатьExtendedTooltip" id="125"/>
+									</Button>
+									<Button name="СписокКонтекстноеМенюДобавитьВКомплект" id="126">
+										<Type>CommandBarButton</Type>
+										<CommandName>11:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюДобавитьВКомплектExtendedTooltip" id="127"/>
+									</Button>
+									<Button name="СписокКонтекстноеМенюАвтообновление" id="128">
+										<Type>CommandBarButton</Type>
+										<CommandName>10:409b9a53-7f7e-4178-86c1-33176c7c7a7a</CommandName>
+										<ExtendedTooltip name="СписокКонтекстноеМенюАвтообновлениеExtendedTooltip" id="129"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="СписокВходящиеКоманднаяПанель" id="11"/>
+							<ExtendedTooltip name="СписокВходящиеРасширеннаяПодсказка" id="12"/>
+							<SearchStringAddition name="СписокВходящиеСтрокаПоиска" id="13">
+								<AdditionSource>
+									<Item>СписокВходящие</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВходящиеСтрокаПоискаКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="СписокВходящиеСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокВходящиеСостояниеПросмотра" id="18">
+								<AdditionSource>
+									<Item>СписокВходящие</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВходящиеСостояниеПросмотраКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="СписокВходящиеСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокВходящиеУправлениеПоиском" id="23">
+								<AdditionSource>
+									<Item>СписокВходящие</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокВходящиеУправлениеПоискомКонтекстноеМеню" id="26"/>
+								<ExtendedTooltip name="СписокВходящиеУправлениеПоискомРасширеннаяПодсказка" id="27"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокВходящиеПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="Группа1" id="28">
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+									<ChildItems>
+										<PictureField name="ФайлыВходящие" id="30">
+											<DataPath>СписокВходяшие.ИндексКартинкиФайлы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Файлы</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Файлы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ТолькоСкрепка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="12" y="3"/>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КоллекцияСкрепка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="12" y="3"/>
+											</ValuesPicture>
+											<ContextMenu name="ФайлыВходящиеКонтекстноеМеню" id="31"/>
+											<ExtendedTooltip name="ФайлыВходящиеРасширеннаяПодсказка" id="32"/>
+										</PictureField>
+										<PictureField name="ЗадачиВходящие" id="33">
+											<DataPath>СписокВходяшие.Задачи</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Задачи</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Задачи</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ВзаимодействиеСотрудников</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.ВзаимодействиеСотрудников</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ЗадачиВходящиеКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="ЗадачиВходящиеРасширеннаяПодсказка" id="35"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="Группа2" id="36">
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="37"/>
+									<ChildItems>
+										<PictureField name="ПодписанЭПВходящие" id="38">
+											<DataPath>СписокВходяшие.СтатусПроверкиЭП</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подписан</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подписан</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="10" y="2"/>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СтатусПроверкиЭП</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ПодписанЭПВходящиеКонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="ПодписанЭПВходящиеРасширеннаяПодсказка" id="40"/>
+										</PictureField>
+										<PictureField name="ЕстьКатегорииВходящие" id="41">
+											<DataPath>СписокВходяшие.ЕстьКатегорииДанных</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Категории</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.Категории</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.Категории</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ЕстьКатегорииВходящиеКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="ЕстьКатегорииВходящиеРасширеннаяПодсказка" id="43"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="Группа3" id="44">
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="45"/>
+									<ChildItems>
+										<PictureField name="ПоступилПоСВДВходящие" id="46">
+											<DataPath>СписокВходяшие.ПоступилПоСВД</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Документ поступил по СВД</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ПроцессОбменаСВД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.ПроцессОбменаСВД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ПоступилПоСВДВходящиеКонтекстноеМеню" id="47"/>
+											<ExtendedTooltip name="ПоступилПоСВДВходящиеРасширеннаяПодсказка" id="48"/>
+										</PictureField>
+										<PictureField name="СостояниеКонтроляВходящие" id="49">
+											<DataPath>СписокВходяшие.СостояниеКонтроля</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Состояние контроля</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.КартинкаКонтроль16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СостоянияКонтроля16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="СостояниеКонтроляВходящиеКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="СостояниеКонтроляВходящиеРасширеннаяПодсказка" id="51"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="НаименованиеВходящие" id="52">
+									<DataPath>СписокВходяшие.Заголовок</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<AutoCellHeight>true</AutoCellHeight>
+									<Width>25</Width>
+									<ContextMenu name="НаименованиеВходящиеКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="НаименованиеВходящиеРасширеннаяПодсказка" id="54"/>
+								</LabelField>
+								<ColumnGroup name="Группа4" id="55">
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="56"/>
+									<ChildItems>
+										<LabelField name="РегистрационныйНомерИДатаВходящие" id="130">
+											<DataPath>СписокВходяшие.РегистрационныйНомерИДата</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Рег. № и дата</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Регистрационный номер и дата регистрации документа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<AutoCellHeight>true</AutoCellHeight>
+											<Width>15</Width>
+											<ContextMenu name="РегистрационныйНомерИДатаВходящиеКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="РегистрационныйНомерИДатаВходящиеРасширеннаяПодсказка" id="132"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="Группа5" id="63">
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="64"/>
+									<ChildItems>
+										<LabelField name="ОтправительВходящие" id="65">
+											<DataPath>СписокВходяшие.Отправитель</DataPath>
+											<Width>25</Width>
+											<ContextMenu name="ОтправительВходящиеКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ОтправительВходящиеРасширеннаяПодсказка" id="67"/>
+										</LabelField>
+										<LabelField name="АдресатВходящие" id="68">
+											<DataPath>СписокВходяшие.Адресат</DataPath>
+											<Width>25</Width>
+											<ContextMenu name="АдресатВходящиеКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="АдресатВходящиеРасширеннаяПодсказка" id="70"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="ДатаСортировкиВходящие" id="82">
+									<DataPath>СписокВходяшие.ДатаСортировки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата регистрации или создания документа, если не зарегистрирован</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>9</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy ЧЧ:мм'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ДатаСортировкиВходящиеКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="ДатаСортировкиВходящиеРасширеннаяПодсказка" id="84"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаИсходящиеДокументы" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходящие</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходящие документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаИсходящиеДокументыРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Table name="СписокИсходящие" id="133">
+							<Height>10</Height>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокИсходящие</DataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокИсходящиеКонтекстноеМеню" id="134"/>
+							<AutoCommandBar name="СписокИсходящиеКоманднаяПанель" id="135"/>
+							<ExtendedTooltip name="СписокИсходящиеРасширеннаяПодсказка" id="136"/>
+							<SearchStringAddition name="СписокИсходящиеСтрокаПоиска" id="137">
+								<AdditionSource>
+									<Item>СписокИсходящие</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокИсходящиеСтрокаПоискаКонтекстноеМеню" id="140"/>
+								<ExtendedTooltip name="СписокИсходящиеСтрокаПоискаРасширеннаяПодсказка" id="141"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокИсходящиеСостояниеПросмотра" id="142">
+								<AdditionSource>
+									<Item>СписокИсходящие</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокИсходящиеСостояниеПросмотраКонтекстноеМеню" id="145"/>
+								<ExtendedTooltip name="СписокИсходящиеСостояниеПросмотраРасширеннаяПодсказка" id="146"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокИсходящиеУправлениеПоиском" id="147">
+								<AdditionSource>
+									<Item>СписокИсходящие</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокИсходящиеУправлениеПоискомКонтекстноеМеню" id="150"/>
+								<ExtendedTooltip name="СписокИсходящиеУправлениеПоискомРасширеннаяПодсказка" id="151"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокИсходящиеПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ГруппаФайлыЗадачи" id="152">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа файлы задачи</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа файлы задачи</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаФайлыЗадачиРасширеннаяПодсказка" id="153"/>
+									<ChildItems>
+										<PictureField name="ФайлыИсходящие" id="158">
+											<DataPath>СписокИсходящие.ИндексКартинкиФайлы</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ТолькоСкрепка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.КоллекцияСкрепка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ФайлыИсходящиеКонтекстноеМеню" id="159"/>
+											<ExtendedTooltip name="ФайлыИсходящиеРасширеннаяПодсказка" id="160"/>
+										</PictureField>
+										<PictureField name="ЗадачиИсходящие" id="161">
+											<DataPath>СписокИсходящие.Задачи</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ВзаимодействиеСотрудников</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.ВзаимодействиеСотрудников</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ЗадачиИсходящиеКонтекстноеМеню" id="162"/>
+											<ExtendedTooltip name="ЗадачиИсходящиеРасширеннаяПодсказка" id="163"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ГруппаЭПКатегории" id="154">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ЭПКатегории</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ЭПКатегории</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаЭПКатегорииРасширеннаяПодсказка" id="155"/>
+									<ChildItems>
+										<PictureField name="ПодписанЭПИсходящие" id="164">
+											<DataPath>СписокИсходящие.СтатусПроверкиЭП</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<TitleLocation>None</TitleLocation>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ПодписанЭП</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СтатусПроверкиЭП</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ПодписанЭПИсходящиеКонтекстноеМеню" id="165"/>
+											<ExtendedTooltip name="ПодписанЭПИсходящиеРасширеннаяПодсказка" id="166"/>
+										</PictureField>
+										<PictureField name="ЕстьКатегорииИсходящие" id="167">
+											<DataPath>СписокИсходящие.ЕстьКатегорииДанных</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<TitleLocation>None</TitleLocation>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.Категории</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.Категории</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ЕстьКатегорииИсходящиеКонтекстноеМеню" id="168"/>
+											<ExtendedTooltip name="ЕстьКатегорииИсходящиеРасширеннаяПодсказка" id="169"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ГруппаСВДКонтроль" id="156">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа СВДКонтроль</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа СВДКонтроль</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСВДКонтрольРасширеннаяПодсказка" id="157"/>
+									<ChildItems>
+										<PictureField name="СостояниеСВДИсходящие" id="170">
+											<DataPath>СписокИсходящие.НомерКартинкиВКоллекции</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<TitleLocation>None</TitleLocation>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.ПроцессОбменаСВД</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СостояниеОперацииСВД</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="СостояниеСВДИсходящиеКонтекстноеМеню" id="171"/>
+											<ExtendedTooltip name="СостояниеСВДИсходящиеРасширеннаяПодсказка" id="172"/>
+										</PictureField>
+										<PictureField name="СостояниеКонтроляИсходящие" id="173">
+											<DataPath>СписокИсходящие.СостояниеКонтроля</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HeaderPicture>
+												<xr:Ref>CommonPicture.КартинкаКонтроль16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<Width>2</Width>
+											<ValuesPicture>
+												<xr:Ref>CommonPicture.СостоянияКонтроля16</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="СостояниеКонтроляИсходящиеКонтекстноеМеню" id="174"/>
+											<ExtendedTooltip name="СостояниеКонтроляИсходящиеРасширеннаяПодсказка" id="175"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="СписокИсходящиеЗаголовок" id="176">
+									<DataPath>СписокИсходящие.Заголовок</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
+									<Width>23</Width>
+									<ContextMenu name="СписокИсходящиеЗаголовокКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="СписокИсходящиеЗаголовокРасширеннаяПодсказка" id="178"/>
+								</LabelField>
+								<LabelField name="СписокИсходящиеРегистрационныйНомерИДата" id="179">
+									<DataPath>СписокИсходящие.РегистрационныйНомерИДата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рег. № и дата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Регистрационный номер и дата регистрации документа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<AutoCellHeight>true</AutoCellHeight>
+									<Width>15</Width>
+									<ContextMenu name="СписокИсходящиеРегистрационныйНомерИДатаКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="СписокИсходящиеРегистрационныйНомерИДатаРасширеннаяПодсказка" id="181"/>
+								</LabelField>
+								<ColumnGroup name="СписокИсходящиеГруппа1" id="188">
+									<ExtendedTooltip name="СписокИсходящиеГруппа1РасширеннаяПодсказка" id="189"/>
+									<ChildItems>
+										<LabelField name="СписокИсходящиеПолучателиДляСписков" id="182">
+											<DataPath>СписокИсходящие.ПолучателиДляСписков</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Получатели</v8:content>
+												</v8:item>
+											</Title>
+											<Width>25</Width>
+											<ContextMenu name="СписокИсходящиеПолучателиДляСписковКонтекстноеМеню" id="183"/>
+											<ExtendedTooltip name="СписокИсходящиеПолучателиДляСписковРасширеннаяПодсказка" id="184"/>
+										</LabelField>
+										<LabelField name="СписокИсходящиеПодписал" id="185">
+											<DataPath>СписокИсходящие.Подписал</DataPath>
+											<Width>25</Width>
+											<ContextMenu name="СписокИсходящиеПодписалКонтекстноеМеню" id="186"/>
+											<ExtendedTooltip name="СписокИсходящиеПодписалРасширеннаяПодсказка" id="187"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<LabelField name="СписокИсходящиеДатаСортировки" id="190">
+									<DataPath>СписокИсходящие.ДатаСортировки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата регистрации или создания документа, если не зарегистрирован</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>9</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy ЧЧ:мм'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СписокИсходящиеДатаСортировкиКонтекстноеМеню" id="191"/>
+									<ExtendedTooltip name="СписокИсходящиеДатаСортировкиРасширеннаяПодсказка" id="192"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокВходяшие" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список входяшие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокВходяшие.ПодписанЭП</Field>
+				<Field>СписокВходяшие.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВходящиеДокументы.Ссылка,
+	ВходящиеДокументы.ПометкаУдаления,
+	ВходящиеДокументы.РегистрационныйНомер,
+	ВходящиеДокументы.ВидДокумента,
+	ВходящиеДокументы.Наименование,
+	ВЫРАЗИТЬ(ВходящиеДокументы.Содержание КАК СТРОКА(500)) КАК Содержание,
+	ВходящиеДокументы.ВопросДеятельности,
+	ВходящиеДокументы.Дело,
+	ВходящиеДокументы.Зарегистрировал,
+	ВходящиеДокументы.СпособПолучения,
+	ВходящиеДокументы.Отправитель,
+	ВходящиеДокументы.Подписал,
+	ВходящиеДокументы.ИсходящийНомер,
+	ВходящиеДокументы.ИсходящаяДата,
+	ВходящиеДокументы.Адресат,
+	ВходящиеДокументы.Подразделение,
+	ВходящиеДокументы.ЧисловойНомер,
+	ВходящиеДокументы.Заголовок,
+	ВходящиеДокументы.ДатаРегистрации,
+	ВходящиеДокументы.ДатаСоздания,
+	ВходящиеДокументы.Код КАК ВнутреннийНомер,
+	ВЫБОР
+		КОГДА ВходящиеДокументы.ДатаРегистрации &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ВходящиеДокументы.ДатаРегистрации
+		ИНАЧЕ ВходящиеДокументы.ДатаСоздания
+	КОНЕЦ КАК ДатаСортировки,
+	ВходящиеДокументы.Организация,
+	ВходящиеДокументы.НоменклатураДел,
+	ВходящиеДокументы.Проект,
+	ОбщиеРеквизитыДокументов.ПредставлениеСостояния КАК Состояние,
+	ОбщиеРеквизитыДокументов.СодержитОригинал,
+	ОбщиеРеквизитыДокументов.РегистрационныйНомерИДата,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьФайлы
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьФайлы,
+	ВЫБОР
+		КОГДА НЕ &amp;ВестиУчетСканКопийОригиналовДокументов
+				//ИЛИ НЕ ВходящиеДокументы.ВидДокумента.ОбязателенФайлОригинала
+				ИЛИ ОбщиеРеквизитыДокументов.СодержитОригинал
+				ИЛИ ВходящиеДокументы.РегистрационныйНомер = ""
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+							ИЛИ КешИнформацииОбОбъектах.ЕстьФайлы = ЛОЖЬ
+						ТОГДА 0
+					КОГДА ОбщиеРеквизитыДокументов.СодержитОригинал
+							И &amp;ВестиУчетСканКопийОригиналовДокументов
+						ТОГДА 2
+					ИНАЧЕ 1
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+						ИЛИ КешИнформацииОбОбъектах.ЕстьФайлы = ЛОЖЬ
+					ТОГДА 4
+				ИНАЧЕ 3
+			КОНЕЦ
+	КОНЕЦ КАК ИндексКартинкиФайлы,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьЗадачи ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьЗадачи
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Задачи,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьКатегорииДанных,
+	ВходящиеДокументы.ПодписанЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ПолученПоСВД ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ПолученПоСВД
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ПоступилПоСВД,
+	КешИнформацииОбОбъектах.СтатусЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписиНет)
+			ТОГДА 0
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНеПроверена)
+			ТОГДА 1
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьДействительна)
+			ТОГДА 2
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНедействительна)
+			ТОГДА 3
+		ИНАЧЕ ВЫБОР
+				КОГДА ВходящиеДокументы.ПодписанЭП
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК СтатусПроверкиЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтроле)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 1
+					ИНАЧЕ 3
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроля)
+			ТОГДА 4
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтролеНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 5
+					КОГДА КешИнформацииОбОбъектах.СрокИсполненияОбщий = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполненияОбщий &gt;= &amp;ТекущаяДата
+						ТОГДА 8
+					ИНАЧЕ 6
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроляНесколько)
+			ТОГДА 7
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СмешанноНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 9
+					ИНАЧЕ 10
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ КАК СостояниеКонтроля
+ИЗ
+	Справочник.ВходящиеДокументы КАК ВходящиеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КешИнформацииОбОбъектах КАК КешИнформацииОбОбъектах
+		ПО ВходящиеДокументы.Ссылка = КешИнформацииОбОбъектах.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбщиеРеквизитыДокументов КАК ОбщиеРеквизитыДокументов
+		ПО ВходящиеДокументы.Ссылка = ОбщиеРеквизитыДокументов.Документ
+ГДЕ
+	ВходящиеДокументы.Проект = &amp;Проект
+	И НЕ ВходящиеДокументы.ПометкаУдаления</QueryText>
+				<MainTable>Catalog.ВходящиеДокументы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаСортировки</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Адресат</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Адресат.Недействителен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокИсходящие" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список исходящие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокИсходящие.ПодписанЭП</Field>
+				<Field>СписокИсходящие.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ИсходящиеДокументы.Ссылка,
+	ИсходящиеДокументы.ПометкаУдаления,
+	ИсходящиеДокументы.РегистрационныйНомер,
+	ИсходящиеДокументы.ДатаРегистрации,
+	ИсходящиеДокументы.ДатаСоздания,
+	ВЫБОР
+		КОГДА ИсходящиеДокументы.ДатаРегистрации &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ИсходящиеДокументы.ДатаРегистрации
+		ИНАЧЕ ИсходящиеДокументы.ДатаСоздания
+	КОНЕЦ КАК ДатаСортировки,
+	ИсходящиеДокументы.Код КАК ВнутреннийНомер,
+	ИсходящиеДокументы.ВидДокумента,
+	ИсходящиеДокументы.Наименование,
+	ВЫРАЗИТЬ(ОбщиеРеквизитыДокументов.КонтрагентыДляСписков КАК СТРОКА(1000)) КАК ПолучателиДляСписков,
+	ВЫРАЗИТЬ(ОбщиеРеквизитыДокументов.КонтрагентыДляСписков КАК СТРОКА(500)) КАК ПолучателиДляГруппировки,
+	ВЫРАЗИТЬ(ИсходящиеДокументы.Содержание КАК СТРОКА(1000)) КАК Содержание,
+	ИсходящиеДокументы.Дело,
+	ИсходящиеДокументы.Зарегистрировал,
+	ИсходящиеДокументы.Подписал,
+	ИсходящиеДокументы.Подготовил,
+	ИсходящиеДокументы.ВопросДеятельности,
+	ИсходящиеДокументы.Подразделение,
+	ИсходящиеДокументы.ЧисловойНомер,
+	ИсходящиеДокументы.Заголовок,
+	ИсходящиеДокументы.Организация,
+	ИсходящиеДокументы.НоменклатураДел,
+	ИсходящиеДокументы.Проект,
+	ОбщиеРеквизитыДокументов.ПредставлениеСостояния КАК Состояние,
+	ОбщиеРеквизитыДокументов.РегистрационныйНомерИДата,
+	ОбщиеРеквизитыДокументов.СодержитОригинал,
+	ВЫБОР
+		КОГДА ЛОЖЬ В
+					(ВЫБРАТЬ
+						ИсходящиеДокументыПолучатели.Отправлен
+					ИЗ
+						Справочник.ИсходящиеДокументы.Получатели КАК ИсходящиеДокументыПолучатели
+					ГДЕ
+						ИсходящиеДокументыПолучатели.Ссылка = ИсходящиеДокументы.Ссылка)
+				И ИСТИНА В
+					(ВЫБРАТЬ
+						ИсходящиеДокументыПолучатели.Отправлен
+					ИЗ
+						Справочник.ИсходящиеДокументы.Получатели КАК ИсходящиеДокументыПолучатели
+					ГДЕ
+						ИсходящиеДокументыПолучатели.Ссылка = ИсходящиеДокументы.Ссылка)
+			ТОГДА 2
+		КОГДА ИСТИНА В
+				(ВЫБРАТЬ
+					ИсходящиеДокументыПолучатели.Отправлен
+				ИЗ
+					Справочник.ИсходящиеДокументы.Получатели КАК ИсходящиеДокументыПолучатели
+				ГДЕ
+					ИсходящиеДокументыПолучатели.Ссылка = ИсходящиеДокументы.Ссылка)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Отправлен,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьФайлы
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьФайлы,
+	ВЫБОР
+		КОГДА НЕ &amp;ВестиУчетСканКопийОригиналовДокументов
+				//ИЛИ НЕ ИсходящиеДокументы.ВидДокумента.ОбязателенФайлОригинала
+				ИЛИ ОбщиеРеквизитыДокументов.СодержитОригинал
+				ИЛИ ИсходящиеДокументы.РегистрационныйНомер = ""
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+							ИЛИ КешИнформацииОбОбъектах.ЕстьФайлы = ЛОЖЬ
+						ТОГДА 0
+					КОГДА ОбщиеРеквизитыДокументов.СодержитОригинал
+							И &amp;ВестиУчетСканКопийОригиналовДокументов
+						ТОГДА 2
+					ИНАЧЕ 1
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+						ИЛИ КешИнформацииОбОбъектах.ЕстьФайлы = ЛОЖЬ
+					ТОГДА 4
+				ИНАЧЕ 3
+			КОНЕЦ
+	КОНЕЦ КАК ИндексКартинкиФайлы,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьЗадачи ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьЗадачи
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Задачи,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьКатегорииДанных,
+	ИсходящиеДокументы.ПодписанЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СостояниеСВД ЕСТЬ NULL 
+				ИЛИ ВидыСостояний.НомерКартинкиВКоллекции ЕСТЬ NULL 
+			ТОГДА 0
+		ИНАЧЕ ВидыСостояний.НомерКартинкиВКоллекции
+	КОНЕЦ КАК НомерКартинкиВКоллекции,
+	КешИнформацииОбОбъектах.СтатусЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписиНет)
+			ТОГДА 0
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНеПроверена)
+			ТОГДА 1
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьДействительна)
+			ТОГДА 2
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНедействительна)
+			ТОГДА 3
+		ИНАЧЕ ВЫБОР
+				КОГДА ИсходящиеДокументы.ПодписанЭП
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК СтатусПроверкиЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтроле)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 1
+					ИНАЧЕ 3
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроля)
+			ТОГДА 4
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтролеНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 5
+					КОГДА КешИнформацииОбОбъектах.СрокИсполненияОбщий = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполненияОбщий &gt;= &amp;ТекущаяДата
+						ТОГДА 8
+					ИНАЧЕ 6
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроляНесколько)
+			ТОГДА 7
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СмешанноНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 9
+					ИНАЧЕ 10
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ КАК СостояниеКонтроля
+ИЗ
+	Справочник.ИсходящиеДокументы КАК ИсходящиеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КешИнформацииОбОбъектах КАК КешИнформацииОбОбъектах
+		ПО ИсходящиеДокументы.Ссылка = КешИнформацииОбОбъектах.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыСостоянийДокументовВСВД КАК ВидыСостояний
+		ПО (КешИнформацииОбОбъектах.СостояниеСВД = ВидыСостояний.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбщиеРеквизитыДокументов КАК ОбщиеРеквизитыДокументов
+		ПО ИсходящиеДокументы.Ссылка = ОбщиеРеквизитыДокументов.Документ
+ГДЕ
+	ИсходящиеДокументы.Проект = &amp;Проект
+	И НЕ ИсходящиеДокументы.ПометкаУдаления</QueryText>
+				<MainTable>Catalog.ИсходящиеДокументы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаСортировки</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Подписал</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Подписал.Недействителен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокВнутренние" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список внутренние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>СписокВнутренние.ЯвляетсяКомплектомДокументов</Field>
+				<Field>СписокВнутренние.ПодписанЭП</Field>
+				<Field>СписокВнутренние.Папка</Field>
+				<Field>СписокВнутренние.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВнутренниеДокументы.Ссылка,
+	ВнутренниеДокументы.ПометкаУдаления,
+	ВнутренниеДокументы.РегистрационныйНомер,
+	ВнутренниеДокументы.ДатаРегистрации,
+	ВЫБОР
+		КОГДА ВнутренниеДокументы.ДатаРегистрации &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ВнутренниеДокументы.ДатаРегистрации
+		ИНАЧЕ ВнутренниеДокументы.ДатаСоздания
+	КОНЕЦ КАК ДатаСортировки,
+	ВнутренниеДокументы.ВидДокумента,
+	ВнутренниеДокументы.ВидДокумента.ЯвляетсяКомплектомДокументов КАК ЯвляетсяКомплектомДокументов,
+	ВнутренниеДокументы.Наименование,
+	ВЫРАЗИТЬ(ВнутренниеДокументы.Содержание КАК СТРОКА(500)) КАК Содержание,
+	ВЫРАЗИТЬ(ОбщиеРеквизитыДокументов.КонтрагентыДляСписков КАК СТРОКА(1000)) КАК Контрагенты,
+	ВнутренниеДокументы.Папка,
+	ВнутренниеДокументы.Подготовил,
+	ВнутренниеДокументы.Подразделение,
+	ВнутренниеДокументы.Утвердил,
+	ВнутренниеДокументы.ВопросДеятельности,
+	ВнутренниеДокументы.Дело,
+	ВнутренниеДокументы.СрокИсполнения,
+	ВнутренниеДокументы.Зарегистрировал,
+	ВнутренниеДокументы.Ответственный,
+	ВнутренниеДокументы.ЧисловойНомер,
+	ВнутренниеДокументы.Заголовок,
+	ВнутренниеДокументы.Код КАК ВнутреннийНомер,
+	ВнутренниеДокументы.ДатаСоздания,
+	ВнутренниеДокументы.Контрагент,
+	ВнутренниеДокументы.КонтактноеЛицо,
+	ВнутренниеДокументы.Организация,
+	ВнутренниеДокументы.НеДействует,
+	ВнутренниеДокументы.НоменклатураДел,
+	ВнутренниеДокументы.Сумма,
+	ВнутренниеДокументы.Валюта,
+	ВнутренниеДокументы.ДатаНачалаДействия,
+	ВнутренниеДокументы.ДатаОкончанияДействия,
+	ВнутренниеДокументы.Проект,
+	ОбщиеРеквизитыДокументов.ПредставлениеСостояния КАК Состояние,
+	ОбщиеРеквизитыДокументов.СодержитОригинал,
+	ОбщиеРеквизитыДокументов.РегистрационныйНомерИДата,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьФайлы
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьФайлы,
+	ВЫБОР
+		КОГДА НЕ &amp;ВестиУчетСканКопийОригиналовДокументов
+				ИЛИ НЕ ВнутренниеДокументы.ВидДокумента.ОбязателенФайлОригинала
+				ИЛИ ОбщиеРеквизитыДокументов.СодержитОригинал
+				ИЛИ ВнутренниеДокументы.РегистрационныйНомер = ""
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+							ИЛИ КешИнформацииОбОбъектах.ЕстьФайлы = ЛОЖЬ
+						ТОГДА 0
+					КОГДА ОбщиеРеквизитыДокументов.СодержитОригинал
+							И &amp;ВестиУчетСканКопийОригиналовДокументов
+						ТОГДА 2
+					ИНАЧЕ 1
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА КешИнформацииОбОбъектах.ЕстьФайлы ЕСТЬ NULL 
+						ИЛИ КешИнформацииОбОбъектах.ЕстьФайлы = ЛОЖЬ
+					ТОГДА 4
+				ИНАЧЕ 3
+			КОНЕЦ
+	КОНЕЦ КАК ИндексКартинкиФайлы,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьЗадачи ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьЗадачи
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Задачи,
+	ВнутренниеДокументы.ПодписанЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		КОГДА КешИнформацииОбОбъектах.ЕстьКатегории
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьКатегорииДанных,
+	КешИнформацииОбОбъектах.СтатусЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписиНет)
+			ТОГДА 0
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНеПроверена)
+			ТОГДА 1
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьДействительна)
+			ТОГДА 2
+		КОГДА КешИнформацииОбОбъектах.СтатусЭП = ЗНАЧЕНИЕ(Перечисление.СтатусПроверкиЭП.ПодписьНедействительна)
+			ТОГДА 3
+		ИНАЧЕ ВЫБОР
+				КОГДА ВнутренниеДокументы.ПодписанЭП
+					ТОГДА 1
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК СтатусПроверкиЭП,
+	ВЫБОР
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтроле)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 1
+					ИНАЧЕ 3
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроля)
+			ТОГДА 4
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.НаКонтролеНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 5
+					КОГДА КешИнформацииОбОбъектах.СрокИсполненияОбщий = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполненияОбщий &gt;= &amp;ТекущаяДата
+						ТОГДА 8
+					ИНАЧЕ 6
+				КОНЕЦ
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СнятсКонтроляНесколько)
+			ТОГДА 7
+		КОГДА КешИнформацииОбОбъектах.СостояниеКонтроля = ЗНАЧЕНИЕ(Перечисление.СостоянияКонтроля.СмешанноНесколько)
+			ТОГДА ВЫБОР
+					КОГДА КешИнформацииОбОбъектах.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+							ИЛИ КешИнформацииОбОбъектах.СрокИсполнения &gt;= &amp;ТекущаяДата
+						ТОГДА 9
+					ИНАЧЕ 10
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ КАК СостояниеКонтроля
+ИЗ
+	Справочник.ВнутренниеДокументы КАК ВнутренниеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КешИнформацииОбОбъектах КАК КешИнформацииОбОбъектах
+		ПО ВнутренниеДокументы.Ссылка = КешИнформацииОбОбъектах.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбщиеРеквизитыДокументов КАК ОбщиеРеквизитыДокументов
+		ПО ВнутренниеДокументы.Ссылка = ОбщиеРеквизитыДокументов.Документ
+ГДЕ
+	ВнутренниеДокументы.Проект = &amp;Проект
+	И НЕ ВнутренниеДокументы.ПометкаУдаления
+{ГДЕ
+	(ВнутренниеДокументы.Папка = &amp;Папка)}</QueryText>
+				<MainTable>Catalog.ВнутренниеДокументы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаСортировки</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Подготовил</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Подготовил.Недействителен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Утвердил</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Утвердил.Недействителен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Папки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникПапкиВнутреннихДокументов.Ссылка,
+	СправочникПапкиВнутреннихДокументов.ПометкаУдаления,
+	СправочникПапкиВнутреннихДокументов.Предопределенный,
+	СправочникПапкиВнутреннихДокументов.Родитель,
+	СправочникПапкиВнутреннихДокументов.Код,
+	СправочникПапкиВнутреннихДокументов.Наименование,
+	СправочникПапкиВнутреннихДокументов.Описание,
+	СправочникПапкиВнутреннихДокументов.Ответственный,
+	СправочникПапкиВнутреннихДокументов.ДатаСоздания,
+	ВЫБОР
+		КОГДА СправочникПапкиВнутреннихДокументов.ПометкаУдаления
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИндексКартинки
+ИЗ
+	Справочник.ПапкиВнутреннихДокументов КАК СправочникПапкиВнутреннихДокументов</QueryText>
+				<MainTable>Catalog.ПапкиВнутреннихДокументов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВидПросмотра" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид просмотра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПросмотраСпискаОбъектов</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидПросмотра</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТекущаяПапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая папка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПапкиВнутреннихДокументов</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТекущаяПапка</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КоличествоДоступныхШаблоновВнутреннихДокументов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество доступных шаблонов внутренних документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДоступныхШаблоновВходящихДокументов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество доступных шаблонов внутренних документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДоступныхШаблоновИсходящихДокументов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество доступных шаблонов внутренних документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Проект" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьПросмотрПапками" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Папки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить просмотр файлов по папкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Папка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВключитьПросмотрПапками</Action>
+		</Command>
+		<Command name="ВключитьПросмотрСписком" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать только список файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВключитьПросмотрСписком</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Проект">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

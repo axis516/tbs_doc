@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор тем</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаВыборТем" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор тем</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор тем</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыборТемРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВсеТемы" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа все темы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа все темы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВсеТемыРасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПодписьИКомПанель" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подпись и ком панель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подпись и ком панель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодписьИКомПанельРасширеннаяПодсказка" id="36"/>
+							<ChildItems>
+								<LabelDecoration name="ПодписьВсеТемы" id="32">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Все темы:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодписьВсеТемыКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ПодписьВсеТемыРасширеннаяПодсказка" id="34"/>
+								</LabelDecoration>
+								<CommandBar name="ГруппаКомПанель" id="37">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ком панель</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ком панель</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="ГруппаКомПанельРасширеннаяПодсказка" id="38"/>
+									<ChildItems>
+										<Button name="Создать" id="39">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Item.ВсеТемы.StandardCommand.Create</CommandName>
+											<ExtendedTooltip name="СоздатьРасширеннаяПодсказка" id="40"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ВсеТемы" id="25">
+							<Representation>Tree</Representation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ВсеТемы</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ВсеТемыКонтекстноеМеню" id="26">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="ВсеТемыКоманднаяПанель" id="27">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВсеТемыРасширеннаяПодсказка" id="28"/>
+							<SearchStringAddition name="ВсеТемыСтрокаПоиска" id="50">
+								<AdditionSource>
+									<Item>ВсеТемы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВсеТемыСтрокаПоискаКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="ВсеТемыСтрокаПоискаРасширеннаяПодсказка" id="52"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВсеТемыСостояниеПросмотра" id="53">
+								<AdditionSource>
+									<Item>ВсеТемы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВсеТемыСостояниеПросмотраКонтекстноеМеню" id="54"/>
+								<ExtendedTooltip name="ВсеТемыСостояниеПросмотраРасширеннаяПодсказка" id="55"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВсеТемыУправлениеПоиском" id="56">
+								<AdditionSource>
+									<Item>ВсеТемы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВсеТемыУправлениеПоискомКонтекстноеМеню" id="57"/>
+								<ExtendedTooltip name="ВсеТемыУправлениеПоискомРасширеннаяПодсказка" id="58"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ВсеТемыВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВсеТемыНаименование" id="29">
+									<DataPath>ВсеТемы.Description</DataPath>
+									<Width>1</Width>
+									<ContextMenu name="ВсеТемыНаименованиеКонтекстноеМеню" id="30">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<ExtendedTooltip name="ВсеТемыНаименованиеРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКомандыВыбора" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды выбора</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа команды выбора</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомандыВыбораРасширеннаяПодсказка" id="22"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияКомандыОтступ" id="45">
+							<ContextMenu name="ДекорацияКомандыОтступКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ДекорацияКомандыОтступРасширеннаяПодсказка" id="47"/>
+						</LabelDecoration>
+						<Button name="КомандаДобавить" id="41">
+							<Type>UsualButton</Type>
+							<Width>4</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.КомандаДобавить</CommandName>
+							<ExtendedTooltip name="КомандаДобавитьРасширеннаяПодсказка" id="42"/>
+						</Button>
+						<Button name="КомандаУдалить" id="43">
+							<Type>UsualButton</Type>
+							<Width>4</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.КомандаУдалить</CommandName>
+							<ExtendedTooltip name="КомандаУдалитьРасширеннаяПодсказка" id="44"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВыбранныеТемы" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбранные темы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбранные темы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыбранныеТемыРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<LabelDecoration name="ПодписьВыбранныеТемы" id="14">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбранные темы:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПодписьВыбранныеТемыКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ПодписьВыбранныеТемыРасширеннаяПодсказка" id="16"/>
+						</LabelDecoration>
+						<Table name="ВыбранныеТемы" id="7">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Width>30</Width>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>ВыбранныеТемы</DataPath>
+							<RowPictureDataPath>ВыбранныеТемы.Picture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ВыбранныеТемыКонтекстноеМеню" id="8">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="ВыбранныеТемыКоманднаяПанель" id="9"/>
+							<ExtendedTooltip name="ВыбранныеТемыРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ВыбранныеТемыСтрокаПоиска" id="59">
+								<AdditionSource>
+									<Item>ВыбранныеТемы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеТемыСтрокаПоискаКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="ВыбранныеТемыСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВыбранныеТемыСостояниеПросмотра" id="62">
+								<AdditionSource>
+									<Item>ВыбранныеТемы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеТемыСостояниеПросмотраКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="ВыбранныеТемыСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВыбранныеТемыУправлениеПоиском" id="65">
+								<AdditionSource>
+									<Item>ВыбранныеТемы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыбранныеТемыУправлениеПоискомКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="ВыбранныеТемыУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ВыбранныеТемыПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ВыбранныеТемыЗначение" id="11">
+									<DataPath>ВыбранныеТемы.Value</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВыбранныеТемыЗначениеКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ВыбранныеТемыЗначениеРасширеннаяПодсказка" id="13"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманды" id="5">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="6"/>
+			<ChildItems>
+				<Button name="КомандаГотово" id="48">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаГотово</CommandName>
+					<TextColor>style:ОтметкаПоложительногоВыполненияЗадачи</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="КомандаГотовоРасширеннаяПодсказка" id="49"/>
+				</Button>
+				<Button name="Отмена" id="3">
+					<Type>UsualButton</Type>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<TextColor>style:ОтметкаОтрицательногоВыполненияЗадачи</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="4"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВыбранныеТемы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные темы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсеТемы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все темы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ТемыЗаметок</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаДобавить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить тему</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДобавить</Action>
+		</Command>
+		<Command name="КомандаУдалить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить тему</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаУдалить</Action>
+		</Command>
+		<Command name="КомандаГотово" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаГотово</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Прерывание действий</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Group>Horizontal</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="КартинкаПредупреждение" id="1">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка предупреждение</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="КартинкаПредупреждениеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КартинкаПредупреждениеРасширеннаяПодсказка" id="3"/>
+		</PictureDecoration>
+		<UsualGroup name="ГруппаОписаниеПроцессовИПричина" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описание процессов и причина</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описание процессов и причина</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<VerticalSpacing>OneAndHalf</VerticalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОписаниеПроцессовИПричинаРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияИнфо" id="11">
+					<Width>41</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действия процесса будут прерваны. 
+Внимание! Все внесенные изменения необратимы. </v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияИнфоКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДекорацияИнфоРасширеннаяПодсказка" id="13"/>
+				</LabelDecoration>
+				<Table name="ПроцессыСхемыДляПрерывания" id="14">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<Width>1</Width>
+					<HeightInTableRows>3</HeightInTableRows>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>ПроцессыСхемыДляПрерывания</DataPath>
+					<RowPictureDataPath>ПроцессыСхемыДляПрерывания.Picture</RowPictureDataPath>
+					<CommandSet>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CheckAll</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>UncheckAll</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+						<ExcludedCommand>Pickup</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+					</CommandSet>
+					<ContextMenu name="ПроцессыСхемыДляПрерыванияКонтекстноеМеню" id="15"/>
+					<AutoCommandBar name="ПроцессыСхемыДляПрерыванияКоманднаяПанель" id="16"/>
+					<ExtendedTooltip name="ПроцессыСхемыДляПрерыванияРасширеннаяПодсказка" id="17"/>
+					<SearchStringAddition name="ПроцессыСхемыДляПрерыванияСтрокаПоиска" id="18">
+						<AdditionSource>
+							<Item>ПроцессыСхемыДляПрерывания</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПроцессыСхемыДляПрерыванияСтрокаПоискаКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="ПроцессыСхемыДляПрерыванияСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПроцессыСхемыДляПрерыванияСостояниеПросмотра" id="21">
+						<AdditionSource>
+							<Item>ПроцессыСхемыДляПрерывания</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПроцессыСхемыДляПрерыванияСостояниеПросмотраКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="ПроцессыСхемыДляПрерыванияСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПроцессыСхемыДляПрерыванияУправлениеПоиском" id="24">
+						<AdditionSource>
+							<Item>ПроцессыСхемыДляПрерывания</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПроцессыСхемыДляПрерыванияУправлениеПоискомКонтекстноеМеню" id="25"/>
+						<ExtendedTooltip name="ПроцессыСхемыДляПрерыванияУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ПроцессыСхемыДляПрерыванияВыбор</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ПроцессыСхемыДляПрерыванияЗначение" id="27">
+							<DataPath>ПроцессыСхемыДляПрерывания.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПроцессыСхемыДляПрерыванияЗначениеКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ПроцессыСхемыДляПрерыванияЗначениеРасширеннаяПодсказка" id="29"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<InputField name="ПричинаПрерывания" id="30">
+					<DataPath>ПричинаПрерывания</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MultiLine>true</MultiLine>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина прерывания</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ПричинаПрерыванияКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ПричинаПрерыванияРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<UsualGroup name="ГруппаКнопки" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопкиExtendedTooltip" id="34"/>
+					<ChildItems>
+						<Button name="ФормаПрервать" id="35">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПрерватьПроцессы</CommandName>
+							<TextColor>style:ОтметкаОтрицательногоВыполненияЗадачи</TextColor>
+							<Font ref="style:ШрифтВажныхКнопок" kind="StyleItem"/>
+							<ExtendedTooltip name="ФормаПрерватьРасширеннаяПодсказка" id="36"/>
+						</Button>
+						<Button name="Отмена" id="37">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<Width>11</Width>
+							<CommandName>Form.Command.Отмена</CommandName>
+							<Font ref="style:ШрифтВажныхКнопок" kind="StyleItem"/>
+							<ExtendedTooltip name="ОтменаExtendedTooltip" id="38"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПричинаПрерывания" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина прерывания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроцессыСхемыДляПрерывания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процессы схемы для прерывания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:TypeSet>cfg:DefinedType.ДействиеКомплексногоПроцесса</v8:TypeSet>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрерватьПроцессы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прервать действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать с прерыванием действий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрерватьПроцессы</Action>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПроцессыСхемыДляПрерывания">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

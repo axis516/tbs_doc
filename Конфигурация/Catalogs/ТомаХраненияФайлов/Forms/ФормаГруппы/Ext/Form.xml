@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Width>70</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Folders</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="18"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="19"/>
+		</InputField>
+		<Table name="ТаблицаПравил" id="7">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<HeightInTableRows>3</HeightInTableRows>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаПравил</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаПравилКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ТаблицаПравилКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаПравилExtendedTooltip" id="20"/>
+			<SearchStringAddition name="ТаблицаПравилСтрокаПоиска" id="25">
+				<AdditionSource>
+					<Item>ТаблицаПравил</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПравилСтрокаПоискаКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="ТаблицаПравилСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаПравилСостояниеПросмотра" id="28">
+				<AdditionSource>
+					<Item>ТаблицаПравил</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПравилСостояниеПросмотраКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ТаблицаПравилСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаПравилУправлениеПоиском" id="31">
+				<AdditionSource>
+					<Item>ТаблицаПравил</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПравилУправлениеПоискомКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ТаблицаПравилУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаПравилВыбор</Event>
+				<Event name="BeforeAddRow">ТаблицаПравилПередНачаломДобавления</Event>
+				<Event name="BeforeRowChange">ТаблицаПравилПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаПравилСсылка" id="10">
+					<DataPath>ТаблицаПравил.Ссылка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>11</Width>
+					<Height>2</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ChoiceButton>false</ChoiceButton>
+					<ContextMenu name="ТаблицаПравилСсылкаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТаблицаПравилСсылкаExtendedTooltip" id="21"/>
+				</InputField>
+				<InputField name="ТаблицаПравилПредставлениеУсловия" id="12">
+					<DataPath>ТаблицаПравил.ПредставлениеУсловия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условие</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>25</Width>
+					<Height>2</Height>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТаблицаПравилПредставлениеУсловияКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ТаблицаПравилПредставлениеУсловияExtendedTooltip" id="22"/>
+				</InputField>
+				<InputField name="ТаблицаПравилКомментарий" id="14">
+					<DataPath>ТаблицаПравил.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>17</Width>
+					<Height>2</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТаблицаПравилКомментарийКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТаблицаПравилКомментарийExtendedTooltip" id="23"/>
+				</InputField>
+				<InputField name="ТаблицаПравилОтветственный" id="16">
+					<DataPath>ТаблицаПравил.Ответственный</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>12</Width>
+					<Height>2</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТаблицаПравилОтветственныйКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ТаблицаПравилОтветственныйExtendedTooltip" id="24"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТомаХраненияФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаблицаПравил" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица правил</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПравилаРазмещенияФайловВТомах</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеУсловия" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление условия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ответственный" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>
