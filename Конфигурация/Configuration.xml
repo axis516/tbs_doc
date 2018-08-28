@@ -164,6 +164,8 @@
 			<Subsystem>УчетВремени</Subsystem>
 			<Subsystem>ЭлектронноеВзаимодействие</Subsystem>
 			<Subsystem>ТБС_ФРД</Subsystem>
+			<Subsystem>ТБС_ЗаявкиIT</Subsystem>
+			<Subsystem>ТБС_ЛичныйКабинет</Subsystem>
 			<StyleItem>ВажныеЗадачиИБизнесПроцессыШрифт</StyleItem>
 			<StyleItem>ВидимыйВариантОтчетаЦвет</StyleItem>
 			<StyleItem>ВспомогательныйТекстТерриторий</StyleItem>
@@ -1246,6 +1248,7 @@
 			<Role>ЧтениеФактическихТрудозатратСотрудниковПодразделения</Role>
 			<Role>ЧтениеФизическихЛиц</Role>
 			<Role>ЧтениеЭД</Role>
+			<Role>ТБС_ЗаявкиIT</Role>
 			<CommonTemplate>ВставкаРегистрационногоШтампаВDocx</CommonTemplate>
 			<CommonTemplate>ВставкаРегистрационногоШтампаВDocxБезШтрихкода</CommonTemplate>
 			<CommonTemplate>ВставкаШтрихкодаВместоТегаВDocx</CommonTemplate>
@@ -1955,6 +1958,7 @@
 			<CommonModule>ЭскалацияЗадачКлиент</CommonModule>
 			<CommonModule>ЭскалацияЗадачКлиентСервер</CommonModule>
 			<CommonModule>ЭскалацияЗадачПереопределяемый</CommonModule>
+			<CommonModule>ТБС_ОбщегоНазначения</CommonModule>
 			<ExchangePlan>Полный</ExchangePlan>
 			<ExchangePlan>Мобильный</ExchangePlan>
 			<ExchangePlan>МобильныйРегистрацияВсехДанных</ExchangePlan>
@@ -2204,6 +2208,7 @@
 			<EventSubscription>УчетнаяЗаписьПриЗаписи</EventSubscription>
 			<EventSubscription>ФайлПриЗаписи</EventSubscription>
 			<EventSubscription>ПроверитьЗначениеОпцииИспользоватьУчетПоОрганизациям</EventSubscription>
+			<EventSubscription>ТБС_БизнесСобытияПередЗаписьюООбъекта</EventSubscription>
 			<ScheduledJob>АвтоматическаяКатегоризацияДанных</ScheduledJob>
 			<ScheduledJob>АвтоматическоеПродлениеДоговоров</ScheduledJob>
 			<ScheduledJob>ВыполнениеЗадач</ScheduledJob>
@@ -3187,6 +3192,9 @@
 			<Catalog>ТБС_Дивизионы</Catalog>
 			<Catalog>ТБС_ОписаниеРабот</Catalog>
 			<Catalog>ТБС_СоставРабот</Catalog>
+			<Catalog>ТБС_СистемыIT</Catalog>
+			<Catalog>ТБС_КатегорииIT</Catalog>
+			<Catalog>ТБС_ИсточникиЗаявокIT</Catalog>
 			<Document>Бронь</Document>
 			<Document>ВходящееПисьмо</Document>
 			<Document>ВходящееСообщениеСВД</Document>
@@ -3204,6 +3212,7 @@
 			<Document>ЭлектронныйДокументВходящий</Document>
 			<Document>ЭлектронныйДокументИсходящий</Document>
 			<Document>ТБС_УчетРабочегоВремени</Document>
+			<Document>ТБС_ЗаявкиIT</Document>
 			<DocumentJournal>СообщенияСВД</DocumentJournal>
 			<DocumentJournal>ЭлектроннаяПочта</DocumentJournal>
 			<DocumentJournal>СогласияНаОбработкуПерсональныхДанных</DocumentJournal>
@@ -3447,6 +3456,10 @@
 			<Enum>ЭлементыРабочегоКалендаря</Enum>
 			<Enum>ЭтапыОбработкиПредметовПоказателейПроцессов</Enum>
 			<Enum>ЦветностиИзображения</Enum>
+			<Enum>ТБС_СтатусыЗаявкиIT</Enum>
+			<Enum>ТБС_Важность</Enum>
+			<Enum>ТБС_ЭтапыРабот</Enum>
+			<Enum>ТБС_СпособыХарактераВыплаты</Enum>
 			<Report>АнализВерсийОбъектов</Report>
 			<Report>ВнутренниеДокументы</Report>
 			<Report>ВопросыДеятельности</Report>
@@ -3517,6 +3530,7 @@
 			<Report>ЭскалацияЗадач</Report>
 			<Report>ЭтапыОбработкиДокументов</Report>
 			<Report>ТБС_ФотографияРабочегоВремени</Report>
+			<Report>ТБС_КанбанДоска</Report>
 			<DataProcessor>АвтоматическаяПроверкаЭПДокументовИзСВД</DataProcessor>
 			<DataProcessor>АвтоматическоеИзвлечениеТекстов</DataProcessor>
 			<DataProcessor>АвтоматическоеРаспознаваниеИзображений</DataProcessor>
@@ -3606,6 +3620,7 @@
 			<DataProcessor>УстановкаОбновлений</DataProcessor>
 			<DataProcessor>УстановкаТиповойМетодикиДокументооборота</DataProcessor>
 			<DataProcessor>ОбменСКонтрагентами</DataProcessor>
+			<DataProcessor>ТБС_РасчетныеЛисты</DataProcessor>
 			<InformationRegister>HTMLПредставленияСодержанияПисем</InformationRegister>
 			<InformationRegister>АвтоматическиеОтветыПоАдресам</InformationRegister>
 			<InformationRegister>АдресныеОбъекты</InformationRegister>
@@ -3894,7 +3909,12 @@
 			<InformationRegister>ЭтапыОбработкиДокументов</InformationRegister>
 			<InformationRegister>ТБС_УчетРабочегоВремени</InformationRegister>
 			<InformationRegister>ТБС_ШаблоныРабот</InformationRegister>
+			<InformationRegister>ТБС_ИсторияПросмотров</InformationRegister>
+			<InformationRegister>ТБС_ПользовательскоеСоглашение</InformationRegister>
+			<InformationRegister>ТБС_ХранилищеДанных</InformationRegister>
+			<InformationRegister>ТБС_РасчетныеЛисты</InformationRegister>
 			<AccumulationRegister>РабочееВремяПользователей</AccumulationRegister>
+			<AccumulationRegister>ТБС_БаллыСотрудников</AccumulationRegister>
 			<ChartOfCharacteristicTypes>ДополнительныеРеквизитыИСведения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ОбъектыАдресацииЗадач</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ВидыДоступа</ChartOfCharacteristicTypes>
