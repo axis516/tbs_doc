@@ -3,7 +3,6 @@
 	<CommandSet>
 		<ExcludedCommand>Post</ExcludedCommand>
 		<ExcludedCommand>Delete</ExcludedCommand>
-		<ExcludedCommand>Write</ExcludedCommand>
 	</CommandSet>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
@@ -897,12 +896,18 @@
 									<ContextMenu name="ИсполнителиРешениеКонтекстноеМеню" id="393"/>
 									<ExtendedTooltip name="ИсполнителиРешениеРасширеннаяПодсказка" id="394"/>
 								</InputField>
+								<InputField name="ИсполнителиОценка" id="463">
+									<DataPath>Объект.Исполнители.Оценка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполнителиОценкаКонтекстноеМеню" id="464"/>
+									<ExtendedTooltip name="ИсполнителиОценкаРасширеннаяПодсказка" id="465"/>
+								</InputField>
 								<InputField name="ИсполнителиТрудоемкостьРабЧасов" id="395">
 									<DataPath>Объект.Исполнители.ТрудоемкостьРабЧасов</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Т/Ч</v8:content>
+											<v8:content>Факт</v8:content>
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
@@ -911,12 +916,14 @@
 								</InputField>
 								<InputField name="ИсполнителиЦена" id="401">
 									<DataPath>Объект.Исполнители.Цена</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ИсполнителиЦенаКонтекстноеМеню" id="402"/>
 									<ExtendedTooltip name="ИсполнителиЦенаРасширеннаяПодсказка" id="403"/>
 								</InputField>
 								<InputField name="ИсполнителиСтоимость" id="398">
 									<DataPath>Объект.Исполнители.Стоимость</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ИсполнителиСтоимостьКонтекстноеМеню" id="399"/>
 									<ExtendedTooltip name="ИсполнителиСтоимостьРасширеннаяПодсказка" id="400"/>
